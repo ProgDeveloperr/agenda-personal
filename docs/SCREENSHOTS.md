@@ -62,4 +62,4 @@ Indicadores académicos, resultados por materia y resumen de evaluaciones.
 
 ---
 
-> Las capturas pertenecen a una instancia privada. Antes de publicar este repositorio de manera abierta, revisá los datos personales y académicos visibles.
+
