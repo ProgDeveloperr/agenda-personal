@@ -1,0 +1,3542 @@
+/*
+ * ==========================================================
+ * AGENDA PERSONAL
+ * MATERIAS
+ * MAT-L1 - PROFESSIONAL HYBRID LIGHT
+ * ==========================================================
+ *
+ * Academic Portfolio
+ *
+ * - canvas light ejecutivo
+ * - hero editorial
+ * - metricas graphite
+ * - composer graphite premium
+ * - catalogo light
+ * - cards academicas premium
+ * - identidad cromatica por materia
+ *
+ * Sin cambios de layout.
+ * Sin cambios PHP / JS / DB.
+ * Dark no instalado aun.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   ROOT
+   ========================================================== */
+
+body.page-subjects-v3 {
+    --subjects-text:
+        #1d2c39;
+
+    --subjects-muted:
+        #617587;
+
+    --subjects-border:
+        rgba(39, 57, 74, .12);
+
+    --subjects-blue:
+        #356fae;
+
+    --subjects-green:
+        #287a56;
+
+    --v3-text:
+        #1f2d3a;
+
+    --v3-muted:
+        #617587;
+
+    --v3-muted-2:
+        #7d8e9e;
+
+    --v3-border:
+        rgba(39, 57, 74, .12);
+
+    --v3-border-hover:
+        rgba(39, 57, 74, .21);
+
+    color-scheme:
+        light;
+
+    color:
+        var(--subjects-text)
+        !important;
+
+    background:
+        radial-gradient(
+            1050px 530px
+            at 9% -8%,
+            rgba(64, 124, 177, .080),
+            transparent 66%
+        ),
+        radial-gradient(
+            800px 450px
+            at 91% 2%,
+            rgba(51, 142, 96, .045),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            #f8fafb 0%,
+            #f1f4f6 100%
+        )
+        !important;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+body.page-subjects-v3
+.app-header {
+    border-bottom-color:
+        rgba(42, 60, 78, .10)
+        !important;
+
+    background:
+        rgba(249, 251, 252, .93)
+        !important;
+
+    box-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .88),
+        0 7px 22px
+        rgba(39, 57, 73, .035)
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-brand-copy strong {
+    color:
+        #1f2c39
+        !important;
+
+    text-shadow:
+        none
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-brand-copy small {
+    color:
+        #718497
+        !important;
+
+    text-shadow:
+        none
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-brand-mark {
+    border-color:
+        #cad8e4
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fbfdff,
+            #edf4f9
+        )
+        !important;
+
+    color:
+        #356fae
+        !important;
+
+    box-shadow:
+        0 3px 10px
+        rgba(42, 69, 91, .045),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-nav {
+    border-color:
+        rgba(41, 58, 76, .13)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .78)
+        !important;
+
+    box-shadow:
+        0 5px 18px
+        rgba(38, 56, 72, .035),
+        inset 0 1px 0
+        rgba(255, 255, 255, .92)
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-nav a {
+    color:
+        #52677b
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-nav a:hover {
+    background:
+        #f0f5f9
+        !important;
+
+    color:
+        #25394c
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-nav a.active {
+    border-color:
+        #c9daea
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf5fb,
+            #e5eff8
+        )
+        !important;
+
+    color:
+        #245b8d
+        !important;
+
+    box-shadow:
+        inset 0 -2px 0
+        #6197ca
+        !important;
+}
+
+
+body.page-subjects-v3
+.notification-bell-v3,
+
+body.page-subjects-v3
+.command-trigger-v3 {
+    border-color:
+        #cfdbe5
+        !important;
+
+    background:
+        rgba(255, 255, 255, .82)
+        !important;
+
+    color:
+        #5d7184
+        !important;
+}
+
+
+body.page-subjects-v3
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(47, 139, 96, .30)
+        !important;
+
+    background:
+        rgba(48, 145, 99, .055)
+        !important;
+
+    color:
+        #267450
+        !important;
+}
+
+
+body.page-subjects-v3
+.quick-add-trigger-v3 kbd,
+
+body.page-subjects-v3
+.command-trigger-v3 kbd {
+    border-color:
+        rgba(62, 82, 101, .12)
+        !important;
+
+    background:
+        #f1f4f6
+        !important;
+
+    color:
+        #748596
+        !important;
+}
+
+
+body.page-subjects-v3
+.app-header-status {
+    color:
+        #566b7d
+        !important;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+body.page-subjects-v3
+.section-kicker,
+
+body.page-subjects-v3
+.hero-eyebrow {
+    color:
+        #287b57
+        !important;
+}
+
+
+body.page-subjects-v3
+.eyebrow-dot {
+    background:
+        #35a572
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(53, 165, 114, .08)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-hero-v3 h1 {
+    color:
+        #192936
+        !important;
+
+    font-weight:
+        820
+        !important;
+
+    letter-spacing:
+        -.05em
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-hero-v3
+> div:first-child
+> p {
+    color:
+        #596f82
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-hero-actions-v3
+.agenda-outline-action-v3 {
+    border-color:
+        #c8d6e1
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f5f8fa
+        )
+        !important;
+
+    color:
+        #45647c
+        !important;
+
+    box-shadow:
+        0 5px 14px
+        rgba(35, 54, 69, .045),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-total-v3 {
+    border-color:
+        #c6d5df
+        !important;
+
+    background:
+        radial-gradient(
+            240px 100px
+            at 100% 0%,
+            rgba(66, 130, 184, .07),
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f8fa
+        )
+        !important;
+
+    box-shadow:
+        0 8px 20px
+        rgba(35, 54, 69, .055),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-total-v3 strong {
+    color:
+        #263b4b
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-total-v3 span {
+    color:
+        #718596
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS — GRAPHITE
+   ========================================================== */
+
+body.page-subjects-v3
+.subjects-metrics-v3 article {
+    border-color:
+        rgba(131, 155, 175, .20)
+        !important;
+
+    background:
+        radial-gradient(
+            360px 165px
+            at 100% 0%,
+            rgba(76, 143, 195, .10),
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            #192732,
+            #111b24
+        )
+        !important;
+
+    box-shadow:
+        0 14px 31px
+        rgba(25, 41, 55, .15),
+        inset 0 1px 0
+        rgba(255, 255, 255, .04),
+        inset 0 -1px 0
+        rgba(0, 0, 0, .12)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-metric-icon-v3 {
+    border-color:
+        rgba(111, 173, 217, .24)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(98, 160, 209, .14),
+            rgba(98, 160, 209, .055)
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-metric-icon-v3 svg {
+    stroke:
+        #91bade
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-metrics-v3 span {
+    color:
+        #adbdca
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-metrics-v3 strong {
+    color:
+        #f4f7f9
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(0, 0, 0, .22)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-metrics-v3 small {
+    color:
+        #8da1b0
+        !important;
+}
+
+
+/* ==========================================================
+   COMPOSER — GRAPHITE SIGNATURE
+   ========================================================== */
+
+body.page-subjects-v3
+.subjects-composer-v3 {
+    border-color:
+        rgba(131, 155, 175, .20)
+        !important;
+
+    background:
+        radial-gradient(
+            520px 240px
+            at 0% 0%,
+            rgba(53, 150, 102, .065),
+            transparent 69%
+        ),
+        radial-gradient(
+            420px 220px
+            at 100% 0%,
+            rgba(67, 134, 188, .07),
+            transparent 70%
+        ),
+        linear-gradient(
+            150deg,
+            #172630,
+            #0f1922
+        )
+        !important;
+
+    box-shadow:
+        0 22px 50px
+        rgba(26, 42, 55, .18),
+        inset 0 1px 0
+        rgba(255, 255, 255, .035)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-composer-inner-v3 {
+    background:
+        transparent
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-composer-heading-v3 {
+    border-bottom-color:
+        rgba(157, 178, 195, .10)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, .018),
+            transparent
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.composer-kicker-v3 {
+    color:
+        #69c398
+        !important;
+
+    letter-spacing:
+        .105em
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-composer-heading-v3 h2 {
+    color:
+        #f1f5f7
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(0, 0, 0, .22)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-composer-heading-v3 p {
+    color:
+        #8fa5b6
+        !important;
+}
+
+
+/* ==========================================================
+   EDITING BANNER
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-editing-banner-v3 {
+    border-color:
+        rgba(142, 118, 209, .27)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(126, 98, 202, .12),
+            rgba(126, 98, 202, .055)
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-editing-banner-v3 small {
+    color:
+        #a99ccc
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-editing-banner-v3 strong {
+    color:
+        #e2dafa
+        !important;
+}
+
+
+/* ==========================================================
+   FORM
+   ========================================================== */
+
+body.page-subjects-v3
+.subjects-field-v3 label {
+    color:
+        #cbd7df
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-field-v3 label small {
+    color:
+        #758c9e
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-field-v3 input,
+
+body.page-subjects-v3
+.subjects-field-v3 select {
+    border-color:
+        rgba(151, 174, 193, .15)
+        !important;
+
+    background:
+        #09141d
+        !important;
+
+    color:
+        #e3eaef
+        !important;
+
+    box-shadow:
+        inset 0 1px 3px
+        rgba(0, 0, 0, .24)
+        !important;
+
+    color-scheme:
+        dark;
+}
+
+
+body.page-subjects-v3
+.subjects-field-v3 input:focus,
+
+body.page-subjects-v3
+.subjects-field-v3 select:focus {
+    border-color:
+        rgba(104, 166, 216, .52)
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(85, 149, 202, .10),
+        inset 0 1px 2px
+        rgba(0, 0, 0, .14)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-field-v3
+input::placeholder {
+    color:
+        #667d8f
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-field-v3 select option {
+    background:
+        #0b1620
+        !important;
+
+    color:
+        #dbe4ea
+        !important;
+}
+
+
+/* ==========================================================
+   COLOR FIELD
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-color-field-v3 {
+    border-color:
+        rgba(151, 174, 193, .12)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .018)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .018)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-color-field-v3 span {
+    color:
+        #91a6b6
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-color-field-v3
+input[type="color"] {
+    border-color:
+        rgba(151, 174, 193, .18)
+        !important;
+
+    background:
+        #0b1620
+        !important;
+}
+
+
+/* ==========================================================
+   COMPOSER ACTIONS
+   ========================================================== */
+
+body.page-subjects-v3
+.composer-save-v3 {
+    border-color:
+        rgba(54, 153, 102, .42)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3b9270,
+            #287154
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(25, 102, 72, .25),
+        inset 0 1px 0
+        rgba(255, 255, 255, .12)
+        !important;
+}
+
+
+body.page-subjects-v3
+.composer-save-v3:hover {
+    border-color:
+        rgba(60, 164, 110, .52)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #419b78,
+            #2b7958
+        )
+        !important;
+
+    box-shadow:
+        0 12px 28px
+        rgba(25, 102, 72, .28)
+        !important;
+}
+
+
+body.page-subjects-v3
+.composer-cancel-v3 {
+    border-color:
+        rgba(151, 174, 193, .15)
+        !important;
+
+    background:
+        #17232d
+        !important;
+
+    color:
+        #93a8b8
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+/* ==========================================================
+   CATALOGO
+   ========================================================== */
+
+body.page-subjects-v3
+.subjects-content-v3 {
+    border-color:
+        #c7d5df
+        !important;
+
+    background:
+        radial-gradient(
+            900px 280px
+            at 100% 0%,
+            rgba(64, 126, 180, .045),
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f6f9fb
+        )
+        !important;
+
+    box-shadow:
+        0 18px 42px
+        rgba(35, 54, 69, .075),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-content-heading-v3 {
+    border-bottom-color:
+        #dce4ea
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(249, 251, 252, .92),
+            rgba(249, 251, 252, .40)
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-content-heading-v3 h2 {
+    color:
+        #203545
+        !important;
+
+    text-shadow:
+        0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-content-heading-v3 p {
+    color:
+        #667b8c
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-active-summary-v3 {
+    border-color:
+        rgba(44, 137, 91, .20)
+        !important;
+
+    background:
+        rgba(48, 143, 96, .06)
+        !important;
+
+    color:
+        #517764
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-active-summary-v3 strong {
+    color:
+        #226c49
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-active-summary-v3
+> span:last-child {
+    color:
+        #648174
+        !important;
+}
+
+
+/* ==========================================================
+   GROUPS
+   ========================================================== */
+
+body.page-subjects-v3
+.subjects-group-v3 {
+    border-color:
+        #d8e1e7
+        !important;
+
+    background:
+        rgba(248, 250, 251, .62)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .94)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-group-heading-v3 {
+    border-bottom-color:
+        #dce4ea
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, .76),
+            rgba(248, 250, 251, .38)
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-group-heading-v3
+> div
+> span {
+    color:
+        #2b7b57
+        !important;
+
+    letter-spacing:
+        .09em
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-group-heading-v3 h3 {
+    color:
+        #263b4b
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-group-count-v3 {
+    border-color:
+        #cad8e2
+        !important;
+
+    background:
+        #f0f5f8
+        !important;
+
+    color:
+        #647a8c
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+/* ==========================================================
+   SUBJECT CARD
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-card-v3 {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--subject-color) 15%,
+            #d1dce4
+        )
+        !important;
+
+    background:
+        radial-gradient(
+            440px 190px
+            at 0% 0%,
+            color-mix(
+                in srgb,
+                var(--subject-color) 7%,
+                transparent
+            ),
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    box-shadow:
+        0 13px 30px
+        rgba(34, 52, 68, .075),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-card-v3:hover {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--subject-color) 30%,
+            #aebfcb
+        )
+        !important;
+
+    background:
+        radial-gradient(
+            440px 190px
+            at 0% 0%,
+            color-mix(
+                in srgb,
+                var(--subject-color) 10%,
+                transparent
+            ),
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f5f9fb
+        )
+        !important;
+
+    box-shadow:
+        0 18px 38px
+        rgba(34, 52, 68, .10),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-card-accent-v3 {
+    background:
+        var(--subject-color)
+        !important;
+
+    box-shadow:
+        0 0 16px
+        color-mix(
+            in srgb,
+            var(--subject-color) 28%,
+            transparent
+        )
+        !important;
+}
+
+
+/* ==========================================================
+   CARD TOP
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-code-v3 {
+    color:
+        #496276
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-code-v3 i {
+    background:
+        var(--subject-color)
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        color-mix(
+            in srgb,
+            var(--subject-color) 9%,
+            transparent
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-code-v3 span {
+    color:
+        color-mix(
+            in srgb,
+            var(--subject-color) 56%,
+            #294254
+        )
+        !important;
+}
+
+
+/* ==========================================================
+   ESTADOS
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-state-v3 {
+    border-color:
+        #d0dbe3
+        !important;
+
+    background:
+        #f4f7f9
+        !important;
+
+    color:
+        #6d8192
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-state-active-v3 {
+    border-color:
+        rgba(46, 141, 94, .24)
+        !important;
+
+    background:
+        rgba(48, 144, 97, .075)
+        !important;
+
+    color:
+        #25734f
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-state-inactive-v3 {
+    border-color:
+        #d2dbe2
+        !important;
+
+    background:
+        #f0f3f5
+        !important;
+
+    color:
+        #718291
+        !important;
+}
+
+
+/* ==========================================================
+   CARD TITLE
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-card-title-v3 h4 {
+    color:
+        #203442
+        !important;
+
+    text-shadow:
+        0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-color-preview-v3 {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--subject-color) 58%,
+            #ffffff
+        )
+        !important;
+
+    background:
+        var(--subject-color)
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        color-mix(
+            in srgb,
+            var(--subject-color) 8%,
+            transparent
+        ),
+        0 4px 10px
+        color-mix(
+            in srgb,
+            var(--subject-color) 16%,
+            transparent
+        )
+        !important;
+}
+
+
+/* ==========================================================
+   CARD DATA
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-card-data-v3
+> div {
+    border-color:
+        #dbe3e9
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fafcfd,
+            #f4f7f9
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-data-icon-v3 {
+    border-color:
+        color-mix(
+            in srgb,
+            var(--subject-color) 14%,
+            #c9d6df
+        )
+        !important;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--subject-color) 5%,
+            #f1f5f8
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-data-icon-v3 svg {
+    stroke:
+        color-mix(
+            in srgb,
+            var(--subject-color) 43%,
+            #507087
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-card-data-v3 span {
+    color:
+        #76899a
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-card-data-v3 strong {
+    color:
+        #314858
+        !important;
+}
+
+
+/* ==========================================================
+   CARD FOOTER
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-card-footer-v3 {
+    border-top-color:
+        #dce4e9
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-open-v3,
+
+body.page-subjects-v3
+.subject-edit-v3,
+
+body.page-subjects-v3
+.subject-state-action-v3 {
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .92)
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-open-v3 {
+    border-color:
+        #bed1df
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eef6fb,
+            #e5f0f7
+        )
+        !important;
+
+    color:
+        #32678f
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-open-v3:hover {
+    border-color:
+        #a9c2d4
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #e9f4fa,
+            #dceaf4
+        )
+        !important;
+
+    color:
+        #235879
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-edit-v3 {
+    border-color:
+        #cbd7e0
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f4f7f9
+        )
+        !important;
+
+    color:
+        #5a7183
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-edit-v3:hover {
+    border-color:
+        #b6c8d5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #3d5d74
+        !important;
+}
+
+
+/* Activa -> boton para desactivar */
+
+body.page-subjects-v3
+.subject-card-v3:not(.subject-card-inactive-v3)
+.subject-state-action-v3 {
+    border-color:
+        rgba(173, 126, 55, .22)
+        !important;
+
+    background:
+        rgba(181, 132, 57, .065)
+        !important;
+
+    color:
+        #88642f
+        !important;
+}
+
+
+/* Inactiva -> boton para activar */
+
+body.page-subjects-v3
+.subject-card-inactive-v3
+.subject-state-action-v3 {
+    border-color:
+        rgba(45, 138, 91, .24)
+        !important;
+
+    background:
+        rgba(48, 143, 96, .07)
+        !important;
+
+    color:
+        #28754f
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-open-v3 svg,
+
+body.page-subjects-v3
+.subject-edit-v3 svg {
+    stroke:
+        currentColor
+        !important;
+}
+
+
+/* ==========================================================
+   INACTIVE CARD
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-card-inactive-v3 {
+    border-color:
+        #d2dbe2
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f6f8f9,
+            #eef2f4
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-card-inactive-v3
+.subject-card-title-v3 h4 {
+    color:
+        #536879
+        !important;
+}
+
+
+body.page-subjects-v3
+.subject-card-inactive-v3
+.subject-code-v3 span {
+    color:
+        #7c8e9c
+        !important;
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+   ========================================================== */
+
+body.page-subjects-v3
+.subjects-empty-v3 {
+    border-color:
+        #d3dde5
+        !important;
+
+    background:
+        radial-gradient(
+            500px 180px
+            at 50% 0%,
+            rgba(65, 129, 182, .045),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f4f7f9
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-empty-icon-v3 {
+    border-color:
+        #c4d4df
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1f6fa,
+            #e7f0f6
+        )
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-empty-icon-v3 svg {
+    stroke:
+        #4e7898
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-empty-v3 strong {
+    color:
+        #2f4555
+        !important;
+}
+
+
+body.page-subjects-v3
+.subjects-empty-v3 p {
+    color:
+        #6f8394
+        !important;
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+body.page-subjects-v3
+.subject-open-v3:focus-visible,
+
+body.page-subjects-v3
+.subject-edit-v3:focus-visible,
+
+body.page-subjects-v3
+.subject-state-action-v3:focus-visible,
+
+body.page-subjects-v3
+.composer-save-v3:focus-visible,
+
+body.page-subjects-v3
+.composer-cancel-v3:focus-visible {
+    outline:
+        2px solid
+        #5d94c2
+        !important;
+
+    outline-offset:
+        3px
+        !important;
+}
+
+
+/* ==========================================================
+   NOTIFICATIONS
+   ========================================================== */
+
+body.page-subjects-v3
+.notification-popover-v3 {
+    border-color:
+        #d1dce5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 24px 60px
+        rgba(31, 48, 63, .18)
+        !important;
+}
+
+
+body.page-subjects-v3
+.notification-popover-head-v3,
+
+body.page-subjects-v3
+.notification-popover-footer-v3 {
+    border-color:
+        #e3e8ed
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-subjects-v3
+.notification-popover-head-v3 strong,
+
+body.page-subjects-v3
+.notification-item-copy-v3 strong,
+
+body.page-subjects-v3
+.notification-empty-v3 strong {
+    color:
+        #304353
+        !important;
+}
+
+
+body.page-subjects-v3
+.notification-item-copy-v3
+> span,
+
+body.page-subjects-v3
+.notification-empty-v3 span {
+    color:
+        #718495
+        !important;
+}
+
+
+body.page-subjects-v3
+.notification-item-v3 {
+    border-color:
+        #e4e9ed
+        !important;
+
+    background:
+        #ffffff
+        !important;
+}
+
+
+body.page-subjects-v3
+.notification-item-v3:hover,
+
+body.page-subjects-v3
+.notification-item-v3.is-unread {
+    background:
+        #f5f9fc
+        !important;
+}
+
+
+/* ==========================================================
+   QUICK ADD
+   ========================================================== */
+
+body.page-subjects-v3
+.quick-add-dialog-v3 {
+    border-color:
+        #d0dbe4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 35px 90px
+        rgba(26, 43, 58, .25)
+        !important;
+}
+
+
+body.page-subjects-v3
+.quick-add-header-v3,
+
+body.page-subjects-v3
+.quick-add-footer-v3 {
+    border-color:
+        #e1e7ec
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-subjects-v3
+.quick-add-heading-v3 strong,
+
+body.page-subjects-v3
+.quick-add-field-v3 label {
+    color:
+        #304252
+        !important;
+}
+
+
+body.page-subjects-v3
+.quick-add-field-v3 input,
+
+body.page-subjects-v3
+.quick-add-field-v3 select,
+
+body.page-subjects-v3
+.quick-add-field-v3 textarea {
+    border-color:
+        #cfdbe4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #263846
+        !important;
+
+    color-scheme:
+        light;
+}
+
+
+body.page-subjects-v3
+.quick-add-cancel-v3 {
+    border-color:
+        #ccd8e1
+        !important;
+
+    background:
+        #f6f8fa
+        !important;
+
+    color:
+        #65798a
+        !important;
+}
+
+
+body.page-subjects-v3
+.quick-add-save-v3 {
+    border-color:
+        rgba(47, 139, 96, .36)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #39906f,
+            #287456
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+}
+
+
+/* ==========================================================
+   COMMAND PALETTE
+   ========================================================== */
+
+body.page-subjects-v3
+.command-dialog-v3 {
+    border-color:
+        #d0dbe4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 35px 90px
+        rgba(26, 43, 58, .25)
+        !important;
+}
+
+
+body.page-subjects-v3
+.command-input-v3 {
+    color:
+        #283a49
+        !important;
+}
+
+
+body.page-subjects-v3
+.command-context-v3,
+
+body.page-subjects-v3
+.command-footer-v3 {
+    border-color:
+        #e2e8ed
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+
+    color:
+        #76899a
+        !important;
+}
+
+
+body.page-subjects-v3
+.command-item-v3:hover {
+    background:
+        #f1f6fa
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * MAT-L1.1 - PREMIUM FINISH
+ * ==========================================================
+ *
+ * Refinamiento final de Materias Light.
+ *
+ * Objetivos:
+ *
+ * - reducir apariencia de panel administrativo
+ * - cards mas editoriales
+ * - color de materia como acento, no como marco
+ * - metadatos mas limpios
+ * - acciones con jerarquia real
+ * - composer graphite mas sofisticado
+ * - catalogo con mayor profundidad
+ *
+ * Sin cambios de DOM, PHP, JS o layout.
+ * ==========================================================
+ */
+
+
+@media (min-width: 681px) {
+
+
+    /* ======================================================
+       CANVAS
+       ====================================================== */
+
+    body.page-subjects-v3 {
+        background:
+            radial-gradient(
+                1100px 560px
+                at 10% -10%,
+                rgba(62, 122, 176, .088),
+                transparent 66%
+            ),
+            radial-gradient(
+                820px 450px
+                at 90% 2%,
+                rgba(48, 139, 94, .050),
+                transparent 70%
+            ),
+            linear-gradient(
+                180deg,
+                #f9fafb 0%,
+                #f1f4f6 100%
+            )
+            !important;
+    }
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-hero-v3 h1 {
+        color:
+            #182835
+            !important;
+
+        font-weight:
+            840
+            !important;
+
+        letter-spacing:
+            -.055em
+            !important;
+
+        text-shadow:
+            0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-hero-v3
+    > div:first-child
+    > p {
+        color:
+            #566d80
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-total-v3 {
+        border-color:
+            #bfd0dd
+            !important;
+
+        background:
+            radial-gradient(
+                220px 100px
+                at 100% 0%,
+                rgba(64, 128, 181, .09),
+                transparent 69%
+            ),
+            linear-gradient(
+                145deg,
+                #ffffff,
+                #f3f7fa
+            )
+            !important;
+
+        box-shadow:
+            0 8px 20px
+            rgba(35, 54, 69, .065),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    /* ======================================================
+       METRICAS
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-metrics-v3 article {
+        border-color:
+            rgba(129, 154, 174, .22)
+            !important;
+
+        background:
+            radial-gradient(
+                370px 170px
+                at 100% 0%,
+                rgba(75, 143, 195, .105),
+                transparent 68%
+            ),
+            radial-gradient(
+                270px 150px
+                at 0% 100%,
+                rgba(48, 139, 94, .030),
+                transparent 70%
+            ),
+            linear-gradient(
+                145deg,
+                #192833,
+                #111b24
+            )
+            !important;
+
+        box-shadow:
+            0 15px 34px
+            rgba(25, 41, 55, .16),
+            inset 0 1px 0
+            rgba(255, 255, 255, .04),
+            inset 0 -1px 0
+            rgba(0, 0, 0, .14)
+            !important;
+
+        border-radius:
+            14px
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-metric-icon-v3 {
+        border-color:
+            rgba(111, 173, 217, .26)
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(98, 160, 209, .15),
+                rgba(98, 160, 209, .055)
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .04)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-metrics-v3 span {
+        color:
+            #afbfcc
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-metrics-v3 strong {
+        color:
+            #f5f8fa
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-metrics-v3 small {
+        color:
+            #8ca0b0
+            !important;
+    }
+
+
+    /* ======================================================
+       COMPOSER REAL
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-composer-inner-v3 {
+        border-color:
+            rgba(130, 155, 175, .22)
+            !important;
+
+        background:
+            radial-gradient(
+                500px 230px
+                at 0% 0%,
+                rgba(52, 150, 102, .075),
+                transparent 68%
+            ),
+            radial-gradient(
+                420px 220px
+                at 100% 0%,
+                rgba(68, 137, 190, .085),
+                transparent 70%
+            ),
+            linear-gradient(
+                150deg,
+                #172731,
+                #0d1821
+            )
+            !important;
+
+        border-radius:
+            18px
+            !important;
+
+        box-shadow:
+            0 24px 52px
+            rgba(23, 39, 52, .22),
+            0 4px 12px
+            rgba(23, 39, 52, .08),
+            inset 0 1px 0
+            rgba(255, 255, 255, .035)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-composer-heading-v3 {
+        border-bottom-color:
+            rgba(158, 179, 196, .11)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, .020),
+                transparent
+            )
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .composer-kicker-v3 {
+        color:
+            #71cea2
+            !important;
+
+        letter-spacing:
+            .115em
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-composer-heading-v3 h2 {
+        color:
+            #f3f6f8
+            !important;
+
+        font-size:
+            19px
+            !important;
+
+        font-weight:
+            790
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-composer-heading-v3 p {
+        color:
+            #91a6b6
+            !important;
+    }
+
+
+    /* ======================================================
+       FORM
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-field-v3 label {
+        color:
+            #d4dee5
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-field-v3 label small {
+        color:
+            #748b9d
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-field-v3 input,
+
+    body.page-subjects-v3
+    .subjects-field-v3 select {
+        border-color:
+            rgba(154, 176, 194, .16)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #0d1922,
+                #0a151d
+            )
+            !important;
+
+        color:
+            #e7edf1
+            !important;
+
+        box-shadow:
+            inset 0 1px 3px
+            rgba(0, 0, 0, .25),
+            inset 0 1px 0
+            rgba(255, 255, 255, .012)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-field-v3 input:hover,
+
+    body.page-subjects-v3
+    .subjects-field-v3 select:hover {
+        border-color:
+            rgba(135, 171, 202, .25)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-field-v3 input:focus,
+
+    body.page-subjects-v3
+    .subjects-field-v3 select:focus {
+        border-color:
+            rgba(105, 167, 217, .55)
+            !important;
+
+        box-shadow:
+            0 0 0 3px
+            rgba(83, 148, 202, .105),
+            inset 0 1px 2px
+            rgba(0, 0, 0, .15)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-color-field-v3 {
+        border-color:
+            rgba(153, 176, 194, .12)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, .025),
+                rgba(255, 255, 255, .010)
+            )
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-color-field-v3 span {
+        color:
+            #91a6b6
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .composer-save-v3 {
+        border-color:
+            rgba(66, 164, 113, .44)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #3d9674,
+                #287255
+            )
+            !important;
+
+        box-shadow:
+            0 10px 25px
+            rgba(24, 101, 71, .28),
+            inset 0 1px 0
+            rgba(255, 255, 255, .13)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .composer-save-v3:hover {
+        background:
+            linear-gradient(
+                180deg,
+                #43a07b,
+                #2b7b59
+            )
+            !important;
+
+        box-shadow:
+            0 13px 29px
+            rgba(24, 101, 71, .31)
+            !important;
+    }
+
+
+    /* ======================================================
+       CATALOGO PRINCIPAL
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-content-v3 {
+        border-color:
+            #c5d3dd
+            !important;
+
+        background:
+            radial-gradient(
+                920px 290px
+                at 100% 0%,
+                rgba(63, 126, 180, .055),
+                transparent 69%
+            ),
+            linear-gradient(
+                145deg,
+                rgba(255, 255, 255, .96),
+                rgba(246, 249, 251, .96)
+            )
+            !important;
+
+        border-radius:
+            18px
+            !important;
+
+        box-shadow:
+            0 20px 46px
+            rgba(34, 53, 68, .085),
+            0 2px 8px
+            rgba(34, 53, 68, .025),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 {
+        border-bottom-color:
+            #d9e2e8
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(251, 252, 253, .96),
+                rgba(247, 249, 251, .65)
+            )
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 h2 {
+        color:
+            #1d3242
+            !important;
+
+        font-size:
+            22px
+            !important;
+
+        font-weight:
+            820
+            !important;
+
+        letter-spacing:
+            -.035em
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 p {
+        color:
+            #607587
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-active-summary-v3 {
+        border-color:
+            rgba(43, 134, 88, .24)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(50, 145, 98, .085),
+                rgba(50, 145, 98, .045)
+            )
+            !important;
+
+        color:
+            #527565
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .8)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-active-summary-v3 strong {
+        color:
+            #216b48
+            !important;
+    }
+
+
+    /* ======================================================
+       CUATRIMESTRES
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-group-v3 {
+        border-color:
+            #d4dee5
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(250, 252, 253, .92),
+                rgba(246, 249, 250, .76)
+            )
+            !important;
+
+        border-radius:
+            16px
+            !important;
+
+        box-shadow:
+            0 8px 20px
+            rgba(35, 53, 68, .035),
+            inset 0 1px 0
+            rgba(255, 255, 255, .92)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-group-heading-v3 {
+        border-bottom-color:
+            #dbe3e9
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, .80),
+                rgba(249, 251, 252, .55)
+            )
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-group-heading-v3
+    > div
+    > span {
+        color:
+            #267653
+            !important;
+
+        letter-spacing:
+            .115em
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-group-heading-v3 h3 {
+        color:
+            #203646
+            !important;
+
+        font-size:
+            16px
+            !important;
+
+        font-weight:
+            790
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-group-count-v3 {
+        border-color:
+            #c6d5e0
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #f6f9fb,
+                #edf3f7
+            )
+            !important;
+
+        color:
+            #637a8d
+            !important;
+    }
+
+
+    /* ======================================================
+       TARJETA — CAMBIO PRINCIPAL
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-card-v3 {
+        border-color:
+            #d1dce4
+            !important;
+
+        background:
+            radial-gradient(
+                440px 180px
+                at 0% 0%,
+                color-mix(
+                    in srgb,
+                    var(--subject-color) 5%,
+                    transparent
+                ),
+                transparent 66%
+            ),
+            linear-gradient(
+                145deg,
+                #ffffff,
+                #f8fafb
+            )
+            !important;
+
+        border-radius:
+            15px
+            !important;
+
+        box-shadow:
+            0 10px 24px
+            rgba(35, 53, 68, .060),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-card-v3:hover {
+        border-color:
+            color-mix(
+                in srgb,
+                var(--subject-color) 22%,
+                #bdcbd5
+            )
+            !important;
+
+        background:
+            radial-gradient(
+                460px 190px
+                at 0% 0%,
+                color-mix(
+                    in srgb,
+                    var(--subject-color) 8%,
+                    transparent
+                ),
+                transparent 67%
+            ),
+            linear-gradient(
+                145deg,
+                #ffffff,
+                #f6f9fb
+            )
+            !important;
+
+        box-shadow:
+            0 16px 34px
+            rgba(35, 53, 68, .09),
+            0 0 0 1px
+            color-mix(
+                in srgb,
+                var(--subject-color) 6%,
+                transparent
+            ),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    /* El color deja de dominar todo el marco */
+
+    body.page-subjects-v3
+    .subject-card-accent-v3 {
+        background:
+            linear-gradient(
+                90deg,
+                var(--subject-color),
+                color-mix(
+                    in srgb,
+                    var(--subject-color) 58%,
+                    transparent
+                ),
+                transparent
+            )
+            !important;
+
+        box-shadow:
+            0 2px 12px
+            color-mix(
+                in srgb,
+                var(--subject-color) 17%,
+                transparent
+            )
+            !important;
+    }
+
+
+    /* ======================================================
+       CODIGO / ESTADO
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-code-v3 {
+        color:
+            #526a7c
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-code-v3 i {
+        background:
+            var(--subject-color)
+            !important;
+
+        box-shadow:
+            0 0 0 4px
+            color-mix(
+                in srgb,
+                var(--subject-color) 8%,
+                transparent
+            )
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-code-v3 span {
+        color:
+            color-mix(
+                in srgb,
+                var(--subject-color) 50%,
+                #355064
+            )
+            !important;
+
+        font-weight:
+            720
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-state-v3 {
+        border-color:
+            #d1dbe3
+            !important;
+
+        background:
+            #f3f6f8
+            !important;
+
+        color:
+            #6b7f90
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-state-active-v3 {
+        border-color:
+            rgba(43, 137, 90, .22)
+            !important;
+
+        background:
+            rgba(49, 143, 96, .075)
+            !important;
+
+        color:
+            #226d49
+            !important;
+    }
+
+
+    /* ======================================================
+       TITULO
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-card-title-v3 h4 {
+        color:
+            #1f3342
+            !important;
+
+        font-size:
+            17px
+            !important;
+
+        font-weight:
+            790
+            !important;
+
+        letter-spacing:
+            -.025em
+            !important;
+
+        text-shadow:
+            0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-color-preview-v3 {
+        border-color:
+            #ffffff
+            !important;
+
+        background:
+            var(--subject-color)
+            !important;
+
+        box-shadow:
+            0 0 0 3px
+            color-mix(
+                in srgb,
+                var(--subject-color) 10%,
+                transparent
+            ),
+            0 3px 10px
+            color-mix(
+                in srgb,
+                var(--subject-color) 20%,
+                transparent
+            )
+            !important;
+    }
+
+
+    /* ======================================================
+       METADATOS — QUITAR EFECTO DE CAJAS
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-card-data-v3
+    > div {
+        border-color:
+            transparent
+            !important;
+
+        background:
+            transparent
+            !important;
+
+        box-shadow:
+            none
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-data-icon-v3 {
+        border-color:
+            color-mix(
+                in srgb,
+                var(--subject-color) 13%,
+                #d0dbe3
+            )
+            !important;
+
+        background:
+            color-mix(
+                in srgb,
+                var(--subject-color) 5%,
+                #f2f6f8
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .9)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-data-icon-v3 svg {
+        stroke:
+            color-mix(
+                in srgb,
+                var(--subject-color) 40%,
+                #56758d
+            )
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-card-data-v3 span {
+        color:
+            #8192a1
+            !important;
+
+        font-weight:
+            650
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-card-data-v3 strong {
+        color:
+            #334a5b
+            !important;
+
+        font-weight:
+            690
+            !important;
+    }
+
+
+    /* ======================================================
+       FOOTER
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-card-footer-v3 {
+        border-top-color:
+            #dce4e9
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                transparent,
+                rgba(246, 249, 251, .38)
+            )
+            !important;
+    }
+
+
+    /*
+     * Abrir:
+     * accion primaria de navegacion.
+     */
+
+    body.page-subjects-v3
+    .subject-open-v3 {
+        border-color:
+            color-mix(
+                in srgb,
+                var(--subject-color) 22%,
+                #b9cbd8
+            )
+            !important;
+
+        background:
+            color-mix(
+                in srgb,
+                var(--subject-color) 6%,
+                #edf5fa
+            )
+            !important;
+
+        color:
+            color-mix(
+                in srgb,
+                var(--subject-color) 43%,
+                #285d83
+            )
+            !important;
+
+        font-weight:
+            720
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .95)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-open-v3:hover {
+        border-color:
+            color-mix(
+                in srgb,
+                var(--subject-color) 35%,
+                #a9bfce
+            )
+            !important;
+
+        background:
+            color-mix(
+                in srgb,
+                var(--subject-color) 9%,
+                #e8f2f8
+            )
+            !important;
+    }
+
+
+    /*
+     * Editar:
+     * secundaria neutral.
+     */
+
+    body.page-subjects-v3
+    .subject-edit-v3 {
+        border-color:
+            #cbd7e0
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #f4f7f9
+            )
+            !important;
+
+        color:
+            #5b7183
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-edit-v3:hover {
+        border-color:
+            #aebfcb
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #38586f
+            !important;
+    }
+
+
+    /*
+     * Desactivar:
+     * deliberadamente menos prominente.
+     */
+
+    body.page-subjects-v3
+    .subject-card-v3:not(.subject-card-inactive-v3)
+    .subject-state-action-v3 {
+        border-color:
+            rgba(171, 124, 54, .21)
+            !important;
+
+        background:
+            rgba(177, 128, 55, .045)
+            !important;
+
+        color:
+            #85642f
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .82)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-card-v3:not(.subject-card-inactive-v3)
+    .subject-state-action-v3:hover {
+        border-color:
+            rgba(171, 124, 54, .34)
+            !important;
+
+        background:
+            rgba(177, 128, 55, .075)
+            !important;
+
+        color:
+            #755323
+            !important;
+    }
+
+
+    /* ======================================================
+       INACTIVAS
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-card-inactive-v3 {
+        border-color:
+            #d5dde3
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                #f6f8f9,
+                #f0f3f5
+            )
+            !important;
+
+        box-shadow:
+            0 7px 18px
+            rgba(35, 53, 68, .035),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-card-inactive-v3
+    .subject-card-title-v3 h4 {
+        color:
+            #566b7b
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subject-card-inactive-v3
+    .subject-state-action-v3 {
+        border-color:
+            rgba(45, 138, 91, .25)
+            !important;
+
+        background:
+            rgba(48, 143, 96, .065)
+            !important;
+
+        color:
+            #26734e
+            !important;
+    }
+
+}
+
+
+/*
+ * ==========================================================
+ * MAT-L1.2 - RADIUS & CONTAINER FINISH
+ * ==========================================================
+ *
+ * Consolidacion geometrica desktop.
+ *
+ * Problema corregido:
+ *
+ * encabezados internos con fondo propio ocultaban
+ * visualmente el border-radius de los contenedores.
+ *
+ * Sin cambios de layout.
+ * Sin cambios PHP / JS / DB.
+ * ==========================================================
+ */
+
+
+@media (min-width: 681px) {
+
+
+    /* ======================================================
+       CATALOGO PRINCIPAL
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-content-v3 {
+        border-radius:
+            22px
+            !important;
+
+        border-color:
+            #c4d3de
+            !important;
+
+        box-shadow:
+            0 22px 48px
+            rgba(34, 53, 68, .09),
+            0 3px 10px
+            rgba(34, 53, 68, .028),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    /*
+     * Esta es la correccion principal.
+     *
+     * El heading posee su propio background.
+     * Si sus esquinas quedan rectas, visualmente
+     * tapa el radio del contenedor exterior.
+     */
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 {
+        border-radius:
+            21px 21px 0 0
+            !important;
+
+        background:
+            radial-gradient(
+                620px 180px
+                at 100% 0%,
+                rgba(64, 126, 180, .040),
+                transparent 70%
+            ),
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #f7fafb
+            )
+            !important;
+    }
+
+
+    /* ======================================================
+       COMPOSER
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-composer-inner-v3 {
+        border-radius:
+            21px
+            !important;
+
+        border-color:
+            rgba(132, 158, 178, .22)
+            !important;
+
+        box-shadow:
+            0 26px 56px
+            rgba(22, 38, 51, .23),
+            0 5px 14px
+            rgba(22, 38, 51, .075),
+            inset 0 1px 0
+            rgba(255, 255, 255, .035)
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-composer-heading-v3 {
+        border-radius:
+            20px 20px 0 0
+            !important;
+    }
+
+
+    /* ======================================================
+       METRICAS
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-metrics-v3 article {
+        border-radius:
+            16px
+            !important;
+    }
+
+
+    /* ======================================================
+       CUATRIMESTRES
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-group-v3 {
+        border-radius:
+            18px
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-group-heading-v3 {
+        border-radius:
+            17px 17px 0 0
+            !important;
+    }
+
+
+    /* ======================================================
+       TARJETAS
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-card-v3 {
+        border-radius:
+            17px
+            !important;
+    }
+
+
+    /*
+     * La linea cromatica superior tambien debe respetar
+     * la curva de la tarjeta.
+     */
+
+    body.page-subjects-v3
+    .subject-card-accent-v3 {
+        border-radius:
+            17px 17px 0 0
+            !important;
+    }
+
+
+    /* ======================================================
+       TOTAL / RESUMEN
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subjects-total-v3 {
+        border-radius:
+            15px
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .subjects-active-summary-v3 {
+        border-radius:
+            999px
+            !important;
+    }
+
+
+    /* ======================================================
+       BOTONES
+       ====================================================== */
+
+    body.page-subjects-v3
+    .subject-open-v3,
+
+    body.page-subjects-v3
+    .subject-edit-v3,
+
+    body.page-subjects-v3
+    .subject-state-action-v3 {
+        border-radius:
+            9px
+            !important;
+    }
+
+
+    body.page-subjects-v3
+    .composer-save-v3 {
+        border-radius:
+            11px
+            !important;
+    }
+
+}
+
+
+/*
+ * ==========================================================
+ * MAT-L1.3 - PREMIUM SPACING & SOFT CONTAINERS
+ * ==========================================================
+ *
+ * Objetivo:
+ * dar mas aire, separar mejor encabezado/catalogo
+ * y evitar la sensacion de plancha cuadrada.
+ *
+ * Solo ajustes visuales.
+ * Sin cambios de layout estructural.
+ * ==========================================================
+ */
+
+@media (min-width: 681px) {
+
+    body.page-subjects-v3
+    .subjects-content-v3 {
+        border-radius: 26px !important;
+        overflow: hidden !important;
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #fbfdfe 100%
+            ) !important;
+        box-shadow:
+            0 26px 60px rgba(35, 54, 72, .08),
+            0 8px 22px rgba(35, 54, 72, .05),
+            inset 0 1px 0 #ffffff !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 {
+        border-radius: 26px 26px 0 0 !important;
+        padding: 26px 28px 22px !important;
+        margin: 0 !important;
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #f8fbfd 100%
+            ) !important;
+        border-bottom: 1px solid #e8eef4 !important;
+        box-shadow:
+            inset 0 -1px 0 rgba(255,255,255,.85) !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 h2,
+    body.page-subjects-v3
+    .subjects-content-heading-v3 h3 {
+        margin-bottom: 8px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-content-heading-v3 p {
+        max-width: 760px !important;
+        line-height: 1.6 !important;
+        color: #698095 !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-total-v3,
+    body.page-subjects-v3
+    .subjects-active-summary-v3 {
+        align-self: center !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-group-v3 {
+        margin: 18px 18px 0 18px !important;
+        border-radius: 22px !important;
+        overflow: hidden !important;
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #fbfcfe 100%
+            ) !important;
+        border: 1px solid #e6edf3 !important;
+        box-shadow:
+            0 10px 24px rgba(49, 72, 91, .05),
+            inset 0 1px 0 rgba(255,255,255,.88) !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-group-v3:first-of-type {
+        margin-top: 20px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-group-heading-v3 {
+        padding: 18px 22px 14px !important;
+        border-radius: 22px 22px 0 0 !important;
+        background:
+            linear-gradient(
+                180deg,
+                #fcfdff 0%,
+                #f7fafc 100%
+            ) !important;
+        border-bottom: 1px solid #edf2f7 !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-group-heading-v3 h3,
+    body.page-subjects-v3
+    .subjects-group-heading-v3 h4 {
+        margin: 0 !important;
+    }
+
+    body.page-subjects-v3
+    .subject-card-v3 {
+        border-radius: 18px !important;
+        box-shadow:
+            0 8px 18px rgba(41, 61, 79, .045),
+            inset 0 1px 0 rgba(255,255,255,.65) !important;
+    }
+
+    body.page-subjects-v3
+    .subject-card-v3 + .subject-card-v3 {
+        margin-top: 0 !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-grid-v3 {
+        padding: 0 4px 4px !important;
+    }
+}
+
+
+/*
+ * ==========================================================
+ * MAT-L1.4 - DARK COMPOSER ROUNDED FINISH
+ * ==========================================================
+ *
+ * Objetivo:
+ * dar una terminacion mas premium al bloque oscuro
+ * "Nueva materia", con bordes mas curvos y mejor recorte.
+ *
+ * Solo ajuste visual.
+ * Sin cambios de layout ni logica.
+ * ==========================================================
+ */
+
+@media (min-width: 681px) {
+
+    body.page-subjects-v3
+    .subjects-composer-v3 {
+        border-radius: 28px !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(93, 123, 153, .18) !important;
+        box-shadow:
+            0 18px 36px rgba(8, 20, 33, .18),
+            0 8px 18px rgba(8, 20, 33, .10),
+            inset 0 1px 0 rgba(255,255,255,.05) !important;
+        background:
+            linear-gradient(
+                180deg,
+                #102132 0%,
+                #0c1b2b 100%
+            ) !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-inner-v3 {
+        border-radius: 28px !important;
+        overflow: hidden !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3::before,
+    body.page-subjects-v3
+    .subjects-composer-inner-v3::before {
+        border-radius: inherit !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3 > *:first-child,
+    body.page-subjects-v3
+    .subjects-composer-inner-v3 > *:first-child {
+        border-top-left-radius: 28px !important;
+        border-top-right-radius: 28px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3 > *:last-child,
+    body.page-subjects-v3
+    .subjects-composer-inner-v3 > *:last-child {
+        border-bottom-left-radius: 28px !important;
+        border-bottom-right-radius: 28px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3 input,
+    body.page-subjects-v3
+    .subjects-composer-v3 select,
+    body.page-subjects-v3
+    .subjects-composer-v3 textarea {
+        border-radius: 14px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3 .subject-color-preview-v3,
+    body.page-subjects-v3
+    .subjects-composer-v3 .subject-color-control-v3,
+    body.page-subjects-v3
+    .subjects-composer-v3 .subject-color-picker-v3 {
+        border-radius: 14px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3 .subject-color-preview-v3 input,
+    body.page-subjects-v3
+    .subjects-composer-v3 .subject-color-control-v3 input,
+    body.page-subjects-v3
+    .subjects-composer-v3 .subject-color-picker-v3 input {
+        border-radius: 10px !important;
+    }
+
+    body.page-subjects-v3
+    .subjects-composer-v3 button,
+    body.page-subjects-v3
+    .subjects-composer-v3 .button,
+    body.page-subjects-v3
+    .subjects-composer-v3 .btn {
+        border-radius: 16px !important;
+    }
+}

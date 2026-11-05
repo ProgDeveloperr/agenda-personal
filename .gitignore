@@ -1,0 +1,29 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime and user data
+**/backups/
+**/logs/
+**/cache/
+**/sessions/
+**/uploads/
+**/storage/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.sql.gz
+*.tar
+*.tar.gz
+*.zip
+
+# Dependencies and development
+vendor/
+node_modules/
+.idea/
+.vscode/
+.DS_Store

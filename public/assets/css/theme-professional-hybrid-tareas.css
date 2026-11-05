@@ -1,0 +1,3758 @@
+/*
+ * ==========================================================
+ * Agenda Personal
+ * Professional Hybrid - Tareas R1
+ * ==========================================================
+ *
+ * LIGHT:
+ * - canvas
+ * - header
+ * - hero
+ * - workspace
+ * - filtros
+ * - series recurrentes
+ *
+ * DARK:
+ * - métricas
+ * - editor
+ * - recurrencia
+ * - task cards
+ *
+ * Sólo capa visual.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   CANVAS
+   ========================================================== */
+
+body.ui-v3.page-tasks-v4 {
+    color-scheme:
+        light;
+
+    background:
+        radial-gradient(
+            950px 500px
+            at 10% -12%,
+            rgba(53, 111, 174, .055),
+            transparent 68%
+        ),
+        linear-gradient(
+            180deg,
+            #f9fafb 0%,
+            #f4f6f8 55%,
+            #eef2f5 100%
+        )
+        !important;
+}
+
+
+body.page-tasks-v4 ::selection {
+    color:
+        #17304c;
+
+    background:
+        rgba(53, 111, 174, .18);
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+body.page-tasks-v4
+.app-header {
+    border-bottom:
+        1px solid
+        rgba(36, 52, 69, .09)
+        !important;
+
+    background:
+        rgba(250, 252, 253, .95)
+        !important;
+
+    box-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .90),
+        0 8px 24px
+        rgba(38, 49, 61, .035)
+        !important;
+
+    backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-brand-mark {
+    border-color:
+        rgba(53, 111, 174, .20)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f6f9fc,
+            #edf3f8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-brand-copy strong {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-brand-copy small {
+    color:
+        #718091
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-nav {
+    border-color:
+        #dbe2e8
+        !important;
+
+    background:
+        rgba(255, 255, 255, .90)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98),
+        0 3px 12px
+        rgba(39, 52, 65, .035)
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-nav a {
+    color:
+        #687889
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-nav a:hover {
+    color:
+        #2b3b4b
+        !important;
+
+    background:
+        #f1f4f7
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-nav a.active {
+    color:
+        #234f7e
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf4fb,
+            #e6eff8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(53, 111, 174, .16)
+        !important;
+}
+
+
+/* Campana */
+
+body.page-tasks-v4
+.notification-bell-v3 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #536a7f
+        !important;
+}
+
+
+/* Nuevo global */
+
+body.page-tasks-v4
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(35, 138, 87, .30)
+        !important;
+
+    background:
+        #f1faf5
+        !important;
+
+    color:
+        #216e49
+        !important;
+}
+
+
+body.page-tasks-v4
+.quick-add-trigger-v3 kbd {
+    border-color:
+        rgba(35, 138, 87, .22)
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #4d715f
+        !important;
+}
+
+
+/* Buscar */
+
+body.page-tasks-v4
+.command-trigger-v3 {
+    border-color:
+        #d3dde5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #52687c
+        !important;
+}
+
+
+body.page-tasks-v4
+.command-trigger-v3 svg {
+    stroke:
+        #60778c
+        !important;
+}
+
+
+body.page-tasks-v4
+.command-trigger-v3 kbd {
+    border-color:
+        #d5dde4
+        !important;
+
+    background:
+        #f0f3f6
+        !important;
+
+    color:
+        #637586
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-header-status {
+    color:
+        #4f6477
+        !important;
+}
+
+
+body.page-tasks-v4
+.status-dot-online {
+    background:
+        #25945d
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 148, 93, .09)
+        !important;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-hero-v4
+.section-kicker {
+    color:
+        #238457
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 h1 {
+    color:
+        #213141
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .68)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 h1 span {
+    color:
+        #60768a
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 p {
+    color:
+        #607487
+        !important;
+}
+
+
+/* Nueva tarea */
+
+body.page-tasks-v4
+.tasks-new-v4 {
+    border-color:
+        rgba(46, 126, 102, .36)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f3faf7,
+            #eaf6f1
+        )
+        !important;
+
+    color:
+        #28745c
+        !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(34, 112, 87, .07),
+        inset 0 1px 0
+        rgba(255, 255, 255, .96)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-new-v4:hover {
+    border-color:
+        rgba(46, 126, 102, .52)
+        !important;
+
+    background:
+        #e6f4ee
+        !important;
+
+    color:
+        #20634e
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS DARK
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article {
+    border-color:
+        rgba(151, 166, 184, .13)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121d2a,
+            #0c151f
+        )
+        !important;
+
+    box-shadow:
+        0 11px 26px
+        rgba(17, 26, 35, .105),
+        inset 0 1px 0
+        rgba(255, 255, 255, .026)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 span {
+    color:
+        #94a8ba
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 strong {
+    color:
+        #f6f9fc
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 small {
+    color:
+        #8196a9
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 article.is-danger {
+    border-color:
+        rgba(227, 97, 106, .24)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #211920,
+            #151218
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 article.is-danger strong {
+    color:
+        #ee858b
+        !important;
+}
+
+
+/* ==========================================================
+   EDITOR DARK
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-editor-v4 {
+    border-color:
+        rgba(151, 166, 184, .14)
+        !important;
+
+    background:
+        linear-gradient(
+            155deg,
+            #121d29,
+            #0a131d
+        )
+        !important;
+
+    box-shadow:
+        0 16px 38px
+        rgba(17, 26, 35, .14),
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4 > header {
+    border-bottom-color:
+        rgba(151, 166, 184, .11)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4
+.section-kicker {
+    color:
+        #5dd98b
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4 > header h2 {
+    color:
+        #f5f8fb
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-close-v4 {
+    color:
+        #9aafc1
+        !important;
+}
+
+
+/* Campos */
+
+body.page-tasks-v4
+.tasks-field-v4 > span {
+    color:
+        #c5d2de
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 > span em {
+    color:
+        #8fa4b7
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 > small {
+    color:
+        #91a6ba
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input,
+
+body.page-tasks-v4
+.tasks-field-v4 select,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea {
+    border-color:
+        rgba(151, 166, 184, .19)
+        !important;
+
+    background:
+        rgba(3, 9, 15, .54)
+        !important;
+
+    color:
+        #f0f5fa
+        !important;
+
+    box-shadow:
+        inset 0 1px 2px
+        rgba(0, 0, 0, .10)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input::placeholder,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea::placeholder {
+    color:
+        #8095a8
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 select option {
+    background:
+        #111b27
+        !important;
+
+    color:
+        #edf3f9
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input:hover,
+
+body.page-tasks-v4
+.tasks-field-v4 select:hover,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea:hover {
+    border-color:
+        rgba(143, 174, 205, .42)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input:focus,
+
+body.page-tasks-v4
+.tasks-field-v4 select:focus,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea:focus {
+    border-color:
+        #75a5ef
+        !important;
+
+    background:
+        rgba(5, 12, 20, .74)
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(87, 148, 255, .14),
+        inset 0 1px 2px
+        rgba(0, 0, 0, .08)
+        !important;
+}
+
+
+/* ==========================================================
+   RECURRENCIA DARK
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-recurrence-v4 {
+    border-color:
+        rgba(91, 142, 188, .22)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(21, 43, 62, .54),
+            rgba(14, 29, 43, .48)
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .018)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-recurrence-v4 > legend {
+    color:
+        #9eb6ca
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-recurrence-help-v4 {
+    color:
+        #91a7ba
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-occurrence-note-v4 {
+    border-color:
+        rgba(104, 163, 219, .23)
+        !important;
+
+    background:
+        rgba(51, 101, 145, .12)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-occurrence-note-v4 strong {
+    color:
+        #abd0ef
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-occurrence-note-v4 span {
+    color:
+        #8fa6ba
+        !important;
+}
+
+
+/* ==========================================================
+   SUBMIT - VERDE PETROLEO
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-submit-v4 {
+    border-color:
+        rgba(46, 126, 102, .82)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3f9a7d 0%,
+            #328268 52%,
+            #296e5b 100%
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(15, 56, 44, .30)
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(34, 112, 87, .22),
+        0 2px 6px
+        rgba(18, 66, 51, .12),
+        inset 0 1px 0
+        rgba(255, 255, 255, .20),
+        inset 0 -1px 0
+        rgba(15, 66, 50, .20)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-submit-v4:hover {
+    border-color:
+        rgba(52, 145, 114, .90)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #49a989 0%,
+            #388e72 52%,
+            #2e7963 100%
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 14px 30px
+        rgba(34, 112, 87, .26),
+        inset 0 1px 0
+        rgba(255, 255, 255, .22)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-submit-v4:focus-visible {
+    outline-color:
+        #56b293
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(52, 145, 114, .16),
+        0 14px 30px
+        rgba(34, 112, 87, .24)
+        !important;
+}
+
+
+/* ==========================================================
+   WORKSPACE LIGHT
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-workspace-v4 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    box-shadow:
+        0 12px 30px
+        rgba(35, 49, 63, .055),
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 {
+    border-bottom-color:
+        #e1e7ec
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4
+.section-kicker {
+    color:
+        #238457
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 h2 {
+    color:
+        #203242
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 small {
+    color:
+        #6b8093
+        !important;
+}
+
+
+/* ==========================================================
+   FILTROS LIGHT
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-filters-v4 select {
+    border-color:
+        #d0dae3
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #263949
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 select option {
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #263949
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 button,
+
+body.page-tasks-v4
+.tasks-filters-v4 a {
+    border-color:
+        #d1dce4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #557088
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 button:hover,
+
+body.page-tasks-v4
+.tasks-filters-v4 a:hover {
+    border-color:
+        #b9c8d4
+        !important;
+
+    background:
+        #f2f6f9
+        !important;
+
+    color:
+        #356fae
+        !important;
+}
+
+
+/* ==========================================================
+   TASK CARDS DARK
+   ========================================================== */
+
+body.page-tasks-v4
+.task-card-v4 {
+    border-color:
+        rgba(151, 166, 184, .14)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #121d2a,
+            #0c151f
+        )
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(17, 26, 35, .10),
+        inset 0 1px 0
+        rgba(255, 255, 255, .024)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4:hover {
+    border-color:
+        rgba(87, 148, 255, .30)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #142131,
+            #0d1722
+        )
+        !important;
+
+    box-shadow:
+        0 14px 32px
+        rgba(17, 26, 35, .14)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-id-v4 {
+    color:
+        #91a6ba
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-main-v4 h3,
+
+body.page-tasks-v4
+.task-main-v4 > strong {
+    color:
+        #f3f7fb
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-main-v4 p,
+
+body.page-tasks-v4
+.task-main-v4 small,
+
+body.page-tasks-v4
+.task-topline-v4 {
+    color:
+        #8da2b6
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-overdue-v4 {
+    color:
+        #ef858c
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-today-v4 {
+    color:
+        #d7a650
+        !important;
+}
+
+
+/* Badges */
+
+body.page-tasks-v4
+.task-priority-v4,
+
+body.page-tasks-v4
+.task-state-v4 {
+    border-color:
+        rgba(151, 166, 184, .13)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .018)
+        !important;
+}
+
+
+/* ==========================================================
+   SERIES RECURRENTES LIGHT
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-series-v4 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    box-shadow:
+        0 10px 26px
+        rgba(35, 49, 63, .05),
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-v4
+.section-kicker {
+    color:
+        #238457
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-v4 h2,
+
+body.page-tasks-v4
+.tasks-series-v4 h3,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 strong {
+    color:
+        #243646
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-header-v4 small,
+
+body.page-tasks-v4
+.tasks-series-top-v4 small,
+
+body.page-tasks-v4
+.tasks-series-empty-v4,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 p,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 small,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 span,
+
+body.page-tasks-v4
+.tasks-series-meta-v4 :is(span, small),
+
+body.page-tasks-v4
+.tasks-series-current-v4 :is(span, small) {
+    color:
+        #6f8396
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-actions-v4 :is(a, button) {
+    border-color:
+        #d1dce4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #557088
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+/* ==========================================================
+   EMPTY STATE LIGHT
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-empty-v4 {
+    color:
+        #6d8194
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-empty-icon-v4 {
+    border-color:
+        rgba(46, 126, 102, .22)
+        !important;
+
+    background:
+        #eef8f3
+        !important;
+
+    color:
+        #2f8069
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-empty-v4 h3 {
+    color:
+        #243646
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-empty-v4 p {
+    color:
+        #718497
+        !important;
+}
+
+
+/* ==========================================================
+   QUICK ADD - LIGHT
+   ========================================================== */
+
+body.page-tasks-v4
+.quick-add-overlay-v3 {
+    background:
+        rgba(36, 46, 57, .36)
+        !important;
+
+    backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+}
+
+
+body.page-tasks-v4
+.quick-add-dialog-v3 {
+    border-color:
+        #d7e0e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 34px 90px
+        rgba(29, 39, 50, .20)
+        !important;
+}
+
+
+body.page-tasks-v4
+.quick-add-header-v3 {
+    border-bottom-color:
+        #e4e9ee
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f7f9fb
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.quick-add-heading-v3 h2 {
+    color:
+        #1c2734
+        !important;
+}
+
+
+body.page-tasks-v4
+.quick-add-heading-v3 p,
+
+body.page-tasks-v4
+.quick-add-field-v3 label,
+
+body.page-tasks-v4
+.quick-add-note-help-v3 {
+    color:
+        #667687
+        !important;
+}
+
+
+body.page-tasks-v4
+.quick-add-field-v3 input,
+
+body.page-tasks-v4
+.quick-add-field-v3 select,
+
+body.page-tasks-v4
+.quick-add-field-v3 textarea {
+    border-color:
+        #d9e1e7
+        !important;
+
+    background:
+        #fafbfd
+        !important;
+
+    color:
+        #202d3a
+        !important;
+}
+
+
+/* ==========================================================
+   MOBILE SHELL
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    body.page-tasks-v4
+    .mobile-bottom-nav-v3 {
+        border-top-color:
+            #dce3e9
+            !important;
+
+        background:
+            rgba(255, 255, 255, .96)
+            !important;
+
+        box-shadow:
+            0 -8px 28px
+            rgba(35, 48, 61, .055)
+            !important;
+    }
+
+
+    body.page-tasks-v4
+    .mobile-bottom-nav-item-v3 {
+        color:
+            #697988
+            !important;
+    }
+
+
+    body.page-tasks-v4
+    .mobile-bottom-nav-item-v3.active,
+
+    body.page-tasks-v4
+    .mobile-bottom-nav-item-v3.is-active,
+
+    body.page-tasks-v4
+    .mobile-bottom-nav-item-v3[aria-current="page"] {
+        color:
+            #356fae
+            !important;
+
+        background:
+            #edf4fb
+            !important;
+    }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+body.page-tasks-v4
+a:focus-visible,
+
+body.page-tasks-v4
+button:focus-visible,
+
+body.page-tasks-v4
+input:focus-visible,
+
+body.page-tasks-v4
+select:focus-visible,
+
+body.page-tasks-v4
+textarea:focus-visible {
+    outline-color:
+        #356fae
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * TAREAS R1.1 - DEEP PROFESSIONAL POLISH
+ * ==========================================================
+ *
+ * Sólo:
+ * - superficies
+ * - contraste
+ * - bordes
+ * - sombras
+ * - jerarquía visual
+ *
+ * Sin cambios estructurales.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   HERO - ACABADO FINO
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-hero-v4 h1 {
+    color:
+        #233444
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .72)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 h1 span {
+    color:
+        #61788e
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 p {
+    color:
+        #5f7488
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4
+.section-kicker {
+    color:
+        #217b51
+        !important;
+
+    letter-spacing:
+        .13em
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS - DARK PREMIUM
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article {
+    border-color:
+        rgba(145, 164, 181, .15)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #13202d 0%,
+            #0d1721 100%
+        )
+        !important;
+
+    box-shadow:
+        0 12px 28px
+        rgba(15, 24, 33, .11),
+        inset 0 1px 0
+        rgba(255, 255, 255, .03)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 span {
+    color:
+        #9aadc0
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 strong {
+    color:
+        #f8fbfe
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 small {
+    color:
+        #8398ab
+        !important;
+}
+
+
+/* ==========================================================
+   EDITOR - PROFUNDIDAD
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-editor-v4 {
+    border-color:
+        rgba(145, 164, 181, .16)
+        !important;
+
+    background:
+        linear-gradient(
+            155deg,
+            #13202c 0%,
+            #0b151f 100%
+        )
+        !important;
+
+    box-shadow:
+        0 18px 42px
+        rgba(15, 24, 33, .15),
+        inset 0 1px 0
+        rgba(255, 255, 255, .028)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4 > header {
+    border-bottom-color:
+        rgba(151, 166, 184, .13)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4 > header h2 {
+    color:
+        #f7fafc
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-close-v4 {
+    color:
+        #9eb2c4
+        !important;
+}
+
+
+/* Campos */
+
+body.page-tasks-v4
+.tasks-field-v4 > span {
+    color:
+        #cbd7e2
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 > span em {
+    color:
+        #90a6b9
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input,
+
+body.page-tasks-v4
+.tasks-field-v4 select,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea {
+    border-color:
+        rgba(151, 166, 184, .22)
+        !important;
+
+    background:
+        rgba(2, 8, 14, .61)
+        !important;
+
+    color:
+        #f1f6fa
+        !important;
+
+    box-shadow:
+        inset 0 1px 3px
+        rgba(0, 0, 0, .12),
+        inset 0 1px 0
+        rgba(255, 255, 255, .012)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input:hover,
+
+body.page-tasks-v4
+.tasks-field-v4 select:hover,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea:hover {
+    border-color:
+        rgba(145, 178, 209, .46)
+        !important;
+
+    background:
+        rgba(3, 10, 17, .70)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input:focus,
+
+body.page-tasks-v4
+.tasks-field-v4 select:focus,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea:focus {
+    border-color:
+        #78a6e6
+        !important;
+
+    background:
+        rgba(4, 11, 19, .78)
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(87, 148, 255, .13),
+        inset 0 1px 2px
+        rgba(0, 0, 0, .10)
+        !important;
+}
+
+
+/* ==========================================================
+   RECURRENCIA
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-recurrence-v4 {
+    border-color:
+        rgba(104, 159, 204, .25)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 47, 67, .62),
+            rgba(13, 31, 45, .53)
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-recurrence-v4 > legend {
+    color:
+        #a7bed1
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-recurrence-help-v4 {
+    color:
+        #91a8ba
+        !important;
+}
+
+
+/* ==========================================================
+   SUBMIT - EMERALD PREMIUM
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-submit-v4 {
+    border-color:
+        rgba(44, 122, 96, .90)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #439e80 0%,
+            #337f67 52%,
+            #286b58 100%
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(11, 49, 38, .32)
+        !important;
+
+    box-shadow:
+        0 11px 26px
+        rgba(30, 102, 79, .24),
+        0 2px 6px
+        rgba(16, 59, 45, .12),
+        inset 0 1px 0
+        rgba(255, 255, 255, .21),
+        inset 0 -1px 0
+        rgba(13, 57, 44, .22)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-submit-v4:hover {
+    border-color:
+        rgba(51, 143, 111, .95)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4daa8a 0%,
+            #398c70 52%,
+            #2d765f 100%
+        )
+        !important;
+
+    box-shadow:
+        0 14px 32px
+        rgba(30, 102, 79, .28),
+        inset 0 1px 0
+        rgba(255, 255, 255, .23)
+        !important;
+}
+
+
+/* ==========================================================
+   WORKSPACE LIGHT - PROFUNDIDAD
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-workspace-v4 {
+    border-color:
+        #ccd8e1
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fafc 100%
+        )
+        !important;
+
+    box-shadow:
+        0 15px 36px
+        rgba(35, 49, 63, .07),
+        inset 0 1px 0
+        rgba(255, 255, 255, 1)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 {
+    border-bottom-color:
+        #dce4ea
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 h2 {
+    color:
+        #213343
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 small {
+    color:
+        #657b8f
+        !important;
+}
+
+
+/* ==========================================================
+   SERIES RECURRENTES
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-series-v4 {
+    border-color:
+        #d3dee6
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .98),
+            rgba(247, 250, 252, .98)
+        )
+        !important;
+
+    box-shadow:
+        0 8px 22px
+        rgba(34, 48, 61, .035),
+        inset 0 1px 0
+        rgba(255, 255, 255, 1)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-v4 h2,
+
+body.page-tasks-v4
+.tasks-series-v4 h3 {
+    color:
+        #203242
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-header-v4 small,
+
+body.page-tasks-v4
+.tasks-series-top-v4 small {
+    color:
+        #6b8092
+        !important;
+}
+
+
+/* Empty state - reemplaza el gris plano */
+
+body.page-tasks-v4
+.tasks-series-empty-v4 {
+    border:
+        1px solid
+        #d8e4de
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fbfa 0%,
+            #f2f7f5 100%
+        )
+        !important;
+
+    color:
+        #5f756c
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .96),
+        0 4px 14px
+        rgba(37, 75, 60, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-empty-v4 strong {
+    color:
+        #2a4138
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-empty-v4 p,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 small,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 span {
+    color:
+        #71867d
+        !important;
+}
+
+
+/* ==========================================================
+   FILTERS
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-filters-v4 select {
+    border-color:
+        #cbd7e0
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f9fbfc
+        )
+        !important;
+
+    color:
+        #2b3e4e
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98),
+        0 2px 7px
+        rgba(35, 49, 62, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 select:hover {
+    border-color:
+        #afc0cd
+        !important;
+}
+
+
+/* Aplicar */
+
+body.page-tasks-v4
+.tasks-filters-v4 button {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eff6fc,
+            #e8f1f9
+        )
+        !important;
+
+    color:
+        #32699d
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .96)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 button:hover {
+    border-color:
+        rgba(53, 111, 174, .40)
+        !important;
+
+    background:
+        #e3eef8
+        !important;
+
+    color:
+        #285d8d
+        !important;
+}
+
+
+/* Links secundarios */
+
+body.page-tasks-v4
+.tasks-filters-v4 a {
+    border-color:
+        #d1dbe3
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #617588
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 a:hover {
+    border-color:
+        #bdcad4
+        !important;
+
+    background:
+        #f4f7f9
+        !important;
+
+    color:
+        #3d586e
+        !important;
+}
+
+
+/* ==========================================================
+   TASK CARD - DARK PREMIUM
+   ========================================================== */
+
+body.page-tasks-v4
+.task-card-v4 {
+    border-color:
+        rgba(151, 166, 184, .15)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #13202d 0%,
+            #0c1621 100%
+        )
+        !important;
+
+    box-shadow:
+        0 12px 28px
+        rgba(16, 25, 34, .12),
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4:hover {
+    border-color:
+        rgba(87, 148, 255, .34)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #152333 0%,
+            #0e1925 100%
+        )
+        !important;
+
+    box-shadow:
+        0 16px 36px
+        rgba(16, 25, 34, .16),
+        inset 0 1px 0
+        rgba(255, 255, 255, .03)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-main-v4 h3,
+
+body.page-tasks-v4
+.task-main-v4 > strong {
+    color:
+        #f7fafc
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-main-v4 p {
+    color:
+        #a0b2c2
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-id-v4,
+
+body.page-tasks-v4
+.task-topline-v4,
+
+body.page-tasks-v4
+.task-main-v4 small {
+    color:
+        #8fa5b9
+        !important;
+}
+
+
+/* ==========================================================
+   TASK ACTIONS
+   ========================================================== */
+
+body.page-tasks-v4
+.task-actions-v4 :is(a, button) {
+    border-color:
+        rgba(151, 166, 184, .15)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .025)
+        !important;
+
+    color:
+        #96aabc
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-actions-v4 :is(a, button):hover {
+    border-color:
+        rgba(87, 148, 255, .30)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .07)
+        !important;
+
+    color:
+        #c4d8ee
+        !important;
+}
+
+
+/* ==========================================================
+   BADGES
+   ========================================================== */
+
+body.page-tasks-v4
+.task-priority-v4,
+
+body.page-tasks-v4
+.task-state-v4 {
+    border-color:
+        rgba(151, 166, 184, .14)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .022)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-priority-v4.priority-alta {
+    background:
+        rgba(221, 156, 56, .12)
+        !important;
+
+    color:
+        #e8b65c
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-priority-v4.priority-urgente {
+    background:
+        rgba(226, 88, 98, .12)
+        !important;
+
+    color:
+        #ef858d
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-state-v4 {
+    background:
+        rgba(106, 134, 162, .10)
+        !important;
+
+    color:
+        #9fb2c5
+        !important;
+}
+
+
+/* ==========================================================
+   TEMPORALIDAD
+   ========================================================== */
+
+body.page-tasks-v4
+.task-overdue-v4 {
+    color:
+        #ed7e86
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-today-v4 {
+    color:
+        #dca954
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * TAREAS R1.2 - SIGNATURE POLISH
+ * ==========================================================
+ *
+ * Objetivo:
+ * llevar Tareas al nivel visual final de Inicio/Hoy/Agenda.
+ *
+ * Sólo:
+ * - color
+ * - superficie
+ * - contraste
+ * - estados
+ * - bordes
+ * - sombras
+ *
+ * Sin geometría.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   BRAND - CONTRASTE PERFECTO SOBRE HEADER LIGHT
+   ========================================================== */
+
+body.page-tasks-v4
+.app-brand-copy strong {
+    color:
+        #1d2a37
+        !important;
+
+    text-shadow:
+        none
+        !important;
+}
+
+
+body.page-tasks-v4
+.app-brand-copy small {
+    color:
+        #6e8091
+        !important;
+}
+
+
+/* ==========================================================
+   HERO - FIRMA EDITORIAL
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-hero-v4 h1 {
+    color:
+        #203141
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .80)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 h1 span {
+    color:
+        #5f768b
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4 p {
+    color:
+        #5b7185
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-hero-v4
+.section-kicker {
+    color:
+        #20794f
+        !important;
+}
+
+
+/* Nueva tarea */
+
+body.page-tasks-v4
+.tasks-new-v4 {
+    border-color:
+        rgba(43, 126, 99, .34)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(248, 253, 251, .98),
+            rgba(235, 247, 241, .98)
+        )
+        !important;
+
+    color:
+        #246b54
+        !important;
+
+    box-shadow:
+        0 7px 20px
+        rgba(31, 91, 70, .075),
+        inset 0 1px 0
+        rgba(255, 255, 255, 1)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-new-v4:hover {
+    border-color:
+        rgba(43, 126, 99, .50)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f2faf6,
+            #e5f4ed
+        )
+        !important;
+
+    color:
+        #195e47
+        !important;
+
+    box-shadow:
+        0 9px 24px
+        rgba(31, 91, 70, .10),
+        inset 0 1px 0
+        rgba(255, 255, 255, 1)
+        !important;
+}
+
+
+/* ==========================================================
+   FEEDBACK DE EXITO / ERROR
+   ========================================================== */
+
+body.page-tasks-v4
+.agenda-message-success-v3 {
+    border-color:
+        #bcdcca
+        !important;
+
+    background:
+        radial-gradient(
+            620px 90px
+            at 0% 50%,
+            rgba(47, 128, 105, .075),
+            transparent 72%
+        ),
+        linear-gradient(
+            180deg,
+            #f5fbf8,
+            #edf8f2
+        )
+        !important;
+
+    color:
+        #286e50
+        !important;
+
+    box-shadow:
+        0 7px 20px
+        rgba(33, 92, 69, .045),
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-tasks-v4
+.agenda-message-success-v3
+.agenda-message-icon-v3 {
+    background:
+        linear-gradient(
+            180deg,
+            #4aa47f,
+            #2f8069
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 3px 9px
+        rgba(34, 112, 87, .18),
+        inset 0 1px 0
+        rgba(255, 255, 255, .18)
+        !important;
+}
+
+
+body.page-tasks-v4
+.agenda-message-error-v3 {
+    border-color:
+        #e9c7cb
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff7f7,
+            #fbedef
+        )
+        !important;
+
+    color:
+        #a2464d
+        !important;
+
+    box-shadow:
+        0 7px 20px
+        rgba(130, 52, 59, .04)
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS - SEMANTICA MUY SUTIL
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article {
+    border-color:
+        rgba(145, 164, 181, .15)
+        !important;
+
+    box-shadow:
+        0 13px 30px
+        rgba(15, 24, 33, .115),
+        inset 0 1px 0
+        rgba(255, 255, 255, .035)
+        !important;
+}
+
+
+/* Abiertas */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article:nth-child(1) {
+    background:
+        radial-gradient(
+            420px 170px
+            at 100% 0%,
+            rgba(70, 130, 190, .085),
+            transparent 64%
+        ),
+        linear-gradient(
+            145deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+/* Vencidas */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article:nth-child(2) {
+    background:
+        radial-gradient(
+            420px 170px
+            at 100% 0%,
+            rgba(201, 82, 92, .06),
+            transparent 64%
+        ),
+        linear-gradient(
+            145deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+/* Para hoy */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article:nth-child(3) {
+    background:
+        radial-gradient(
+            420px 170px
+            at 100% 0%,
+            rgba(203, 153, 67, .06),
+            transparent 64%
+        ),
+        linear-gradient(
+            145deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+/* Completadas */
+
+body.page-tasks-v4
+.tasks-metrics-v4 article:nth-child(4) {
+    background:
+        radial-gradient(
+            420px 170px
+            at 100% 0%,
+            rgba(57, 153, 107, .07),
+            transparent 64%
+        ),
+        linear-gradient(
+            145deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 span {
+    color:
+        #9bafc1
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 strong {
+    color:
+        #f9fbfd
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-metrics-v4 small {
+    color:
+        #8499ac
+        !important;
+}
+
+
+/* ==========================================================
+   EDITOR - DARK SIGNATURE
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-editor-v4 {
+    border-color:
+        rgba(147, 166, 183, .17)
+        !important;
+
+    background:
+        radial-gradient(
+            620px 280px
+            at 0% 0%,
+            rgba(61, 118, 164, .055),
+            transparent 58%
+        ),
+        linear-gradient(
+            155deg,
+            #13202c,
+            #0a141e
+        )
+        !important;
+
+    box-shadow:
+        0 20px 46px
+        rgba(14, 23, 32, .16),
+        inset 0 1px 0
+        rgba(255, 255, 255, .03)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4 > header {
+    border-bottom-color:
+        rgba(151, 166, 184, .14)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4
+.section-kicker {
+    color:
+        #62d693
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-editor-v4 > header h2 {
+    color:
+        #f7fafc
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(0, 0, 0, .18)
+        !important;
+}
+
+
+/* Inputs con profundidad material */
+
+body.page-tasks-v4
+.tasks-field-v4 input,
+
+body.page-tasks-v4
+.tasks-field-v4 select,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea {
+    border-color:
+        rgba(151, 170, 187, .22)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(2, 8, 14, .66),
+            rgba(4, 11, 18, .60)
+        )
+        !important;
+
+    color:
+        #f0f5f9
+        !important;
+
+    box-shadow:
+        inset 0 1px 3px
+        rgba(0, 0, 0, .14),
+        inset 0 1px 0
+        rgba(255, 255, 255, .012)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input:hover,
+
+body.page-tasks-v4
+.tasks-field-v4 select:hover,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea:hover {
+    border-color:
+        rgba(139, 176, 209, .46)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3, 10, 17, .75),
+            rgba(5, 13, 21, .68)
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-field-v4 input:focus,
+
+body.page-tasks-v4
+.tasks-field-v4 select:focus,
+
+body.page-tasks-v4
+.tasks-field-v4 textarea:focus {
+    border-color:
+        #75a3dc
+        !important;
+
+    background:
+        rgba(4, 11, 19, .82)
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(84, 145, 201, .12),
+        inset 0 1px 3px
+        rgba(0, 0, 0, .12)
+        !important;
+}
+
+
+/* ==========================================================
+   REPETICION
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-recurrence-v4 {
+    border-color:
+        rgba(100, 157, 202, .27)
+        !important;
+
+    background:
+        radial-gradient(
+            440px 180px
+            at 100% 0%,
+            rgba(70, 130, 180, .065),
+            transparent 65%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(20, 43, 61, .64),
+            rgba(12, 29, 43, .57)
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .022)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-recurrence-v4 > legend {
+    color:
+        #abc1d3
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-recurrence-help-v4 {
+    color:
+        #93a9ba
+        !important;
+}
+
+
+/* ==========================================================
+   CTA CREAR TAREA
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-submit-v4 {
+    border-color:
+        rgba(43, 123, 95, .92)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #45a383 0%,
+            #348268 53%,
+            #286a57 100%
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(10, 48, 36, .34)
+        !important;
+
+    box-shadow:
+        0 12px 28px
+        rgba(29, 100, 77, .25),
+        0 2px 7px
+        rgba(15, 57, 43, .13),
+        inset 0 1px 0
+        rgba(255, 255, 255, .22),
+        inset 0 -1px 0
+        rgba(12, 55, 42, .22)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-submit-v4:hover {
+    border-color:
+        rgba(48, 145, 110, .96)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #50ae8c 0%,
+            #3a9073 53%,
+            #2e755f 100%
+        )
+        !important;
+
+    box-shadow:
+        0 15px 34px
+        rgba(29, 100, 77, .29),
+        inset 0 1px 0
+        rgba(255, 255, 255, .24)
+        !important;
+}
+
+
+/* ==========================================================
+   WORKSPACE - LIGHT MATERIAL
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-workspace-v4 {
+    border-color:
+        #cad6df
+        !important;
+
+    background:
+        radial-gradient(
+            780px 260px
+            at 100% 0%,
+            rgba(73, 122, 165, .035),
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    box-shadow:
+        0 16px 40px
+        rgba(34, 48, 61, .075),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 {
+    border-bottom-color:
+        #d9e2e9
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 h2 {
+    color:
+        #203242
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-list-header-v4 small {
+    color:
+        #62798d
+        !important;
+}
+
+
+/* ==========================================================
+   SERIES RECURRENTES
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-series-v4 {
+    border-color:
+        #cfdae3
+        !important;
+
+    background:
+        radial-gradient(
+            620px 210px
+            at 100% 0%,
+            rgba(43, 126, 99, .035),
+            transparent 72%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafb
+        )
+        !important;
+
+    box-shadow:
+        0 9px 24px
+        rgba(34, 48, 61, .042),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-empty-v4 {
+    border-color:
+        #d2e1da
+        !important;
+
+    background:
+        radial-gradient(
+            540px 130px
+            at 100% 0%,
+            rgba(43, 126, 99, .075),
+            transparent 66%
+        ),
+        linear-gradient(
+            145deg,
+            #f9fcfa,
+            #f1f7f4
+        )
+        !important;
+
+    color:
+        #60766c
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98),
+        0 5px 16px
+        rgba(37, 76, 60, .03)
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-empty-v4 strong {
+    color:
+        #263d34
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-empty-v4 p,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 span,
+
+body.page-tasks-v4
+.tasks-series-empty-v4 small {
+    color:
+        #6d8278
+        !important;
+}
+
+
+/* Series reales futuras */
+
+body.page-tasks-v4
+.tasks-series-card-v4 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    box-shadow:
+        0 7px 20px
+        rgba(36, 49, 62, .045),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-card-v4 h3 {
+    color:
+        #253746
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-series-meta-v4,
+
+body.page-tasks-v4
+.tasks-series-current-v4 {
+    color:
+        #6c8193
+        !important;
+}
+
+
+/* ==========================================================
+   FILTROS - CONTROL BAR PREMIUM
+   ========================================================== */
+
+body.page-tasks-v4
+.tasks-filters-v4 select {
+    border-color:
+        #c9d5de
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    color:
+        #293d4d
+        !important;
+
+    box-shadow:
+        0 2px 8px
+        rgba(37, 50, 63, .028),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 select:hover {
+    border-color:
+        #afbfcb
+        !important;
+}
+
+
+/* Aplicar */
+
+body.page-tasks-v4
+.tasks-filters-v4 button {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f1f7fc,
+            #e7f0f8
+        )
+        !important;
+
+    color:
+        #306796
+        !important;
+
+    box-shadow:
+        0 3px 9px
+        rgba(46, 86, 124, .04),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-tasks-v4
+.tasks-filters-v4 button:hover {
+    border-color:
+        rgba(53, 111, 174, .40)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf5fb,
+            #deebf5
+        )
+        !important;
+
+    color:
+        #285b86
+        !important;
+}
+
+
+/* ==========================================================
+   TASK CARDS - BASE SIGNATURE
+   ========================================================== */
+
+body.page-tasks-v4
+.task-card-v4 {
+    border-color:
+        rgba(146, 165, 182, .16)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+
+    box-shadow:
+        0 13px 30px
+        rgba(15, 24, 33, .125),
+        inset 0 1px 0
+        rgba(255, 255, 255, .028)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4:hover {
+    border-color:
+        rgba(90, 146, 198, .34)
+        !important;
+
+    box-shadow:
+        0 17px 38px
+        rgba(15, 24, 33, .17),
+        inset 0 1px 0
+        rgba(255, 255, 255, .032)
+        !important;
+}
+
+
+/* ==========================================================
+   PRIORIDAD COMO ILUMINACION, NO COMO NEON
+   ========================================================== */
+
+body.page-tasks-v4
+.task-card-v4.priority-baja {
+    background:
+        radial-gradient(
+            640px 220px
+            at 100% 0%,
+            rgba(104, 132, 153, .045),
+            transparent 66%
+        ),
+        linear-gradient(
+            120deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.priority-media {
+    background:
+        radial-gradient(
+            640px 220px
+            at 100% 0%,
+            rgba(75, 135, 195, .055),
+            transparent 66%
+        ),
+        linear-gradient(
+            120deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.priority-alta {
+    background:
+        radial-gradient(
+            680px 230px
+            at 100% 0%,
+            rgba(204, 151, 63, .065),
+            transparent 67%
+        ),
+        linear-gradient(
+            120deg,
+            #13202d,
+            #0c1621
+        )
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.priority-urgente {
+    border-color:
+        rgba(208, 86, 95, .23)
+        !important;
+
+    background:
+        radial-gradient(
+            720px 250px
+            at 100% 0%,
+            rgba(211, 73, 84, .085),
+            transparent 67%
+        ),
+        linear-gradient(
+            120deg,
+            #15202c,
+            #0c1621
+        )
+        !important;
+
+    box-shadow:
+        0 14px 32px
+        rgba(15, 24, 33, .135),
+        0 0 0 1px
+        rgba(211, 73, 84, .018),
+        inset 0 1px 0
+        rgba(255, 255, 255, .028)
+        !important;
+}
+
+
+/* Barras laterales existentes */
+
+body.page-tasks-v4
+.task-card-v4.priority-baja::before {
+    background:
+        #71889a
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.priority-media::before {
+    background:
+        #568ac0
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.priority-alta::before {
+    background:
+        #c29445
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.priority-urgente::before,
+
+body.page-tasks-v4
+.task-card-v4.is-overdue::before {
+    background:
+        #d45660
+        !important;
+
+    box-shadow:
+        0 0 14px
+        rgba(212, 86, 96, .18)
+        !important;
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY EN TASK CARD
+   ========================================================== */
+
+body.page-tasks-v4
+.task-main-v4 h3,
+
+body.page-tasks-v4
+.task-main-v4 > strong {
+    color:
+        #f7fafc
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(0, 0, 0, .15)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-main-v4 > p {
+    color:
+        #a3b4c3
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-id-v4,
+
+body.page-tasks-v4
+.task-topline-v4 {
+    color:
+        #91a6b9
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-meta-v4 > span {
+    color:
+        #879daf
+        !important;
+}
+
+
+/* ==========================================================
+   BADGES - ESTADOS
+   ========================================================== */
+
+body.page-tasks-v4
+.task-priority-v4,
+
+body.page-tasks-v4
+.task-state-v4 {
+    border-color:
+        rgba(151, 166, 184, .15)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-priority-v4.priority-alta {
+    border-color:
+        rgba(204, 151, 63, .22)
+        !important;
+
+    background:
+        rgba(204, 151, 63, .11)
+        !important;
+
+    color:
+        #e4b45f
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-priority-v4.priority-urgente {
+    border-color:
+        rgba(214, 82, 92, .24)
+        !important;
+
+    background:
+        rgba(214, 82, 92, .12)
+        !important;
+
+    color:
+        #ef8990
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-state-v4.state-pendiente {
+    border-color:
+        rgba(108, 137, 166, .18)
+        !important;
+
+    background:
+        rgba(108, 137, 166, .10)
+        !important;
+
+    color:
+        #9cafc1
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-state-v4.state-en_progreso {
+    border-color:
+        rgba(75, 139, 196, .22)
+        !important;
+
+    background:
+        rgba(75, 139, 196, .11)
+        !important;
+
+    color:
+        #91bbe1
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-state-v4.state-completada {
+    border-color:
+        rgba(54, 166, 105, .22)
+        !important;
+
+    background:
+        rgba(54, 166, 105, .11)
+        !important;
+
+    color:
+        #84d6a7
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-state-v4.state-cancelada {
+    border-color:
+        rgba(137, 151, 164, .18)
+        !important;
+
+    background:
+        rgba(137, 151, 164, .09)
+        !important;
+
+    color:
+        #a8b5c0
+        !important;
+}
+
+
+/* ==========================================================
+   CANCELADA - GRAPHITE ARCHIVE
+   Reemplaza el gris plano actual
+   ========================================================== */
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada {
+    opacity:
+        1
+        !important;
+
+    border-color:
+        rgba(134, 149, 163, .17)
+        !important;
+
+    background:
+        radial-gradient(
+            600px 210px
+            at 100% 0%,
+            rgba(124, 142, 158, .045),
+            transparent 68%
+        ),
+        linear-gradient(
+            120deg,
+            #17212a,
+            #111920
+        )
+        !important;
+
+    box-shadow:
+        0 9px 22px
+        rgba(17, 25, 32, .09),
+        inset 0 1px 0
+        rgba(255, 255, 255, .022)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada::before {
+    background:
+        #778794
+        !important;
+
+    box-shadow:
+        none
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada
+.task-main-v4 h3,
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada
+.task-main-v4 > strong {
+    color:
+        #c5cfd7
+        !important;
+
+    text-shadow:
+        none
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada
+.task-main-v4 > p,
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada
+.task-meta-v4 > span,
+
+body.page-tasks-v4
+.task-card-v4.state-cancelada
+.task-id-v4 {
+    color:
+        #8293a1
+        !important;
+}
+
+
+/* ==========================================================
+   COMPLETADA - GREEN GRAPHITE
+   ========================================================== */
+
+body.page-tasks-v4
+.task-card-v4.state-completada {
+    opacity:
+        1
+        !important;
+
+    border-color:
+        rgba(67, 143, 103, .18)
+        !important;
+
+    background:
+        radial-gradient(
+            620px 210px
+            at 100% 0%,
+            rgba(54, 151, 99, .06),
+            transparent 68%
+        ),
+        linear-gradient(
+            120deg,
+            #14221f,
+            #0e1917
+        )
+        !important;
+
+    box-shadow:
+        0 9px 22px
+        rgba(15, 29, 24, .09),
+        inset 0 1px 0
+        rgba(255, 255, 255, .022)
+        !important;
+}
+
+
+/* ==========================================================
+   CHECK CONTROL
+   ========================================================== */
+
+body.page-tasks-v4
+.task-check-v4 button,
+
+body.page-tasks-v4
+.task-check-v4 .is-complete {
+    border-color:
+        rgba(54, 159, 105, .24)
+        !important;
+
+    background:
+        rgba(54, 159, 105, .08)
+        !important;
+
+    color:
+        #72d39c
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-check-v4 button:hover {
+    border-color:
+        rgba(54, 174, 110, .38)
+        !important;
+
+    background:
+        rgba(54, 159, 105, .13)
+        !important;
+
+    color:
+        #94e4b6
+        !important;
+
+    box-shadow:
+        0 0 14px
+        rgba(54, 159, 105, .09)
+        !important;
+}
+
+
+/* ==========================================================
+   ACCIONES DE TAREA
+   ========================================================== */
+
+body.page-tasks-v4
+.task-actions-v4 :is(a, button) {
+    border-color:
+        rgba(146, 166, 184, .16)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, .032),
+            rgba(255, 255, 255, .016)
+        )
+        !important;
+
+    color:
+        #9aafc0
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-actions-v4 :is(a, button):hover {
+    border-color:
+        rgba(91, 148, 199, .30)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(82, 139, 191, .09),
+            rgba(82, 139, 191, .05)
+        )
+        !important;
+
+    color:
+        #c4d8e9
+        !important;
+
+    box-shadow:
+        0 4px 12px
+        rgba(19, 45, 68, .08),
+        inset 0 1px 0
+        rgba(255, 255, 255, .03)
+        !important;
+}
+
+
+/* ==========================================================
+   TEMPORALIDAD
+   ========================================================== */
+
+body.page-tasks-v4
+.task-overdue-v4 {
+    color:
+        #ef858d
+        !important;
+}
+
+
+body.page-tasks-v4
+.task-today-v4 {
+    color:
+        #e0ac57
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * D4.1 - TAREAS LIGHT BRAND CONTRAST
+ * ==========================================================
+ *
+ * Corrige exclusivamente la identidad visual del extremo
+ * izquierdo del header cuando el theme activo es LIGHT.
+ *
+ * Dark permanece intacto.
+ * DOM permanece intacto.
+ * ==========================================================
+ */
+
+
+html[data-theme="light"]
+body.page-tasks-v4
+.app-brand-copy strong {
+    color:
+        #1f2c39
+        !important;
+
+    text-shadow:
+        none
+        !important;
+}
+
+
+html[data-theme="light"]
+body.page-tasks-v4
+.app-brand-copy small {
+    color:
+        #718497
+        !important;
+
+    text-shadow:
+        none
+        !important;
+}
+
+
+html[data-theme="light"]
+body.page-tasks-v4
+.app-brand-mark {
+    border-color:
+        #cbd8e4
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fbfd,
+            #edf4f8
+        )
+        !important;
+
+    color:
+        #356fae
+        !important;
+
+    box-shadow:
+        0 3px 10px
+        rgba(42, 69, 91, .045),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+html[data-theme="light"]
+body.page-tasks-v4
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+html[data-theme="light"]
+body.page-tasks-v4
+.app-brand:hover
+.app-brand-copy strong {
+    color:
+        #172431
+        !important;
+}

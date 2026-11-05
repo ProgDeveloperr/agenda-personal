@@ -1,0 +1,2550 @@
+/*
+ * ==========================================================
+ * AGENDA PERSONAL
+ * CALENDARIO
+ * CAL-L1 - PROFESSIONAL HYBRID LIGHT
+ * ==========================================================
+ *
+ * Desktop / tablet ancho solamente.
+ *
+ * Filosofia:
+ * - canvas claro profesional
+ * - hero editorial
+ * - metricas graphite
+ * - workspace claro
+ * - tablero mensual graphite exterior
+ * - dias claros
+ * - eventos oscuros + color de materia
+ * - HOY azul inequívoco
+ *
+ * Mobile <= 760px queda fuera de este theme.
+ * ==========================================================
+ */
+
+
+@media (min-width: 761px) {
+
+    /* ======================================================
+       TOKENS LOCALES
+       ====================================================== */
+
+    body.page-calendar-v3 {
+        --cal-bg:
+            #f3f5f7;
+
+        --cal-bg-soft:
+            #eef2f5;
+
+        --cal-surface:
+            #ffffff;
+
+        --cal-surface-soft:
+            #f8fafc;
+
+        --cal-border:
+            rgba(36, 52, 68, .12);
+
+        --cal-border-strong:
+            rgba(36, 52, 68, .19);
+
+        --cal-text:
+            #1f2d3a;
+
+        --cal-muted:
+            #617487;
+
+        --cal-muted-2:
+            #8090a0;
+
+        --cal-blue:
+            #3975ae;
+
+        --cal-green:
+            #27835c;
+
+        --v3-text:
+            #1f2d3a;
+
+        --v3-muted:
+            #617487;
+
+        --v3-muted-2:
+            #8090a0;
+
+        --v3-border:
+            rgba(36, 52, 68, .12);
+
+        --v3-border-hover:
+            rgba(36, 52, 68, .21);
+
+        color-scheme:
+            light;
+
+        color:
+            var(--cal-text)
+            !important;
+
+        background:
+            radial-gradient(
+                900px 460px
+                at 12% -8%,
+                rgba(68, 125, 178, .075),
+                transparent 66%
+            ),
+            radial-gradient(
+                700px 380px
+                at 90% 5%,
+                rgba(70, 146, 107, .045),
+                transparent 70%
+            ),
+            linear-gradient(
+                180deg,
+                #f7f9fa 0%,
+                #f1f4f6 100%
+            )
+            !important;
+    }
+
+
+    /* ======================================================
+       HEADER
+       ====================================================== */
+
+    body.page-calendar-v3
+    .app-header {
+        border-bottom-color:
+            rgba(42, 60, 78, .10)
+            !important;
+
+        background:
+            rgba(249, 251, 252, .91)
+            !important;
+
+        box-shadow:
+            0 1px 0
+            rgba(255, 255, 255, .86),
+            0 7px 22px
+            rgba(39, 57, 73, .035)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-brand-copy strong {
+        color:
+            #1f2c39
+            !important;
+
+        text-shadow:
+            none
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-brand-copy small {
+        color:
+            #718497
+            !important;
+
+        text-shadow:
+            none
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-brand-mark {
+        border-color:
+            #cad8e4
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                #fbfdff,
+                #edf4f9
+            )
+            !important;
+
+        color:
+            #356fae
+            !important;
+
+        box-shadow:
+            0 3px 10px
+            rgba(42, 69, 91, .045),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-brand-mark svg {
+        stroke:
+            #356fae
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-nav {
+        border-color:
+            rgba(41, 58, 76, .13)
+            !important;
+
+        background:
+            rgba(255, 255, 255, .76)
+            !important;
+
+        box-shadow:
+            0 5px 18px
+            rgba(38, 56, 72, .035),
+            inset 0 1px 0
+            rgba(255, 255, 255, .92)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-nav a {
+        color:
+            #52677b
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-nav a:hover {
+        background:
+            #f0f5f9
+            !important;
+
+        color:
+            #25394c
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-nav a.active {
+        border-color:
+            #c9daea
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #edf5fb,
+                #e5eff8
+            )
+            !important;
+
+        color:
+            #245b8d
+            !important;
+
+        box-shadow:
+            inset 0 -2px 0
+            #6197ca
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-bell-v3,
+
+    body.page-calendar-v3
+    .command-trigger-v3 {
+        border-color:
+            #cfdbe5
+            !important;
+
+        background:
+            rgba(255, 255, 255, .78)
+            !important;
+
+        color:
+            #5d7184
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .92)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-bell-v3:hover,
+
+    body.page-calendar-v3
+    .command-trigger-v3:hover {
+        border-color:
+            #b9cada
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #315a7d
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-trigger-v3 {
+        border-color:
+            rgba(47, 139, 96, .30)
+            !important;
+
+        background:
+            rgba(48, 145, 99, .055)
+            !important;
+
+        color:
+            #267450
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .9)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-trigger-v3:hover {
+        border-color:
+            rgba(47, 139, 96, .43)
+            !important;
+
+        background:
+            rgba(48, 145, 99, .10)
+            !important;
+
+        color:
+            #1d6845
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-trigger-v3 kbd,
+
+    body.page-calendar-v3
+    .command-trigger-v3 kbd {
+        border-color:
+            rgba(62, 82, 101, .12)
+            !important;
+
+        background:
+            #f1f4f6
+            !important;
+
+        color:
+            #748596
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .app-header-status {
+        color:
+            #566b7d
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .status-dot-online {
+        background:
+            #2aa56f
+            !important;
+
+        box-shadow:
+            0 0 0 4px
+            rgba(42, 165, 111, .075)
+            !important;
+    }
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    body.page-calendar-v3
+    .hero-eyebrow {
+        color:
+            #287e59
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .eyebrow-dot {
+        background:
+            #36a674
+            !important;
+
+        box-shadow:
+            0 0 0 4px
+            rgba(54, 166, 116, .08)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-hero-v3 h1 {
+        color:
+            #1d2b38
+            !important;
+
+        text-shadow:
+            none
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-hero-v3
+    > div:first-child
+    > p {
+        color:
+            #607487
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-hero-actions-v3
+    .agenda-outline-action-v3 {
+        border-color:
+            #ccd9e4
+            !important;
+
+        background:
+            rgba(255, 255, 255, .76)
+            !important;
+
+        color:
+            #405e79
+            !important;
+
+        box-shadow:
+            0 5px 16px
+            rgba(40, 58, 75, .045),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-hero-actions-v3
+    .agenda-outline-action-v3:hover {
+        border-color:
+            #afc4d5
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #285a83
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-total-v3 {
+        border-color:
+            #d3dde6
+            !important;
+
+        background:
+            rgba(255, 255, 255, .72)
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .92)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-total-v3 strong {
+        color:
+            #213140
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-total-v3 span {
+        color:
+            #738596
+            !important;
+    }
+
+
+    /* ======================================================
+       METRICAS GRAPHITE
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 article {
+        border-color:
+            rgba(103, 128, 149, .20)
+            !important;
+
+        background:
+            radial-gradient(
+                360px 160px
+                at 100% 0%,
+                rgba(73, 135, 188, .075),
+                transparent 70%
+            ),
+            linear-gradient(
+                145deg,
+                #18232d,
+                #111a23
+            )
+            !important;
+
+        box-shadow:
+            0 10px 25px
+            rgba(29, 45, 58, .11),
+            inset 0 1px 0
+            rgba(255, 255, 255, .03)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metric-icon-v3 {
+        border-color:
+            rgba(112, 164, 211, .20)
+            !important;
+
+        background:
+            rgba(91, 149, 201, .075)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metric-icon-v3 svg {
+        stroke:
+            #82add4
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 span {
+        color:
+            #a5b5c3
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 strong {
+        color:
+            #f1f5f8
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 small {
+        color:
+            #8498aa
+            !important;
+    }
+
+
+    /* ======================================================
+       WORKSPACE
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-workspace-v3 {
+        border-color:
+            #d2dce5
+            !important;
+
+        background:
+            linear-gradient(
+                155deg,
+                #ffffff,
+                #f8fafb
+            )
+            !important;
+
+        box-shadow:
+            0 18px 42px
+            rgba(36, 53, 68, .085),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-toolbar-v3 {
+        border-bottom-color:
+            #e0e6eb
+            !important;
+
+        background:
+            radial-gradient(
+                640px 170px
+                at 50% 0%,
+                rgba(75, 133, 181, .045),
+                transparent 72%
+            ),
+            #fbfcfd
+            !important;
+    }
+
+
+    /* ======================================================
+       NAVEGACION DEL MES
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-nav-button-v3 {
+        border-color:
+            #ccd9e3
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #587087
+            !important;
+
+        box-shadow:
+            0 4px 12px
+            rgba(36, 54, 70, .045),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-nav-button-v3:hover {
+        border-color:
+            #afc4d6
+            !important;
+
+        background:
+            #f4f8fb
+            !important;
+
+        color:
+            #2d648f
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-month-title-v3
+    > span {
+        color:
+            #708497
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-month-title-v3 h2 {
+        color:
+            #21313f
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-month-title-v3 p {
+        color:
+            #778a9b
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-today-button-v3 {
+        border-color:
+            rgba(45, 132, 91, .25)
+            !important;
+
+        background:
+            rgba(47, 141, 96, .065)
+            !important;
+
+        color:
+            #287851
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-today-button-v3:hover {
+        border-color:
+            rgba(45, 132, 91, .40)
+            !important;
+
+        background:
+            rgba(47, 141, 96, .11)
+            !important;
+
+        color:
+            #1f6744
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-current-month-v3 {
+        border-color:
+            #c4d7e7
+            !important;
+
+        background:
+            #edf5fb
+            !important;
+
+        color:
+            #376b96
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-current-month-v3
+    > span {
+        color:
+            #587b9a
+            !important;
+    }
+
+
+    /* ======================================================
+       LEYENDA
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-legend-v3 {
+        border-top-color:
+            #e0e6eb
+            !important;
+
+        border-bottom-color:
+            #e0e6eb
+            !important;
+
+        background:
+            #f7f9fb
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-title-v3 {
+        color:
+            #65798b
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-chip-v3 {
+        border-color:
+            #d6e0e8
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        box-shadow:
+            0 3px 10px
+            rgba(38, 55, 70, .035),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-chip-v3 small {
+        color:
+            #7a8c9d
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-chip-v3 strong {
+        color:
+            #34495b
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-empty-v3 {
+        color:
+            #7c8e9e
+            !important;
+
+        background:
+            #f7f9fb
+            !important;
+    }
+
+
+    /* ======================================================
+       BOARD EXTERIOR GRAPHITE
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-board-scroll-v3 {
+        border-top-color:
+            rgba(42, 60, 77, .14)
+            !important;
+
+        background:
+            linear-gradient(
+                155deg,
+                #18232d,
+                #111a23
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .025)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-board-v3 {
+        background:
+            #15202a
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-weekdays-v3 {
+        border-bottom-color:
+            rgba(180, 197, 211, .12)
+            !important;
+
+        background:
+            #16212b
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-weekdays-v3
+    > div {
+        border-right-color:
+            rgba(180, 197, 211, .08)
+            !important;
+
+        color:
+            #afbfcc
+            !important;
+
+        background:
+            #16212b
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-weekdays-v3
+    .calendar-weekend-heading-v3 {
+        color:
+            #879aaa
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-days-v3 {
+        background:
+            #17222c
+            !important;
+    }
+
+
+    /* ======================================================
+       DIAS
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-day-v3 {
+        border-color:
+            #d9e1e8
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #fbfcfd
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .95)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-weekend-v3 {
+        background:
+            linear-gradient(
+                180deg,
+                #fafbfd,
+                #f5f8fa
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-empty-v3 {
+        background:
+            #edf1f4
+            !important;
+
+        box-shadow:
+            none
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-header-v3 {
+        border-bottom-color:
+            #e7ecef
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-number-v3 {
+        color:
+            #304253
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-count-v3 {
+        border-color:
+            #cedae4
+            !important;
+
+        background:
+            #eef4f8
+            !important;
+
+        color:
+            #627b90
+            !important;
+    }
+
+
+    /* HOY */
+
+    body.page-calendar-v3
+    .calendar-day-today-v3 {
+        border-color:
+            #6a9dcc
+            !important;
+
+        background:
+            radial-gradient(
+                340px 180px
+                at 50% 0%,
+                rgba(83, 148, 205, .09),
+                transparent 70%
+            ),
+            linear-gradient(
+                180deg,
+                #f5faff,
+                #edf6fd
+            )
+            !important;
+
+        box-shadow:
+            inset 0 0 0 2px
+            rgba(83, 148, 205, .25),
+            0 7px 18px
+            rgba(48, 104, 151, .075)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-today-v3
+    .calendar-day-number-v3 {
+        color:
+            #245f92
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-today-label-v3 {
+        border-color:
+            rgba(65, 126, 181, .21)
+            !important;
+
+        background:
+            rgba(65, 126, 181, .09)
+            !important;
+
+        color:
+            #316e9f
+            !important;
+    }
+
+
+    /* ======================================================
+       EVENTOS
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-event-v3 {
+        border-color:
+            rgba(128, 151, 170, .18)
+            !important;
+
+        background:
+            radial-gradient(
+                320px 130px
+                at 100% 0%,
+                color-mix(
+                    in srgb,
+                    var(--event-color) 8%,
+                    transparent
+                ),
+                transparent 70%
+            ),
+            linear-gradient(
+                145deg,
+                #17232d,
+                #101920
+            )
+            !important;
+
+        box-shadow:
+            0 8px 18px
+            rgba(23, 37, 49, .14),
+            inset 0 1px 0
+            rgba(255, 255, 255, .025)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3:hover {
+        border-color:
+            color-mix(
+                in srgb,
+                var(--event-color) 30%,
+                #8093a4
+            )
+            !important;
+
+        background:
+            radial-gradient(
+                320px 130px
+                at 100% 0%,
+                color-mix(
+                    in srgb,
+                    var(--event-color) 12%,
+                    transparent
+                ),
+                transparent 70%
+            ),
+            linear-gradient(
+                145deg,
+                #1a2934,
+                #121d26
+            )
+            !important;
+
+        box-shadow:
+            0 11px 24px
+            rgba(23, 37, 49, .19)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-top-v3
+    > span {
+        color:
+            #a8bac8
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-top-v3 small {
+        color:
+            #8498a9
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3
+    > strong {
+        color:
+            #f0f4f7
+            !important;
+
+        text-shadow:
+            0 1px 0
+            rgba(0, 0, 0, .18)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3
+    > p {
+        color:
+            #8fa4b5
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3
+    > p span {
+        color:
+            color-mix(
+                in srgb,
+                var(--event-color) 74%,
+                #e1e8ee
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-footer-v3 {
+        border-top-color:
+            rgba(159, 179, 196, .08)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-v3 {
+        border-color:
+            rgba(160, 181, 199, .12)
+            !important;
+
+        background:
+            rgba(255, 255, 255, .035)
+            !important;
+
+        color:
+            #a6b8c7
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-pendiente {
+        background:
+            rgba(89, 143, 194, .12)
+            !important;
+
+        color:
+            #9ec3e5
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-entregado {
+        background:
+            rgba(74, 165, 176, .12)
+            !important;
+
+        color:
+            #8bd1d8
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-aprobado {
+        background:
+            rgba(74, 164, 110, .12)
+            !important;
+
+        color:
+            #8bd0a7
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-desaprobado {
+        background:
+            rgba(205, 104, 115, .13)
+            !important;
+
+        color:
+            #e29aa2
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-cancelado {
+        background:
+            rgba(149, 163, 176, .09)
+            !important;
+
+        color:
+            #9faebb
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-open-v3 {
+        color:
+            #88a8c0
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3:hover
+    .calendar-event-open-v3 {
+        color:
+            #bdd4e4
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-cancelled-v3 {
+        opacity:
+            .72
+            !important;
+
+        filter:
+            saturate(.70)
+            !important;
+    }
+
+
+    /* ======================================================
+       PANEL INFERIOR
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-bottom-v3 {
+        border-color:
+            #cfdae3
+            !important;
+
+        background:
+            radial-gradient(
+                620px 180px
+                at 0% 0%,
+                rgba(52, 145, 101, .055),
+                transparent 70%
+            ),
+            linear-gradient(
+                145deg,
+                #ffffff,
+                #f6f9fa
+            )
+            !important;
+
+        box-shadow:
+            0 10px 26px
+            rgba(36, 53, 68, .065),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-icon-v3 {
+        border-color:
+            rgba(48, 139, 96, .18)
+            !important;
+
+        background:
+            rgba(48, 139, 96, .07)
+            !important;
+
+        color:
+            #31805a
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-icon-v3 svg {
+        stroke:
+            #31805a
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-v3 strong {
+        color:
+            #293a48
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-v3 p {
+        color:
+            #65798a
+            !important;
+    }
+
+
+    /* ======================================================
+       NOTIFICACIONES - SUPERFICIE LIGHT
+       ====================================================== */
+
+    body.page-calendar-v3
+    .notification-popover-v3 {
+        border-color:
+            #d1dce5
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        box-shadow:
+            0 24px 60px
+            rgba(31, 48, 63, .18)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-popover-head-v3,
+
+    body.page-calendar-v3
+    .notification-popover-footer-v3 {
+        border-color:
+            #e3e8ed
+            !important;
+
+        background:
+            #f8fafb
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-popover-head-v3 strong,
+
+    body.page-calendar-v3
+    .notification-item-copy-v3 strong,
+
+    body.page-calendar-v3
+    .notification-empty-v3 strong {
+        color:
+            #304353
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-item-copy-v3
+    > span,
+
+    body.page-calendar-v3
+    .notification-empty-v3 span {
+        color:
+            #718495
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-item-v3 {
+        border-color:
+            #e4e9ed
+            !important;
+
+        background:
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .notification-item-v3:hover,
+
+    body.page-calendar-v3
+    .notification-item-v3.is-unread {
+        background:
+            #f5f9fc
+            !important;
+    }
+
+
+    /* ======================================================
+       QUICK ADD - SUPERFICIE LIGHT
+       ====================================================== */
+
+    body.page-calendar-v3
+    .quick-add-dialog-v3 {
+        border-color:
+            #d0dbe4
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        box-shadow:
+            0 35px 90px
+            rgba(26, 43, 58, .25)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-header-v3,
+
+    body.page-calendar-v3
+    .quick-add-footer-v3 {
+        border-color:
+            #e1e7ec
+            !important;
+
+        background:
+            #f8fafb
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-heading-v3 strong,
+
+    body.page-calendar-v3
+    .quick-add-field-v3 label {
+        color:
+            #304252
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-field-v3 label small,
+
+    body.page-calendar-v3
+    .quick-add-note-help-v3 {
+        color:
+            #7b8d9d
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-field-v3 input,
+
+    body.page-calendar-v3
+    .quick-add-field-v3 select,
+
+    body.page-calendar-v3
+    .quick-add-field-v3 textarea {
+        border-color:
+            #cfdbe4
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #263846
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-cancel-v3 {
+        border-color:
+            #ccd8e1
+            !important;
+
+        background:
+            #f6f8fa
+            !important;
+
+        color:
+            #65798a
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .quick-add-save-v3 {
+        border-color:
+            rgba(47, 139, 96, .36)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #39906f,
+                #287456
+            )
+            !important;
+
+        color:
+            #ffffff
+            !important;
+
+        box-shadow:
+            0 9px 22px
+            rgba(37, 115, 83, .18)
+            !important;
+    }
+
+
+    /* ======================================================
+       COMMAND PALETTE
+       ====================================================== */
+
+    body.page-calendar-v3
+    .command-dialog-v3 {
+        border-color:
+            #d0dbe4
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        box-shadow:
+            0 35px 90px
+            rgba(26, 43, 58, .25)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .command-input-v3 {
+        color:
+            #283a49
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .command-context-v3,
+
+    body.page-calendar-v3
+    .command-footer-v3 {
+        border-color:
+            #e2e8ed
+            !important;
+
+        background:
+            #f8fafb
+            !important;
+
+        color:
+            #76899a
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .command-item-v3 {
+        border-color:
+            transparent
+            !important;
+
+        background:
+            transparent
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .command-item-v3:hover {
+        background:
+            #f1f6fa
+            !important;
+    }
+
+}
+
+
+/*
+ * ==========================================================
+ * CAL-L1.1 - PROFESSIONAL REFINEMENT
+ * ==========================================================
+ *
+ * Pulido visual exclusivamente.
+ *
+ * No modifica geometria.
+ * No modifica responsive.
+ * No modifica mobile.
+ * No modifica DOM.
+ * ==========================================================
+ */
+
+
+@media (min-width: 761px) {
+
+
+    /* ======================================================
+       HERO — MAYOR JERARQUIA EDITORIAL
+       ====================================================== */
+
+    body.page-calendar-v3
+    .hero-eyebrow {
+        color:
+            #267a56
+            !important;
+
+        letter-spacing:
+            .115em
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-hero-v3 h1 {
+        color:
+            #1a2936
+            !important;
+
+        text-shadow:
+            0 1px 0
+            rgba(255, 255, 255, .95)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-hero-v3
+    > div:first-child
+    > p {
+        color:
+            #596f82
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-total-v3 {
+        border-color:
+            #c8d5df
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #f6f9fb
+            )
+            !important;
+
+        box-shadow:
+            0 7px 18px
+            rgba(35, 54, 70, .055),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-total-v3 strong {
+        color:
+            #1d3040
+            !important;
+    }
+
+
+    /* ======================================================
+       METRICAS — GRAPHITE PREMIUM
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 article {
+        border-color:
+            rgba(125, 150, 171, .20)
+            !important;
+
+        background:
+            radial-gradient(
+                370px 170px
+                at 100% 0%,
+                rgba(83, 150, 202, .095),
+                transparent 69%
+            ),
+            radial-gradient(
+                260px 140px
+                at 0% 100%,
+                rgba(49, 142, 98, .035),
+                transparent 72%
+            ),
+            linear-gradient(
+                145deg,
+                #192631,
+                #111b24
+            )
+            !important;
+
+        box-shadow:
+            0 14px 31px
+            rgba(27, 43, 57, .13),
+            inset 0 1px 0
+            rgba(255, 255, 255, .038),
+            inset 0 -1px 0
+            rgba(0, 0, 0, .15)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metric-icon-v3 {
+        border-color:
+            rgba(126, 178, 219, .24)
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(103, 164, 215, .13),
+                rgba(103, 164, 215, .055)
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .035)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metric-icon-v3 svg {
+        stroke:
+            #91b9dc
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 span {
+        color:
+            #adbdca
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 strong {
+        color:
+            #f5f8fa
+            !important;
+
+        text-shadow:
+            0 1px 0
+            rgba(0, 0, 0, .20)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-metrics-v3 small {
+        color:
+            #8da0b0
+            !important;
+    }
+
+
+    /* ======================================================
+       WORKSPACE — MAS PROFUNDIDAD
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-workspace-v3 {
+        border-color:
+            #cbd7e0
+            !important;
+
+        background:
+            linear-gradient(
+                155deg,
+                #ffffff,
+                #f7f9fb
+            )
+            !important;
+
+        box-shadow:
+            0 24px 54px
+            rgba(38, 55, 70, .095),
+            0 2px 8px
+            rgba(38, 55, 70, .035),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-toolbar-v3 {
+        border-bottom-color:
+            #dce4ea
+            !important;
+
+        background:
+            radial-gradient(
+                700px 180px
+                at 50% 0%,
+                rgba(66, 126, 179, .055),
+                transparent 72%
+            ),
+            linear-gradient(
+                180deg,
+                #fcfdfe,
+                #f7f9fb
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-month-title-v3
+    > span {
+        color:
+            #657e94
+            !important;
+
+        letter-spacing:
+            .095em
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-month-title-v3 h2 {
+        color:
+            #1d3040
+            !important;
+
+        text-shadow:
+            0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-month-title-v3 p {
+        color:
+            #708596
+            !important;
+    }
+
+
+    /* ======================================================
+       CONTROLES
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-nav-button-v3 {
+        border-color:
+            #c5d3df
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #f6f9fb
+            )
+            !important;
+
+        color:
+            #526e86
+            !important;
+
+        box-shadow:
+            0 5px 14px
+            rgba(34, 54, 70, .055),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-nav-button-v3:hover {
+        border-color:
+            #9fb8cd
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #245d8d
+            !important;
+
+        box-shadow:
+            0 8px 18px
+            rgba(45, 92, 131, .085)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-today-button-v3 {
+        border-color:
+            rgba(43, 126, 85, .30)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(49, 145, 98, .085),
+                rgba(49, 145, 98, .045)
+            )
+            !important;
+
+        color:
+            #236e4a
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .85)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-current-month-v3 {
+        border-color:
+            #b9d0e3
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #eff7fd,
+                #e7f1f9
+            )
+            !important;
+
+        color:
+            #2c6695
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    /* ======================================================
+       LEYENDA — MAS LIMPIA
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-legend-v3 {
+        border-top-color:
+            #dbe3e9
+            !important;
+
+        border-bottom-color:
+            #dbe3e9
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #f8fafb,
+                #f4f7f9
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-title-v3 {
+        color:
+            #5e7589
+            !important;
+
+        letter-spacing:
+            .09em
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-chip-v3 {
+        border-color:
+            #d0dbe4
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #fafcfd
+            )
+            !important;
+
+        box-shadow:
+            0 4px 12px
+            rgba(36, 54, 70, .04),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-legend-chip-v3 strong {
+        color:
+            #30475a
+            !important;
+    }
+
+
+    /* ======================================================
+       BOARD — GRAPHITE MAS REFINADO
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-board-scroll-v3 {
+        border-top-color:
+            rgba(83, 108, 129, .20)
+            !important;
+
+        background:
+            radial-gradient(
+                900px 280px
+                at 50% 0%,
+                rgba(90, 149, 199, .055),
+                transparent 72%
+            ),
+            linear-gradient(
+                155deg,
+                #17242f,
+                #111b24
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .03)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-board-v3 {
+        background:
+            linear-gradient(
+                180deg,
+                #16222c,
+                #131e27
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-weekdays-v3 {
+        border-bottom-color:
+            rgba(190, 205, 217, .13)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #182631,
+                #15212b
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-weekdays-v3
+    > div {
+        border-right-color:
+            rgba(190, 205, 217, .085)
+            !important;
+
+        color:
+            #b8c7d2
+            !important;
+
+        background:
+            transparent
+            !important;
+
+        text-shadow:
+            0 1px 0
+            rgba(0, 0, 0, .20)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-weekdays-v3
+    .calendar-weekend-heading-v3 {
+        color:
+            #8fa3b4
+            !important;
+    }
+
+
+    /* ======================================================
+       DIAS — MAS DEFINICION
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-day-v3 {
+        border-color:
+            #d4dde5
+            !important;
+
+        background:
+            radial-gradient(
+                300px 130px
+                at 100% 0%,
+                rgba(71, 129, 178, .025),
+                transparent 72%
+            ),
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #fafcfd
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            #ffffff,
+            inset 0 -1px 0
+            rgba(30, 48, 64, .025)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-v3:hover {
+        border-color:
+            #b7c8d6
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #ffffff,
+                #f7fafc
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            #ffffff,
+            0 7px 18px
+            rgba(33, 53, 70, .055)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-weekend-v3 {
+        background:
+            linear-gradient(
+                180deg,
+                #f9fbfc,
+                #f4f7f9
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-empty-v3 {
+        border-color:
+            #dbe2e7
+            !important;
+
+        background:
+            #eef2f5
+            !important;
+
+        opacity:
+            .82
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-header-v3 {
+        border-bottom-color:
+            #e3e9ed
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-number-v3 {
+        color:
+            #2b4052
+            !important;
+    }
+
+
+    /* ======================================================
+       HOY — CLARO PERO ELEGANTE
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-day-today-v3 {
+        border-color:
+            #5e95c5
+            !important;
+
+        background:
+            radial-gradient(
+                360px 180px
+                at 50% 0%,
+                rgba(77, 143, 198, .115),
+                transparent 69%
+            ),
+            linear-gradient(
+                180deg,
+                #f6fbff,
+                #ebf5fc
+            )
+            !important;
+
+        box-shadow:
+            inset 0 0 0 2px
+            rgba(74, 139, 195, .26),
+            inset 0 1px 0
+            #ffffff,
+            0 11px 25px
+            rgba(46, 105, 153, .10)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-today-v3
+    .calendar-day-number-v3 {
+        color:
+            #1f5e94
+            !important;
+
+        text-shadow:
+            0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-today-label-v3 {
+        border-color:
+            rgba(56, 120, 176, .28)
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(67, 133, 190, .12),
+                rgba(67, 133, 190, .07)
+            )
+            !important;
+
+        color:
+            #286596
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .8)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-day-count-v3 {
+        border-color:
+            #c2d2de
+            !important;
+
+        background:
+            #edf3f7
+            !important;
+
+        color:
+            #55738b
+            !important;
+    }
+
+
+    /* ======================================================
+       EVENTOS — MAS PREMIUM
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-event-v3 {
+        border-color:
+            rgba(129, 153, 173, .20)
+            !important;
+
+        background:
+            radial-gradient(
+                330px 150px
+                at 100% 0%,
+                color-mix(
+                    in srgb,
+                    var(--event-color) 10%,
+                    transparent
+                ),
+                transparent 68%
+            ),
+            linear-gradient(
+                145deg,
+                #182630,
+                #101a22
+            )
+            !important;
+
+        box-shadow:
+            0 10px 22px
+            rgba(17, 30, 41, .17),
+            inset 0 1px 0
+            rgba(255, 255, 255, .03)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3:hover {
+        border-color:
+            color-mix(
+                in srgb,
+                var(--event-color) 34%,
+                #8396a7
+            )
+            !important;
+
+        background:
+            radial-gradient(
+                330px 150px
+                at 100% 0%,
+                color-mix(
+                    in srgb,
+                    var(--event-color) 15%,
+                    transparent
+                ),
+                transparent 68%
+            ),
+            linear-gradient(
+                145deg,
+                #1c2c38,
+                #13202a
+            )
+            !important;
+
+        box-shadow:
+            0 14px 29px
+            rgba(17, 30, 41, .22)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-stripe-v3 {
+        box-shadow:
+            0 0 0 1px
+            color-mix(
+                in srgb,
+                var(--event-color) 34%,
+                transparent
+            ),
+            0 0 12px
+            color-mix(
+                in srgb,
+                var(--event-color) 16%,
+                transparent
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3
+    > strong {
+        color:
+            #f4f7f9
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3
+    > p {
+        color:
+            #94a8b8
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-v3
+    > p span {
+        color:
+            color-mix(
+                in srgb,
+                var(--event-color) 78%,
+                #edf2f5
+            )
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-event-state-v3 {
+        border-color:
+            rgba(170, 189, 204, .13)
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .025)
+            !important;
+    }
+
+
+    /* ======================================================
+       PANEL INFERIOR — CIERRE EDITORIAL
+       ====================================================== */
+
+    body.page-calendar-v3
+    .calendar-bottom-v3 {
+        border-color:
+            #c7d5de
+            !important;
+
+        background:
+            radial-gradient(
+                650px 190px
+                at 0% 0%,
+                rgba(48, 141, 96, .07),
+                transparent 70%
+            ),
+            linear-gradient(
+                145deg,
+                #ffffff,
+                #f5f8fa
+            )
+            !important;
+
+        box-shadow:
+            0 14px 31px
+            rgba(35, 53, 68, .075),
+            inset 0 1px 0
+            #ffffff
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-icon-v3 {
+        border-color:
+            rgba(45, 130, 88, .23)
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(48, 142, 96, .10),
+                rgba(48, 142, 96, .045)
+            )
+            !important;
+
+        color:
+            #287a54
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .85)
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-v3 strong {
+        color:
+            #253846
+            !important;
+    }
+
+
+    body.page-calendar-v3
+    .calendar-bottom-v3 p {
+        color:
+            #607688
+            !important;
+    }
+
+}

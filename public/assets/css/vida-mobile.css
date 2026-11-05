@@ -1,0 +1,538 @@
+/*
+ * Agenda Personal
+ * Vida Responsive R2 FIX1
+ *
+ * Navegador anual exclusivo para mobile.
+ * La matriz original continúa siendo
+ * la fuente de verdad del sistema.
+ */
+
+.life-mobile-year-v1 {
+    display: none;
+}
+
+@media (max-width: 760px) {
+
+    /* La matriz solo se oculta cuando JS terminó bien. */
+
+    body.page-life-v3.vida-mobile-ready-v1
+    .life-matrix-scroll-v3 {
+        display: none !important;
+    }
+
+    body.page-life-v3.vida-mobile-ready-v1
+    .life-mobile-year-v1 {
+        display: block;
+    }
+
+    .page-life-v3 .life-mobile-year-v1 {
+        padding: 17px 15px 20px;
+
+        border-bottom:
+            1px solid rgba(151, 166, 184, .09);
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(12, 21, 32, .78),
+                rgba(7, 13, 21, .40)
+            );
+    }
+
+    /* Header */
+
+    .page-life-v3 .life-mobile-head-v1 {
+        margin-bottom: 16px;
+    }
+
+    .page-life-v3 .life-mobile-head-v1 > span {
+        display: block;
+
+        color: #61e18f;
+
+        font-size: 10px;
+        font-weight: 800;
+        line-height: 1.35;
+
+        letter-spacing: .075em;
+        text-transform: uppercase;
+    }
+
+    .page-life-v3 .life-mobile-head-v1 h3 {
+        margin: 4px 0 0;
+
+        color: #eef4fa;
+
+        font-size: 19px;
+        line-height: 1.3;
+
+        letter-spacing: -.02em;
+    }
+
+    .page-life-v3 .life-mobile-head-v1 p {
+        margin: 6px 0 0;
+
+        color: #9aafc2;
+
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    /* Selector anual */
+
+    .page-life-v3 .life-mobile-nav-v1 {
+        display: grid;
+
+        grid-template-columns:
+            48px
+            minmax(0, 1fr)
+            48px;
+
+        gap: 9px;
+
+        margin-bottom: 15px;
+    }
+
+    .page-life-v3 .life-mobile-arrow-v1 {
+        min-height: 48px;
+
+        display: grid;
+        place-items: center;
+
+        border:
+            1px solid rgba(135, 162, 194, .18);
+
+        border-radius: 11px;
+
+        background:
+            rgba(22, 35, 51, .76);
+
+        color: #b9cadb;
+
+        font: inherit;
+        font-size: 22px;
+
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .page-life-v3 .life-mobile-arrow-v1:disabled {
+        opacity: .35;
+        cursor: default;
+    }
+
+    .page-life-v3 .life-mobile-select-wrap-v1 {
+        position: relative;
+        min-width: 0;
+    }
+
+    .page-life-v3 .life-mobile-select-v1 {
+        width: 100%;
+        min-height: 48px;
+
+        padding:
+            0
+            39px
+            0
+            14px;
+
+        border:
+            1px solid rgba(87, 148, 255, .28);
+
+        border-radius: 11px;
+
+        outline: none;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(87, 148, 255, .15),
+                rgba(87, 148, 255, .07)
+            );
+
+        color: #e7eff9;
+
+        font: inherit;
+        font-size: 13px;
+        font-weight: 750;
+
+        appearance: none;
+        -webkit-appearance: none;
+
+        color-scheme: dark;
+    }
+
+    .page-life-v3 .life-mobile-select-wrap-v1::after {
+        content: "⌄";
+
+        position: absolute;
+
+        top: 50%;
+        right: 14px;
+
+        transform: translateY(-55%);
+
+        color: #8caedd;
+
+        pointer-events: none;
+    }
+
+    /* Información del año */
+
+    .page-life-v3 .life-mobile-summary-v1 {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 12px;
+
+        margin-bottom: 11px;
+
+        padding: 0 2px;
+    }
+
+    .page-life-v3 .life-mobile-summary-v1 strong {
+        color: #dce7f1;
+
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .page-life-v3 .life-mobile-summary-v1 span {
+        color: #8ea5ba;
+
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    /* 12 meses */
+
+    .page-life-v3 .life-mobile-grid-v1 {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .page-life-v3 .life-mobile-month-v1 {
+        position: relative;
+
+        min-width: 0;
+        min-height: 64px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 10px 11px;
+
+        border:
+            1px solid rgba(151, 174, 202, .14);
+
+        border-radius: 11px;
+
+        outline: none;
+
+        background:
+            linear-gradient(
+                150deg,
+                rgba(20, 31, 45, .92),
+                rgba(11, 19, 29, .90)
+            );
+
+        color: #d6e2ec;
+
+        font: inherit;
+        text-align: left;
+
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .page-life-v3 .life-mobile-month-v1 > span {
+        font-size: 12px;
+        font-weight: 760;
+        line-height: 1.25;
+    }
+
+    .page-life-v3 .life-mobile-month-v1 > small {
+        color: #849bb0;
+
+        font-size: 9.5px;
+        line-height: 1.3;
+    }
+
+    /* Marcado */
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked {
+        border-color:
+            rgba(54, 227, 121, .35);
+
+        background:
+            linear-gradient(
+                150deg,
+                rgba(54, 227, 121, .11),
+                rgba(24, 56, 39, .15)
+            );
+    }
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked > span {
+        color: #8cedad;
+    }
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked > small {
+        color: #69ce8d;
+    }
+
+    /* Actual */
+
+    .page-life-v3
+    .life-mobile-month-v1.is-current {
+        border-color: #5794ff;
+
+        background:
+            linear-gradient(
+                150deg,
+                rgba(87, 148, 255, .18),
+                rgba(34, 62, 105, .14)
+            );
+
+        box-shadow:
+            inset 0 0 0 1px rgba(87, 148, 255, .20),
+            0 0 0 2px rgba(87, 148, 255, .08);
+    }
+
+    .page-life-v3
+    .life-mobile-month-v1.is-current > span {
+        color: #bed5ff;
+    }
+
+    .page-life-v3
+    .life-mobile-month-v1.is-current > small {
+        color: #91b8f7;
+    }
+
+    /* Selección */
+
+    .page-life-v3
+    .life-mobile-month-v1.is-selected {
+        outline:
+            2px solid rgba(215, 230, 255, .82);
+
+        outline-offset: 2px;
+    }
+
+    .page-life-v3
+    .life-mobile-month-v1:active {
+        transform: scale(.975);
+    }
+
+    .page-life-v3
+    .life-mobile-month-v1:focus-visible {
+        outline:
+            2px solid #a9c8ff;
+
+        outline-offset: 2px;
+    }
+
+    /* Leyenda */
+
+    .page-life-v3 .life-mobile-legend-v1 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 9px 13px;
+
+        margin-top: 16px;
+        padding-top: 13px;
+
+        border-top:
+            1px solid rgba(151, 166, 184, .07);
+    }
+
+    .page-life-v3
+    .life-mobile-legend-v1 > span {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 6px;
+
+        color: #93a9bd;
+
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .page-life-v3
+    .life-mobile-legend-v1 i {
+        width: 9px;
+        height: 9px;
+
+        display: inline-block;
+
+        border-radius: 3px;
+    }
+
+    .life-mobile-legend-empty-v1 {
+        border:
+            1px solid rgba(151, 174, 202, .32);
+
+        background:
+            rgba(255, 255, 255, .025);
+    }
+
+    .life-mobile-legend-marked-v1 {
+        background: #39dd7a;
+    }
+
+    .life-mobile-legend-current-v1 {
+        border: 2px solid #5794ff;
+
+        background:
+            rgba(87, 148, 255, .08);
+    }
+
+    /* Inspector */
+
+    body.page-life-v3.vida-mobile-ready-v1
+    .life-panel-footer-v3 {
+        border-top:
+            1px solid rgba(151, 166, 184, .10);
+    }
+}
+
+@media (max-width: 360px) {
+
+    .page-life-v3 .life-mobile-grid-v1 {
+        gap: 6px;
+    }
+
+    .page-life-v3 .life-mobile-month-v1 {
+        min-height: 60px;
+
+        padding: 9px 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-life-v3 .life-mobile-month-v1,
+    .page-life-v3 .life-mobile-arrow-v1 {
+        transition: none;
+    }
+}
+
+
+/*
+ * Vida Mobile R2.1 State Select Fix
+ *
+ * 1. Mes actual + marcado:
+ *    relleno verde y contorno azul.
+ *
+ * 2. Opciones nativas del selector:
+ *    fondo blanco y texto negro.
+ *
+ * Exclusivo del navegador mobile.
+ */
+
+@media (max-width: 760px) {
+
+    /* ======================================
+       ACTUAL + MARCADO
+    ====================================== */
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked.is-current {
+        border-color: #5794ff;
+
+        outline:
+            2px solid #5794ff;
+
+        outline-offset: 1px;
+
+        background:
+            linear-gradient(
+                150deg,
+                rgba(54, 227, 121, .20),
+                rgba(29, 91, 55, .20)
+            );
+
+        box-shadow:
+            inset 0 0 0 1px
+            rgba(54, 227, 121, .20),
+            0 0 0 3px
+            rgba(87, 148, 255, .08);
+    }
+
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked.is-current > span {
+        color: #8ff0b1;
+    }
+
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked.is-current > small {
+        color: #72d997;
+    }
+
+
+    /*
+     * Si además está seleccionado,
+     * mantenemos el contorno semántico azul
+     * del mes actual.
+     */
+
+    .page-life-v3
+    .life-mobile-month-v1.is-marked.is-current.is-selected {
+        outline:
+            2px solid #74a8ff;
+
+        outline-offset: 2px;
+    }
+
+
+    /* ======================================
+       SELECTOR NATIVO
+    ====================================== */
+
+    /*
+     * El control cerrado mantiene el tema
+     * oscuro diseñado para Agenda Personal.
+     *
+     * Las options del popup nativo usan
+     * contraste convencional negro/blanco.
+     */
+
+    .page-life-v3
+    .life-mobile-select-v1 option {
+        background: #ffffff;
+
+        color: #111111;
+
+        font-weight: 600;
+    }
+
+
+    .page-life-v3
+    .life-mobile-select-v1 option:checked {
+        background: #9fc9f7;
+
+        color: #080808;
+
+        font-weight: 750;
+    }
+}
+

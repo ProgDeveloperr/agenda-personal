@@ -1,0 +1,2726 @@
+/*
+ * Agenda Personal
+ * AGENDA-SISTEMA-THEME-T1
+ * PROFESSIONAL HYBRID LIGHT
+ *
+ * Scope:
+ *   html:not([data-theme="dark"]) body.page-system-v3
+ *
+ * Estrategia:
+ * - ui-v3.css conserva el baseline dark existente.
+ * - esta capa actúa únicamente en Light Mode.
+ * - theme-system-dark.css NO se modifica.
+ * - no cambia estructura DOM ni geometría del header.
+ */
+
+
+/* ==========================================================================
+   ROOT / CANVAS
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.ui-v3.page-system-v3 {
+    background:
+        radial-gradient(
+            circle at 12% -8%,
+            rgba(56, 189, 139, .08),
+            transparent 31rem
+        ),
+        radial-gradient(
+            circle at 92% 6%,
+            rgba(64, 117, 189, .07),
+            transparent 32rem
+        ),
+        #f4f7fb;
+
+    color: #182338;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3 ::selection {
+    background: rgba(30, 158, 111, .18);
+    color: #122033;
+}
+
+
+/* ==========================================================================
+   HEADER — COLOR PARITY ONLY
+   No modifica grid ni estructura.
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-header {
+    border-bottom-color: rgba(137, 151, 171, .22);
+
+    background:
+        rgba(255, 255, 255, .92);
+
+    box-shadow:
+        0 1px 0 rgba(19, 34, 54, .025),
+        0 12px 34px rgba(31, 48, 74, .055);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-brand {
+    color: #172338;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-brand strong {
+    color: #172338;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-brand small {
+    color: #78869a;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-brand-mark {
+    border-color: rgba(33, 159, 111, .18);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #eff8f4
+        );
+
+    color: #16845e;
+
+    box-shadow:
+        0 7px 18px rgba(20, 120, 84, .10);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-nav a {
+    color: #66758a;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-nav a:hover,
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-nav a:focus-visible {
+    background: #f0f5f7;
+    color: #1b7559;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.app-header-status {
+    border-color: rgba(129, 145, 166, .22);
+
+    background:
+        rgba(248, 250, 252, .92);
+
+    color: #66758a;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.status-dot {
+    box-shadow:
+        0 0 0 4px rgba(125, 142, 164, .09);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.status-dot-online {
+    background: #2ebd7f;
+
+    box-shadow:
+        0 0 0 4px rgba(46, 189, 127, .11);
+}
+
+
+/* ==========================================================================
+   THEME TOGGLE
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.theme-toggle-v3 {
+    border-color: rgba(126, 142, 163, .24);
+
+    background:
+        #ffffff;
+
+    color: #53657b;
+
+    box-shadow:
+        0 5px 15px rgba(36, 53, 78, .07);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.theme-toggle-v3:hover,
+html:not([data-theme="dark"])
+body.page-system-v3
+.theme-toggle-v3:focus-visible {
+    border-color: rgba(33, 157, 111, .30);
+
+    background:
+        #edf8f3;
+
+    color: #147955;
+
+    box-shadow:
+        0 6px 18px rgba(27, 124, 88, .10);
+}
+
+
+/* ==========================================================================
+   PAGE SHELL / HERO
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-shell-v3 {
+    color: #182338;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.section-kicker {
+    color: #19805e;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-hero-v3 h1 {
+    color: #162238;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-hero-v3 h1 span {
+    color: #6d7d92;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-hero-v3 p {
+    color: #65758a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================================
+   OVERALL HEALTH
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-overall-v3 {
+    border-color: rgba(129, 147, 170, .22);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .98),
+            rgba(246, 249, 252, .98)
+        );
+
+    box-shadow:
+        0 12px 32px rgba(32, 49, 74, .07);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-overall-v3 strong {
+    color: #29384d;
+    font-size: 13px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-overall-v3 small {
+    color: #7b899b;
+    font-size: 10px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-health-dot-v3 {
+    background: #d89b48;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-health-dot-v3.is-ok {
+    background: #28b978;
+
+    box-shadow:
+        0 0 0 5px rgba(40, 185, 120, .10),
+        0 0 18px rgba(40, 185, 120, .16);
+}
+
+
+/* ==========================================================================
+   TOP METRICS
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-metrics-v3 article {
+    border-color: rgba(132, 148, 169, .18);
+
+    background:
+        linear-gradient(
+            150deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    box-shadow:
+        0 10px 28px rgba(35, 52, 76, .055);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-metrics-v3 span {
+    color: #78879a;
+    font-size: 10px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-metrics-v3 strong {
+    color: #213047;
+    font-size: 21px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-metrics-v3 small {
+    color: #8a97a8;
+    font-size: 9.5px;
+}
+
+
+/* ==========================================================================
+   CARDS
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-card-v3 {
+    border-color: rgba(130, 148, 171, .18);
+
+    background:
+        linear-gradient(
+            150deg,
+            rgba(255, 255, 255, .99),
+            rgba(249, 251, 253, .99)
+        );
+
+    box-shadow:
+        0 13px 34px rgba(31, 48, 72, .06);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-card-v3 > header {
+    border-bottom-color: rgba(133, 149, 169, .13);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-card-v3 h2 {
+    color: #223148;
+    font-size: 16px;
+}
+
+
+/* ==========================================================================
+   STATUS PILLS
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-card-status-v3 {
+    border-color: rgba(126, 143, 165, .20);
+
+    background:
+        #f3f6f9;
+
+    color: #68788d;
+
+    font-size: 9px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-card-status-v3.ok {
+    border-color: rgba(35, 173, 112, .20);
+
+    background:
+        rgba(35, 173, 112, .09);
+
+    color: #167a52;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-card-status-v3.warning {
+    border-color: rgba(203, 143, 52, .22);
+
+    background:
+        rgba(203, 143, 52, .09);
+
+    color: #9c6721;
+}
+
+
+/* ==========================================================================
+   LISTS / FACTS
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-list-v3 > div,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-facts-v3 > div {
+    border-color: rgba(134, 150, 170, .15);
+
+    background:
+        #f7f9fb;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-list-v3 > div:hover,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-facts-v3 > div:hover {
+    border-color: rgba(76, 145, 118, .20);
+
+    background:
+        #f3f8f6;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-list-v3 span,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-facts-v3 span {
+    color: #7a899b;
+    font-size: 10px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-list-v3 strong,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-facts-v3 strong {
+    color: #344359;
+    font-size: 12px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-list-v3 small,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-facts-v3 small {
+    color: #8b98a9;
+    font-size: 9.5px;
+}
+
+
+/* ==========================================================================
+   AUTOMATION HIGHLIGHT
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-highlight-v3 {
+    border-color: rgba(40, 177, 116, .14);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(36, 177, 115, .08),
+            rgba(255, 255, 255, .70)
+        );
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-highlight-v3 strong {
+    color: #168058;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-highlight-v3 span {
+    color: #708195;
+    font-size: 10px;
+}
+
+
+/* ==========================================================================
+   BACKUP
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-backup-name-v3 {
+    border-color: rgba(79, 128, 181, .15);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(74, 126, 183, .07),
+            #f8fafc
+        );
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-backup-name-v3 span {
+    color: #75869a;
+    font-size: 10px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-backup-name-v3 strong {
+    color: #3c678f;
+    font-size: 12px;
+}
+
+
+/* ==========================================================================
+   STORAGE
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-storage-track-v3 {
+    background: #e5ebf1;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-storage-track-v3 span {
+    background:
+        linear-gradient(
+            90deg,
+            #21a674,
+            #48bc8d
+        );
+
+    box-shadow:
+        0 0 14px rgba(31, 158, 109, .18);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-storage-labels-v3 strong {
+    color: #44546a;
+    font-size: 11px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-storage-labels-v3 span {
+    color: #7d8b9d;
+    font-size: 10px;
+}
+
+
+/* ==========================================================================
+   PREFERENCES
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-preferences-v3 form,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-readonly-setting-v3 {
+    border-color: rgba(132, 149, 170, .17);
+
+    background:
+        #f7f9fb;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-preferences-v3 label span,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-readonly-setting-v3 span {
+    color: #526378;
+    font-size: 11px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-preferences-v3 label small,
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-readonly-setting-v3 small {
+    color: #8492a3;
+    font-size: 9.5px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-preferences-v3 input {
+    border-color: rgba(119, 139, 163, .27);
+
+    background:
+        #ffffff;
+
+    color: #29394f;
+
+    font-size: 12px;
+
+    box-shadow:
+        inset 0 1px 2px rgba(30, 46, 68, .025);
+
+    color-scheme: light;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-preferences-v3 input:hover {
+    border-color: rgba(70, 128, 105, .31);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-preferences-v3 input:focus {
+    border-color: #38a77e;
+
+    box-shadow:
+        0 0 0 3px rgba(56, 167, 126, .12);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-save-v3 {
+    border-color: #16825b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16825b,
+            #1f9d6d
+        );
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    box-shadow:
+        0 8px 19px rgba(21, 126, 88, .18);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-save-v3:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #126f4e,
+            #1b8d62
+        );
+
+    box-shadow:
+        0 10px 23px rgba(21, 126, 88, .22);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-save-v3:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 165, 116, .17),
+        0 10px 23px rgba(21, 126, 88, .19);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-readonly-setting-v3 > strong {
+    color: #415168;
+    font-size: 15px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-readonly-setting-v3 > em {
+    color: #8290a1;
+    font-size: 9px;
+}
+
+
+/* ==========================================================================
+   SECURITY
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-security-v3 {
+    border-color: rgba(41, 164, 108, .14);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(40, 170, 112, .065),
+            rgba(255, 255, 255, .7)
+        );
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-security-v3 strong {
+    color: #314158;
+    font-size: 12px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-security-v3 p {
+    color: #748397;
+    font-size: 10.5px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   FOOTER DIAGNOSTIC
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-footer-v3 {
+    border-color: rgba(132, 149, 170, .18);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7f9fb
+        );
+
+    box-shadow:
+        0 11px 30px rgba(33, 49, 72, .055);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-footer-v3 strong {
+    color: #405168;
+    font-size: 11px;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.system-footer-v3 small {
+    color: #8391a2;
+    font-size: 9.5px;
+}
+
+
+/* ==========================================================================
+   MESSAGE FEEDBACK
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.agenda-message-v3 {
+    border-color: rgba(131, 149, 170, .18);
+
+    background:
+        #ffffff;
+
+    color: #35465c;
+
+    box-shadow:
+        0 9px 25px rgba(33, 49, 72, .055);
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.agenda-message-success-v3 {
+    border-color: rgba(31, 164, 106, .20);
+
+    background:
+        #eff9f4;
+
+    color: #176b4c;
+}
+
+html:not([data-theme="dark"])
+body.page-system-v3
+.agenda-message-error-v3 {
+    border-color: rgba(201, 78, 78, .18);
+
+    background:
+        #fff4f4;
+
+    color: #9e3f3f;
+}
+
+
+/* ==========================================================================
+   FOCUS
+   ========================================================================== */
+
+html:not([data-theme="dark"])
+body.page-system-v3
+a:focus-visible,
+html:not([data-theme="dark"])
+body.page-system-v3
+button:focus-visible {
+    outline:
+        2px solid rgba(30, 151, 107, .42);
+
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   MOBILE LIGHT COMPATIBILITY
+   sistema-mobile.css conserva geometría.
+   Esta sección sólo corrige color/legibilidad donde aquel archivo usa
+   valores del baseline oscuro.
+   ========================================================================== */
+
+@media (max-width: 760px) {
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-hero-v3 p {
+        color: #65758a;
+        font-size: 12px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-overall-v3 strong {
+        font-size: 12px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-overall-v3 small {
+        font-size: 9.5px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-metrics-v3 span {
+        font-size: 9px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-metrics-v3 strong {
+        font-size: 19px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-metrics-v3 small {
+        font-size: 8.5px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-card-v3 h2 {
+        font-size: 15px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-list-v3 span,
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-facts-v3 span {
+        font-size: 9px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-list-v3 strong,
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-facts-v3 strong {
+        font-size: 11px;
+    }
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-list-v3 small,
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-facts-v3 small {
+        font-size: 8.5px;
+    }
+}
+
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-card-v3,
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .system-save-v3,
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .theme-toggle-v3 {
+        transition: none;
+    }
+
+}
+
+
+/* ==========================================================================
+ * SISTEMA-T1.1 - DESKTOP VISUAL PARITY
+ * ==========================================================================
+ *
+ * Objetivos:
+ * - Navbar parity con arquitectura D1.3 validada.
+ * - Escala legible real a 100%.
+ * - Mejor jerarquia de informacion.
+ * - Dark premium con mayor contraste.
+ * - Preservar mobile <= 760px.
+ *
+ * No modifica estructura DOM.
+ * ========================================================================== */
+
+
+@media (min-width: 761px) {
+
+    /* ======================================================================
+       PAGE WIDTH / RHYTHM
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-shell-v3 {
+        width:
+            min(
+                1240px,
+                calc(100% - 48px)
+            );
+
+        padding:
+            48px
+            0
+            82px;
+    }
+
+
+    body.page-system-v3
+    .system-hero-v3 {
+        gap: 38px;
+
+        margin-bottom: 24px;
+    }
+
+
+    body.page-system-v3
+    .system-hero-v3 h1 {
+        font-size:
+            clamp(
+                42px,
+                4vw,
+                58px
+            );
+
+        line-height: .98;
+
+        letter-spacing: -.055em;
+    }
+
+
+    body.page-system-v3
+    .system-hero-v3 p {
+        max-width: 680px;
+
+        margin-top: 12px;
+
+        font-size: 14px;
+        line-height: 1.68;
+    }
+
+
+    body.page-system-v3
+    .section-kicker {
+        font-size: 10.5px;
+        font-weight: 850;
+
+        line-height: 1.2;
+
+        letter-spacing: .09em;
+    }
+
+
+    /* ======================================================================
+       GENERAL HEALTH
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-overall-v3 {
+        min-width: 245px;
+
+        gap: 12px;
+
+        padding:
+            16px
+            18px;
+
+        border-radius: 14px;
+    }
+
+
+    body.page-system-v3
+    .system-health-dot-v3 {
+        width: 10px;
+        height: 10px;
+
+        flex:
+            0
+            0
+            10px;
+    }
+
+
+    body.page-system-v3
+    .system-overall-v3 strong {
+        font-size: 13.5px;
+        line-height: 1.35;
+    }
+
+
+    body.page-system-v3
+    .system-overall-v3 small {
+        margin-top: 3px;
+
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* ======================================================================
+       TOP METRICS
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-metrics-v3 {
+        gap: 12px;
+
+        margin-top: 20px;
+    }
+
+
+    body.page-system-v3
+    .system-metrics-v3 article {
+        min-height: 110px;
+
+        padding:
+            18px;
+
+        border-radius: 14px;
+    }
+
+
+    body.page-system-v3
+    .system-metrics-v3 span {
+        font-size: 10.5px;
+        font-weight: 700;
+
+        line-height: 1.3;
+    }
+
+
+    body.page-system-v3
+    .system-metrics-v3 strong {
+        margin-top: 8px;
+
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+
+    body.page-system-v3
+    .system-metrics-v3 small {
+        margin-top: 6px;
+
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* ======================================================================
+       MAIN GRID / CARDS
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-grid-v3 {
+        gap: 16px;
+
+        margin-top: 16px;
+    }
+
+
+    body.page-system-v3
+    .system-card-v3 {
+        padding: 22px;
+
+        border-radius: 17px;
+    }
+
+
+    body.page-system-v3
+    .system-card-v3 > header {
+        gap: 18px;
+
+        padding-bottom: 16px;
+    }
+
+
+    body.page-system-v3
+    .system-card-v3 h2 {
+        margin-top: 5px;
+
+        font-size: 18px;
+        line-height: 1.25;
+    }
+
+
+    body.page-system-v3
+    .system-card-status-v3 {
+        min-height: 28px;
+
+        display: inline-flex;
+        align-items: center;
+
+        padding:
+            0
+            10px;
+
+        font-size: 10px;
+
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+
+    /* ======================================================================
+       LISTS / FACTS
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-list-v3,
+    body.page-system-v3
+    .system-facts-v3 {
+        gap: 10px;
+
+        margin-top: 15px;
+    }
+
+
+    body.page-system-v3
+    .system-list-v3 > div,
+    body.page-system-v3
+    .system-facts-v3 > div {
+        min-height: 64px;
+
+        justify-content: center;
+
+        padding:
+            13px
+            14px;
+
+        border-radius: 11px;
+    }
+
+
+    body.page-system-v3
+    .system-list-v3 span,
+    body.page-system-v3
+    .system-facts-v3 span {
+        font-size: 10px;
+        font-weight: 650;
+
+        line-height: 1.35;
+    }
+
+
+    body.page-system-v3
+    .system-list-v3 strong,
+    body.page-system-v3
+    .system-facts-v3 strong {
+        margin-top: 5px;
+
+        font-size: 12.5px;
+        font-weight: 750;
+
+        line-height: 1.35;
+    }
+
+
+    body.page-system-v3
+    .system-list-v3 small,
+    body.page-system-v3
+    .system-facts-v3 small {
+        margin-top: 4px;
+
+        font-size: 9.5px;
+        line-height: 1.4;
+    }
+
+
+    /* ======================================================================
+       AUTOMATION HIGHLIGHT
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-highlight-v3 {
+        gap: 10px;
+
+        padding:
+            22px
+            4px
+            14px;
+    }
+
+
+    body.page-system-v3
+    .system-highlight-v3 strong {
+        font-size: 34px;
+
+        line-height: 1;
+    }
+
+
+    body.page-system-v3
+    .system-highlight-v3 span {
+        font-size: 10.5px;
+
+        line-height: 1.3;
+    }
+
+
+    /* ======================================================================
+       BACKUP
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-backup-name-v3 {
+        gap: 5px;
+
+        margin-top: 17px;
+
+        padding: 15px;
+
+        border-radius: 11px;
+    }
+
+
+    body.page-system-v3
+    .system-backup-name-v3 span {
+        font-size: 10px;
+    }
+
+
+    body.page-system-v3
+    .system-backup-name-v3 strong {
+        font-size: 12.5px;
+
+        line-height: 1.35;
+    }
+
+
+    /* ======================================================================
+       STORAGE
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-storage-v3 {
+        margin-top: 20px;
+    }
+
+
+    body.page-system-v3
+    .system-storage-track-v3 {
+        height: 9px;
+    }
+
+
+    body.page-system-v3
+    .system-storage-labels-v3 {
+        margin-top: 9px;
+    }
+
+
+    body.page-system-v3
+    .system-storage-labels-v3 strong {
+        font-size: 11px;
+    }
+
+
+    body.page-system-v3
+    .system-storage-labels-v3 span {
+        font-size: 10px;
+    }
+
+
+    /* ======================================================================
+       PREFERENCES
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-preferences-v3 {
+        gap: 14px;
+
+        margin-top: 16px;
+    }
+
+
+    body.page-system-v3
+    .system-preferences-v3 form,
+    body.page-system-v3
+    .system-readonly-setting-v3 {
+        padding: 17px;
+
+        border-radius: 12px;
+    }
+
+
+    body.page-system-v3
+    .system-preferences-v3 form {
+        gap: 14px;
+    }
+
+
+    body.page-system-v3
+    .system-preferences-v3 label span,
+    body.page-system-v3
+    .system-readonly-setting-v3 span {
+        font-size: 11px;
+        font-weight: 750;
+    }
+
+
+    body.page-system-v3
+    .system-preferences-v3 label small,
+    body.page-system-v3
+    .system-readonly-setting-v3 small {
+        margin-top: 4px;
+
+        font-size: 10px;
+        line-height: 1.45;
+    }
+
+
+    body.page-system-v3
+    .system-preferences-v3 input {
+        min-height: 42px;
+
+        margin-top: 10px;
+
+        padding:
+            0
+            12px;
+
+        border-radius: 9px;
+
+        font-size: 13px;
+    }
+
+
+    body.page-system-v3
+    .system-save-v3 {
+        min-height: 42px;
+
+        padding:
+            0
+            17px;
+
+        border-radius: 9px;
+
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+
+    body.page-system-v3
+    .system-readonly-setting-v3 > strong {
+        font-size: 17px;
+    }
+
+
+    body.page-system-v3
+    .system-readonly-setting-v3 > em {
+        font-size: 9.5px;
+    }
+
+
+    /* ======================================================================
+       SECURITY
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-security-v3 {
+        margin-top: 18px;
+    }
+
+
+    body.page-system-v3
+    .system-security-v3 strong {
+        font-size: 13px;
+
+        line-height: 1.35;
+    }
+
+
+    body.page-system-v3
+    .system-security-v3 p {
+        max-width: 620px;
+
+        margin-top: 7px;
+
+        font-size: 10.5px;
+        line-height: 1.65;
+    }
+
+
+    /* ======================================================================
+       FOOTER
+       ====================================================================== */
+
+    body.page-system-v3
+    .system-footer-v3 {
+        gap: 30px;
+
+        margin-top: 16px;
+
+        padding:
+            17px
+            18px;
+
+        border-radius: 14px;
+    }
+
+
+    body.page-system-v3
+    .system-footer-v3 strong {
+        margin-top: 4px;
+
+        font-size: 11.5px;
+
+        line-height: 1.35;
+    }
+
+
+    body.page-system-v3
+    .system-footer-v3 small {
+        margin-top: 3px;
+
+        font-size: 9.5px;
+        line-height: 1.4;
+    }
+
+}
+
+
+/* ==========================================================================
+   HEADER GRID PARITY
+   D1.3 architecture:
+   BRAND | NAV | BELL | RIGHT ACTIONS
+   ========================================================================== */
+
+@media (min-width: 1180px) {
+
+    body.page-system-v3
+    .app-header-inner {
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(190px, 1fr)
+            auto
+            42px
+            max-content !important;
+
+        align-items: center !important;
+
+        column-gap: 14px !important;
+    }
+
+
+    body.page-system-v3
+    .app-brand {
+        min-width: 0;
+
+        justify-self: start;
+    }
+
+
+    body.page-system-v3
+    .app-brand strong {
+        font-size: 15px;
+
+        line-height: 1.15;
+    }
+
+
+    body.page-system-v3
+    .app-brand small {
+        font-size: 10px;
+
+        line-height: 1.2;
+    }
+
+
+    body.page-system-v3
+    .app-nav {
+        min-width: 0;
+
+        justify-self: center;
+
+        white-space: nowrap;
+    }
+
+
+    body.page-system-v3
+    .app-nav a {
+        padding:
+            9px
+            10px;
+
+        font-size: 12px;
+        font-weight: 700;
+
+        line-height: 1;
+    }
+
+
+    body.page-system-v3
+    .app-header-inner
+    > .notification-center-v3 {
+        grid-column: 3;
+
+        width: 42px;
+
+        justify-self: center;
+    }
+
+
+    body.page-system-v3
+    .notification-bell-v3 {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    body.page-system-v3
+    .app-header-status {
+        grid-column: 4;
+
+        min-width: 0;
+
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 9px !important;
+
+        justify-self: end;
+
+        white-space: nowrap;
+    }
+
+
+    body.page-system-v3
+    .app-header-status
+    .theme-toggle-v3 {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+
+        flex:
+            0
+            0
+            40px;
+    }
+
+
+    body.page-system-v3
+    .app-header-status
+    > span:last-child {
+        font-size: 11px;
+        font-weight: 650;
+    }
+
+}
+
+
+/* ==========================================================================
+   DARK SYSTEM — PREMIUM READABILITY
+   ========================================================================== */
+
+@media (min-width: 761px) {
+
+    html[data-theme="dark"]
+    body.page-system-v3 {
+        background:
+            radial-gradient(
+                circle at 10% -12%,
+                rgba(35, 137, 102, .08),
+                transparent 34rem
+            ),
+            radial-gradient(
+                circle at 90% -8%,
+                rgba(45, 91, 145, .075),
+                transparent 34rem
+            ),
+            #07111b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-hero-v3 h1 {
+        color: #f0f5f8;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-hero-v3 h1 span {
+        color: #8296a8;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-hero-v3 p {
+        color: #8094a7;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-overall-v3 {
+        border-color:
+            rgba(147, 166, 186, .14);
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(16, 27, 39, .94),
+                rgba(10, 19, 29, .94)
+            );
+
+        box-shadow:
+            0 14px 34px rgba(0, 0, 0, .15);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-overall-v3 strong {
+        color: #d9e3ea;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-overall-v3 small {
+        color: #748a9d;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-metrics-v3 article {
+        border-color:
+            rgba(147, 166, 186, .13);
+
+        background:
+            linear-gradient(
+                150deg,
+                rgba(15, 26, 38, .94),
+                rgba(9, 17, 26, .94)
+            );
+
+        box-shadow:
+            0 12px 28px rgba(0, 0, 0, .12);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-metrics-v3 span {
+        color: #7d92a5;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-metrics-v3 strong {
+        color: #edf3f7;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-metrics-v3 small {
+        color: #6c8295;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-card-v3 {
+        border-color:
+            rgba(147, 166, 186, .13);
+
+        background:
+            linear-gradient(
+                150deg,
+                rgba(14, 25, 36, .97),
+                rgba(8, 16, 25, .97)
+            );
+
+        box-shadow:
+            0 15px 38px rgba(0, 0, 0, .13);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-card-v3 > header {
+        border-bottom-color:
+            rgba(151, 168, 185, .10);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-card-v3 h2 {
+        color: #e0e8ee;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-card-status-v3 {
+        border-color:
+            rgba(145, 164, 184, .16);
+
+        background:
+            rgba(255, 255, 255, .025);
+
+        color: #8499aa;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-card-status-v3.ok {
+        border-color:
+            rgba(51, 204, 124, .18);
+
+        background:
+            rgba(40, 181, 108, .065);
+
+        color: #63dc91;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-card-status-v3.warning {
+        border-color:
+            rgba(218, 162, 82, .18);
+
+        background:
+            rgba(194, 139, 65, .065);
+
+        color: #e0b06b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-list-v3 > div,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-facts-v3 > div {
+        border-color:
+            rgba(147, 165, 184, .09);
+
+        background:
+            rgba(255, 255, 255, .018);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-list-v3 span,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-facts-v3 span {
+        color: #71879a;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-list-v3 strong,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-facts-v3 strong {
+        color: #c6d3dd;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-list-v3 small,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-facts-v3 small {
+        color: #62788b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-highlight-v3 span {
+        color: #74899b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-backup-name-v3 {
+        border-color:
+            rgba(83, 148, 214, .13);
+
+        background:
+            rgba(63, 124, 184, .035);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-backup-name-v3 span {
+        color: #71879b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-backup-name-v3 strong {
+        color: #9bc0df;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-storage-labels-v3 strong {
+        color: #c0ccd5;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-storage-labels-v3 span {
+        color: #73889b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-preferences-v3 form,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-readonly-setting-v3 {
+        border-color:
+            rgba(147, 165, 184, .10);
+
+        background:
+            rgba(255, 255, 255, .018);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-preferences-v3 label span,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-readonly-setting-v3 span {
+        color: #a0b0bd;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-preferences-v3 label small,
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-readonly-setting-v3 small {
+        color: #718699;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-preferences-v3 input {
+        border-color:
+            rgba(146, 166, 186, .15);
+
+        background:
+            rgba(3, 8, 13, .42);
+
+        color: #d0dae2;
+
+        color-scheme: dark;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-readonly-setting-v3 > strong {
+        color: #c7d2dc;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-readonly-setting-v3 > em {
+        color: #6e8497;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-security-v3 strong {
+        color: #c8d4dd;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-security-v3 p {
+        color: #74899b;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-footer-v3 {
+        border-color:
+            rgba(147, 165, 184, .11);
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(14, 25, 36, .92),
+                rgba(9, 17, 26, .92)
+            );
+
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, .11);
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-footer-v3 strong {
+        color: #b5c4cf;
+    }
+
+
+    html[data-theme="dark"]
+    body.page-system-v3
+    .system-footer-v3 small {
+        color: #687e91;
+    }
+
+}
+
+
+/* ==========================================================================
+ * SISTEMA-NAVBAR-LIGHT-T1
+ * Exact Light Navbar Parity
+ *
+ * Fuente visual:
+ * theme-professional-light.css
+ *
+ * Scope estricto:
+ * html:not([data-theme="dark"]) body.page-system-v3
+ *
+ * Dark queda excluido.
+ * Mobile <=760px queda excluido.
+ * ========================================================================== */
+
+
+@media (min-width: 761px) {
+
+    /* ======================================================================
+       HEADER
+       ====================================================================== */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header {
+        border-bottom:
+            1px solid
+            rgba(36, 52, 69, .09)
+            !important;
+
+        background:
+            rgba(250, 252, 253, .95)
+            !important;
+
+        box-shadow:
+            0 1px 0
+            rgba(255, 255, 255, .90),
+            0 8px 24px
+            rgba(38, 49, 61, .035)
+            !important;
+
+        backdrop-filter:
+            blur(22px)
+            saturate(125%)
+            !important;
+
+        -webkit-backdrop-filter:
+            blur(22px)
+            saturate(125%)
+            !important;
+    }
+
+
+    /* ======================================================================
+       MARCA
+       Sistema no posee .app-brand-copy.
+       Se reproduce la misma composicion sobre el span existente.
+       ====================================================================== */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand {
+        gap: 12px !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand-mark {
+        width: 43px !important;
+        height: 43px !important;
+
+        flex:
+            0
+            0
+            43px
+            !important;
+
+        border:
+            1px solid
+            rgba(53, 111, 174, .20)
+            !important;
+
+        border-radius:
+            13px
+            !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                #f6f9fc,
+                #edf3f8
+            )
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .98)
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand-mark svg {
+        width: 22px !important;
+        height: 22px !important;
+
+        stroke:
+            #356fae
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand
+    > span:last-child {
+        min-width: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand
+    > span:last-child
+    strong {
+        color:
+            #1d2936
+            !important;
+
+        font-size:
+            16px
+            !important;
+
+        line-height:
+            1.3
+            !important;
+
+        font-weight:
+            780
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand
+    > span:last-child
+    small {
+        margin-top:
+            4px
+            !important;
+
+        color:
+            #718091
+            !important;
+
+        font-size:
+            10px
+            !important;
+
+        line-height:
+            1.35
+            !important;
+
+        letter-spacing:
+            .10em
+            !important;
+    }
+
+
+    /* ======================================================================
+       NAVBAR — copia exacta Light aprobada de Inicio
+       ====================================================================== */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav {
+        min-width: 0;
+
+        display: flex;
+        align-items: center;
+
+        gap:
+            4px
+            !important;
+
+        padding:
+            5px
+            !important;
+
+        border:
+            1px solid
+            #dbe2e8
+            !important;
+
+        border-radius:
+            14px
+            !important;
+
+        background:
+            rgba(255, 255, 255, .90)
+            !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, .98),
+            0 3px 12px
+            rgba(39, 52, 65, .035)
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav a {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height:
+            39px
+            !important;
+
+        padding:
+            0 11px
+            !important;
+
+        border-radius:
+            9px
+            !important;
+
+        color:
+            #687889
+            !important;
+
+        font-size:
+            13px
+            !important;
+
+        line-height:
+            1.3
+            !important;
+
+        font-weight:
+            650
+            !important;
+
+        white-space: nowrap;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav a:hover,
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav a:focus-visible {
+        color:
+            #2b3b4b
+            !important;
+
+        background:
+            #f1f4f7
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav a.active {
+        color:
+            #234f7e
+            !important;
+
+        background:
+            linear-gradient(
+                180deg,
+                #edf4fb,
+                #e6eff8
+            )
+            !important;
+
+        box-shadow:
+            inset 0 0 0 1px
+            rgba(53, 111, 174, .16)
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav a.active::after {
+        background:
+            #82b3ff
+            !important;
+    }
+
+
+    /* ======================================================================
+       STATUS
+       El T1 original habia agregado una superficie propia.
+       Inicio solamente usa texto; se elimina esa diferencia.
+       ====================================================================== */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header-status {
+        min-width: 0;
+
+        gap:
+            8px
+            !important;
+
+        border-color:
+            transparent
+            !important;
+
+        background:
+            transparent
+            !important;
+
+        color:
+            #647485
+            !important;
+
+        box-shadow:
+            none
+            !important;
+
+        font-size:
+            11px
+            !important;
+
+        line-height:
+            1.4
+            !important;
+
+        font-weight:
+            650
+            !important;
+
+        white-space: nowrap;
+    }
+
+
+    /* ======================================================================
+       CAMPANA — copia exacta Light aprobada
+       ====================================================================== */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .notification-bell-v3 {
+        width:
+            41px
+            !important;
+
+        height:
+            41px
+            !important;
+
+        border:
+            1px solid
+            #dbe2e8
+            !important;
+
+        border-radius:
+            11px
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #607489
+            !important;
+
+        box-shadow:
+            0 2px 7px
+            rgba(40, 53, 67, .035)
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .notification-bell-v3 svg {
+        width:
+            18px
+            !important;
+
+        height:
+            18px
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .notification-bell-v3:hover,
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .notification-center-v3.is-open
+    .notification-bell-v3 {
+        border-color:
+            rgba(53, 111, 174, .28)
+            !important;
+
+        background:
+            #f2f6fb
+            !important;
+
+        color:
+            #356fae
+            !important;
+    }
+
+
+    /* ======================================================================
+       NUEVO — copia exacta Light aprobada
+       ====================================================================== */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .quick-add-trigger-v3 {
+        border-color:
+            rgba(35, 138, 87, .21)
+            !important;
+
+        background:
+            #f1faf5
+            !important;
+
+        color:
+            #23794f
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .quick-add-trigger-v3:hover {
+        border-color:
+            rgba(35, 138, 87, .36)
+            !important;
+
+        background:
+            #e8f6ee
+            !important;
+
+        color:
+            #176640
+            !important;
+    }
+
+}
+
+
+/* ==========================================================================
+   DESKTOP GRID — restaurar geometria global exacta
+   ========================================================================== */
+
+@media (min-width: 1180px) {
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header-inner {
+        width:
+            min(
+                1380px,
+                calc(100% - 48px)
+            )
+            !important;
+
+        min-height:
+            82px
+            !important;
+
+        display:
+            grid
+            !important;
+
+        grid-template-columns:
+            minmax(165px, 1fr)
+            max-content
+            42px
+            minmax(135px, 1fr)
+            !important;
+
+        align-items:
+            center
+            !important;
+
+        gap:
+            14px
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand {
+        min-width: 0;
+
+        grid-column:
+            1
+            !important;
+
+        justify-self:
+            start
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav {
+        grid-column:
+            2
+            !important;
+
+        justify-self:
+            center
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .notification-center-v3 {
+        grid-column:
+            3
+            !important;
+
+        width:
+            42px
+            !important;
+
+        justify-self:
+            end
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header-status {
+        grid-column:
+            4
+            !important;
+
+        justify-self:
+            end
+            !important;
+    }
+
+}
+
+
+/* ==========================================================================
+ * SISTEMA-NAVBAR-LIGHT-T1.1-SPACING
+ * Restore final D1.3 navbar geometry
+ *
+ * Mantiene todos los colores del Light T1.
+ * Solo corrige distribucion y respiracion.
+ * ========================================================================== */
+
+
+@media (min-width: 1180px) {
+
+    /*
+     * Arquitectura final:
+     *
+     * brand | nav | bell | right actions
+     *
+     * Clave:
+     * - flexible space queda a la izquierda
+     * - nav conserva ancho natural
+     * - bell tiene track fijo
+     * - acciones derechas usan max-content
+     */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header-inner {
+        width:
+            min(
+                1380px,
+                calc(100% - 48px)
+            )
+            !important;
+
+        min-height:
+            82px
+            !important;
+
+        display:
+            grid
+            !important;
+
+        grid-template-columns:
+            minmax(190px, 1fr)
+            auto
+            42px
+            max-content
+            !important;
+
+        align-items:
+            center
+            !important;
+
+        column-gap:
+            14px
+            !important;
+
+        row-gap:
+            0
+            !important;
+    }
+
+
+    /* Marca */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-brand {
+        grid-column:
+            1
+            !important;
+
+        justify-self:
+            start
+            !important;
+    }
+
+
+    /* Navegacion */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-nav {
+        grid-column:
+            2
+            !important;
+
+        justify-self:
+            center
+            !important;
+    }
+
+
+    /* Campana */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .notification-center-v3 {
+        grid-column:
+            3
+            !important;
+
+        width:
+            42px
+            !important;
+
+        justify-self:
+            center
+            !important;
+    }
+
+
+    /* Nuevo + Buscar + Toggle + Estado */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header-status {
+        grid-column:
+            4
+            !important;
+
+        width:
+            max-content
+            !important;
+
+        min-width:
+            max-content
+            !important;
+
+        display:
+            flex
+            !important;
+
+        align-items:
+            center
+            !important;
+
+        justify-content:
+            flex-start
+            !important;
+
+        justify-self:
+            end
+            !important;
+
+        gap:
+            14px
+            !important;
+
+        white-space:
+            nowrap
+            !important;
+    }
+
+
+    /*
+     * Evita que los controles generados reduzcan su ancho
+     * cuando el header tiene muchos elementos.
+     */
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .app-header-status
+    > * {
+        flex-shrink:
+            0
+            !important;
+    }
+
+
+    html:not([data-theme="dark"])
+    body.page-system-v3
+    .theme-toggle-v3 {
+        flex:
+            0
+            0
+            40px
+            !important;
+    }
+
+}

@@ -1,0 +1,1279 @@
+/*
+ * ==========================================================
+ * Agenda Personal
+ * Professional Light R1B
+ * PILOTO EXCLUSIVO: Inicio
+ * ==========================================================
+ *
+ * Capa puramente cromática.
+ * No modifica geometría ni comportamiento.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   TOKENS
+   ========================================================== */
+
+body.ui-v3.page-dashboard-v3 {
+
+    --v3-bg:
+        #f3f5f7;
+
+    --v3-bg-soft:
+        #eef2f5;
+
+    --v3-surface:
+        #ffffff;
+
+    --v3-surface-2:
+        #f8fafc;
+
+    --v3-surface-3:
+        #eef3f7;
+
+    --v3-border:
+        rgba(31, 43, 56, .11);
+
+    --v3-border-hover:
+        rgba(31, 43, 56, .20);
+
+    --v3-text:
+        #1c2734;
+
+    --v3-muted:
+        #607080;
+
+    --v3-muted-2:
+        #7d8996;
+
+    --v3-blue:
+        #356fae;
+
+    --v3-green:
+        #238a57;
+
+    --v3-purple:
+        #7257c8;
+
+    --v3-cyan:
+        #277c8e;
+
+    --v3-shadow:
+        0 18px 48px
+        rgba(31, 43, 56, .08);
+
+    --v3-shadow-soft:
+        0 7px 22px
+        rgba(31, 43, 56, .055);
+
+    color-scheme:
+        light;
+
+    color:
+        var(--v3-text);
+
+    background:
+        radial-gradient(
+            950px 500px
+            at 12% -15%,
+            rgba(53, 111, 174, .055),
+            transparent 68%
+        ),
+        linear-gradient(
+            180deg,
+            #f9fafb 0%,
+            #f4f6f8 55%,
+            #eef2f5 100%
+        )
+        !important;
+}
+
+
+body.page-dashboard-v3 ::selection {
+    color:
+        #17304c;
+
+    background:
+        rgba(53, 111, 174, .18);
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+body.page-dashboard-v3
+.app-header {
+    border-bottom:
+        1px solid
+        rgba(36, 52, 69, .09)
+        !important;
+
+    background:
+        rgba(250, 252, 253, .95)
+        !important;
+
+    box-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .90),
+        0 8px 24px
+        rgba(38, 49, 61, .035)
+        !important;
+
+    backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+}
+
+
+/* Marca */
+
+body.page-dashboard-v3
+.app-brand-mark {
+    border-color:
+        rgba(53, 111, 174, .20)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f6f9fc,
+            #edf3f8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-brand-copy strong {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-brand-copy small {
+    color:
+        #718091
+        !important;
+}
+
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+body.page-dashboard-v3
+.app-nav {
+    border-color:
+        #dbe2e8
+        !important;
+
+    background:
+        rgba(255, 255, 255, .90)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98),
+        0 3px 12px
+        rgba(39, 52, 65, .035)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-nav a {
+    color:
+        #687889
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-nav a:hover {
+    color:
+        #2b3b4b
+        !important;
+
+    background:
+        #f1f4f7
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-nav a.active {
+    color:
+        #234f7e
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf4fb,
+            #e6eff8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(53, 111, 174, .16)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.app-header-status {
+    color:
+        #647485
+        !important;
+}
+
+
+/* ==========================================================
+   CAMPANA
+   ========================================================== */
+
+body.page-dashboard-v3
+.notification-bell-v3 {
+    border-color:
+        #dbe2e8
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #607489
+        !important;
+
+    box-shadow:
+        0 2px 7px
+        rgba(40, 53, 67, .035)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.notification-bell-v3:hover,
+
+body.page-dashboard-v3
+.notification-center-v3.is-open
+.notification-bell-v3 {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        #f2f6fb
+        !important;
+
+    color:
+        #356fae
+        !important;
+}
+
+
+/* ==========================================================
+   NUEVO
+   ========================================================== */
+
+body.page-dashboard-v3
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(35, 138, 87, .21)
+        !important;
+
+    background:
+        #f1faf5
+        !important;
+
+    color:
+        #23794f
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-trigger-v3:hover {
+    border-color:
+        rgba(35, 138, 87, .36)
+        !important;
+
+    background:
+        #e8f6ee
+        !important;
+
+    color:
+        #176640
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-trigger-v3 kbd {
+    border-color:
+        rgba(35, 138, 87, .16)
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #56806a
+        !important;
+}
+
+
+/* ==========================================================
+   BUSCAR
+   ========================================================== */
+
+body.page-dashboard-v3
+.command-trigger-v3 {
+    border-color:
+        #dbe2e8
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #647485
+        !important;
+}
+
+
+body.page-dashboard-v3
+.command-trigger-v3:hover {
+    border-color:
+        rgba(53, 111, 174, .24)
+        !important;
+
+    background:
+        #f4f7fa
+        !important;
+
+    color:
+        #365f89
+        !important;
+}
+
+
+body.page-dashboard-v3
+.command-trigger-v3 kbd {
+    border-color:
+        #e0e6eb
+        !important;
+
+    background:
+        #f4f6f8
+        !important;
+
+    color:
+        #7a8794
+        !important;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+body.page-dashboard-v3
+.dashboard-v3 {
+    color:
+        #1c2734
+        !important;
+}
+
+
+body.page-dashboard-v3
+.hero-copy-v3 h1 {
+    color:
+        #17222f
+        !important;
+}
+
+
+body.page-dashboard-v3
+.hero-copy-v3 h1 span {
+    color:
+        #52708d
+        !important;
+}
+
+
+body.page-dashboard-v3
+.hero-copy-v3 p {
+    color:
+        #607080
+        !important;
+}
+
+
+body.page-dashboard-v3
+.section-kicker {
+    color:
+        #23794f
+        !important;
+}
+
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+body.page-dashboard-v3
+.today-card-v3,
+
+body.page-dashboard-v3
+.metrics-v3 > article,
+
+body.page-dashboard-v3
+.next-event-v3,
+
+body.page-dashboard-v3
+.tools-grid-v3 > * {
+    border-color:
+        #dce3e9
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fafbfd
+        )
+        !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(37, 51, 65, .045)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.tools-grid-v3 > *:hover {
+    border-color:
+        #c9d5df
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 12px 30px
+        rgba(37, 51, 65, .07)
+        !important;
+}
+
+
+/* ==========================================================
+   TEXTO GENERAL
+   ========================================================== */
+
+body.page-dashboard-v3
+.dashboard-v3 h2,
+
+body.page-dashboard-v3
+.dashboard-v3 h3 {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-v3 p {
+    color:
+        #657484
+        !important;
+}
+
+
+/* Hoy */
+
+body.page-dashboard-v3
+.today-main > strong {
+    color:
+        #17222f
+        !important;
+}
+
+
+body.page-dashboard-v3
+.today-main span {
+    color:
+        #5f7080
+        !important;
+}
+
+
+body.page-dashboard-v3
+.today-main small,
+
+body.page-dashboard-v3
+.today-card-v3 > p {
+    color:
+        #7a8794
+        !important;
+}
+
+
+/* Métricas */
+
+body.page-dashboard-v3
+.metrics-v3 article span {
+    color:
+        #657585
+        !important;
+}
+
+
+body.page-dashboard-v3
+.metrics-v3 article strong {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-dashboard-v3
+.metrics-v3 article small {
+    color:
+        #82909d
+        !important;
+}
+
+
+/* Próximo evento */
+
+body.page-dashboard-v3
+.event-date-v3 strong,
+
+body.page-dashboard-v3
+.event-main-v3 strong,
+
+body.page-dashboard-v3
+.event-main-v3 h3 {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-dashboard-v3
+.event-date-v3 span,
+
+body.page-dashboard-v3
+.event-main-v3 p,
+
+body.page-dashboard-v3
+.event-main-v3 small,
+
+body.page-dashboard-v3
+.event-side-v3 {
+    color:
+        #667687
+        !important;
+}
+
+
+/* Herramientas */
+
+body.page-dashboard-v3
+.tools-grid-v3 h3,
+
+body.page-dashboard-v3
+.tools-grid-v3 strong {
+    color:
+        #1e2b38
+        !important;
+}
+
+
+body.page-dashboard-v3
+.tools-grid-v3 p,
+
+body.page-dashboard-v3
+.tools-grid-v3 small {
+    color:
+        #6b7a89
+        !important;
+}
+
+
+/* ==========================================================
+   QUICK ADD
+   ========================================================== */
+
+body.page-dashboard-v3
+.quick-add-overlay-v3 {
+    background:
+        rgba(36, 46, 57, .36)
+        !important;
+
+    backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-dialog-v3 {
+    border-color:
+        #d7e0e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 34px 90px
+        rgba(29, 39, 50, .20)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-header-v3 {
+    border-bottom-color:
+        #e4e9ee
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f7f9fb
+        )
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-heading-v3 h2 {
+    color:
+        #1c2734
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-heading-v3 p,
+
+body.page-dashboard-v3
+.quick-add-field-v3 label,
+
+body.page-dashboard-v3
+.quick-add-note-help-v3 {
+    color:
+        #667687
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-field-v3 input,
+
+body.page-dashboard-v3
+.quick-add-field-v3 select,
+
+body.page-dashboard-v3
+.quick-add-field-v3 textarea {
+    border-color:
+        #d9e1e7
+        !important;
+
+    background:
+        #fafbfd
+        !important;
+
+    color:
+        #202d3a
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-field-v3 input:focus,
+
+body.page-dashboard-v3
+.quick-add-field-v3 select:focus,
+
+body.page-dashboard-v3
+.quick-add-field-v3 textarea:focus {
+    border-color:
+        rgba(53, 111, 174, .48)
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(53, 111, 174, .09)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-footer-v3 {
+    border-top-color:
+        #e4e9ee
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-cancel-v3 {
+    border-color:
+        #d9e1e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #5f6f80
+        !important;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    body.page-dashboard-v3
+    .mobile-bottom-nav-v3 {
+        border-top-color:
+            #dce3e9
+            !important;
+
+        background:
+            rgba(255, 255, 255, .96)
+            !important;
+
+        box-shadow:
+            0 -8px 28px
+            rgba(35, 48, 61, .055)
+            !important;
+    }
+
+
+    body.page-dashboard-v3
+    .mobile-bottom-nav-item-v3 {
+        color:
+            #697988
+            !important;
+    }
+
+
+    body.page-dashboard-v3
+    .mobile-bottom-nav-item-v3.active,
+
+    body.page-dashboard-v3
+    .mobile-bottom-nav-item-v3.is-active,
+
+    body.page-dashboard-v3
+    .mobile-bottom-nav-item-v3[aria-current="page"] {
+        color:
+            #356fae
+            !important;
+
+        background:
+            #edf4fb
+            !important;
+    }
+
+
+    body.page-dashboard-v3
+    .mobile-more-sheet-v3 {
+        border-color:
+            #dce3e9
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        box-shadow:
+            0 -24px 70px
+            rgba(33, 45, 57, .17)
+            !important;
+    }
+
+
+    body.page-dashboard-v3
+    .mobile-more-backdrop-v3 {
+        background:
+            rgba(37, 47, 57, .34)
+            !important;
+    }
+
+
+    body.page-dashboard-v3
+    .quick-add-mobile-trigger-v3,
+
+    body.page-dashboard-v3
+    .command-mobile-trigger-v3 {
+        border-color:
+            #d8e0e7
+            !important;
+
+        background:
+            #ffffff
+            !important;
+
+        color:
+            #356fae
+            !important;
+
+        box-shadow:
+            0 8px 24px
+            rgba(35, 48, 61, .10)
+            !important;
+    }
+
+}
+
+
+/* ==========================================================
+   FOCUS
+   ========================================================== */
+
+body.page-dashboard-v3
+a:focus-visible,
+
+body.page-dashboard-v3
+button:focus-visible,
+
+body.page-dashboard-v3
+input:focus-visible,
+
+body.page-dashboard-v3
+select:focus-visible,
+
+body.page-dashboard-v3
+textarea:focus-visible {
+    outline-color:
+        #356fae
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * Professional Light R1B.1
+ * Title Contrast Polish
+ * ==========================================================
+ *
+ * Sólo corrige texto sobre superficies claras.
+ * Las superficies oscuras actuales se preservan.
+ * ==========================================================
+ */
+
+
+/* ----------------------------------------------------------
+   Hero principal
+   ---------------------------------------------------------- */
+
+body.page-dashboard-v3
+.dashboard-hero-v3 h1 {
+    color:
+        #1c2936
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-hero-v3 h1 span {
+    color:
+        #60768a
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-hero-v3 > div:first-child > p {
+    color:
+        #67798a
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-hero-v3
+.section-kicker {
+    color:
+        #23794f
+        !important;
+}
+
+
+/* ----------------------------------------------------------
+   Próximas acciones
+   Esta sección permanece sobre la superficie clara.
+   ---------------------------------------------------------- */
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-section-head-v3 h2,
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-section-head-v3 h3 {
+    color:
+        #1f2d3a
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.section-kicker {
+    color:
+        #23794f
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-section-count-v3 {
+    color:
+        #637687
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-head-v4 > span {
+    color:
+        #647687
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-head-v4 > strong {
+    color:
+        #263746
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-head-v4 > a {
+    color:
+        #356fae
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * Professional Light R1B.2
+ * Contrast Micro-Polish
+ * ==========================================================
+ *
+ * Scope:
+ * - indicadores del hero
+ * - Próximas acciones
+ * - controles del header
+ *
+ * No modifica layout ni las tarjetas oscuras.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   INDICADORES DEL HERO
+   Próximos 14 días / Pendientes
+   ========================================================== */
+
+body.page-dashboard-v3
+.dashboard-hero-status-v3 > div {
+    border-color:
+        #d8e1e8
+        !important;
+
+    background:
+        rgba(255, 255, 255, .62)
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-hero-status-v3 span {
+    color:
+        #617589
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-hero-status-v3 strong {
+    color:
+        #263747
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-hero-status-v3 small {
+    color:
+        #71869a
+        !important;
+}
+
+
+/* ==========================================================
+   PROXIMAS ACCIONES
+   Sólo contenido interno de la fila clara
+   ========================================================== */
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-date-v4 {
+    color:
+        #6c8195
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-date-v4 strong {
+    color:
+        #536d84
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-date-v4 span {
+    color:
+        #698095
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-copy-v4 > div {
+    color:
+        #647b90
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-copy-v4 > div i {
+    color:
+        #8799aa
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-copy-v4 > strong {
+    color:
+        #263849
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-copy-v4 > small {
+    color:
+        #6d8295
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-state-v4 > small {
+    color:
+        #74889a
+        !important;
+}
+
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-row-arrow-v3 {
+    color:
+        #657c91
+        !important;
+}
+
+
+/* Prioridad ALTA mantiene identidad,
+   pero gana contraste sobre light */
+
+body.page-dashboard-v3
+.dashboard-actions-v4
+.dashboard-action-state-v4
+.priority-alta {
+    color:
+        #b3740d
+        !important;
+}
+
+
+/* ==========================================================
+   HEADER - NUEVO
+   ========================================================== */
+
+body.page-dashboard-v3
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(35, 138, 87, .30)
+        !important;
+
+    color:
+        #216e49
+        !important;
+}
+
+
+body.page-dashboard-v3
+.quick-add-trigger-v3 kbd {
+    border-color:
+        rgba(35, 138, 87, .22)
+        !important;
+
+    color:
+        #4d715f
+        !important;
+}
+
+
+/* ==========================================================
+   HEADER - BUSCAR
+   ========================================================== */
+
+body.page-dashboard-v3
+.command-trigger-v3 {
+    border-color:
+        #d3dde5
+        !important;
+
+    color:
+        #52687c
+        !important;
+}
+
+
+body.page-dashboard-v3
+.command-trigger-v3 svg {
+    stroke:
+        #60778c
+        !important;
+}
+
+
+body.page-dashboard-v3
+.command-trigger-v3 kbd {
+    border-color:
+        #d5dde4
+        !important;
+
+    background:
+        #f0f3f6
+        !important;
+
+    color:
+        #637586
+        !important;
+}
+
+
+/* ==========================================================
+   HEADER - ESTADO
+   ========================================================== */
+
+body.page-dashboard-v3
+.app-header-status {
+    color:
+        #4f6477
+        !important;
+}
+
+
+body.page-dashboard-v3
+.status-dot-online {
+    background:
+        #25945d
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 148, 93, .09)
+        !important;
+}
+
+
+/* ==========================================================
+   HEADER - CAMPANA
+   ========================================================== */
+
+body.page-dashboard-v3
+.notification-bell-v3 {
+    border-color:
+        #d4dee6
+        !important;
+
+    color:
+        #536a7f
+        !important;
+}

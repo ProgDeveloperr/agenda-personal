@@ -1,0 +1,1194 @@
+
+/*
+ * Agenda Personal
+ * Materia Workspace - Legibilidad V1
+ *
+ * Encabezado individual y estadisticas.
+ * Exclusivo de page-subject-workspace-v3.
+ *
+ * No modifica datos, acciones ni logica PHP.
+ */
+
+/* ==========================================
+   VOLVER AL CATALOGO
+========================================== */
+
+.page-subject-workspace-v3 .subject-back-v3 {
+    gap: 9px;
+
+    margin-bottom: 21px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #a7bbce;
+}
+
+/* ==========================================
+   ENCABEZADO PRINCIPAL
+========================================== */
+
+.page-subject-workspace-v3 .subject-workspace-hero-v3 {
+    gap: 28px;
+
+    padding: 30px 32px;
+
+    margin-bottom: 17px;
+}
+
+/* Código y estado de la materia */
+
+.page-subject-workspace-v3
+.subject-workspace-eyebrow-v3 {
+    gap: 8px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/*
+ * El título principal conserva sus dimensiones
+ * fluidas originales.
+ */
+
+.page-subject-workspace-v3
+.subject-workspace-identity-v3 > p {
+    max-width: 730px;
+
+    font-size: 14px;
+    line-height: 1.65;
+
+    color: #acbfd0;
+}
+
+/* ==========================================
+   ETIQUETAS ACADEMICAS
+========================================== */
+
+.page-subject-workspace-v3
+.subject-workspace-tags-v3 {
+    gap: 9px;
+
+    margin-top: 20px;
+}
+
+.page-subject-workspace-v3
+.subject-workspace-tags-v3 > span {
+    min-height: 35px;
+
+    gap: 8px;
+
+    padding: 7px 11px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #aec2d4;
+}
+
+.page-subject-workspace-v3
+.subject-workspace-tags-v3 svg {
+    width: 15px;
+    height: 15px;
+
+    stroke: #89a4bb;
+}
+
+/* ==========================================
+   ACCIONES DEL ENCABEZADO
+========================================== */
+
+.page-subject-workspace-v3
+.subject-workspace-actions-v3 {
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.page-subject-workspace-v3
+.subject-primary-action-v3,
+.page-subject-workspace-v3
+.subject-secondary-action-v3 {
+    min-height: 42px;
+
+    gap: 8px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+.page-subject-workspace-v3
+.subject-primary-action-v3 svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================
+   CUATRO ESTADISTICAS
+========================================== */
+
+.page-subject-workspace-v3
+.subject-workspace-metrics-v3 {
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.page-subject-workspace-v3
+.subject-workspace-metrics-v3 article {
+    min-width: 0;
+    min-height: 110px;
+
+    padding: 18px 19px;
+
+    border-radius: 13px;
+}
+
+/* Etiquetas */
+
+.page-subject-workspace-v3
+.subject-workspace-metrics-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #a9bdd0;
+}
+
+/* Valores principales */
+
+.page-subject-workspace-v3
+.subject-workspace-metrics-v3 strong {
+    margin-top: 5px;
+
+    font-size: 23px;
+    line-height: 1.3;
+
+    color: #eff5fa;
+}
+
+/* Descripciones inferiores */
+
+.page-subject-workspace-v3
+.subject-workspace-metrics-v3 small {
+    margin-top: 5px;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #9cb1c5;
+}
+
+/* ==========================================
+   AJUSTES RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .page-subject-workspace-v3
+    .subject-workspace-hero-v3 {
+        gap: 22px;
+
+        padding: 24px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 article {
+        min-height: 104px;
+
+        padding: 16px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .page-subject-workspace-v3
+    .subject-workspace-hero-v3 {
+        padding: 19px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-identity-v3 > p {
+        font-size: 13px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 strong {
+        font-size: 21px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 small {
+        font-size: 11px;
+    }
+}
+
+
+/*
+ * Materia Workspace - Legibilidad V2 Activity
+ *
+ * Proximo evento, tareas e historial academico.
+ * Exclusivo de page-subject-workspace-v3.
+ *
+ * No modifica operaciones, enlaces ni datos.
+ */
+
+/* ==========================================
+   ENCABEZADOS DE SECCIONES
+========================================== */
+
+.page-subject-workspace-v3 .subject-section-heading-v3 {
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.page-subject-workspace-v3 .subject-section-heading-v3 h2 {
+    margin-top: 5px;
+
+    font-size: 19px;
+    line-height: 1.3;
+
+    color: #edf4fa;
+}
+
+.page-subject-workspace-v3 .subject-section-heading-v3 > a {
+    gap: 7px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #a2bed8;
+}
+
+.page-subject-workspace-v3 .subject-section-count-v3 {
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #99aec2;
+}
+
+/* ==========================================
+   CONTENEDORES PRINCIPALES
+========================================== */
+
+.page-subject-workspace-v3 .subject-next-v3,
+.page-subject-workspace-v3 .subject-timeline-v3 {
+    padding: 21px;
+}
+
+/* ==========================================
+   PROXIMO EVENTO
+========================================== */
+
+.page-subject-workspace-v3 .subject-next-card-v3 {
+    min-width: 0;
+    min-height: 125px;
+
+    grid-template-columns:
+        76px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+}
+
+/* Fecha */
+
+.page-subject-workspace-v3 .subject-event-date-v3 {
+    min-height: 82px;
+
+    border-radius: 10px;
+}
+
+.page-subject-workspace-v3 .subject-event-date-v3 span {
+    font-size: 11px;
+    line-height: 1.35;
+
+    color: #a0b5c9;
+}
+
+.page-subject-workspace-v3 .subject-event-date-v3 strong {
+    margin-top: 3px;
+
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.page-subject-workspace-v3 .subject-event-date-v3 small {
+    font-size: 11px;
+    line-height: 1.35;
+
+    color: #91a7bc;
+}
+
+/* Informacion del evento */
+
+.page-subject-workspace-v3 .subject-next-content-v3 {
+    min-width: 0;
+}
+
+.page-subject-workspace-v3 .subject-event-meta-v3 {
+    gap: 7px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a3b9ce;
+}
+
+.page-subject-workspace-v3 .subject-next-content-v3 h3 {
+    margin: 7px 0 5px;
+
+    font-size: 16px;
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+.page-subject-workspace-v3 .subject-next-content-v3 p {
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #9db2c6;
+}
+
+/* Estados */
+
+.page-subject-workspace-v3 .subject-event-status-v3 {
+    min-height: 27px;
+
+    padding: 4px 9px;
+
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.page-subject-workspace-v3 .subject-next-state-v3 {
+    gap: 10px;
+}
+
+.page-subject-workspace-v3 .subject-next-state-v3 > i {
+    font-size: 15px;
+
+    color: #9cb1c5;
+}
+
+/* ==========================================
+   ESTADOS VACIOS
+========================================== */
+
+.page-subject-workspace-v3 .subject-empty-panel-v3 {
+    min-height: 155px;
+
+    padding: 25px 18px;
+
+    border-radius: 12px;
+}
+
+.page-subject-workspace-v3 .subject-empty-panel-v3 > div {
+    width: 39px;
+    height: 39px;
+
+    margin-bottom: 11px;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+.page-subject-workspace-v3 .subject-empty-panel-v3 strong {
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: #cbd8e4;
+}
+
+.page-subject-workspace-v3 .subject-empty-panel-v3 p {
+    max-width: 450px;
+
+    margin-top: 6px;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #97adc1;
+}
+
+/* ==========================================
+   TAREAS ASOCIADAS
+========================================== */
+
+.page-subject-workspace-v3 .subject-tasks-v4 {
+    margin-top: 15px;
+}
+
+.page-subject-workspace-v3 .subject-task-heading-v4 {
+    gap: 11px;
+}
+
+.page-subject-workspace-v3 .subject-task-heading-v4 > a {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #a4c6e5;
+}
+
+.page-subject-workspace-v3 .subject-task-list-v4 {
+    gap: 9px;
+}
+
+/* Tarjeta de tarea */
+
+.page-subject-workspace-v3 .subject-task-item-v4 {
+    min-width: 0;
+    min-height: 83px;
+
+    grid-template-columns:
+        auto
+        49px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border-radius: 10px;
+}
+
+/* Fecha */
+
+.page-subject-workspace-v3 .subject-task-date-v4 strong {
+    font-size: 17px;
+    line-height: 1.25;
+
+    color: #d8e4ed;
+}
+
+.page-subject-workspace-v3 .subject-task-date-v4 span {
+    margin-top: 3px;
+
+    font-size: 10px;
+    line-height: 1.35;
+
+    color: #97adc1;
+}
+
+/* Texto */
+
+.page-subject-workspace-v3 .subject-task-copy-v4 {
+    min-width: 0;
+}
+
+.page-subject-workspace-v3 .subject-task-copy-v4 > div {
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a0b5c9;
+}
+
+.page-subject-workspace-v3 .subject-task-copy-v4 > strong {
+    margin-top: 5px;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    color: #dce7f0;
+
+    overflow-wrap: anywhere;
+}
+
+.page-subject-workspace-v3 .subject-task-copy-v4 > small {
+    margin-top: 4px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #96adc1;
+
+    overflow-wrap: anywhere;
+}
+
+.page-subject-workspace-v3 .subject-task-arrow-v4 {
+    font-size: 15px;
+
+    color: #9ab2c8;
+}
+
+/* ==========================================
+   HISTORIAL ACADEMICO
+========================================== */
+
+.page-subject-workspace-v3 .subject-timeline-list-v3 {
+    gap: 8px;
+}
+
+.page-subject-workspace-v3 .subject-timeline-item-v3 {
+    min-width: 0;
+    min-height: 88px;
+
+    grid-template-columns:
+        8px
+        48px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+}
+
+/* Indicador de color */
+
+.page-subject-workspace-v3 .subject-timeline-dot-v3 {
+    width: 5px;
+    height: 38px;
+}
+
+/* Fecha */
+
+.page-subject-workspace-v3 .subject-timeline-date-v3 strong {
+    font-size: 19px;
+    line-height: 1.2;
+
+    color: #e0eaf2;
+}
+
+.page-subject-workspace-v3 .subject-timeline-date-v3 span {
+    margin-top: 3px;
+
+    font-size: 10px;
+    line-height: 1.35;
+
+    color: #a0b5c9;
+}
+
+/* Informacion */
+
+.page-subject-workspace-v3 .subject-timeline-copy-v3 > div {
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #9fb5c9;
+}
+
+.page-subject-workspace-v3 .subject-timeline-copy-v3 > strong {
+    margin-top: 5px;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    color: #dbe6f0;
+
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    text-overflow: clip;
+}
+
+.page-subject-workspace-v3 .subject-timeline-copy-v3 > small {
+    margin-top: 4px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #93aabf;
+
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    text-overflow: clip;
+}
+
+/* Nota o estado */
+
+.page-subject-workspace-v3 .subject-timeline-result-v3 {
+    min-width: 65px;
+}
+
+.page-subject-workspace-v3 .subject-timeline-result-v3 > strong {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.page-subject-workspace-v3 .subject-timeline-result-v3 > small {
+    margin-top: 3px;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #9aafc3;
+}
+
+/* ==========================================
+   NAVEGACION CON TECLADO
+========================================== */
+
+.page-subject-workspace-v3 .subject-next-card-v3:focus-visible,
+.page-subject-workspace-v3 .subject-task-item-v4:focus-visible,
+.page-subject-workspace-v3 .subject-timeline-item-v3:focus-visible {
+    outline: 2px solid #85b7ff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 760px) {
+
+    .page-subject-workspace-v3 .subject-next-card-v3 {
+        grid-template-columns:
+            70px
+            minmax(0, 1fr);
+    }
+
+    .page-subject-workspace-v3 .subject-next-state-v3 {
+        grid-column: 2;
+
+        justify-content: flex-start;
+    }
+
+    .page-subject-workspace-v3 .subject-task-item-v4 {
+        grid-template-columns:
+            auto
+            43px
+            minmax(0, 1fr)
+            auto;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .page-subject-workspace-v3 .subject-next-v3,
+    .page-subject-workspace-v3 .subject-timeline-v3 {
+        padding: 16px;
+    }
+
+    .page-subject-workspace-v3 .subject-section-heading-v3 {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .page-subject-workspace-v3 .subject-timeline-item-v3 {
+        grid-template-columns:
+            6px
+            42px
+            minmax(0, 1fr);
+
+        gap: 9px;
+    }
+
+    .page-subject-workspace-v3 .subject-timeline-result-v3 {
+        grid-column: 3;
+
+        align-items: flex-start;
+    }
+}
+
+
+/*
+ * Materia Workspace - Legibilidad V3 Sidebar
+ *
+ * Datos academicos, rendimiento y accesos rapidos.
+ * Exclusivo de page-subject-workspace-v3.
+ *
+ * No modifica calculos, registros ni acciones.
+ */
+
+/* ==========================================
+   TARJETAS LATERALES
+========================================== */
+
+.page-subject-workspace-v3 .subject-profile-card-v3,
+.page-subject-workspace-v3 .subject-performance-v3,
+.page-subject-workspace-v3 .subject-actions-card-v3 {
+    min-width: 0;
+
+    padding: 19px;
+
+    border-radius: 14px;
+}
+
+/* ==========================================
+   DATOS ACADEMICOS - ENCABEZADO
+========================================== */
+
+.page-subject-workspace-v3 .subject-profile-heading-v3 {
+    gap: 11px;
+
+    margin-bottom: 16px;
+}
+
+.page-subject-workspace-v3
+.subject-profile-heading-v3 > span {
+    width: 5px;
+    height: 39px;
+
+    flex: 0 0 5px;
+}
+
+.page-subject-workspace-v3
+.subject-profile-heading-v3 small {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #8ea8be;
+}
+
+.page-subject-workspace-v3
+.subject-profile-heading-v3 strong {
+    margin-top: 3px;
+
+    font-size: 14px;
+    line-height: 1.35;
+
+    color: #d9e5ef;
+}
+
+/* ==========================================
+   DATOS ACADEMICOS - FILAS
+========================================== */
+
+.page-subject-workspace-v3
+.subject-profile-card-v3 dl > div {
+    gap: 12px;
+
+    padding: 12px 0;
+}
+
+.page-subject-workspace-v3 .subject-profile-card-v3 dt {
+    flex: 0 0 auto;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #95acc1;
+}
+
+.page-subject-workspace-v3 .subject-profile-card-v3 dd {
+    min-width: 0;
+    max-width: 170px;
+
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.45;
+    font-weight: 650;
+
+    color: #d6e2ed;
+
+    text-align: right;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   RENDIMIENTO - ENCABEZADO
+========================================== */
+
+.page-subject-workspace-v3 .subject-performance-v3 h3,
+.page-subject-workspace-v3 .subject-actions-card-v3 h3 {
+    margin: 5px 0 17px;
+
+    font-size: 16px;
+    line-height: 1.35;
+
+    color: #dae6ef;
+}
+
+/* ==========================================
+   RENDIMIENTO - PROMEDIO
+========================================== */
+
+.page-subject-workspace-v3
+.subject-performance-main-v3 {
+    gap: 13px;
+
+    margin-bottom: 17px;
+}
+
+.page-subject-workspace-v3
+.subject-performance-main-v3 > strong {
+    min-width: 57px;
+
+    font-size: 27px;
+    line-height: 1.2;
+
+    color: #f0f6fb;
+}
+
+.page-subject-workspace-v3
+.subject-performance-main-v3 span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #abc1d4;
+}
+
+.page-subject-workspace-v3
+.subject-performance-main-v3 small {
+    margin-top: 4px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #91a9bf;
+}
+
+/* ==========================================
+   RENDIMIENTO - BARRA
+========================================== */
+
+/*
+ * Solo modificamos altura y radio.
+ * Los porcentajes PHP permanecen intactos.
+ */
+
+.page-subject-workspace-v3
+.subject-performance-track-v3 {
+    height: 8px;
+
+    border-radius: 999px;
+}
+
+/* ==========================================
+   RENDIMIENTO - LEYENDA
+========================================== */
+
+.page-subject-workspace-v3
+.subject-performance-legend-v3 {
+    gap: 11px;
+
+    margin-top: 17px;
+}
+
+.page-subject-workspace-v3
+.subject-performance-legend-v3 > div {
+    grid-template-columns:
+        10px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 9px;
+}
+
+.page-subject-workspace-v3
+.subject-performance-legend-v3 i {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 3px;
+}
+
+.page-subject-workspace-v3
+.subject-performance-legend-v3 span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a7bdd0;
+}
+
+.page-subject-workspace-v3
+.subject-performance-legend-v3 strong {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #d6e3ed;
+}
+
+/* ==========================================
+   ACCIONES RAPIDAS
+========================================== */
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 > a {
+    grid-template-columns:
+        34px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 11px;
+
+    min-height: 64px;
+
+    margin-top: 9px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+/* Icono */
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 > a > span {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+}
+
+/* Texto */
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 > a > div {
+    min-width: 0;
+
+    gap: 3px;
+}
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 strong {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #d5e2ed;
+
+    overflow-wrap: anywhere;
+}
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 small {
+    margin-top: 0;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #94abc0;
+
+    overflow-wrap: anywhere;
+}
+
+/* Flecha */
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 > a > i {
+    font-size: 14px;
+
+    color: #9bb3c9;
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 > a:focus-visible {
+    outline: 2px solid #85b7ff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .page-subject-workspace-v3
+    .subject-workspace-side-v3 {
+        gap: 13px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-profile-card-v3,
+    .page-subject-workspace-v3
+    .subject-performance-v3,
+    .page-subject-workspace-v3
+    .subject-actions-card-v3 {
+        min-width: 0;
+        padding: 17px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-profile-card-v3 dd {
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .page-subject-workspace-v3
+    .subject-workspace-side-v3 {
+        grid-template-columns: 1fr;
+    }
+
+    .page-subject-workspace-v3
+    .subject-profile-card-v3 dd {
+        max-width: 65%;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .page-subject-workspace-v3
+    .subject-actions-card-v3 > a {
+        min-height: 62px;
+    }
+}
+
+
+/*
+ * Materia Workspace - Legibilidad V4 Final
+ *
+ * Consolidacion visual y accesibilidad.
+ * Exclusivo de page-subject-workspace-v3.
+ *
+ * Preserva V1, V2 y V3.
+ */
+
+/* ==========================================
+   NOMBRES DE MATERIAS LARGOS
+========================================== */
+
+.page-subject-workspace-v3
+.subject-workspace-identity-v3 h1 {
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+
+    line-height: 1.12;
+}
+
+/* ==========================================
+   NAVEGACION CON TECLADO
+========================================== */
+
+.page-subject-workspace-v3
+.subject-back-v3:focus-visible,
+
+.page-subject-workspace-v3
+.subject-primary-action-v3:focus-visible,
+
+.page-subject-workspace-v3
+.subject-secondary-action-v3:focus-visible,
+
+.page-subject-workspace-v3
+.subject-section-heading-v3 > a:focus-visible,
+
+.page-subject-workspace-v3
+.subject-task-heading-v4 > a:focus-visible,
+
+.page-subject-workspace-v3
+.subject-actions-card-v3 > a:focus-visible {
+    outline: 2px solid #9bbfff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   ESTADO DE ERROR
+========================================== */
+
+.page-subject-workspace-v3
+.subject-workspace-error-v3 h1 {
+    font-size: clamp(24px, 3vw, 35px);
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+}
+
+.page-subject-workspace-v3
+.subject-workspace-error-v3 p {
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #a8bed1;
+}
+
+.page-subject-workspace-v3
+.subject-workspace-error-v3 a {
+    min-height: 40px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.page-subject-workspace-v3
+.subject-workspace-error-v3 a:focus-visible {
+    outline: 2px solid #9bbfff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   PANTALLAS ESTRECHAS
+========================================== */
+
+@media (max-width: 380px) {
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 {
+        gap: 9px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 article {
+        min-width: 0;
+
+        padding: 13px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 span {
+        font-size: 11px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 strong {
+        font-size: 20px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-workspace-metrics-v3 small {
+        font-size: 10.5px;
+    }
+
+    .page-subject-workspace-v3
+    .subject-profile-card-v3 dd {
+        max-width: 60%;
+    }
+}
+
+/* ==========================================
+   MOVIMIENTO REDUCIDO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-subject-workspace-v3
+    .subject-next-card-v3,
+
+    .page-subject-workspace-v3
+    .subject-task-item-v4,
+
+    .page-subject-workspace-v3
+    .subject-timeline-item-v3 {
+        transition: none;
+    }
+}
+

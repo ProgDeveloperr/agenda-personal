@@ -1,0 +1,640 @@
+/*
+ * Agenda Personal
+ * Calendario Responsive R1
+ *
+ * Mini calendario mensual + agenda diaria.
+ * Exclusivo <= 760px.
+ *
+ * El calendario desktop permanece intacto
+ * como fuente de verdad y fallback.
+ */
+
+.calendar-mobile-v1 {
+    display: none;
+}
+
+
+@media (max-width: 760px) {
+
+    /* ======================================
+       ACTIVACION FAIL-OPEN
+    ====================================== */
+
+    body.page-calendar-v3.calendar-mobile-ready-v1
+    .calendar-board-scroll-v3 {
+        display: none !important;
+    }
+
+
+    body.page-calendar-v3.calendar-mobile-ready-v1
+    .calendar-mobile-v1 {
+        display: block;
+    }
+
+
+    /* ======================================
+       CONTENEDOR
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-v1 {
+        margin-top: 0;
+
+        border-top:
+            1px solid rgba(151, 166, 184, .08);
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(12, 21, 32, .66),
+                rgba(7, 13, 21, .30)
+            );
+    }
+
+
+    /* ======================================
+       CABECERA
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-head-v1 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        gap: 14px;
+
+        padding:
+            15px
+            14px
+            12px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-head-copy-v1 {
+        min-width: 0;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-head-copy-v1 > span {
+        display: block;
+
+        color: #61e18f;
+
+        font-size: 9px;
+        line-height: 1.3;
+        font-weight: 850;
+
+        letter-spacing: .07em;
+        text-transform: uppercase;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-head-copy-v1 strong {
+        display: block;
+
+        margin-top: 3px;
+
+        color: #e7eff6;
+
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-head-copy-v1 small {
+        display: block;
+
+        margin-top: 3px;
+
+        color: #8fa6bb;
+
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-head-state-v1 {
+        flex: 0 0 auto;
+
+        padding:
+            5px
+            8px;
+
+        border:
+            1px solid rgba(87, 148, 255, .15);
+
+        border-radius: 999px;
+
+        background:
+            rgba(87, 148, 255, .055);
+
+        color: #9cbae1;
+
+        font-size: 9px;
+        line-height: 1.25;
+        font-weight: 750;
+    }
+
+
+    /* ======================================
+       DIAS DE SEMANA
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-weekdays-v1 {
+        display: grid;
+
+        grid-template-columns:
+            repeat(7, minmax(0, 1fr));
+
+        gap: 4px;
+
+        padding:
+            0
+            12px
+            7px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-weekdays-v1 span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 0;
+
+        color: #738ba1;
+
+        font-size: 9px;
+        line-height: 1.2;
+        font-weight: 800;
+
+        letter-spacing: .035em;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-weekdays-v1 span:nth-child(6),
+
+    .page-calendar-v3
+    .calendar-mobile-weekdays-v1 span:nth-child(7) {
+        color: #687f94;
+    }
+
+
+    /* ======================================
+       GRID MENSUAL
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-grid-v1 {
+        display: grid;
+
+        grid-template-columns:
+            repeat(7, minmax(0, 1fr));
+
+        gap: 4px;
+
+        padding:
+            0
+            12px
+            14px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-day-empty-v1 {
+        min-width: 0;
+        min-height: 49px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1 {
+        position: relative;
+
+        min-width: 0;
+        min-height: 49px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        padding:
+            5px
+            2px;
+
+        border:
+            1px solid transparent;
+
+        border-radius: 9px;
+
+        outline: none;
+
+        background: transparent;
+
+        color: #aebfd0;
+
+        font: inherit;
+        text-align: center;
+
+        cursor: pointer;
+
+        box-sizing: border-box;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1 > strong {
+        font-size: 12px;
+        line-height: 1;
+
+        font-weight: 750;
+    }
+
+
+    /* Tiene actividad */
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1.has-events {
+        background:
+            rgba(255, 255, 255, .018);
+
+        border-color:
+            rgba(151, 174, 202, .075);
+    }
+
+
+    /* Hoy */
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1.is-today {
+        border-color:
+            rgba(87, 148, 255, .65);
+
+        background:
+            rgba(87, 148, 255, .11);
+
+        color: #dbe8ff;
+
+        box-shadow:
+            inset 0 0 0 1px
+            rgba(87, 148, 255, .10);
+    }
+
+
+    /* Seleccionado */
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1.is-selected {
+        border-color: #72a5ff;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(87, 148, 255, .22),
+                rgba(87, 148, 255, .09)
+            );
+
+        color: #ffffff;
+
+        box-shadow:
+            0 0 0 2px
+            rgba(87, 148, 255, .10);
+    }
+
+
+    /* ======================================
+       PUNTOS DE ACTIVIDAD
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-dots-v1 {
+        min-height: 7px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 2px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-dot-v1 {
+        width: 5px;
+        height: 5px;
+
+        flex: 0 0 5px;
+
+        border-radius: 50%;
+
+        background: #6b8399;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-more-v1 {
+        margin-left: 1px;
+
+        color: #8098ad;
+
+        font-size: 7px;
+        line-height: 1;
+        font-weight: 750;
+    }
+
+
+    /* ======================================
+       AGENDA DEL DIA
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-agenda-v1 {
+        padding:
+            14px
+            14px
+            17px;
+
+        border-top:
+            1px solid rgba(151, 166, 184, .085);
+
+        background:
+            rgba(7, 13, 21, .26);
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-agenda-head-v1 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        gap: 12px;
+
+        margin-bottom: 11px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-agenda-title-v1 {
+        min-width: 0;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-agenda-title-v1 > span {
+        display: block;
+
+        color: #61e18f;
+
+        font-size: 9px;
+        line-height: 1.3;
+        font-weight: 850;
+
+        letter-spacing: .065em;
+        text-transform: uppercase;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-agenda-title-v1 strong {
+        display: block;
+
+        margin-top: 3px;
+
+        color: #e6eef6;
+
+        font-size: 14px;
+        line-height: 1.35;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-agenda-count-v1 {
+        flex: 0 0 auto;
+
+        color: #8ca3b8;
+
+        font-size: 9.5px;
+        line-height: 1.3;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1 {
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    /* ======================================
+       EVENTO CLONADO
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-v3 {
+        width: 100%;
+        min-width: 0;
+
+        padding:
+            12px
+            11px
+            11px
+            15px;
+
+        border-radius: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-top-v3 {
+        gap: 6px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-top-v3 > span {
+        font-size: 9.5px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-top-v3 small {
+        font-size: 10.5px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-v3 > strong {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-v3 > p {
+        margin-top: 5px;
+
+        font-size: 10.5px;
+        line-height: 1.45;
+
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-events-v1
+    .calendar-event-footer-v3 {
+        margin-top: 8px;
+        padding-top: 7px;
+    }
+
+
+    /* ======================================
+       DIA SIN ACTIVIDAD
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-empty-v1 {
+        min-height: 94px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding:
+            17px
+            14px;
+
+        border:
+            1px dashed rgba(151, 174, 202, .11);
+
+        border-radius: 10px;
+
+        text-align: center;
+
+        background:
+            rgba(255, 255, 255, .008);
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-empty-v1 > span {
+        width: 30px;
+        height: 30px;
+
+        display: grid;
+        place-items: center;
+
+        margin-bottom: 7px;
+
+        border-radius: 9px;
+
+        background:
+            rgba(54, 227, 121, .045);
+
+        color: #61d98b;
+
+        font-size: 14px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-empty-v1 strong {
+        color: #bdcbd7;
+
+        font-size: 11.5px;
+        line-height: 1.35;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-empty-v1 p {
+        margin:
+            4px
+            0
+            0;
+
+        color: #7f96aa;
+
+        font-size: 9.5px;
+        line-height: 1.45;
+    }
+
+
+    /* ======================================
+       ACCESIBILIDAD
+    ====================================== */
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1:focus-visible {
+        outline:
+            2px solid #9fc0ff;
+
+        outline-offset: 2px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .page-calendar-v3
+    .calendar-mobile-weekdays-v1,
+
+    .page-calendar-v3
+    .calendar-mobile-grid-v1 {
+        gap: 3px;
+
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1,
+
+    .page-calendar-v3
+    .calendar-mobile-day-empty-v1 {
+        min-height: 46px;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-calendar-v3
+    .calendar-mobile-day-v1 {
+        transition: none;
+    }
+}

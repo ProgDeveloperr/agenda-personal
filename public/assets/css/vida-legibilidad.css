@@ -1,0 +1,1451 @@
+
+/*
+ * Agenda Personal
+ * Vida - Legibilidad V1
+ *
+ * Encabezado, progreso e indicadores.
+ *
+ * Alcance exclusivo: page-life-v3.
+ * No modifica la matriz interactiva.
+ */
+
+/* ==========================================
+   DESCRIPCION PRINCIPAL
+========================================== */
+
+.page-life-v3 .life-hero-copy-v3 > p {
+    max-width: 710px;
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    color: #b0c1d2;
+}
+
+/* ==========================================
+   INFORMACION DEL ENCABEZADO
+========================================== */
+
+.page-life-v3 .life-hero-meta-v3 {
+    gap: 10px 20px;
+
+    margin-top: 19px;
+}
+
+.page-life-v3 .life-hero-meta-v3 span {
+    gap: 8px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #a9bbcf;
+}
+
+.page-life-v3 .life-hero-meta-v3 svg {
+    width: 15px;
+    height: 15px;
+
+    stroke: #91abc5;
+}
+
+/* ==========================================
+   PANEL DE PROGRESO
+========================================== */
+
+/*
+ * Conservar las dimensiones originales del anillo.
+ * Mejorar solamente la informacion tipografica.
+ */
+
+.page-life-v3 .life-progress-copy-v3 strong {
+    font-size: 16px;
+    line-height: 1.35;
+
+    color: #eaf1f7;
+}
+
+.page-life-v3 .life-progress-copy-v3 span {
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #a9bed1;
+}
+
+.page-life-v3 .life-progress-orb-inner-v3 strong {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.page-life-v3 .life-progress-orb-inner-v3 span {
+    font-size: 9px;
+    line-height: 1.35;
+}
+
+/* ==========================================
+   CUATRO INDICADORES
+========================================== */
+
+.page-life-v3 .life-metrics-v3 {
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.page-life-v3 .life-metrics-v3 article {
+    min-width: 0;
+    min-height: 108px;
+
+    gap: 13px;
+
+    padding: 16px 17px;
+
+    border-radius: 13px;
+}
+
+/* ==========================================
+   ICONOS
+========================================== */
+
+.page-life-v3 .life-metric-icon-v3 {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    border-radius: 11px;
+}
+
+.page-life-v3 .life-metric-icon-v3 svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ==========================================
+   INFORMACION DE LAS TARJETAS
+========================================== */
+
+.page-life-v3
+.life-metrics-v3 article > div:last-child {
+    min-width: 0;
+    gap: 3px;
+}
+
+/* Etiquetas */
+
+.page-life-v3 .life-metrics-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #aebfd1;
+}
+
+/* Valores principales */
+
+.page-life-v3 .life-metrics-v3 strong {
+    margin-top: 3px;
+
+    font-size: 21px;
+    line-height: 1.3;
+
+    color: #edf3f8;
+
+    /*
+     * Evitar recortar valores largos,
+     * especialmente Edad del periodo.
+     */
+
+    white-space: normal;
+    overflow: visible;
+
+    overflow-wrap: normal;
+    text-overflow: clip;
+}
+
+/* Descripciones secundarias */
+
+.page-life-v3 .life-metrics-v3 small {
+    margin-top: 3px;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #a1b5c8;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .page-life-v3 .life-metrics-v3 article {
+        min-height: 105px;
+        padding: 15px;
+    }
+
+    .page-life-v3 .life-metrics-v3 strong {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .page-life-v3 .life-metrics-v3 {
+        gap: 10px;
+    }
+
+    .page-life-v3 .life-metrics-v3 article {
+        gap: 10px;
+
+        padding: 13px;
+    }
+
+    .page-life-v3 .life-metric-icon-v3 {
+        width: 35px;
+        height: 35px;
+
+        flex-basis: 35px;
+    }
+
+    .page-life-v3 .life-metrics-v3 strong {
+        font-size: 18px;
+    }
+
+    .page-life-v3 .life-metrics-v3 small {
+        font-size: 11px;
+    }
+}
+
+
+/*
+ * Vida - Legibilidad V2 Matriz
+ *
+ * Periodo actual, progreso y referencias de la matriz.
+ *
+ * Exclusivo de page-life-v3.
+ * No modifica las dimensiones de las 1080 celdas.
+ */
+
+/* ==========================================
+   PERIODO ACTUAL
+========================================== */
+
+.page-life-v3 .life-current-v3 > div {
+    padding: 18px 19px;
+}
+
+/* Mes actual */
+
+.page-life-v3 .life-current-primary-v3 strong {
+    margin-top: 6px;
+
+    font-size: 22px;
+    line-height: 1.3;
+
+    color: #edf4fa;
+}
+
+.page-life-v3 .life-current-primary-v3 p {
+    margin-top: 5px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #a6b9cc;
+}
+
+/* Etiquetas de fechas y edad */
+
+.page-life-v3
+.life-current-period-v3 > span,
+.page-life-v3
+.life-current-age-v3 > span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a4b8cc;
+}
+
+/* Valores */
+
+.page-life-v3
+.life-current-period-v3 strong,
+.page-life-v3
+.life-current-age-v3 strong {
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #e2eaf2;
+
+    white-space: normal;
+}
+
+.page-life-v3 .life-current-period-v3 strong span {
+    padding: 0 5px;
+
+    color: #91a9c2;
+}
+
+/* Explicacion del borde azul */
+
+.page-life-v3 .life-current-rule-v3 {
+    gap: 12px;
+}
+
+.page-life-v3 .life-current-rule-v3 i {
+    width: 17px;
+    height: 17px;
+
+    flex-basis: 17px;
+}
+
+.page-life-v3 .life-current-rule-v3 p {
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #a6b9cc;
+}
+
+/* ==========================================
+   ENCABEZADO DE LA MATRIZ
+========================================== */
+
+.page-life-v3 .life-main-header-v3 {
+    gap: 24px;
+
+    padding: 22px;
+}
+
+/* Descripcion explicativa */
+
+.page-life-v3 .life-main-header-v3 p {
+    max-width: 620px;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #abbdd0;
+}
+
+/* ==========================================
+   LEYENDA DE LA MATRIZ
+========================================== */
+
+.page-life-v3 .life-legend-v3 {
+    gap: 12px;
+}
+
+.page-life-v3 .life-legend-v3 > span {
+    gap: 7px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #adbed0;
+}
+
+/* Cuadrados de referencia, no celdas reales */
+
+.page-life-v3 .life-legend-v3 i {
+    width: 12px;
+    height: 12px;
+
+    flex: 0 0 12px;
+}
+
+/* ==========================================
+   BARRA DE PROGRESO
+========================================== */
+
+.page-life-v3 .life-progress-track-wrap-v3 {
+    padding: 16px 22px;
+}
+
+.page-life-v3 .life-progress-track-labels-v3 {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a8bbce;
+}
+
+.page-life-v3
+.life-progress-track-labels-v3 strong {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #68e798;
+}
+
+.page-life-v3 .life-progress-track-v3 {
+    height: 6px;
+}
+
+/* ==========================================
+   REFERENCIAS DE LOS AÑOS
+========================================== */
+
+.page-life-v3 .life-ruler-years-v3 span {
+    padding-bottom: 8px;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a1b5c8;
+}
+
+/* ==========================================
+   RANGOS DE EDAD
+========================================== */
+
+.page-life-v3 .life-range-v3 {
+    gap: 5px;
+}
+
+.page-life-v3 .life-range-v3 strong {
+    font-size: 11px;
+    line-height: 1.35;
+
+    color: #a9bed1;
+}
+
+.page-life-v3 .life-range-v3 span {
+    font-size: 10px;
+    line-height: 1.35;
+
+    color: #879eb4;
+}
+
+/* Mes actual */
+
+.page-life-v3
+.life-row-current-v3 .life-range-v3 strong {
+    color: #91baff;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .page-life-v3 .life-current-v3 > div {
+        padding: 16px;
+    }
+
+    .page-life-v3 .life-main-header-v3 {
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .page-life-v3 .life-progress-track-wrap-v3 {
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .page-life-v3 .life-current-primary-v3 strong {
+        font-size: 20px;
+    }
+
+    .page-life-v3 .life-current-rule-v3 p {
+        font-size: 12px;
+    }
+
+    .page-life-v3 .life-main-header-v3 p {
+        font-size: 12px;
+    }
+}
+
+
+/*
+ * Vida - Legibilidad V3 Workspace
+ * Inspector, editor y panel Memoria.
+ * No modifica las celdas de la matriz.
+ */
+
+/* INSPECTOR */
+
+.page-life-v3 .life-panel-footer-v3 {
+    min-height: 72px;
+    padding: 13px 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.page-life-v3 .life-cell-inspector-v3 {
+    gap: 12px;
+}
+
+.page-life-v3 .life-inspector-icon-v3 {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 10px;
+}
+
+.page-life-v3 .life-inspector-icon-v3 svg {
+    width: 17px;
+    height: 17px;
+}
+
+.page-life-v3 .life-cell-inspector-v3 > div {
+    gap: 4px;
+}
+
+.page-life-v3 .life-cell-inspector-v3 > div > span {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #92a9be;
+}
+
+.page-life-v3 .life-cell-inspector-v3 > div > strong {
+    max-width: 780px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #bdccda;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-overflow: clip;
+}
+
+.page-life-v3 .life-feedback-v3 {
+    padding: 8px 11px !important;
+    font-size: 11px !important;
+    line-height: 1.4;
+    border-radius: 9px;
+}
+
+/* EDITOR */
+
+.page-life-v3 .life-detail-workspace-v3 {
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.page-life-v3 .life-detail-editor-v3 {
+    min-width: 0;
+    padding: 20px;
+}
+
+.page-life-v3 .life-detail-head-v3 {
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.page-life-v3 .life-detail-head-v3 .section-kicker,
+.page-life-v3 .life-notes-index-v3 .section-kicker {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-life-v3 .life-detail-head-v3 h2 {
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #f0f5fa;
+}
+
+.page-life-v3 .life-detail-head-v3 p {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: #a6bace;
+}
+
+.page-life-v3 .life-selected-state-v3 {
+    min-height: 29px;
+    padding: 4px 10px;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #a5b7ca;
+}
+
+.page-life-v3 .life-selected-state-v3.is-marked {
+    color: #70e49c;
+}
+
+.page-life-v3 .life-detail-body-v3 {
+    gap: 17px;
+    padding-top: 17px;
+}
+
+.page-life-v3 .life-detail-meta-v3 {
+    gap: 8px;
+}
+
+.page-life-v3 .life-detail-meta-v3 article {
+    min-height: 65px;
+    padding: 11px 12px;
+    border-radius: 10px;
+}
+
+.page-life-v3 .life-detail-meta-v3 span {
+    font-size: 11px;
+    line-height: 1.35;
+    color: #93a9be;
+}
+
+.page-life-v3 .life-detail-meta-v3 strong {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #d7e2ed;
+    overflow-wrap: anywhere;
+}
+
+/* NOTA */
+
+.page-life-v3 .life-note-label-v3 {
+    gap: 12px;
+    margin-bottom: 11px;
+}
+
+.page-life-v3 .life-note-label-v3 > div > span {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #c6d5e1;
+}
+
+.page-life-v3 .life-note-label-v3 small {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.45;
+    color: #91a8bd;
+}
+
+.page-life-v3 .life-note-label-v3 > span {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #a6b8ca;
+}
+
+.page-life-v3 .life-note-editor-v3 textarea {
+    min-height: 155px;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #d9e5ef;
+}
+
+.page-life-v3 .life-note-editor-v3 textarea::placeholder {
+    color: #8198ad;
+}
+
+.page-life-v3 .life-note-actions-v3 {
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.page-life-v3 .life-note-actions-v3 > div {
+    gap: 9px;
+}
+
+.page-life-v3 .life-note-primary-v3,
+.page-life-v3 .life-note-secondary-v3 {
+    min-height: 39px;
+    padding: 0 13px;
+    border-radius: 9px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.page-life-v3 .life-note-primary-v3 {
+    color: #75e7a0;
+}
+
+.page-life-v3 .life-note-secondary-v3 {
+    color: #a9bdcf;
+}
+
+/* MEMORIA */
+
+.page-life-v3 .life-notes-index-v3 {
+    min-width: 0;
+    padding: 20px;
+}
+
+.page-life-v3 .life-notes-index-v3 > header {
+    margin-bottom: 15px;
+}
+
+.page-life-v3 .life-notes-index-v3 h3 {
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #e4edf5;
+}
+
+.page-life-v3 .life-notes-index-v3 > header > strong {
+    min-width: 30px;
+    height: 30px;
+    padding: 0 7px;
+    font-size: 12px;
+}
+
+.page-life-v3 .life-notes-search-v3 {
+    min-height: 42px;
+    gap: 10px;
+    padding: 0 12px;
+    border-radius: 10px;
+}
+
+.page-life-v3 .life-notes-search-v3 svg {
+    width: 16px;
+    height: 16px;
+}
+
+.page-life-v3 .life-notes-search-v3 input {
+    min-height: 38px;
+    font-size: 12px;
+    color: #d3e0ec;
+}
+
+.page-life-v3 .life-notes-search-v3 input::placeholder {
+    color: #8196aa;
+}
+
+.page-life-v3 .life-notes-list-v3 {
+    max-height: 340px;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.page-life-v3 .life-note-index-item-v3 {
+    grid-template-columns: 80px minmax(0, 1fr) 14px;
+    gap: 10px;
+    min-height: 67px;
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.page-life-v3 .life-note-index-meta-v3 strong {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #cfdae4;
+}
+
+.page-life-v3 .life-note-index-meta-v3 small {
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #92a8bc;
+}
+
+.page-life-v3 .life-note-index-copy-v3 {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #aebfd0;
+}
+
+.page-life-v3 .life-note-index-item-v3 i {
+    font-size: 12px;
+    color: #8ca4ba;
+}
+
+/* ESTADO VACIO */
+
+.page-life-v3 .life-notes-empty-v3 {
+    min-height: 155px;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.page-life-v3 .life-notes-empty-v3 > span {
+    font-size: 22px;
+}
+
+.page-life-v3 .life-notes-empty-v3 strong {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #b7c9d9;
+}
+
+.page-life-v3 .life-notes-empty-v3 small {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #90a5b9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 680px) {
+    .page-life-v3 .life-detail-editor-v3,
+    .page-life-v3 .life-notes-index-v3 {
+        padding: 16px;
+    }
+
+    .page-life-v3 .life-detail-body-v3 {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 470px) {
+    .page-life-v3 .life-detail-head-v3 h2 {
+        font-size: 18px;
+    }
+
+    .page-life-v3 .life-note-actions-v3 > button,
+    .page-life-v3 .life-note-actions-v3 > div > button {
+        width: 100%;
+    }
+
+    .page-life-v3 .life-note-index-item-v3 {
+        grid-template-columns: 68px minmax(0, 1fr) 12px;
+        gap: 8px;
+    }
+}
+
+
+/*
+ * Vida - Legibilidad V4 Settings
+ *
+ * Configuracion del calendario y estado inicial.
+ * Exclusivo de page-life-v3.
+ * No modifica formularios, valores ni JavaScript.
+ */
+
+/* ==========================================
+   PANEL DE CONFIGURACION
+========================================== */
+
+.page-life-v3 .life-settings-v3 {
+    margin-top: 16px;
+    border-radius: 13px;
+}
+
+.page-life-v3 .life-settings-v3 summary {
+    grid-template-columns:
+        38px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 13px;
+    padding: 14px 17px;
+}
+
+.page-life-v3 .life-settings-summary-icon-v3 {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+}
+
+.page-life-v3 .life-settings-summary-icon-v3 svg {
+    width: 17px;
+    height: 17px;
+    stroke: #91a8bd;
+}
+
+.page-life-v3 .life-settings-v3 summary > div {
+    gap: 4px;
+}
+
+.page-life-v3 .life-settings-v3 summary > div > strong {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #d8e5ef;
+}
+
+.page-life-v3 .life-settings-v3 summary > div > span {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #9db2c6;
+}
+
+/* ==========================================
+   CONTENIDO DESPLEGADO
+========================================== */
+
+.page-life-v3 .life-settings-content-v3 {
+    gap: 15px 26px;
+    padding: 19px;
+}
+
+.page-life-v3 .life-settings-content-v3 h3 {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #dce7f1;
+}
+
+.page-life-v3 .life-settings-content-v3 > div > p {
+    max-width: 570px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #9eb3c6;
+}
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+.page-life-v3 .life-settings-form-v3 {
+    gap: 10px;
+}
+
+.page-life-v3 .life-settings-form-v3 input[type="date"] {
+    min-width: 165px;
+    min-height: 42px;
+    padding: 0 12px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    color: #e5edf5;
+    color-scheme: dark;
+}
+
+.page-life-v3 .life-settings-form-v3 button {
+    min-height: 42px;
+    padding: 0 15px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* ==========================================
+   ADVERTENCIA
+========================================== */
+
+.page-life-v3
+.life-settings-content-v3 .life-settings-warning-v3 {
+    margin: 0;
+    padding-top: 13px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #a0b3c6 !important;
+}
+
+/* ==========================================
+   ESTADO INICIAL SIN FECHA CONFIGURADA
+========================================== */
+
+.page-life-v3 .life-setup-v3 {
+    gap: 20px;
+    padding: 25px;
+}
+
+.page-life-v3 .life-setup-v3 h2 {
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.page-life-v3 .life-setup-v3 p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #a3b7c9;
+}
+
+.page-life-v3 .life-setup-form-v3 {
+    gap: 10px;
+}
+
+.page-life-v3 .life-setup-form-v3 input,
+.page-life-v3 .life-setup-form-v3 button {
+    min-height: 42px;
+    font-size: 12px;
+}
+
+.page-life-v3 .life-setup-form-v3 input[type="date"] {
+    padding: 0 12px;
+    color-scheme: dark;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .page-life-v3 .life-settings-content-v3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .page-life-v3 .life-settings-form-v3 {
+        flex-wrap: wrap;
+    }
+
+    .page-life-v3 .life-setup-v3 {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .page-life-v3 .life-setup-form-v3 {
+        grid-column: 1 / -1;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .page-life-v3 .life-settings-v3 summary {
+        padding: 13px;
+    }
+
+    .page-life-v3 .life-settings-content-v3 {
+        padding: 15px;
+    }
+
+    .page-life-v3 .life-settings-form-v3 input[type="date"] {
+        flex: 1 1 165px;
+        min-width: 0;
+    }
+
+    .page-life-v3 .life-settings-form-v3 button {
+        flex: 1 1 auto;
+    }
+
+    .page-life-v3 .life-setup-v3 {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 18px;
+    }
+
+    .page-life-v3 .life-setup-form-v3 {
+        grid-column: auto;
+    }
+}
+
+
+/*
+ * Vida - Responsive R1 Mobile Matrix
+ *
+ * Adaptacion exclusiva de la matriz de 1080 meses
+ * para pantallas tactiles estrechas.
+ *
+ * No modifica datos, HTML ni JavaScript.
+ */
+
+@media (max-width: 760px) {
+
+    /* ==========================================
+       PANEL
+    ========================================== */
+
+    .page-life-v3 .life-main-panel-v3 {
+        min-width: 0;
+    }
+
+    .page-life-v3 .life-main-header-v3 {
+        align-items: stretch;
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding:
+            18px
+            16px;
+    }
+
+    .page-life-v3 .life-legend-v3 {
+        gap:
+            9px
+            12px;
+    }
+
+    /* ==========================================
+       PROGRESO
+    ========================================== */
+
+    .page-life-v3
+    .life-progress-track-wrap-v3 {
+        padding:
+            14px
+            16px;
+    }
+
+    /* ==========================================
+       VIEWPORT HORIZONTAL DE LA MATRIZ
+    ========================================== */
+
+    .page-life-v3
+    .life-matrix-scroll-v3 {
+        position: relative;
+
+        overflow-x: auto;
+        overflow-y: visible;
+
+        padding:
+            13px
+            12px
+            21px;
+
+        -webkit-overflow-scrolling: touch;
+
+        overscroll-behavior-x: contain;
+
+        touch-action:
+            pan-x
+            pan-y;
+
+        scroll-padding-left: 86px;
+
+        scrollbar-width: thin;
+        scrollbar-color:
+            rgba(128, 157, 190, .45)
+            rgba(255, 255, 255, .025);
+    }
+
+    .page-life-v3
+    .life-matrix-scroll-v3::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    .page-life-v3
+    .life-matrix-scroll-v3::-webkit-scrollbar-track {
+        background:
+            rgba(255, 255, 255, .025);
+
+        border-radius: 999px;
+    }
+
+    .page-life-v3
+    .life-matrix-scroll-v3::-webkit-scrollbar-thumb {
+        background:
+            rgba(128, 157, 190, .42);
+
+        border-radius: 999px;
+    }
+
+    /*
+     * Indicacion explícita.
+     * No requiere alterar vida.php.
+     */
+
+    .page-life-v3
+    .life-matrix-scroll-v3::before {
+        content:
+            "← Deslizá para recorrer los 36 meses →";
+
+        position: sticky;
+        left: 0;
+        z-index: 20;
+
+        display: block;
+
+        width: max-content;
+        max-width: calc(100vw - 62px);
+
+        margin:
+            0
+            0
+            13px
+            3px;
+
+        padding:
+            6px
+            9px;
+
+        border:
+            1px solid
+            rgba(87, 148, 255, .15);
+
+        border-radius: 8px;
+
+        background:
+            rgba(10, 18, 28, .94);
+
+        box-shadow:
+            0 5px 14px
+            rgba(0, 0, 0, .16);
+
+        color: #94afd0;
+
+        font-size: 10px;
+        line-height: 1.35;
+        font-weight: 650;
+
+        pointer-events: none;
+    }
+
+    /* ==========================================
+       MATRIZ
+    ========================================== */
+
+    .page-life-v3 .life-matrix-v3 {
+        width: max-content;
+
+        /*
+         * Se conserva deliberadamente una matriz
+         * mayor que el viewport.
+         */
+        min-width: 910px;
+    }
+
+    /* ==========================================
+       REGLA DE AÑOS
+    ========================================== */
+
+    .page-life-v3 .life-ruler-v3 {
+        grid-template-columns:
+            76px
+            auto;
+
+        gap: 12px;
+
+        margin-bottom: 9px;
+    }
+
+    /*
+     * Reserva sticky equivalente a la columna
+     * de edades.
+     */
+
+    .page-life-v3
+    .life-ruler-v3 > div:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 12;
+
+        width: 76px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #0b141f 80%,
+                rgba(11, 20, 31, .86)
+            );
+    }
+
+    .page-life-v3
+    .life-ruler-years-v3 {
+        gap: 11px;
+    }
+
+    .page-life-v3
+    .life-ruler-years-v3 span {
+        font-size: 10px;
+        line-height: 1.35;
+
+        letter-spacing: .055em;
+    }
+
+    /* ==========================================
+       FILAS
+    ========================================== */
+
+    .page-life-v3 .life-grid-v3 {
+        gap: 5px;
+    }
+
+    .page-life-v3 .life-row-v3 {
+        grid-template-columns:
+            76px
+            auto;
+
+        gap: 12px;
+
+        min-height: 28px;
+
+        padding:
+            2px
+            3px;
+    }
+
+    /* ==========================================
+       EDADES STICKY
+    ========================================== */
+
+    .page-life-v3 .life-range-v3 {
+        position: sticky;
+        left: 0;
+        z-index: 11;
+
+        min-height: 25px;
+
+        align-items: center;
+
+        padding:
+            3px
+            6px;
+
+        border-right:
+            1px solid
+            rgba(151, 166, 184, .08);
+
+        border-radius:
+            6px
+            0
+            0
+            6px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #0b141f 78%,
+                rgba(11, 20, 31, .90)
+            );
+
+        box-shadow:
+            8px 0 13px
+            rgba(4, 9, 15, .20);
+    }
+
+    .page-life-v3
+    .life-row-current-v3 .life-range-v3 {
+        background:
+            linear-gradient(
+                90deg,
+                #101d31 76%,
+                rgba(16, 29, 49, .92)
+            );
+    }
+
+    .page-life-v3
+    .life-range-v3 strong {
+        font-size: 11px;
+    }
+
+    .page-life-v3
+    .life-range-v3 span {
+        font-size: 10px;
+    }
+
+    /* ==========================================
+       CELDAS TACTILES
+    ========================================== */
+
+    .page-life-v3 .life-cells-v3 {
+        grid-template-columns:
+            repeat(
+                36,
+                20px
+            );
+
+        gap: 5px;
+    }
+
+    .page-life-v3 .life-cell-v3 {
+        width: 20px !important;
+        height: 20px !important;
+
+        border-radius:
+            5px !important;
+    }
+
+    .page-life-v3
+    .life-cell-v3:nth-child(12),
+
+    .page-life-v3
+    .life-cell-v3:nth-child(24) {
+        margin-right: 8px;
+    }
+
+    /* ==========================================
+       INSPECTOR INFERIOR
+    ========================================== */
+
+    .page-life-v3
+    .life-panel-footer-v3 {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding:
+            13px
+            16px;
+    }
+
+    .page-life-v3
+    .life-cell-inspector-v3 {
+        width: 100%;
+    }
+
+    .page-life-v3
+    .life-cell-inspector-v3 > div {
+        min-width: 0;
+    }
+
+    .page-life-v3
+    .life-cell-inspector-v3 > div > strong {
+        max-width: 100%;
+
+        font-size: 11.5px;
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* ==========================================
+   TOUCH DEVICES
+========================================== */
+
+@media
+(hover: none) and (pointer: coarse) {
+
+    /*
+     * Evita que el hover ampliado quede
+     * "pegado" después de tocar una celda.
+     */
+
+    .page-life-v3
+    .life-cell-v3:hover {
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   TELEFONOS ESTRECHOS
+========================================== */
+
+@media (max-width: 420px) {
+
+    .page-life-v3
+    .life-matrix-scroll-v3 {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        scroll-padding-left: 80px;
+    }
+
+    .page-life-v3
+    .life-matrix-v3 {
+        min-width: 900px;
+    }
+
+    .page-life-v3
+    .life-ruler-v3,
+
+    .page-life-v3
+    .life-row-v3 {
+        grid-template-columns:
+            72px
+            auto;
+
+        gap: 10px;
+    }
+
+    .page-life-v3
+    .life-ruler-v3 > div:first-child {
+        width: 72px;
+    }
+
+    .page-life-v3
+    .life-range-v3 {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .page-life-v3
+    .life-cells-v3 {
+        gap: 4px;
+    }
+
+    .page-life-v3
+    .life-matrix-scroll-v3::before {
+        font-size: 9.5px;
+    }
+}

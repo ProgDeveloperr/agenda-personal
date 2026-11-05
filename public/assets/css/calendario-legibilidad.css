@@ -1,0 +1,859 @@
+
+/*
+ * Agenda Personal
+ * Calendario - Legibilidad V1
+ *
+ * Encabezado e indicadores.
+ * Alcance exclusivo: page-calendar-v3.
+ */
+
+/* ==========================================
+   DESCRIPCION PRINCIPAL
+========================================== */
+
+.page-calendar-v3
+.calendar-hero-v3 > div:first-child > p {
+    max-width: 690px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #b0c1d2;
+}
+
+/* ==========================================
+   ACCIONES DEL ENCABEZADO
+========================================== */
+
+.page-calendar-v3 .calendar-hero-actions-v3 {
+    gap: 12px;
+}
+
+.page-calendar-v3
+.calendar-hero-actions-v3 .agenda-outline-action-v3 {
+    min-height: 42px;
+    padding: 0 13px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   CONTADOR DE EVENTOS
+========================================== */
+
+.page-calendar-v3 .calendar-event-total-v3 {
+    min-height: 42px;
+
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 13px;
+}
+
+.page-calendar-v3 .calendar-event-total-v3 strong {
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.page-calendar-v3 .calendar-event-total-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #a8bbce;
+}
+
+/* ==========================================
+   CUATRO INDICADORES SUPERIORES
+========================================== */
+
+.page-calendar-v3 .calendar-metrics-v3 {
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.page-calendar-v3 .calendar-metrics-v3 article {
+    min-width: 0;
+    min-height: 106px;
+
+    gap: 14px;
+    padding: 16px 18px;
+
+    border-radius: 13px;
+}
+
+/* Iconos */
+
+.page-calendar-v3 .calendar-metric-icon-v3 {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    border-radius: 11px;
+}
+
+.page-calendar-v3 .calendar-metric-icon-v3 svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Contenedor de informacion */
+
+.page-calendar-v3
+.calendar-metrics-v3 article > div:last-child {
+    min-width: 0;
+    gap: 3px;
+}
+
+/* Etiquetas */
+
+.page-calendar-v3 .calendar-metrics-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #adbed0;
+}
+
+/* Valores numericos */
+
+.page-calendar-v3 .calendar-metrics-v3 strong {
+    margin-top: 2px;
+
+    font-size: 26px;
+    line-height: 1.2;
+
+    color: #edf3f8;
+}
+
+/* Textos secundarios */
+
+.page-calendar-v3 .calendar-metrics-v3 small {
+    margin-top: 2px;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #a1b5c8;
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+.page-calendar-v3
+.calendar-hero-actions-v3 a:focus-visible {
+    outline: 2px solid #79a9fa;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .page-calendar-v3 .calendar-metrics-v3 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+
+    .page-calendar-v3 .calendar-hero-v3 {
+        gap: 18px;
+    }
+
+    .page-calendar-v3 .calendar-metrics-v3 {
+        gap: 10px;
+    }
+
+    .page-calendar-v3 .calendar-metrics-v3 article {
+        min-height: 100px;
+
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .page-calendar-v3 .calendar-metric-icon-v3 {
+        width: 35px;
+        height: 35px;
+
+        flex-basis: 35px;
+    }
+
+    .page-calendar-v3 .calendar-metrics-v3 strong {
+        font-size: 23px;
+    }
+}
+
+
+/*
+ * Calendario - Legibilidad V2
+ *
+ * Navegacion mensual, leyenda y dias de la semana.
+ * Exclusivo de page-calendar-v3.
+ * No modifica la cuadricula ni sus eventos.
+ */
+
+/* ==========================================
+   BARRA DE NAVEGACION
+========================================== */
+
+.page-calendar-v3 .calendar-toolbar-v3 {
+    min-height: 105px;
+
+    gap: 20px;
+    padding: 18px 20px;
+}
+
+.page-calendar-v3 .calendar-navigation-v3 {
+    gap: 9px;
+}
+
+/* Botones anterior / siguiente */
+
+.page-calendar-v3 .calendar-nav-button-v3 {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+}
+
+.page-calendar-v3 .calendar-nav-button-v3 svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* ==========================================
+   MES Y AÑO
+========================================== */
+
+.page-calendar-v3 .calendar-month-title-v3 {
+    min-width: 220px;
+}
+
+.page-calendar-v3 .calendar-month-title-v3 > span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #9cb1c6;
+}
+
+.page-calendar-v3 .calendar-month-title-v3 h2 {
+    margin: 4px 0;
+
+    font-size: 29px;
+    line-height: 1.2;
+
+    color: #f3f7fb;
+}
+
+.page-calendar-v3 .calendar-month-title-v3 p {
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #a6b8cb;
+}
+
+/* ==========================================
+   MES ACTUAL / IR A HOY
+========================================== */
+
+.page-calendar-v3 .calendar-today-button-v3 {
+    min-height: 40px;
+
+    gap: 8px;
+    padding: 0 12px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.page-calendar-v3 .calendar-today-button-v3 svg {
+    width: 16px;
+    height: 16px;
+}
+
+.page-calendar-v3 .calendar-current-month-v3 {
+    min-height: 34px;
+
+    gap: 8px;
+    padding: 7px 11px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-calendar-v3
+.calendar-current-month-v3 > span {
+    width: 8px;
+    height: 8px;
+
+    flex: 0 0 8px;
+}
+
+/* ==========================================
+   REFERENCIAS DE MATERIAS
+========================================== */
+
+.page-calendar-v3 .calendar-legend-v3 {
+    min-height: 66px;
+
+    gap: 15px;
+    padding: 13px 19px;
+}
+
+/* Titulo de la leyenda */
+
+.page-calendar-v3 .calendar-legend-title-v3 {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a5b9cd;
+}
+
+/* Contenedor de materias */
+
+.page-calendar-v3 .calendar-legend-items-v3 {
+    min-width: 0;
+
+    gap: 8px;
+}
+
+/* Cada materia */
+
+.page-calendar-v3 .calendar-legend-chip-v3 {
+    max-width: 100%;
+    min-height: 35px;
+
+    gap: 7px;
+    padding: 6px 11px;
+
+    border-radius: 999px;
+}
+
+/* Indicador de color */
+
+.page-calendar-v3 .calendar-legend-chip-v3 i {
+    width: 9px;
+    height: 9px;
+
+    flex: 0 0 9px;
+
+    border-radius: 3px;
+}
+
+/* Codigo */
+
+.page-calendar-v3 .calendar-legend-chip-v3 small {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #9db1c6;
+}
+
+/* Nombre */
+
+.page-calendar-v3 .calendar-legend-chip-v3 strong {
+    min-width: 0;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #d4e0eb;
+
+    overflow-wrap: anywhere;
+}
+
+/* Mes sin materias */
+
+.page-calendar-v3 .calendar-legend-empty-v3 {
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #a5b8cb;
+}
+
+/* ==========================================
+   NOMBRES DE LOS SIETE DIAS
+========================================== */
+
+.page-calendar-v3 .calendar-weekdays-v3 > div {
+    padding: 13px 12px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #aebfd1;
+
+    letter-spacing: .055em;
+}
+
+/* Mantener diferenciacion del fin de semana */
+
+.page-calendar-v3
+.calendar-weekdays-v3 .calendar-weekend-heading-v3 {
+    color: #9caec2 !important;
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+.page-calendar-v3
+.calendar-nav-button-v3:focus-visible,
+.page-calendar-v3
+.calendar-today-button-v3:focus-visible {
+    outline: 2px solid #79a9fa;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .page-calendar-v3 .calendar-toolbar-v3 {
+        gap: 14px;
+        padding: 15px 13px;
+    }
+
+    .page-calendar-v3 .calendar-month-title-v3 {
+        min-width: 0;
+    }
+
+    .page-calendar-v3 .calendar-legend-v3 {
+        gap: 11px;
+        padding: 13px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .page-calendar-v3 .calendar-month-title-v3 h2 {
+        font-size: 26px;
+    }
+
+    .page-calendar-v3 .calendar-legend-chip-v3 {
+        padding: 6px 9px;
+    }
+}
+
+
+/*
+ * Calendario - Legibilidad V3 Eventos
+ *
+ * Cuadricula mensual y tarjetas academicas.
+ * Alcance exclusivo: page-calendar-v3.
+ *
+ * No modifica fechas, registros ni comportamiento funcional.
+ */
+
+/* ==========================================
+   CONTENEDOR DEL CALENDARIO
+========================================== */
+
+.page-calendar-v3 .calendar-board-scroll-v3 {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+
+/*
+ * Conservar siete columnas.
+ * Evitar que las tarjetas queden excesivamente estrechas.
+ */
+
+.page-calendar-v3 .calendar-board-v3 {
+    min-width: 1190px;
+}
+
+.page-calendar-v3 .calendar-days-v3 {
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+}
+
+/* ==========================================
+   CELDAS DE LOS DIAS
+========================================== */
+
+.page-calendar-v3 .calendar-day-v3 {
+    min-width: 0;
+    min-height: 175px;
+
+    padding: 11px;
+}
+
+/* Mantener la altura adaptable al contenido. */
+
+.page-calendar-v3 .calendar-day-header-v3 {
+    min-height: 31px;
+
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+/* Numero del dia */
+
+.page-calendar-v3 .calendar-day-number-v3 {
+    width: 29px;
+    height: 29px;
+
+    font-size: 14px;
+    line-height: 1.2;
+
+    color: #b6c8da;
+}
+
+/* Indicador del dia actual */
+
+.page-calendar-v3
+.calendar-day-today-v3 .calendar-day-number-v3 {
+    color: #ffffff;
+}
+
+.page-calendar-v3 .calendar-today-label-v3 {
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* Contador de eventos por dia */
+
+.page-calendar-v3 .calendar-day-count-v3 {
+    min-width: 23px;
+    height: 23px;
+
+    padding: 0 6px;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    color: #a7bbcf;
+}
+
+/* ==========================================
+   CONTENEDOR DE EVENTOS
+========================================== */
+
+.page-calendar-v3 .calendar-events-v3 {
+    min-width: 0;
+
+    gap: 8px;
+}
+
+/* ==========================================
+   TARJETAS ACADEMICAS
+========================================== */
+
+.page-calendar-v3 .calendar-event-v3 {
+    min-width: 0;
+
+    padding: 11px 10px 10px 13px;
+
+    border-radius: 10px;
+}
+
+/* Conservamos la identificacion cromatica original. */
+
+.page-calendar-v3 .calendar-event-stripe-v3 {
+    width: 3px;
+}
+
+/* ==========================================
+   ENCABEZADO DE LA TARJETA
+========================================== */
+
+.page-calendar-v3 .calendar-event-top-v3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 5px 7px;
+
+    margin-bottom: 8px;
+}
+
+/* Parcial, final, entrega, etc. */
+
+.page-calendar-v3
+.calendar-event-top-v3 > span {
+    min-width: 0;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a9bdd0;
+}
+
+/* Horario */
+
+.page-calendar-v3 .calendar-event-top-v3 small {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #b2c5d8;
+}
+
+/* ==========================================
+   TITULO PRINCIPAL
+========================================== */
+
+.page-calendar-v3 .calendar-event-v3 > strong {
+    display: block;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    color: #edf3f9;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* ==========================================
+   MATERIA
+========================================== */
+
+.page-calendar-v3 .calendar-event-v3 > p {
+    margin-top: 7px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #a9bacd;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Codigo de materia */
+
+.page-calendar-v3 .calendar-event-v3 > p span {
+    color: #9fb9d3;
+}
+
+/* ==========================================
+   PIE DE TARJETA
+========================================== */
+
+.page-calendar-v3 .calendar-event-footer-v3 {
+    flex-wrap: wrap;
+
+    gap: 7px;
+    margin-top: 10px;
+
+    padding-top: 8px;
+}
+
+/* Estados academicos */
+
+.page-calendar-v3 .calendar-event-state-v3 {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 24px;
+
+    padding: 4px 8px;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    border-radius: 999px;
+}
+
+/* Flecha de acceso */
+
+.page-calendar-v3 .calendar-event-open-v3 {
+    font-size: 15px;
+    line-height: 1.2;
+
+    color: #9bafc4;
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+.page-calendar-v3 .calendar-event-v3:focus-visible {
+    outline: 2px solid #79a9fa;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+/*
+ * El calendario conserva las siete columnas.
+ * Las pantallas estrechas utilizan el desplazamiento
+ * horizontal del contenedor calendar-board-scroll-v3.
+ */
+
+@media (max-width: 1190px) {
+
+    .page-calendar-v3 .calendar-board-v3 {
+        min-width: 1190px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .page-calendar-v3 .calendar-day-v3 {
+        padding: 10px;
+    }
+
+    .page-calendar-v3 .calendar-event-v3 {
+        padding: 10px 9px 10px 12px;
+    }
+}
+
+
+/*
+ * Calendario - Legibilidad V4 Final
+ *
+ * Panel informativo inferior.
+ *
+ * Alcance exclusivo: page-calendar-v3.
+ * Sin modificaciones funcionales.
+ */
+
+/* ==========================================
+   CONTENEDOR INFORMATIVO
+========================================== */
+
+.page-calendar-v3 .calendar-bottom-v3 {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 86px;
+
+    margin-top: 18px;
+
+    padding: 17px 19px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 28, 41, .78),
+            rgba(10, 18, 28, .82)
+        );
+
+    border:
+        1px solid rgba(151, 166, 184, .13);
+}
+
+/* ==========================================
+   ICONO
+========================================== */
+
+.page-calendar-v3 .calendar-bottom-icon-v3 {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    border-radius: 11px;
+
+    background:
+        rgba(87, 148, 255, .075);
+
+    border:
+        1px solid rgba(87, 148, 255, .13);
+}
+
+.page-calendar-v3 .calendar-bottom-icon-v3 svg {
+    width: 19px;
+    height: 19px;
+
+    stroke: #89b1ff;
+}
+
+/* ==========================================
+   INFORMACION
+========================================== */
+
+.page-calendar-v3
+.calendar-bottom-v3 > div:last-child {
+    min-width: 0;
+}
+
+/* Titulo */
+
+.page-calendar-v3 .calendar-bottom-v3 strong {
+    display: block;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    font-weight: 750;
+
+    color: #e5eef7;
+}
+
+/* Texto explicativo */
+
+.page-calendar-v3 .calendar-bottom-v3 p {
+    max-width: 920px;
+
+    margin: 5px 0 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #a9bbce;
+
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .page-calendar-v3 .calendar-bottom-v3 {
+        align-items: flex-start;
+
+        gap: 13px;
+
+        padding: 15px;
+    }
+
+    .page-calendar-v3 .calendar-bottom-v3 p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .page-calendar-v3 .calendar-bottom-icon-v3 {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .page-calendar-v3 .calendar-bottom-v3 strong {
+        font-size: 13px;
+    }
+
+    .page-calendar-v3 .calendar-bottom-v3 p {
+        line-height: 1.55;
+    }
+}
+

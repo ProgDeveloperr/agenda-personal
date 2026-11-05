@@ -1,0 +1,2022 @@
+/*
+ * ==========================================================
+ * Agenda Personal
+ * Professional Hybrid - Hoy R1
+ * ==========================================================
+ *
+ * CLARO:
+ * - canvas
+ * - header
+ * - hero
+ * - presión del día
+ * - requiere atención
+ * - próximas tareas
+ *
+ * OSCURO:
+ * - métricas
+ * - siguiente acción
+ * - agenda
+ * - columna lateral
+ *
+ * Capa exclusivamente visual.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   CANVAS
+   ========================================================== */
+
+body.ui-v3.page-today-v4 {
+    color-scheme:
+        light;
+
+    background:
+        radial-gradient(
+            900px 480px
+            at 10% -12%,
+            rgba(53, 111, 174, .055),
+            transparent 68%
+        ),
+        linear-gradient(
+            180deg,
+            #f9fafb 0%,
+            #f4f6f8 54%,
+            #eef2f5 100%
+        )
+        !important;
+}
+
+
+body.page-today-v4 ::selection {
+    color:
+        #17304c;
+
+    background:
+        rgba(53, 111, 174, .18);
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+body.page-today-v4
+.app-header {
+    border-bottom:
+        1px solid
+        rgba(36, 52, 69, .09)
+        !important;
+
+    background:
+        rgba(250, 252, 253, .95)
+        !important;
+
+    box-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .90),
+        0 8px 24px
+        rgba(38, 49, 61, .035)
+        !important;
+
+    backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+}
+
+
+body.page-today-v4
+.app-brand-mark {
+    border-color:
+        rgba(53, 111, 174, .20)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f6f9fc,
+            #edf3f8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-today-v4
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+body.page-today-v4
+.app-brand-copy strong {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-today-v4
+.app-brand-copy small {
+    color:
+        #718091
+        !important;
+}
+
+
+body.page-today-v4
+.app-nav {
+    border-color:
+        #dbe2e8
+        !important;
+
+    background:
+        rgba(255, 255, 255, .90)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98),
+        0 3px 12px
+        rgba(39, 52, 65, .035)
+        !important;
+}
+
+
+body.page-today-v4
+.app-nav a {
+    color:
+        #687889
+        !important;
+}
+
+
+body.page-today-v4
+.app-nav a:hover {
+    color:
+        #2b3b4b
+        !important;
+
+    background:
+        #f1f4f7
+        !important;
+}
+
+
+body.page-today-v4
+.app-nav a.active {
+    color:
+        #234f7e
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf4fb,
+            #e6eff8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(53, 111, 174, .16)
+        !important;
+}
+
+
+/* Campana */
+
+body.page-today-v4
+.notification-bell-v3 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #536a7f
+        !important;
+}
+
+
+body.page-today-v4
+.notification-bell-v3:hover,
+
+body.page-today-v4
+.notification-center-v3.is-open
+.notification-bell-v3 {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        #f2f6fb
+        !important;
+
+    color:
+        #356fae
+        !important;
+}
+
+
+/* Nuevo */
+
+body.page-today-v4
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(35, 138, 87, .30)
+        !important;
+
+    background:
+        #f1faf5
+        !important;
+
+    color:
+        #216e49
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-trigger-v3 kbd {
+    border-color:
+        rgba(35, 138, 87, .22)
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #4d715f
+        !important;
+}
+
+
+/* Buscar */
+
+body.page-today-v4
+.command-trigger-v3 {
+    border-color:
+        #d3dde5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #52687c
+        !important;
+}
+
+
+body.page-today-v4
+.command-trigger-v3 svg {
+    stroke:
+        #60778c
+        !important;
+}
+
+
+body.page-today-v4
+.command-trigger-v3 kbd {
+    border-color:
+        #d5dde4
+        !important;
+
+    background:
+        #f0f3f6
+        !important;
+
+    color:
+        #637586
+        !important;
+}
+
+
+body.page-today-v4
+.app-header-status {
+    color:
+        #4f6477
+        !important;
+}
+
+
+body.page-today-v4
+.status-dot-online {
+    background:
+        #25945d
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 148, 93, .09)
+        !important;
+}
+
+
+/* ==========================================================
+   HERO CLARO
+   ========================================================== */
+
+body.page-today-v4
+.today-hero-v4 h1 {
+    color:
+        #1c2936
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-v4 h1 span {
+    color:
+        #60768a
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-v4 p {
+    color:
+        #67798a
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-v4
+.section-kicker {
+    color:
+        #23794f
+        !important;
+}
+
+
+/* ==========================================================
+   PRESION DEL DIA - CLARO
+   ========================================================== */
+
+body.page-today-v4
+.today-hero-state-v4 {
+    border-color:
+        #d9e2e8
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7f9fb
+        )
+        !important;
+
+    box-shadow:
+        0 7px 22px
+        rgba(36, 49, 63, .045)
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4 span {
+    color:
+        #64788b
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4 small {
+    color:
+        #718497
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4 em {
+    color:
+        #617587
+        !important;
+}
+
+
+/* Estados semánticos */
+
+body.page-today-v4
+.today-hero-state-v4.is-controlled strong {
+    color:
+        #238457
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4.is-moderate strong {
+    color:
+        #356fae
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4.is-high strong {
+    color:
+        #a97620
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4.is-critical strong {
+    color:
+        #b64b53
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS - DARK
+   ========================================================== */
+
+body.page-today-v4
+.today-metrics-v4 article {
+    border-color:
+        rgba(151, 166, 184, .10)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111a25,
+            #0b121b
+        )
+        !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(25, 34, 44, .08)
+        !important;
+}
+
+
+body.page-today-v4
+.today-metrics-v4 span {
+    color:
+        #8fa3b7
+        !important;
+}
+
+
+body.page-today-v4
+.today-metrics-v4 strong {
+    color:
+        #eef3f7
+        !important;
+}
+
+
+body.page-today-v4
+.today-metrics-v4 small {
+    color:
+        #70869a
+        !important;
+}
+
+
+/* ==========================================================
+   SIGUIENTE ACCION - DARK
+   ========================================================== */
+
+body.page-today-v4
+.today-next-v4 {
+    border-color:
+        rgba(151, 166, 184, .10)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101925,
+            #0a1119
+        )
+        !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(25, 34, 44, .09)
+        !important;
+}
+
+
+body.page-today-v4
+.today-next-v4
+.today-section-head-v4 h2 {
+    color:
+        #edf3f7
+        !important;
+}
+
+
+body.page-today-v4
+.today-next-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-next-v4
+.today-section-head-v4 > a {
+    color:
+        #8299ad
+        !important;
+}
+
+
+body.page-today-v4
+.today-focus-task-v4 {
+    border-color:
+        rgba(111, 169, 225, .12)
+        !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(87, 148, 255, .045),
+            rgba(255, 255, 255, .008)
+        )
+        !important;
+}
+
+
+body.page-today-v4
+.today-focus-mark-v4 strong,
+
+body.page-today-v4
+.today-focus-copy-v4 h3 {
+    color:
+        #edf3f8
+        !important;
+}
+
+
+body.page-today-v4
+.today-focus-meta-v4,
+
+body.page-today-v4
+.today-focus-copy-v4 p {
+    color:
+        #a2b6c9
+        !important;
+}
+
+
+body.page-today-v4
+.today-focus-details-v4 span {
+    color:
+        #a8b9cb
+        !important;
+}
+
+
+/* ==========================================================
+   REQUIERE ATENCION - LIGHT
+   ========================================================== */
+
+body.page-today-v4
+.today-attention-v4 {
+    border-color:
+        #dce3e9
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fafbfd
+        )
+        !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(35, 48, 62, .045)
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.section-kicker {
+    color:
+        #23794f
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-section-head-v4 h2 {
+    color:
+        #20303f
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-attention-v4
+.today-section-head-v4 > a {
+    color:
+        #65788a
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 article {
+    border-color:
+        #e0e6eb
+        !important;
+
+    background:
+        #f7f9fb
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 span {
+    color:
+        #65798c
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 strong {
+    color:
+        #243646
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 small {
+    color:
+        #788897
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 {
+    border-color:
+        #e0e6eb
+        !important;
+
+    background:
+        #fbfcfd
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4:hover {
+    border-color:
+        #cbd7e1
+        !important;
+
+    background:
+        #f5f8fa
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 strong {
+    color:
+        #253747
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 small {
+    color:
+        #718292
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 > i {
+    color:
+        #8293a2
+        !important;
+}
+
+
+/* Empty dentro de light */
+
+body.page-today-v4
+.today-attention-v4
+.today-empty-v4 {
+    border-color:
+        #dce4ea
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-empty-v4 strong {
+    color:
+        #273847
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-empty-v4 p {
+    color:
+        #728291
+        !important;
+}
+
+
+/* ==========================================================
+   AGENDA DE HOY - DARK
+   ========================================================== */
+
+body.page-today-v4
+.today-agenda-v4 {
+    border-color:
+        rgba(151, 166, 184, .10)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101925,
+            #0a1119
+        )
+        !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(25, 34, 44, .09)
+        !important;
+}
+
+
+body.page-today-v4
+.today-agenda-v4
+.today-section-head-v4 h2 {
+    color:
+        #edf3f7
+        !important;
+}
+
+
+body.page-today-v4
+.today-agenda-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-agenda-v4
+.today-section-head-v4 > a {
+    color:
+        #8299ad
+        !important;
+}
+
+
+body.page-today-v4
+.today-day-grid-v4 > article {
+    border-color:
+        rgba(151, 166, 184, .08)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .008)
+        !important;
+}
+
+
+body.page-today-v4
+.today-day-grid-v4 > article > header strong {
+    color:
+        #cbd6de
+        !important;
+}
+
+
+body.page-today-v4
+.today-day-item-v4 strong {
+    color:
+        #d1dbe3
+        !important;
+}
+
+
+body.page-today-v4
+.today-day-item-v4 > span,
+
+body.page-today-v4
+.today-day-item-v4 small {
+    color:
+        #70879b
+        !important;
+}
+
+
+/* ==========================================================
+   PROXIMAS TAREAS - LIGHT
+   ========================================================== */
+
+body.page-today-v4
+.today-upcoming-v4 {
+    border-color:
+        #dce3e9
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fafbfd
+        )
+        !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(35, 48, 62, .045)
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.section-kicker {
+    color:
+        #23794f
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.today-section-head-v4 h2 {
+    color:
+        #20303f
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-upcoming-v4
+.today-section-head-v4 > a {
+    color:
+        #65788a
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4 {
+    border-color:
+        #e0e6eb
+        !important;
+
+    background:
+        #fbfcfd
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4:hover {
+    border-color:
+        #cad7e1
+        !important;
+
+    background:
+        #f5f8fa
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-date-v4 strong {
+    color:
+        #2a3d4e
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-date-v4 span {
+    color:
+        #718394
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> div:nth-child(2)
+> strong {
+    color:
+        #243646
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> div:nth-child(2)
+> span,
+
+body.page-today-v4
+.today-upcoming-item-v4 small {
+    color:
+        #718292
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4 > i {
+    color:
+        #8293a2
+        !important;
+}
+
+
+/* Empty dentro de light */
+
+body.page-today-v4
+.today-upcoming-v4
+.today-empty-v4 {
+    border-color:
+        #dce4ea
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.today-empty-v4 strong {
+    color:
+        #273847
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.today-empty-v4 p {
+    color:
+        #728291
+        !important;
+}
+
+
+/* ==========================================================
+   COLUMNA LATERAL - DARK
+   ========================================================== */
+
+body.page-today-v4
+.today-side-card-v4 {
+    border-color:
+        rgba(151, 166, 184, .10)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101925,
+            #0a1119
+        )
+        !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(25, 34, 44, .09)
+        !important;
+}
+
+
+body.page-today-v4
+.today-side-card-v4 h3 {
+    color:
+        #edf3f7
+        !important;
+}
+
+
+body.page-today-v4
+.today-side-card-v4 dt {
+    color:
+        #91a5b8
+        !important;
+}
+
+
+body.page-today-v4
+.today-side-card-v4 dd {
+    color:
+        #e2eaf0
+        !important;
+}
+
+
+body.page-today-v4
+.today-rule-v4 > span {
+    color:
+        #7fa4c4
+        !important;
+}
+
+
+body.page-today-v4
+.today-rule-v4 p {
+    color:
+        #9eb0c1
+        !important;
+}
+
+
+body.page-today-v4
+.today-shortcuts-v4 > a {
+    border-color:
+        rgba(151, 166, 184, .09)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .008)
+        !important;
+}
+
+
+body.page-today-v4
+.today-shortcuts-v4 > a:hover {
+    border-color:
+        rgba(111, 169, 225, .20)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .035)
+        !important;
+}
+
+
+body.page-today-v4
+.today-shortcuts-v4 strong {
+    color:
+        #d8e1e8
+        !important;
+}
+
+
+body.page-today-v4
+.today-shortcuts-v4 small {
+    color:
+        #8298ab
+        !important;
+}
+
+
+body.page-today-v4
+.today-shortcuts-v4 > a > i {
+    color:
+        #7891a6
+        !important;
+}
+
+
+/* ==========================================================
+   QUICK ADD - LIGHT
+   ========================================================== */
+
+body.page-today-v4
+.quick-add-overlay-v3 {
+    background:
+        rgba(36, 46, 57, .36)
+        !important;
+
+    backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-dialog-v3 {
+    border-color:
+        #d7e0e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 34px 90px
+        rgba(29, 39, 50, .20)
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-header-v3 {
+    border-bottom-color:
+        #e4e9ee
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f7f9fb
+        )
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-heading-v3 h2 {
+    color:
+        #1c2734
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-heading-v3 p,
+
+body.page-today-v4
+.quick-add-field-v3 label,
+
+body.page-today-v4
+.quick-add-note-help-v3 {
+    color:
+        #667687
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-field-v3 input,
+
+body.page-today-v4
+.quick-add-field-v3 select,
+
+body.page-today-v4
+.quick-add-field-v3 textarea {
+    border-color:
+        #d9e1e7
+        !important;
+
+    background:
+        #fafbfd
+        !important;
+
+    color:
+        #202d3a
+        !important;
+}
+
+
+body.page-today-v4
+.quick-add-footer-v3 {
+    border-top-color:
+        #e4e9ee
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+/* ==========================================================
+   MOBILE SHELL - LIGHT
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    body.page-today-v4
+    .mobile-bottom-nav-v3 {
+        border-top-color:
+            #dce3e9
+            !important;
+
+        background:
+            rgba(255, 255, 255, .96)
+            !important;
+
+        box-shadow:
+            0 -8px 28px
+            rgba(35, 48, 61, .055)
+            !important;
+    }
+
+
+    body.page-today-v4
+    .mobile-bottom-nav-item-v3 {
+        color:
+            #697988
+            !important;
+    }
+
+
+    body.page-today-v4
+    .mobile-bottom-nav-item-v3.active,
+
+    body.page-today-v4
+    .mobile-bottom-nav-item-v3.is-active,
+
+    body.page-today-v4
+    .mobile-bottom-nav-item-v3[aria-current="page"] {
+        color:
+            #356fae
+            !important;
+
+        background:
+            #edf4fb
+            !important;
+    }
+
+}
+
+
+/* ==========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================== */
+
+body.page-today-v4
+a:focus-visible,
+
+body.page-today-v4
+button:focus-visible,
+
+body.page-today-v4
+input:focus-visible,
+
+body.page-today-v4
+select:focus-visible,
+
+body.page-today-v4
+textarea:focus-visible {
+    outline-color:
+        #356fae
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * HOY R1.1 - PULIDO CROMATICO FINO
+ * Professional Hybrid
+ * ==========================================================
+ *
+ * Sólo:
+ * - contraste
+ * - bordes
+ * - sombras
+ * - superficies
+ *
+ * No modifica geometría ni responsive.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+body.page-today-v4
+.today-hero-v4 p {
+    color:
+        #5f7285
+        !important;
+}
+
+
+/* ==========================================================
+   PRESION DEL DIA
+   ========================================================== */
+
+body.page-today-v4
+.today-hero-state-v4 {
+    border-color:
+        #cfd9e2
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(31, 45, 61, .055),
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4 span {
+    color:
+        #6f8294
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4 small,
+
+body.page-today-v4
+.today-hero-state-v4 em {
+    color:
+        #738699
+        !important;
+}
+
+
+body.page-today-v4
+.today-hero-state-v4 strong {
+    letter-spacing:
+        .02em;
+}
+
+
+/* ==========================================================
+   OSCUROS - REFINADO
+   ========================================================== */
+
+body.page-today-v4
+.today-metrics-v4 article,
+
+body.page-today-v4
+.today-next-v4,
+
+body.page-today-v4
+.today-agenda-v4,
+
+body.page-today-v4
+.today-side-card-v4 {
+    border-color:
+        rgba(151, 166, 184, .12)
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(21, 31, 40, .08),
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+body.page-today-v4
+.today-metrics-v4 small,
+
+body.page-today-v4
+.today-next-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-next-v4
+.today-section-head-v4 > a,
+
+body.page-today-v4
+.today-agenda-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-agenda-v4
+.today-section-head-v4 > a,
+
+body.page-today-v4
+.today-side-card-v4 dt,
+
+body.page-today-v4
+.today-shortcuts-v4 small {
+    color:
+        #8ea2b4
+        !important;
+}
+
+
+/* ==========================================================
+   REQUIERE ATENCION
+   ========================================================== */
+
+body.page-today-v4
+.today-attention-v4 {
+    border-color:
+        #d4dde5
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f9fbfc
+        )
+        !important;
+
+    box-shadow:
+        0 8px 22px
+        rgba(34, 47, 60, .05),
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-section-head-v4 h2 {
+    color:
+        #1f2f3d
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-attention-v4
+.today-section-head-v4 > a {
+    color:
+        #5f7386
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 article {
+    border-color:
+        #d9e2e9
+        !important;
+
+    background:
+        #fcfdfe
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 strong {
+    color:
+        #1f3140
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-groups-v4 span,
+
+body.page-today-v4
+.today-attention-groups-v4 small {
+    color:
+        #738598
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 {
+    border-color:
+        #dde5eb
+        !important;
+
+    background:
+        #ffffff
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4:hover {
+    border-color:
+        #cbd7e1
+        !important;
+
+    background:
+        #f7f9fb
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 strong {
+    color:
+        #213444
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 small,
+
+body.page-today-v4
+.today-attention-v4
+.today-task-row-v4 > i {
+    color:
+        #728496
+        !important;
+}
+
+
+/* ==========================================================
+   PROXIMAS TAREAS
+   ========================================================== */
+
+body.page-today-v4
+.today-upcoming-v4 {
+    border-color:
+        #d4dde5
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f9fbfc
+        )
+        !important;
+
+    box-shadow:
+        0 8px 22px
+        rgba(34, 47, 60, .05),
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.today-section-head-v4 h2 {
+    color:
+        #1f2f3d
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-v4
+.today-section-head-v4 > span,
+
+body.page-today-v4
+.today-upcoming-v4
+.today-section-head-v4 > a {
+    color:
+        #5f7386
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4 {
+    border-color:
+        #dde4ea
+        !important;
+
+    background:
+        #ffffff
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4:hover {
+    border-color:
+        #cbd7e1
+        !important;
+
+    background:
+        #f7f9fb
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-date-v4 strong {
+    color:
+        #223545
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-date-v4 span,
+
+body.page-today-v4
+.today-upcoming-item-v4 small,
+
+body.page-today-v4
+.today-upcoming-item-v4 > i {
+    color:
+        #728496
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> div:nth-child(2)
+> strong {
+    color:
+        #203242
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> div:nth-child(2)
+> span {
+    color:
+        #667b8f
+        !important;
+}
+
+
+/* ==========================================================
+   PRIORIDADES - LIGHT
+   ========================================================== */
+
+body.page-today-v4
+.today-upcoming-item-v4
+> b.priority-baja {
+    color:
+        #5d7285
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> b.priority-media {
+    color:
+        #356fae
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> b.priority-alta {
+    color:
+        #b47715
+        !important;
+}
+
+
+body.page-today-v4
+.today-upcoming-item-v4
+> b.priority-urgente {
+    color:
+        #b64951
+        !important;
+}
+
+
+/* ==========================================================
+   EMPTY STATES EN SUPERFICIES LIGHT
+   ========================================================== */
+
+body.page-today-v4
+.today-attention-v4
+.today-empty-v4,
+
+body.page-today-v4
+.today-upcoming-v4
+.today-empty-v4 {
+    border-color:
+        #dde5eb
+        !important;
+
+    background:
+        #fbfcfd
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-empty-v4 strong,
+
+body.page-today-v4
+.today-upcoming-v4
+.today-empty-v4 strong {
+    color:
+        #233646
+        !important;
+}
+
+
+body.page-today-v4
+.today-attention-v4
+.today-empty-v4 p,
+
+body.page-today-v4
+.today-upcoming-v4
+.today-empty-v4 p {
+    color:
+        #728395
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * HOY R1.2 - PULIDO FINAL
+ * Professional Hybrid
+ * ==========================================================
+ * Alcance:
+ * - contraste fino
+ * - texto secundario
+ * - títulos y microjerarquía
+ * - bordes/sombras suaves
+ * - acabado premium en superficies light/dark
+ *
+ * No modifica geometría, layout ni responsive.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   HERO / TITULOS
+   ========================================================== */
+
+body.page-today-v4 .today-hero-v4 h1 {
+    color: #243444 !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,.65) !important;
+}
+
+body.page-today-v4 .today-hero-v4 h1 span {
+    color: #5d748b !important;
+}
+
+body.page-today-v4 .today-hero-v4 p {
+    color: #63778b !important;
+}
+
+body.page-today-v4 .section-kicker {
+    color: #23945c !important;
+    letter-spacing: .14em !important;
+}
+
+
+/* ==========================================================
+   METRICAS SUPERIORES OSCURAS
+   ========================================================== */
+
+body.page-today-v4 .today-metrics-v4 article strong {
+    color: #f7fbff !important;
+}
+
+body.page-today-v4 .today-metrics-v4 article small,
+body.page-today-v4 .today-metrics-v4 article span {
+    color: #90a5b8 !important;
+}
+
+body.page-today-v4 .today-metrics-v4 article {
+    box-shadow:
+        0 10px 24px rgba(16, 24, 32, .10),
+        inset 0 1px 0 rgba(255,255,255,.028) !important;
+}
+
+
+/* ==========================================================
+   SIGUIENTE ACCION
+   ========================================================== */
+
+body.page-today-v4 .today-next-v4 .today-section-head-v4 h2,
+body.page-today-v4 .today-next-v4 .today-section-head-v4 > a {
+    color: #eef4fb !important;
+}
+
+body.page-today-v4 .today-focus-task-v4 {
+    box-shadow:
+        0 12px 30px rgba(14, 21, 29, .12),
+        inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+
+body.page-today-v4 .today-focus-meta-v4,
+body.page-today-v4 .today-focus-copy-v4 > p,
+body.page-today-v4 .today-focus-details-v4 span,
+body.page-today-v4 .today-event-context-v4 small,
+body.page-today-v4 .today-event-context-v4 dt {
+    color: #90a5b8 !important;
+}
+
+body.page-today-v4 .today-focus-copy-v4 h3,
+body.page-today-v4 .today-event-context-v4 strong,
+body.page-today-v4 .today-focus-reason-v4 strong,
+body.page-today-v4 .today-focus-mark-v4 strong {
+    color: #f4f8fd !important;
+}
+
+body.page-today-v4 .today-focus-reason-v4 {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.01)) !important;
+    border-color: rgba(151,166,184,.11) !important;
+}
+
+body.page-today-v4 .today-focus-reason-v4 span,
+body.page-today-v4 .today-focus-mark-v4 span,
+body.page-today-v4 .today-focus-actions-v4 > span {
+    color: #7ea0be !important;
+}
+
+
+/* ==========================================================
+   SIDEBAR OSCURA
+   ========================================================== */
+
+body.page-today-v4 .today-side-card-v4 .section-kicker,
+body.page-today-v4 .today-side-card-v4 h3 {
+    color: #f2f7fc !important;
+}
+
+body.page-today-v4 .today-side-card-v4 dt,
+body.page-today-v4 .today-side-card-v4 small,
+body.page-today-v4 .today-side-card-v4 li {
+    color: #90a5b8 !important;
+}
+
+body.page-today-v4 .today-side-card-v4 dd,
+body.page-today-v4 .today-side-card-v4 strong,
+body.page-today-v4 .today-shortcuts-v4 a {
+    color: #edf4fb !important;
+}
+
+body.page-today-v4 .today-side-card-v4 {
+    box-shadow:
+        0 10px 24px rgba(15, 24, 33, .10),
+        inset 0 1px 0 rgba(255,255,255,.02) !important;
+}
+
+
+/* ==========================================================
+   BLOQUES LIGHT - REQUIERE ATENCION / PROXIMAS TAREAS
+   ========================================================== */
+
+body.page-today-v4 .today-attention-v4,
+body.page-today-v4 .today-upcoming-v4 {
+    box-shadow:
+        0 10px 26px rgba(31, 45, 61, .05),
+        inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+body.page-today-v4 .today-attention-v4 .today-section-head-v4 h2,
+body.page-today-v4 .today-upcoming-v4 .today-section-head-v4 h2 {
+    color: #203242 !important;
+}
+
+body.page-today-v4 .today-attention-v4 .today-section-head-v4 > span,
+body.page-today-v4 .today-upcoming-v4 .today-section-head-v4 > span,
+body.page-today-v4 .today-upcoming-v4 .today-section-head-v4 > a {
+    color: #607487 !important;
+}
+
+body.page-today-v4 .today-attention-groups-v4 article {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.88) !important;
+}
+
+body.page-today-v4 .today-task-row-v4 strong,
+body.page-today-v4 .today-upcoming-item-v4 > div:nth-child(2) > strong {
+    color: #233545 !important;
+}
+
+body.page-today-v4 .today-task-row-v4 small,
+body.page-today-v4 .today-upcoming-item-v4 > div:nth-child(2) > span,
+body.page-today-v4 .today-upcoming-item-v4 small,
+body.page-today-v4 .today-upcoming-date-v4 span {
+    color: #6f8397 !important;
+}
+
+body.page-today-v4 .today-upcoming-item-v4 {
+    box-shadow:
+        0 2px 10px rgba(36, 50, 65, .025),
+        inset 0 1px 0 rgba(255,255,255,.92) !important;
+}
+
+
+/* ==========================================================
+   PRIORIDADES LIGHT
+   ========================================================== */
+
+body.page-today-v4 .today-upcoming-item-v4 > b.priority-baja {
+    color: #64798b !important;
+}
+
+body.page-today-v4 .today-upcoming-item-v4 > b.priority-media {
+    color: #356da8 !important;
+}
+
+body.page-today-v4 .today-upcoming-item-v4 > b.priority-alta {
+    color: #be7e17 !important;
+    font-weight: 700 !important;
+}
+
+body.page-today-v4 .today-upcoming-item-v4 > b.priority-urgente {
+    color: #c45158 !important;
+    font-weight: 700 !important;
+}
+
+
+/* ==========================================================
+   AGENDA DE HOY OSCURA
+   ========================================================== */
+
+body.page-today-v4 .today-agenda-v4 .today-section-head-v4 h2,
+body.page-today-v4 .today-agenda-v4 .today-section-head-v4 > span {
+    color: #edf4fb !important;
+}
+
+body.page-today-v4 .today-agenda-v4 .today-empty-v4 strong {
+    color: #f4f8fd !important;
+}
+
+body.page-today-v4 .today-agenda-v4 .today-empty-v4 p,
+body.page-today-v4 .today-agenda-v4 .today-agenda-grid-v4 small,
+body.page-today-v4 .today-agenda-v4 .today-agenda-grid-v4 span {
+    color: #91a5b8 !important;
+}
+
+
+/* ==========================================================
+   BOTONES
+   ========================================================== */
+
+body.page-today-v4 .today-focus-buttons-v4 .is-primary {
+    box-shadow:
+        0 6px 14px rgba(27, 134, 84, .18),
+        inset 0 1px 0 rgba(255,255,255,.05) !important;
+}
+
+body.page-today-v4 .today-focus-buttons-v4 .is-complete,
+body.page-today-v4 .today-focus-buttons-v4 a {
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.03) !important;
+}

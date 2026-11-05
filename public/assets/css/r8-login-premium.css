@@ -1,0 +1,143 @@
+/* R8-R6A | Presentación exclusiva del login. No afecta el dashboard. */
+:root{color-scheme:dark;--bg:#0b121b;--fg:#eef4fa;--muted:#95aabc;--line:rgba(167,194,213,.19);--accent:#e1f5fa}
+*,*::before,*::after{box-sizing:border-box}
+html{min-height:100%;background:var(--bg)}
+body{margin:0;min-height:100vh;min-height:100dvh;color:var(--fg);font:400 16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.login-scene{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:40px 20px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse 50% 44% at 50% 36%,rgba(40,92,116,.28),transparent 95%),radial-gradient(ellipse 43% 36% at 95% 100%,rgba(21,63,89,.17),transparent 90%),linear-gradient(150deg,#0b1119 0%,#111d29 54%,#090f16 100%)}
+.login-scene::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(174,197,218,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(174,197,218,.035) 1px,transparent 1px);background-size:66px 66px;mask-image:linear-gradient(to bottom,transparent,black 28%,black 72%,transparent)}
+.login-scene::after{content:"";position:absolute;z-index:-1;left:50%;top:49%;width:min(690px,120vw);height:540px;transform:translate(-50%,-50%);pointer-events:none;border:1px solid rgba(164,194,214,.045);border-radius:50%;box-shadow:0 0 0 85px rgba(164,194,214,.012),0 0 0 170px rgba(164,194,214,.008)}
+.login-shell{width:min(100%,486px);margin:0 auto;animation:login-enter .7s cubic-bezier(.2,.8,.2,1) both}
+.login-brand{display:flex;align-items:center;gap:12px;margin:0 0 27px 4px}
+.login-brand-mark{width:42px;height:42px;display:grid;place-items:center;color:#d8f2fc;border:1px solid rgba(173,214,234,.24);border-radius:13px;background:linear-gradient(160deg,rgba(146,187,208,.17),rgba(94,134,156,.05));box-shadow:inset 0 1px rgba(255,255,255,.07)}
+.login-brand-mark svg{width:21px;height:21px}
+.login-brand-type{display:flex;flex-direction:column;line-height:1.2;gap:5px}
+.login-brand-type strong{font-size:15px;font-weight:750;letter-spacing:-.035em}
+.login-brand-type>span{font-size:10px;letter-spacing:.15em;font-weight:750;color:#89a4b8}
+.login-card{position:relative;padding:37px 38px 28px;border:1px solid rgba(178,206,225,.22);border-radius:21px;background:linear-gradient(155deg,rgba(24,39,52,.98),rgba(17,29,40,.97));box-shadow:0 34px 95px rgba(0,0,0,.36),0 2px 16px rgba(0,0,0,.13),inset 0 1px rgba(255,255,255,.06)}
+.login-card::before{content:"";position:absolute;pointer-events:none;left:23px;right:23px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(220,245,255,.34),transparent)}
+.login-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.login-overline{display:inline-flex;align-items:center;gap:8px;color:#b8ccda;letter-spacing:.115em;font-size:10px;font-weight:800}
+.login-status-dot{width:7px;height:7px;border-radius:50%;background:#76d6b5;box-shadow:0 0 12px rgba(118,214,181,.42)}
+.login-edition{font-size:10px;letter-spacing:.11em;font-weight:700;color:#70889b}
+h1{margin:0;color:#f5f9fc;font-size:clamp(32px,6vw,43px);line-height:1.13;font-weight:760;letter-spacing:-.052em}
+h1 span{color:#abc1d2}
+.login-intro{margin:13px 0 29px;font-size:14px;color:var(--muted);line-height:1.6}
+.login-form{display:grid;gap:18px}
+.login-field label{display:block;margin-bottom:8px;color:#e1eaf2;font-size:13px;font-weight:650}
+.login-control{display:flex;align-items:center;gap:12px;height:52px;border:1px solid #3a5164;border-radius:11px;background:#0e1924;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease}
+.login-control:focus-within{border-color:#a2d7e8;box-shadow:0 0 0 3px rgba(145,208,230,.14);background:#101e2b}
+.login-control>svg{flex:0 0 18px;width:18px;height:18px;margin-left:15px;color:#7b98ae}
+.login-control input{min-width:0;width:100%;height:100%;border:0;outline:0;border-radius:inherit;padding:0 14px 0 0;background:transparent;color:#f4f8fb;font:inherit;font-size:14px}
+.login-control input::placeholder{color:#7891a6;opacity:1}
+.login-control input:-webkit-autofill{-webkit-text-fill-color:#f4f8fb;box-shadow:0 0 0 100px #132435 inset;caret-color:white}
+.login-submit{margin-top:7px;min-height:53px;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;border:1px solid rgba(255,255,255,.3);border-radius:11px;background:linear-gradient(180deg,#ebf7fa,#d8eaf2);color:#112532;font:inherit;font-size:14px;font-weight:750;letter-spacing:-.01em;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.17);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.login-submit svg{width:18px;height:18px;transition:transform .2s ease}
+.login-submit:hover{filter:brightness(1.04);transform:translateY(-1px);box-shadow:0 9px 22px rgba(0,0,0,.21)}
+.login-submit:hover svg{transform:translateX(3px)}
+.login-submit:active{transform:translateY(0);box-shadow:0 3px 10px rgba(0,0,0,.17)}
+.login-submit:focus-visible{outline:3px solid #80c8e6;outline-offset:4px}
+.login-trust{display:flex;align-items:center;justify-content:center;gap:8px;border-top:1px solid var(--line);margin-top:26px;padding-top:22px;color:#8faabd;font-size:11px;font-weight:550;letter-spacing:.01em}
+.login-trust svg{width:15px;height:15px;color:#93cabf;flex:none}
+.login-error{display:flex;align-items:flex-start;gap:10px;padding:12px 13px;margin:-11px 0 23px;border-radius:10px;border:1px solid rgba(246,153,157,.29);background:rgba(131,49,64,.22);color:#ffd9dc;font-size:12.5px;line-height:1.5}
+.login-error-symbol{display:grid;place-items:center;width:17px;height:17px;flex:none;border:1px solid #f1a9af;border-radius:50%;font-weight:800;font-size:11px}
+.login-footer{display:flex;justify-content:space-between;gap:12px;padding:20px 4px 0;color:#758fa2;font-size:11px}
+.login-footer span:last-child{font-size:10px;letter-spacing:.1em;font-weight:650}
+.login-footer span span{margin-inline:4px;color:#5c768a}
+@keyframes login-enter{from{opacity:0;transform:translateY(16px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@media(max-width:520px){.login-scene{padding:24px 15px}.login-brand{margin:0 0 19px 3px}.login-card{padding:29px 24px 25px;border-radius:18px}.login-footer{flex-wrap:wrap}.login-edition{display:none}}
+@media(max-width:350px){.login-card{padding:25px 18px}.login-control{height:49px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* R8-R6C-V2 — micro-pulido exclusivo del login */
+
+.login-brand-mark {
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.10),
+        0 6px 22px rgba(0,0,0,.14);
+}
+
+.login-card {
+    border-color: rgba(182,210,228,.27);
+
+    box-shadow:
+        0 39px 108px rgba(0,0,0,.35),
+        0 6px 22px rgba(0,0,0,.15),
+        inset 0 1px rgba(255,255,255,.07);
+}
+
+.login-card-top {
+    margin-bottom: 24px;
+}
+
+.login-control {
+    border-color: #405a6e;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+.login-control:hover {
+    border-color: #62839a;
+}
+
+.login-control:focus-within {
+    border-color: #a2d7e8;
+
+    box-shadow:
+        0 0 0 3px rgba(145,208,230,.15),
+        inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.login-submit {
+    box-shadow:
+        0 9px 24px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.60);
+}
+
+.login-submit:hover {
+    box-shadow:
+        0 13px 30px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.70);
+}
+
+.login-trust {
+    color: #a0b8c8;
+}
+
+.login-footer {
+    color: #8da5b5;
+}
+
+@media (max-width: 520px) {
+    .login-card-top {
+        margin-bottom: 20px;
+    }
+}
+
+/* R8-R6C-V2 END */
+
+/* R9-R3D2B3: enlace discreto al registro por invitacion. */
+.r9-login-invite-entry {
+  margin: 1rem 0 .15rem;
+  text-align: center;
+  font-size: .875rem;
+  line-height: 1.6;
+  color: #acb9c8;
+}
+.r9-login-invite-entry a {
+  color: #eaf4ff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(234,244,255,.5);
+  text-underline-offset: 3px;
+}
+.r9-login-invite-entry a:hover,
+.r9-login-invite-entry a:focus-visible {
+  color: #fff;
+  text-decoration-color: currentColor;
+}
+.r9-login-invite-entry a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}

@@ -1,0 +1,1994 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+
+    --fondo: #0d1117;
+    --panel: #161b22;
+    --panel-secundario: #21262d;
+    --borde: #30363d;
+
+    --texto: #e6edf3;
+    --secundario: #8b949e;
+
+    --verde: #39d353;
+    --verde-suave: rgba(57, 211, 83, .12);
+
+    --rojo: #f85149;
+    --rojo-suave: rgba(248, 81, 73, .12);
+
+    --azul: #58a6ff;
+}
+
+html {
+    background: var(--fondo);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.barra-superior {
+    border-bottom: 1px solid var(--borde);
+    background: rgba(13, 17, 23, .96);
+}
+
+.barra-contenido {
+    width: min(1180px, calc(100% - 32px));
+    min-height: 62px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.marca {
+    color: var(--texto);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navegacion a {
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    color: var(--secundario);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navegacion a:hover,
+.navegacion a.activo {
+    color: var(--texto);
+    background: var(--panel-secundario);
+}
+
+.contenedor {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+
+    padding: 52px 0 72px;
+}
+
+.encabezado {
+    margin-bottom: 36px;
+}
+
+.titulo-pagina {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    margin: 0 0 8px;
+
+    color: var(--verde);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.08;
+}
+
+h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.descripcion {
+    max-width: 700px;
+
+    margin: 14px 0 0;
+
+    color: var(--secundario);
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.contador {
+    flex: 0 0 auto;
+
+    padding: 9px 13px;
+
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+
+    color: var(--secundario);
+
+    font-size: 14px;
+}
+
+.estado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 44px;
+}
+
+.tarjeta {
+    min-width: 0;
+
+    padding: 20px;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    background: var(--panel);
+}
+
+.tarjeta .titulo {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--secundario);
+
+    font-size: 13px;
+}
+
+.tarjeta strong {
+    font-size: 18px;
+}
+
+.correcto {
+    color: var(--verde);
+}
+
+.error {
+    color: var(--rojo);
+}
+
+.seccion-principal {
+    padding-top: 30px;
+    border-top: 1px solid var(--borde);
+}
+
+.seccion-titulo {
+    margin-bottom: 18px;
+}
+
+.lista-modulos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.modulo {
+    display: block;
+
+    min-width: 0;
+
+    padding: 24px;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    background: var(--panel);
+
+    text-decoration: none;
+}
+
+.modulo h3 {
+    margin: 10px 0 8px;
+}
+
+.modulo p {
+    margin: 0;
+
+    color: var(--secundario);
+
+    line-height: 1.55;
+}
+
+.modulo-disponible:hover {
+    border-color: #484f58;
+    background: var(--panel-secundario);
+}
+
+.modulo-proximo {
+    opacity: .7;
+}
+
+.modulo-estado {
+    color: var(--secundario);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.modulo-disponible .modulo-estado {
+    color: var(--verde);
+}
+
+.panel {
+    overflow: hidden;
+
+    margin-bottom: 22px;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    background: var(--panel);
+}
+
+.panel-cabecera {
+    padding: 20px 22px;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+.panel-cabecera p {
+    margin: 6px 0 0;
+
+    color: var(--secundario);
+
+    line-height: 1.5;
+}
+
+.formulario {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(120px, 1fr)
+        minmax(130px, .8fr)
+        90px;
+
+    gap: 18px;
+
+    padding: 22px;
+}
+
+.campo {
+    min-width: 0;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--texto);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo input[type="text"],
+.campo select {
+    width: 100%;
+    min-height: 42px;
+
+    padding: 9px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    outline: none;
+
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+.campo input[type="text"]:focus,
+.campo select:focus {
+    border-color: var(--azul);
+}
+
+.campo input[type="color"] {
+    width: 100%;
+    height: 42px;
+
+    padding: 4px;
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    background: var(--fondo);
+    cursor: pointer;
+}
+
+.acciones-formulario {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 8px 14px;
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.boton-principal {
+    border-color: rgba(240, 246, 252, .1);
+
+    background: #238636;
+    color: #ffffff;
+}
+
+.boton-principal:hover {
+    background: #2ea043;
+}
+
+.boton-secundario {
+    border-color: var(--borde);
+
+    background: var(--panel-secundario);
+    color: var(--texto);
+}
+
+.boton-secundario:hover {
+    border-color: #484f58;
+}
+
+.boton-pequeno {
+    min-height: 32px;
+
+    padding: 5px 9px;
+
+    font-size: 12px;
+}
+
+.mensaje {
+    margin-bottom: 20px;
+
+    padding: 13px 16px;
+
+    border: 1px solid;
+    border-radius: 8px;
+
+    line-height: 1.45;
+}
+
+.mensaje-exito {
+    border-color: rgba(57, 211, 83, .35);
+
+    background: var(--verde-suave);
+    color: #7ee787;
+}
+
+.mensaje-error {
+    border-color: rgba(248, 81, 73, .35);
+
+    background: var(--rojo-suave);
+    color: #ff7b72;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+.tabla {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+    padding: 14px 18px;
+
+    border-bottom: 1px solid var(--borde);
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabla th {
+    color: var(--secundario);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.tabla tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.fila-inactiva {
+    opacity: .58;
+}
+
+.materia-nombre {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.color-materia {
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    flex: 0 0 auto;
+
+    border-radius: 3px;
+}
+
+.badge {
+    display: inline-flex;
+
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-activa {
+    background: var(--verde-suave);
+    color: #7ee787;
+}
+
+.badge-inactiva {
+    background: var(--panel-secundario);
+    color: var(--secundario);
+}
+
+.acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.acciones-tabla form {
+    margin: 0;
+}
+
+.texto-muted {
+    color: var(--secundario);
+}
+
+.estado-vacio {
+    padding: 38px 22px;
+
+    text-align: center;
+}
+
+.estado-vacio p {
+    margin: 7px 0 0;
+
+    color: var(--secundario);
+}
+
+
+@media (max-width: 900px) {
+
+    .estado {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista-modulos {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campo-grande {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 620px) {
+
+    .barra-contenido {
+        min-height: auto;
+
+        padding: 14px 0;
+
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navegacion {
+        width: 100%;
+    }
+
+    .contenedor {
+        padding-top: 34px;
+    }
+
+    .titulo-pagina {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .estado {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-grande {
+        grid-column: auto;
+    }
+
+    .acciones-formulario {
+        grid-column: auto;
+    }
+}
+
+
+/* ==================================================
+   Materias - modelo académico V2
+   ================================================== */
+
+.formulario-materias {
+    grid-template-columns:
+        repeat(12, minmax(0, 1fr));
+}
+
+.campo-materia-nombre {
+    grid-column: span 5;
+}
+
+.campo-materia-codigo {
+    grid-column: span 2;
+}
+
+.campo-materia-cuatrimestre {
+    grid-column: span 2;
+}
+
+.campo-materia-color {
+    grid-column: span 3;
+}
+
+.campo-materia-turno {
+    grid-column: span 3;
+}
+
+.campo-materia-comision {
+    grid-column: span 3;
+}
+
+.campo-materia-docente {
+    grid-column: span 6;
+}
+
+.materia-codigo {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.dato-compuesto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.dato-compuesto small {
+    color: var(--secundario);
+    font-size: 12px;
+}
+
+.tabla-materias td:first-child {
+    min-width: 250px;
+}
+
+.tabla-materias td:nth-child(4) {
+    min-width: 190px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .campo-materia-nombre {
+        grid-column: span 8;
+    }
+
+    .campo-materia-codigo {
+        grid-column: span 4;
+    }
+
+    .campo-materia-cuatrimestre,
+    .campo-materia-turno,
+    .campo-materia-comision,
+    .campo-materia-color {
+        grid-column: span 6;
+    }
+
+    .campo-materia-docente {
+        grid-column: span 12;
+    }
+}
+
+
+@media (max-width: 620px) {
+
+    .formulario-materias {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-materia-nombre,
+    .campo-materia-codigo,
+    .campo-materia-cuatrimestre,
+    .campo-materia-color,
+    .campo-materia-turno,
+    .campo-materia-comision,
+    .campo-materia-docente {
+        grid-column: auto;
+    }
+}
+
+
+
+/* ==================================================
+   Agenda académica
+   ================================================== */
+
+.formulario-eventos {
+    grid-template-columns:
+        repeat(12, minmax(0, 1fr));
+}
+
+.formulario-eventos .campo input[type="date"],
+.formulario-eventos .campo input[type="time"],
+.formulario-eventos .campo input[type="number"],
+.formulario-eventos .campo textarea {
+    width: 100%;
+
+    padding: 9px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    outline: none;
+
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+.formulario-eventos .campo input[type="date"],
+.formulario-eventos .campo input[type="time"],
+.formulario-eventos .campo input[type="number"] {
+    min-height: 42px;
+}
+
+.formulario-eventos .campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formulario-eventos .campo input:focus,
+.formulario-eventos .campo textarea:focus {
+    border-color: var(--azul);
+}
+
+.campo-evento-materia {
+    grid-column: span 5;
+}
+
+.campo-evento-tipo {
+    grid-column: span 3;
+}
+
+.campo-evento-titulo {
+    grid-column: span 4;
+}
+
+.campo-evento-fecha {
+    grid-column: span 3;
+}
+
+.campo-evento-hora {
+    grid-column: span 2;
+}
+
+.campo-evento-lugar {
+    grid-column: span 4;
+}
+
+.campo-evento-estado {
+    grid-column: span 2;
+}
+
+.campo-evento-nota {
+    grid-column: span 1;
+}
+
+.campo-evento-descripcion {
+    grid-column: 1 / -1;
+}
+
+.lista-eventos {
+    display: flex;
+    flex-direction: column;
+}
+
+.evento-item {
+    display: grid;
+
+    grid-template-columns:
+        135px
+        5px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 18px;
+
+    align-items: center;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+.evento-item:last-child {
+    border-bottom: 0;
+}
+
+.evento-fecha {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    color: var(--texto);
+}
+
+.evento-fecha strong {
+    font-size: 14px;
+}
+
+.evento-fecha span {
+    color: var(--secundario);
+    font-size: 13px;
+}
+
+.evento-color {
+    align-self: stretch;
+
+    min-height: 62px;
+
+    border-radius: 999px;
+}
+
+.evento-contenido {
+    min-width: 0;
+}
+
+.evento-superior {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 5px;
+}
+
+.evento-tipo {
+    color: var(--secundario);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.evento-contenido h3 {
+    margin: 0 0 5px;
+
+    font-size: 17px;
+}
+
+.evento-materia {
+    margin: 0;
+
+    color: var(--secundario);
+
+    font-size: 14px;
+}
+
+.evento-detalle {
+    margin: 6px 0 0;
+
+    color: var(--secundario);
+
+    font-size: 13px;
+}
+
+.evento-acciones {
+    align-self: center;
+}
+
+.evento-pasado {
+    opacity: .72;
+}
+
+.badge-evento-pendiente {
+    background: rgba(88, 166, 255, .14);
+    color: #79c0ff;
+}
+
+.badge-evento-aprobado {
+    background: var(--verde-suave);
+    color: #7ee787;
+}
+
+.badge-evento-desaprobado {
+    background: var(--rojo-suave);
+    color: #ff7b72;
+}
+
+.badge-evento-ausente,
+.badge-evento-cancelado {
+    background: var(--panel-secundario);
+    color: var(--secundario);
+}
+
+
+@media (max-width: 900px) {
+
+    .campo-evento-materia,
+    .campo-evento-titulo {
+        grid-column: span 8;
+    }
+
+    .campo-evento-tipo,
+    .campo-evento-fecha,
+    .campo-evento-lugar {
+        grid-column: span 4;
+    }
+
+    .campo-evento-hora,
+    .campo-evento-estado,
+    .campo-evento-nota {
+        grid-column: span 4;
+    }
+
+    .evento-item {
+        grid-template-columns:
+            105px
+            5px
+            minmax(0, 1fr);
+    }
+
+    .evento-acciones {
+        grid-column: 3;
+    }
+}
+
+
+@media (max-width: 620px) {
+
+    .formulario-eventos {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-evento-materia,
+    .campo-evento-tipo,
+    .campo-evento-titulo,
+    .campo-evento-fecha,
+    .campo-evento-hora,
+    .campo-evento-lugar,
+    .campo-evento-estado,
+    .campo-evento-nota,
+    .campo-evento-descripcion {
+        grid-column: auto;
+    }
+
+    .evento-item {
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+    }
+
+    .evento-color {
+        width: 100%;
+        height: 4px;
+        min-height: 4px;
+    }
+
+    .evento-acciones {
+        grid-column: auto;
+    }
+}
+
+
+
+/* ==================================================
+   Agenda P5E - filtros y cuenta regresiva
+   ================================================== */
+
+.filtros-eventos {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 2fr)
+        minmax(170px, 1fr)
+        minmax(170px, 1fr)
+        auto;
+
+    gap: 16px;
+
+    align-items: end;
+
+    padding: 20px 22px;
+}
+
+.filtros-eventos .campo {
+    min-width: 0;
+}
+
+.filtros-eventos select {
+    width: 100%;
+    min-height: 42px;
+
+    padding: 9px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    outline: none;
+
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+.filtros-eventos select:focus {
+    border-color: var(--azul);
+}
+
+.acciones-filtros {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.evento-cuenta {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: 6px;
+    padding: 4px 8px;
+
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+
+    background: var(--panel-secundario);
+    color: var(--texto);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+@media (max-width: 1000px) {
+
+    .filtros-eventos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .acciones-filtros {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 620px) {
+
+    .filtros-eventos {
+        grid-template-columns: 1fr;
+    }
+
+    .acciones-filtros {
+        grid-column: auto;
+    }
+
+    .acciones-filtros .boton {
+        flex: 1 1 auto;
+    }
+}
+
+
+
+/* ==================================================
+   P5F - Dashboard integrado
+   ================================================== */
+
+.dashboard-proximo {
+    margin-bottom: 44px;
+}
+
+.dashboard-proximo > .seccion-titulo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 16px;
+}
+
+.dashboard-proximo .etiqueta {
+    margin-bottom: 5px;
+}
+
+.proximo-evento-card {
+    display: grid;
+
+    grid-template-columns:
+        6px
+        130px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    background: var(--panel);
+
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.proximo-evento-card:hover {
+    border-color: #484f58;
+    background: var(--panel-secundario);
+}
+
+.proximo-evento-color {
+    align-self: stretch;
+
+    min-height: 76px;
+
+    border-radius: 999px;
+}
+
+.proximo-evento-fecha {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.proximo-evento-fecha strong {
+    font-size: 15px;
+}
+
+.proximo-evento-fecha span {
+    color: var(--secundario);
+
+    font-size: 13px;
+}
+
+.proximo-evento-contenido {
+    min-width: 0;
+}
+
+.proximo-evento-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 6px;
+}
+
+.proximo-evento-contenido h3 {
+    margin: 0 0 5px;
+
+    font-size: 19px;
+}
+
+.proximo-evento-contenido p {
+    margin: 0;
+
+    color: var(--secundario);
+
+    font-size: 14px;
+}
+
+.proximo-evento-cuenta {
+    padding: 7px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+
+    background: var(--fondo);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+@media (max-width: 760px) {
+
+    .proximo-evento-card {
+        grid-template-columns:
+            5px
+            minmax(0, 1fr);
+    }
+
+    .proximo-evento-color {
+        grid-row: 1 / span 3;
+    }
+
+    .proximo-evento-fecha,
+    .proximo-evento-contenido,
+    .proximo-evento-cuenta {
+        grid-column: 2;
+    }
+
+    .proximo-evento-cuenta {
+        width: fit-content;
+    }
+}
+
+
+@media (max-width: 620px) {
+
+    .dashboard-proximo > .seccion-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+
+/* ==================================================
+   P6A - Calendario académico mensual
+   ================================================== */
+
+.calendario-panel {
+    overflow: hidden;
+}
+
+.calendario-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+.calendario-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.calendario-mes-actual {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+.calendario-mes-actual strong {
+    font-size: 18px;
+}
+
+.calendario-mes-actual span {
+    color: var(--secundario);
+
+    font-size: 12px;
+}
+
+.calendario-scroll {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.calendario-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(120px, 1fr));
+
+    min-width: 840px;
+}
+
+.calendario-dia-semana {
+    padding: 11px 10px;
+
+    border-right: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+
+    background: var(--panel-secundario);
+    color: var(--secundario);
+
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.calendario-dia-semana:nth-child(7) {
+    border-right: 0;
+}
+
+.calendario-dia {
+    min-height: 145px;
+
+    padding: 9px;
+
+    border-right: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+
+    background: var(--panel);
+}
+
+.calendario-dia:nth-child(7n) {
+    border-right: 0;
+}
+
+.calendario-dia-vacio {
+    background:
+        rgba(255, 255, 255, .012);
+}
+
+.calendario-dia-hoy {
+    box-shadow:
+        inset 0 0 0 2px
+        rgba(88, 166, 255, .55);
+}
+
+.calendario-numero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 6px;
+
+    min-height: 24px;
+
+    margin-bottom: 7px;
+}
+
+.calendario-numero > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 25px;
+    height: 25px;
+
+    padding: 0 5px;
+
+    border-radius: 999px;
+
+    color: var(--secundario);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.calendario-dia-hoy
+.calendario-numero > span {
+    background: var(--azul);
+    color: #ffffff;
+}
+
+.calendario-numero small {
+    color: var(--azul);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.calendario-eventos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.calendario-evento {
+    display: grid;
+
+    grid-template-columns:
+        4px
+        minmax(0, 1fr);
+
+    gap: 7px;
+
+    min-width: 0;
+
+    padding: 6px;
+
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+
+    background: var(--fondo);
+
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.calendario-evento:hover {
+    border-color: #484f58;
+    background: var(--panel-secundario);
+}
+
+.calendario-evento-color {
+    align-self: stretch;
+
+    border-radius: 999px;
+}
+
+.calendario-evento-contenido {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 2px;
+}
+
+.calendario-evento-contenido strong,
+.calendario-evento-contenido small {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.calendario-evento-contenido strong {
+    font-size: 11px;
+}
+
+.calendario-evento-contenido small {
+    color: var(--secundario);
+
+    font-size: 10px;
+}
+
+.calendario-evento-cancelado {
+    opacity: .48;
+}
+
+.calendario-ayuda {
+    margin-top: 14px;
+
+    color: var(--secundario);
+
+    font-size: 13px;
+}
+
+.calendario-ayuda p {
+    margin: 0;
+}
+
+
+@media (max-width: 720px) {
+
+    .calendario-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .calendario-mes-actual {
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 620px) {
+
+    .calendario-navegacion {
+        width: 100%;
+    }
+
+    .calendario-navegacion .boton {
+        flex: 1 1 auto;
+
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+}
+
+
+
+/* ==================================================
+   P6B - Resumen y leyenda mensual
+   ================================================== */
+
+.calendario-resumen {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.calendario-resumen-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 16px 18px;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    background: var(--panel);
+}
+
+.calendario-resumen-item span {
+    color: var(--secundario);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.calendario-resumen-item strong {
+    font-size: 22px;
+}
+
+.calendario-leyenda-panel {
+    margin-bottom: 18px;
+}
+
+.calendario-leyenda {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 16px 20px;
+}
+
+.calendario-leyenda-item {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 36px;
+
+    padding: 7px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+
+    background: var(--fondo);
+}
+
+.calendario-leyenda-color {
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    flex: 0 0 auto;
+
+    border-radius: 3px;
+}
+
+.calendario-leyenda-item strong {
+    font-size: 12px;
+}
+
+
+@media (max-width: 800px) {
+
+    .calendario-resumen {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .calendario-resumen {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* ==================================================
+   P7A - Calendario de Vida
+   ================================================== */
+
+.vida-config-form {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    padding: 20px 22px;
+}
+
+.vida-config-form .campo {
+    min-width: 240px;
+}
+
+.vida-config-form input[type="date"] {
+    width: 100%;
+    min-height: 42px;
+
+    padding: 9px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+.vida-config-aviso {
+    padding: 0 22px 20px;
+
+    color: var(--secundario);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.vida-estadisticas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.vida-panel {
+    overflow: hidden;
+}
+
+.vida-panel-cabecera {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+.vida-leyenda {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.vida-leyenda span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--secundario);
+
+    font-size: 11px;
+}
+
+.vida-demo {
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 3px;
+}
+
+.vida-demo-vacio {
+    border: 1px solid var(--borde);
+
+    background: var(--panel-secundario);
+}
+
+.vida-demo-marcado {
+    border: 1px solid var(--verde);
+
+    background: var(--verde);
+}
+
+.vida-demo-actual {
+    border: 2px solid var(--azul);
+
+    background: var(--panel-secundario);
+}
+
+.vida-scroll {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 20px 22px 22px;
+}
+
+.vida-matriz {
+    display: grid;
+
+    grid-template-columns:
+        82px
+        max-content;
+
+    gap: 8px 12px;
+
+    width: max-content;
+}
+
+.vida-rango {
+    display: flex;
+    align-items: center;
+
+    min-height: 17px;
+
+    color: var(--secundario);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.vida-fila {
+    display: grid;
+
+    grid-template-columns:
+        repeat(36, 14px);
+
+    gap: 4px;
+}
+
+.vida-celda {
+    width: 14px;
+    height: 14px;
+
+    padding: 0;
+
+    border: 1px solid var(--borde);
+    border-radius: 3px;
+
+    background: var(--panel-secundario);
+
+    cursor: pointer;
+}
+
+.vida-celda:hover {
+    border-color: #8b949e;
+}
+
+.vida-celda:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+}
+
+.vida-celda-marcada {
+    border-color: var(--verde);
+
+    background: var(--verde);
+}
+
+.vida-celda-actual {
+    outline: 2px solid var(--azul);
+    outline-offset: 1px;
+}
+
+.vida-celda:disabled {
+    cursor: wait;
+    opacity: .6;
+}
+
+.vida-feedback {
+    min-height: 24px;
+
+    padding: 0 22px 18px;
+
+    color: var(--verde);
+
+    font-size: 12px;
+}
+
+.vida-feedback-error {
+    color: var(--rojo);
+}
+
+
+@media (max-width: 800px) {
+
+    .vida-estadisticas {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .vida-panel-cabecera {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .vida-estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .vida-config-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .vida-config-form .campo {
+        min-width: 0;
+    }
+
+}
+
+
+
+/* ==================================================
+   P7C - detalle del mes actual
+   ================================================== */
+
+.vida-actual-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(130px, .8fr)
+        minmax(180px, 1fr)
+        minmax(220px, 1.3fr)
+        minmax(220px, 1.3fr);
+
+    gap: 1px;
+
+    margin-bottom: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    background: var(--borde);
+}
+
+.vida-actual-identidad,
+.vida-actual-edad,
+.vida-actual-periodo,
+.vida-actual-explicacion {
+    min-width: 0;
+
+    padding: 16px 18px;
+
+    background: var(--panel);
+}
+
+.vida-actual-identidad,
+.vida-actual-edad,
+.vida-actual-periodo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.vida-actual-card span:not(
+    .vida-actual-borde
+) {
+    color: var(--secundario);
+
+    font-size: 11px;
+}
+
+.vida-actual-card strong {
+    font-size: 14px;
+}
+
+.vida-actual-identidad strong {
+    font-size: 18px;
+}
+
+.vida-actual-explicacion {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.vida-actual-explicacion p {
+    margin: 0;
+
+    color: var(--secundario);
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.vida-actual-borde {
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    flex: 0 0 auto;
+
+    border: 2px solid var(--azul);
+    border-radius: 3px;
+
+    background: var(--panel-secundario);
+}
+
+
+/*
+ * Cada fila contiene 36 meses.
+ * Aumentamos la separación después
+ * del mes 12 y del mes 24 para que
+ * los tres años se lean visualmente.
+ */
+
+.vida-fila .vida-celda:nth-child(12),
+.vida-fila .vida-celda:nth-child(24) {
+    margin-right: 5px;
+}
+
+
+@media (max-width: 900px) {
+
+    .vida-actual-card {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .vida-actual-card {
+        grid-template-columns: 1fr;
+    }
+
+}
+

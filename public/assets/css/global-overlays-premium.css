@@ -1,0 +1,1198 @@
+/*
+ * ==========================================================
+ * AGENDA PERSONAL
+ * GUX-O1 - PREMIUM GLOBAL OVERLAYS
+ * ==========================================================
+ *
+ * Desktop UX density upgrade:
+ *
+ * - Quick Add
+ * - Command Palette
+ *
+ * Geometry / typography only.
+ *
+ * NO modifica:
+ * - colores Light
+ * - colores Dark
+ * - navbar
+ * - triggers
+ * - PHP
+ * - JS
+ * - mobile <= 760px
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   DESKTOP
+   ========================================================== */
+
+@media (min-width: 981px) {
+
+
+    /* ======================================================
+       QUICK ADD
+       ====================================================== */
+
+    body.ui-v3
+    .quick-add-overlay-v3 {
+        padding:
+            clamp(34px, 5vh, 60px)
+            28px
+            42px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-dialog-v3 {
+        width:
+            min(
+                960px,
+                calc(100vw - 56px)
+            )
+            !important;
+
+        border-radius:
+            26px
+            !important;
+    }
+
+
+    /* Header */
+
+    body.ui-v3
+    .quick-add-header-v3 {
+        gap:
+            30px
+            !important;
+
+        padding:
+            27px
+            30px
+            25px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-v3 {
+        gap:
+            16px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-icon-v3 {
+        width:
+            50px
+            !important;
+
+        height:
+            50px
+            !important;
+
+        border-radius:
+            15px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-icon-v3 svg {
+        width:
+            21px
+            !important;
+
+        height:
+            21px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-v3
+    > div
+    > span {
+        font-size:
+            10px
+            !important;
+
+        line-height:
+            1.2
+            !important;
+
+        letter-spacing:
+            .105em
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-v3 h2 {
+        margin:
+            5px
+            0
+            5px
+            !important;
+
+        font-size:
+            26px
+            !important;
+
+        line-height:
+            1.08
+            !important;
+
+        letter-spacing:
+            -.035em
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-v3 p {
+        font-size:
+            12.5px
+            !important;
+
+        line-height:
+            1.55
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-close-v3 {
+        min-height:
+            38px
+            !important;
+
+        padding:
+            0
+            11px
+            !important;
+
+        border-radius:
+            11px
+            !important;
+
+        gap:
+            7px
+            !important;
+
+        font-size:
+            10px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-close-v3 kbd {
+        font-size:
+            8px
+            !important;
+    }
+
+
+    /* Form */
+
+    body.ui-v3
+    .quick-add-grid-v3 {
+        gap:
+            19px
+            20px
+            !important;
+
+        padding:
+            27px
+            30px
+            30px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 {
+        gap:
+            8px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 label {
+        font-size:
+            11px
+            !important;
+
+        line-height:
+            1.25
+            !important;
+
+        font-weight:
+            760
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 label small {
+        font-size:
+            8.5px
+            !important;
+
+        line-height:
+            1.2
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 input,
+
+    body.ui-v3
+    .quick-add-field-v3 select {
+        min-height:
+            49px
+            !important;
+
+        padding:
+            0
+            14px
+            !important;
+
+        border-radius:
+            11px
+            !important;
+
+        font-size:
+            13.5px
+            !important;
+
+        line-height:
+            1.35
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 textarea {
+        min-height:
+            116px
+            !important;
+
+        padding:
+            13px
+            14px
+            !important;
+
+        border-radius:
+            11px
+            !important;
+
+        font-size:
+            13.5px
+            !important;
+
+        line-height:
+            1.55
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-note-help-v3 {
+        margin-top:
+            6px
+            !important;
+
+        font-size:
+            9.5px
+            !important;
+
+        line-height:
+            1.45
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-subject-color-v3 {
+        width:
+            11px
+            !important;
+
+        height:
+            11px
+            !important;
+    }
+
+
+    /* Footer */
+
+    body.ui-v3
+    .quick-add-footer-v3 {
+        min-height:
+            74px
+            !important;
+
+        padding:
+            15px
+            30px
+            17px
+            !important;
+
+        gap:
+            22px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-shortcut-v3 {
+        gap:
+            8px
+            !important;
+
+        font-size:
+            10px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-shortcut-v3 kbd {
+        min-width:
+            24px
+            !important;
+
+        min-height:
+            24px
+            !important;
+
+        padding:
+            3px
+            6px
+            !important;
+
+        font-size:
+            8px
+            !important;
+
+        border-radius:
+            6px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-actions-v3 {
+        gap:
+            11px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-cancel-v3,
+
+    body.ui-v3
+    .quick-add-save-v3 {
+        min-height:
+            45px
+            !important;
+
+        padding:
+            0
+            19px
+            !important;
+
+        border-radius:
+            11px
+            !important;
+
+        font-size:
+            12px
+            !important;
+
+        font-weight:
+            760
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-save-v3 {
+        min-width:
+            158px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-save-arrow-v3 {
+        font-size:
+            14px
+            !important;
+    }
+
+
+
+    /* ======================================================
+       COMMAND PALETTE
+       ====================================================== */
+
+    body.ui-v3
+    .command-overlay-v3 {
+        padding:
+            clamp(36px, 5vh, 66px)
+            28px
+            42px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-dialog-v3 {
+        width:
+            min(
+                1040px,
+                calc(100vw - 56px)
+            )
+            !important;
+
+        max-height:
+            calc(100vh - 90px)
+            !important;
+
+        border-radius:
+            26px
+            !important;
+    }
+
+
+    /* Search */
+
+    body.ui-v3
+    .command-search-v3 {
+        min-height:
+            78px
+            !important;
+
+        gap:
+            15px
+            !important;
+
+        padding:
+            16px
+            22px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-search-icon-v3 {
+        width:
+            30px
+            !important;
+
+        height:
+            30px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-search-icon-v3 svg {
+        width:
+            20px
+            !important;
+
+        height:
+            20px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-input-v3 {
+        min-height:
+            46px
+            !important;
+
+        font-size:
+            18px
+            !important;
+
+        line-height:
+            1.35
+            !important;
+
+        letter-spacing:
+            -.015em
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-escape-v3 {
+        min-width:
+            38px
+            !important;
+
+        min-height:
+            31px
+            !important;
+
+        padding:
+            0
+            8px
+            !important;
+
+        border-radius:
+            8px
+            !important;
+
+        font-size:
+            8.5px
+            !important;
+    }
+
+
+    /* Context bar */
+
+    body.ui-v3
+    .command-context-v3 {
+        min-height:
+            50px
+            !important;
+
+        padding:
+            11px
+            22px
+            !important;
+
+        gap:
+            18px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-context-label-v3,
+
+    body.ui-v3
+    .command-context-status-v3 {
+        font-size:
+            10px
+            !important;
+
+        line-height:
+            1.35
+            !important;
+    }
+
+
+    /* Results */
+
+    body.ui-v3
+    .command-results-v3 {
+        max-height:
+            min(
+                620px,
+                calc(100vh - 255px)
+            )
+            !important;
+
+        padding:
+            14px
+            16px
+            18px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-section-v3 {
+        gap:
+            7px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-section-heading-v3 {
+        padding:
+            10px
+            10px
+            8px
+            !important;
+
+        font-size:
+            10px
+            !important;
+
+        line-height:
+            1.3
+            !important;
+
+        letter-spacing:
+            .085em
+            !important;
+    }
+
+
+    /* Result rows */
+
+    body.ui-v3
+    .command-item-v3 {
+        min-height:
+            74px
+            !important;
+
+        grid-template-columns:
+            44px
+            minmax(0, 1fr)
+            auto
+            !important;
+
+        gap:
+            14px
+            !important;
+
+        padding:
+            11px
+            13px
+            !important;
+
+        border-radius:
+            15px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-icon-v3 {
+        width:
+            42px
+            !important;
+
+        height:
+            42px
+            !important;
+
+        border-radius:
+            12px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-icon-v3 svg {
+        width:
+            18px
+            !important;
+
+        height:
+            18px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-content-v3 {
+        gap:
+            4px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-content-v3 strong {
+        font-size:
+            14px
+            !important;
+
+        line-height:
+            1.25
+            !important;
+
+        letter-spacing:
+            -.012em
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-content-v3 small {
+        font-size:
+            11px
+            !important;
+
+        line-height:
+            1.45
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-meta-v3 {
+        gap:
+            12px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-meta-v3 small {
+        font-size:
+            9.5px
+            !important;
+
+        line-height:
+            1.3
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-arrow-v3 {
+        width:
+            34px
+            !important;
+
+        height:
+            34px
+            !important;
+
+        border-radius:
+            10px
+            !important;
+
+        font-size:
+            14px
+            !important;
+    }
+
+
+    /* Empty / loading */
+
+    body.ui-v3
+    .command-loading-v3,
+
+    body.ui-v3
+    .command-empty-v3,
+
+    body.ui-v3
+    .command-error-v3 {
+        min-height:
+            180px
+            !important;
+
+        padding:
+            28px
+            !important;
+
+        font-size:
+            12px
+            !important;
+
+        line-height:
+            1.55
+            !important;
+    }
+
+
+    /* Footer */
+
+    body.ui-v3
+    .command-footer-v3 {
+        min-height:
+            54px
+            !important;
+
+        padding:
+            11px
+            18px
+            !important;
+
+        gap:
+            16px
+            !important;
+
+        font-size:
+            10px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-footer-v3 kbd {
+        min-width:
+            24px
+            !important;
+
+        min-height:
+            23px
+            !important;
+
+        padding:
+            3px
+            6px
+            !important;
+
+        border-radius:
+            6px
+            !important;
+
+        font-size:
+            8px
+            !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   TABLET
+   761 - 980
+   ========================================================== */
+
+@media
+    (min-width: 761px)
+    and
+    (max-width: 980px) {
+
+    body.ui-v3
+    .quick-add-dialog-v3 {
+        width:
+            min(
+                820px,
+                calc(100vw - 34px)
+            )
+            !important;
+
+        border-radius:
+            22px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-header-v3 {
+        padding:
+            23px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-v3 h2 {
+        font-size:
+            22px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-heading-v3 p {
+        font-size:
+            11px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-grid-v3 {
+        gap:
+            16px
+            !important;
+
+        padding:
+            22px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 input,
+
+    body.ui-v3
+    .quick-add-field-v3 select {
+        min-height:
+            46px
+            !important;
+
+        font-size:
+            12.5px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-field-v3 textarea {
+        min-height:
+            105px
+            !important;
+
+        font-size:
+            12.5px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-footer-v3 {
+        padding:
+            14px
+            22px
+            16px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-dialog-v3 {
+        width:
+            calc(100vw - 34px)
+            !important;
+
+        max-height:
+            calc(100vh - 60px)
+            !important;
+
+        border-radius:
+            22px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-search-v3 {
+        min-height:
+            70px
+            !important;
+
+        padding:
+            14px
+            18px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-input-v3 {
+        font-size:
+            16px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-results-v3 {
+        max-height:
+            calc(100vh - 230px)
+            !important;
+
+        padding:
+            12px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-v3 {
+        min-height:
+            68px
+            !important;
+
+        gap:
+            12px
+            !important;
+
+        padding:
+            10px
+            !important;
+
+        border-radius:
+            13px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-content-v3 strong {
+        font-size:
+            13px
+            !important;
+    }
+
+
+    body.ui-v3
+    .command-item-content-v3 small {
+        font-size:
+            10px
+            !important;
+    }
+
+}
+
+
+/*
+ * <= 760px:
+ * NO OVERRIDE.
+ *
+ * Sigue gobernando quick-add-mobile.css
+ * y el responsive mobile existente.
+ */
+
+
+
+/*
+ * ==========================================================
+ * GUX-O1.1 - MICRO VISUAL FIX
+ * ==========================================================
+ *
+ * 1. Quick Add:
+ *    reserva espacio real para el indicador de materia.
+ *
+ * 2. Command Palette:
+ *    centra y respira correctamente el ESC.
+ *
+ * No modifica colores.
+ * No modifica JS.
+ * No modifica navbar.
+ * No modifica mobile <= 760px.
+ * ==========================================================
+ */
+
+@media (min-width: 761px) {
+
+
+    /* ======================================================
+       QUICK ADD - SUBJECT COLOR INDICATOR
+       ====================================================== */
+
+    body.ui-v3
+    .quick-add-subject-wrap-v3
+    select {
+        padding-left:
+            42px
+            !important;
+
+        padding-right:
+            42px
+            !important;
+    }
+
+
+    body.ui-v3
+    .quick-add-subject-color-v3 {
+        left:
+            16px
+            !important;
+
+        width:
+            10px
+            !important;
+
+        height:
+            10px
+            !important;
+
+        border-radius:
+            3px
+            !important;
+    }
+
+
+
+    /* ======================================================
+       COMMAND PALETTE - ESC KEY
+       ====================================================== */
+
+    body.ui-v3
+    .command-escape-v3 {
+        display:
+            inline-flex
+            !important;
+
+        align-items:
+            center
+            !important;
+
+        justify-content:
+            center
+            !important;
+
+        align-self:
+            center
+            !important;
+
+        justify-self:
+            end
+            !important;
+
+        flex:
+            0 0 auto
+            !important;
+
+        min-width:
+            52px
+            !important;
+
+        width:
+            auto
+            !important;
+
+        height:
+            38px
+            !important;
+
+        min-height:
+            38px
+            !important;
+
+        padding:
+            0
+            13px
+            !important;
+
+        margin-left:
+            10px
+            !important;
+
+        box-sizing:
+            border-box
+            !important;
+
+        line-height:
+            1
+            !important;
+
+        text-align:
+            center
+            !important;
+
+        white-space:
+            nowrap
+            !important;
+
+        font-size:
+            9.5px
+            !important;
+
+        font-weight:
+            750
+            !important;
+
+        letter-spacing:
+            .04em
+            !important;
+    }
+
+}
+

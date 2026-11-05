@@ -1,0 +1,1130 @@
+
+/*
+ * Agenda Personal
+ * Rendimiento - Legibilidad V1
+ *
+ * Encabezado y metricas generales.
+ * Exclusivo de page-performance-v3.
+ *
+ * No modifica calculos ni datos PHP.
+ */
+
+/* ==========================================
+   ENCABEZADO PRINCIPAL
+========================================== */
+
+.page-performance-v3 .performance-hero-v3 {
+    gap: 24px;
+
+    margin-bottom: 22px;
+}
+
+/* Etiqueta de seccion */
+
+.page-performance-v3
+.performance-hero-v3 .section-kicker {
+    font-size: 11px;
+    line-height: 1.45;
+
+    letter-spacing: .065em;
+}
+
+/*
+ * Conservar el tamaño fluido y degradado
+ * originales del titulo principal.
+ */
+
+.page-performance-v3 .performance-hero-v3 h1 {
+    max-width: 100%;
+
+    line-height: 1.12;
+
+    overflow-wrap: anywhere;
+}
+
+/* Descripcion */
+
+.page-performance-v3 .performance-hero-v3 p {
+    max-width: 760px;
+
+    margin-top: 9px;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: #a8bbce;
+}
+
+/* ==========================================
+   MUESTRA ACTUAL
+========================================== */
+
+.page-performance-v3 .performance-sample-v3 {
+    min-width: 0;
+
+    padding: 16px 18px;
+
+    border-radius: 12px;
+}
+
+/* Etiqueta */
+
+.page-performance-v3
+.performance-sample-v3 > span {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a0b5c9;
+}
+
+/* Resultado principal */
+
+.page-performance-v3
+.performance-sample-v3 strong {
+    margin-top: 6px;
+
+    font-size: 23px;
+    line-height: 1.25;
+
+    color: #f0f5fa;
+}
+
+/* Aclaracion */
+
+.page-performance-v3
+.performance-sample-v3 small {
+    margin-top: 6px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #9aafc3;
+}
+
+/* ==========================================
+   CUATRO METRICAS GENERALES
+========================================== */
+
+.page-performance-v3 .performance-metrics-v3 {
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.page-performance-v3
+.performance-metrics-v3 article {
+    min-width: 0;
+    min-height: 108px;
+
+    padding: 17px 19px;
+
+    border-radius: 12px;
+}
+
+/* Etiquetas */
+
+.page-performance-v3
+.performance-metrics-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #a7bdcf;
+}
+
+/*
+ * Los colores de las metricas de estado
+ * se conservan desde el CSS original.
+ */
+
+.page-performance-v3
+.performance-metrics-v3 strong {
+    margin-top: 5px;
+
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+/* Descripciones inferiores */
+
+.page-performance-v3
+.performance-metrics-v3 small {
+    margin-top: 6px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #9aafc3;
+}
+
+/* ==========================================
+   AJUSTES RESPONSIVE
+========================================== */
+
+/*
+ * No se reemplazan las columnas originales.
+ * Se respetan los breakpoints de ui-v3.css.
+ */
+
+@media (max-width: 900px) {
+
+    .page-performance-v3
+    .performance-metrics-v3 article {
+        min-height: 102px;
+
+        padding: 16px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .page-performance-v3
+    .performance-hero-v3 {
+        gap: 17px;
+    }
+
+    .page-performance-v3
+    .performance-hero-v3 p {
+        font-size: 12px;
+    }
+
+    .page-performance-v3
+    .performance-metrics-v3 strong {
+        font-size: 22px;
+    }
+
+    .page-performance-v3
+    .performance-metrics-v3 small {
+        font-size: 11px;
+    }
+}
+
+
+/*
+ * Rendimiento - Legibilidad V2 Subjects
+ *
+ * Catalogo de rendimiento por materia.
+ * Exclusivo de page-performance-v3.
+ *
+ * No modifica promedios, datos ni estados PHP.
+ */
+
+/* ==========================================
+   CONTENEDOR DEL CATALOGO
+========================================== */
+
+.page-performance-v3 .performance-subjects-v3 {
+    min-width: 0;
+
+    padding: 21px;
+
+    border-radius: 15px;
+}
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.page-performance-v3
+.performance-subjects-v3 .performance-section-head-v3 {
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.page-performance-v3
+.performance-subjects-v3 .performance-section-head-v3 h2 {
+    font-size: 19px;
+    line-height: 1.35;
+
+    color: #edf4fa;
+}
+
+.page-performance-v3
+.performance-subjects-v3 .performance-section-head-v3 > span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #9fb4c8;
+
+    white-space: nowrap;
+}
+
+/* ==========================================
+   GRID DE MATERIAS
+========================================== */
+
+.page-performance-v3 .performance-subject-grid-v3 {
+    gap: 13px;
+}
+
+/*
+ * Se conserva la distribucion original:
+ * dos columnas en escritorio y una en movil.
+ */
+
+/* ==========================================
+   TARJETA INDIVIDUAL
+========================================== */
+
+.page-performance-v3 .performance-subject-card-v3 {
+    min-width: 0;
+    min-height: 215px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px 17px 16px 19px;
+
+    border-radius: 12px;
+}
+
+/* Conservar identidad cromatica individual */
+
+.page-performance-v3 .performance-subject-accent-v3 {
+    top: 17px;
+    bottom: 17px;
+
+    width: 3px;
+}
+
+/* ==========================================
+   CODIGO, TITULO Y PROMEDIO
+========================================== */
+
+.page-performance-v3 .performance-subject-head-v3 {
+    gap: 12px;
+}
+
+.page-performance-v3
+.performance-subject-head-v3 > div {
+    min-width: 0;
+    flex: 1 1 auto;
+
+    gap: 5px;
+}
+
+/* Codigo */
+
+.page-performance-v3
+.performance-subject-head-v3 small {
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+/* Nombre completo de la materia */
+
+.page-performance-v3
+.performance-subject-head-v3 > div > strong {
+    margin-top: 0;
+
+    font-size: 15px;
+    line-height: 1.35;
+
+    color: #dce7f0;
+
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    text-overflow: clip;
+}
+
+/* Promedio */
+
+.page-performance-v3
+.performance-subject-head-v3 > span {
+    flex: 0 0 auto;
+
+    font-size: 23px;
+    line-height: 1.2;
+
+    color: #f0f6fa;
+}
+
+/* ==========================================
+   CUATRO ESTADISTICAS
+========================================== */
+
+.page-performance-v3 .performance-subject-stats-v3 {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    margin-top: 19px;
+}
+
+.page-performance-v3
+.performance-subject-stats-v3 span {
+    min-width: 0;
+
+    padding: 8px 7px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #acbfd1;
+
+    text-align: center;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   INFORMACION INFERIOR
+========================================== */
+
+.page-performance-v3 .performance-subject-foot-v3 {
+    gap: 12px;
+
+    margin-top: auto;
+    padding-top: 17px;
+}
+
+.page-performance-v3
+.performance-subject-foot-v3 span {
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #9eb3c7;
+}
+
+/* Conservar el color de materias con notas */
+
+.page-performance-v3
+.performance-subject-foot-v3 .with-grade {
+    color: #66d98e;
+}
+
+.page-performance-v3
+.performance-subject-foot-v3 i {
+    flex: 0 0 auto;
+
+    font-size: 15px;
+
+    color: #8ba5ba;
+}
+
+/* ==========================================
+   NAVEGACION CON TECLADO
+========================================== */
+
+.page-performance-v3
+.performance-subject-card-v3:focus-visible {
+    outline: 2px solid #88b7ff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .page-performance-v3
+    .performance-subject-card-v3 {
+        min-height: 210px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .page-performance-v3
+    .performance-subject-grid-v3 {
+        grid-template-columns: 1fr;
+    }
+
+    .page-performance-v3
+    .performance-subject-card-v3 {
+        min-height: 0;
+
+        padding: 17px;
+    }
+
+    .page-performance-v3
+    .performance-subject-foot-v3 {
+        margin-top: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-performance-v3
+    .performance-subjects-v3 {
+        padding: 16px;
+    }
+
+    .page-performance-v3
+    .performance-subject-head-v3 > div > strong {
+        font-size: 14px;
+    }
+
+    .page-performance-v3
+    .performance-subject-stats-v3 span {
+        font-size: 10.5px;
+    }
+}
+
+
+/*
+ * Rendimiento - Legibilidad V3 History Sidebar
+ *
+ * Historial de calificaciones y panel lateral.
+ * Exclusivo de page-performance-v3.
+ *
+ * No modifica notas, porcentajes ni consultas PHP.
+ */
+
+/* ==========================================
+   CONTENEDORES
+========================================== */
+
+.page-performance-v3 .performance-history-v3,
+.page-performance-v3 .performance-overview-v3,
+.page-performance-v3 .performance-sample-card-v3,
+.page-performance-v3 .performance-open-v3 {
+    min-width: 0;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+/* ==========================================
+   HISTORIAL - ENCABEZADO
+========================================== */
+
+.page-performance-v3
+.performance-history-v3 .performance-section-head-v3 {
+    gap: 16px;
+
+    margin-bottom: 19px;
+}
+
+.page-performance-v3
+.performance-history-v3 .performance-section-head-v3 h2 {
+    font-size: 19px;
+    line-height: 1.35;
+
+    color: #eaf2f8;
+}
+
+.page-performance-v3
+.performance-history-v3 .performance-section-head-v3 > span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a0b5c9;
+}
+
+/* ==========================================
+   HISTORIAL - LISTADO
+========================================== */
+
+.page-performance-v3 .performance-grade-list-v3 {
+    gap: 9px;
+}
+
+.page-performance-v3 .performance-grade-item-v3 {
+    min-width: 0;
+    min-height: 101px;
+
+    grid-template-columns:
+        3px
+        82px
+        minmax(0, 1fr)
+        auto
+        54px;
+
+    gap: 12px;
+
+    padding: 13px 11px;
+
+    border-radius: 11px;
+}
+
+/* Indicador cromatico de la materia */
+
+.page-performance-v3 .performance-grade-accent-v3 {
+    width: 3px;
+    height: 42px;
+}
+
+/* Fecha */
+
+.page-performance-v3 .performance-grade-date-v3 {
+    min-width: 0;
+}
+
+.page-performance-v3
+.performance-grade-date-v3 span {
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #a4b8ca;
+
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   HISTORIAL - INFORMACION
+========================================== */
+
+.page-performance-v3 .performance-grade-copy-v3 {
+    min-width: 0;
+}
+
+.page-performance-v3
+.performance-grade-copy-v3 > div {
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #9eb3c7;
+}
+
+/* Nombre de la evaluacion */
+
+.page-performance-v3
+.performance-grade-copy-v3 > strong {
+    margin-top: 5px;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: #dce7f0;
+
+    overflow-wrap: anywhere;
+}
+
+/* Materia */
+
+.page-performance-v3
+.performance-grade-copy-v3 > small {
+    margin-top: 4px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #9bb0c3;
+
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   HISTORIAL - NOTAS Y ESTADOS
+========================================== */
+
+.page-performance-v3 .performance-grade-value-v3 {
+    min-width: 0;
+
+    gap: 3px;
+}
+
+.page-performance-v3
+.performance-grade-value-v3 strong {
+    font-size: 19px;
+    line-height: 1.25;
+
+    color: #edf5fa;
+}
+
+.page-performance-v3
+.performance-grade-value-v3 small {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #9eb3c6;
+}
+
+/*
+ * No modificar los colores semanticos.
+ * Solo mejorar dimensiones y lectura.
+ */
+
+.page-performance-v3 .performance-status-v3 {
+    min-height: 27px;
+
+    padding: 4px 8px;
+
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+/* ==========================================
+   TITULOS DEL PANEL LATERAL
+========================================== */
+
+.page-performance-v3 .performance-overview-v3 h3,
+.page-performance-v3 .performance-sample-card-v3 h3,
+.page-performance-v3 .performance-open-v3 h3 {
+    margin: 5px 0 17px;
+
+    font-size: 16px;
+    line-height: 1.35;
+
+    color: #dce7f0;
+}
+
+.page-performance-v3
+.performance-side-v3 .section-kicker {
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   PANORAMA - ESTADO ACADEMICO
+========================================== */
+
+.page-performance-v3 .performance-overview-main-v3 {
+    gap: 13px;
+
+    margin-bottom: 16px;
+}
+
+.page-performance-v3
+.performance-overview-main-v3 > strong {
+    font-size: 29px;
+    line-height: 1.2;
+
+    color: #f0f6fa;
+}
+
+.page-performance-v3
+.performance-overview-main-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #aec3d5;
+}
+
+.page-performance-v3
+.performance-overview-main-v3 small {
+    margin-top: 4px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #9cb1c5;
+}
+
+/* Barra: conservar porcentajes PHP y colores */
+
+.page-performance-v3 .performance-track-v3 {
+    height: 8px;
+
+    border-radius: 999px;
+}
+
+/* ==========================================
+   PANORAMA - LEYENDA
+========================================== */
+
+.page-performance-v3 .performance-overview-list-v3 {
+    gap: 11px;
+
+    margin-top: 17px;
+}
+
+.page-performance-v3
+.performance-overview-list-v3 > div {
+    grid-template-columns:
+        10px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 9px;
+}
+
+.page-performance-v3 .performance-overview-list-v3 i {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 3px;
+}
+
+.page-performance-v3
+.performance-overview-list-v3 span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a4bbce;
+}
+
+.page-performance-v3
+.performance-overview-list-v3 strong {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #d5e2ed;
+}
+
+/* ==========================================
+   CALIDAD DE MUESTRA
+========================================== */
+
+.page-performance-v3 .performance-sample-grid-v3 {
+    gap: 10px;
+}
+
+.page-performance-v3
+.performance-sample-grid-v3 > div {
+    min-width: 0;
+    min-height: 80px;
+
+    padding: 13px;
+
+    border-radius: 9px;
+}
+
+.page-performance-v3
+.performance-sample-grid-v3 strong {
+    font-size: 23px;
+    line-height: 1.25;
+
+    color: #eaf2f8;
+}
+
+.page-performance-v3
+.performance-sample-grid-v3 span {
+    margin-top: 5px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #a4b9cc;
+
+    overflow-wrap: anywhere;
+}
+
+/* Explicacion estadistica */
+
+.page-performance-v3 .performance-sample-card-v3 p {
+    margin-top: 15px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #9db3c7;
+}
+
+/* ==========================================
+   CARGA ACTUAL
+========================================== */
+
+.page-performance-v3 .performance-open-item-v3 {
+    min-width: 0;
+    min-height: 76px;
+
+    grid-template-columns:
+        3px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 10px;
+
+    margin-top: 9px;
+
+    padding: 11px;
+
+    border-radius: 10px;
+}
+
+/* Indicador de color */
+
+.page-performance-v3
+.performance-open-item-v3 > span {
+    width: 3px;
+    height: 39px;
+}
+
+/* Informacion */
+
+.page-performance-v3
+.performance-open-item-v3 > div {
+    min-width: 0;
+
+    gap: 4px;
+}
+
+.page-performance-v3
+.performance-open-item-v3 strong {
+    font-size: 12px;
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.page-performance-v3
+.performance-open-item-v3 small {
+    margin-top: 0;
+
+    font-size: 11px;
+    line-height: 1.5;
+
+    color: #9bb1c5;
+
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    text-overflow: clip;
+}
+
+/* ==========================================
+   ESTADOS VACIOS
+========================================== */
+
+.page-performance-v3 .performance-mini-empty-v3 {
+    padding: 15px 0;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #9fb4c8;
+}
+
+.page-performance-v3 .performance-empty-v3 {
+    min-height: 165px;
+
+    padding: 25px 18px;
+
+    border-radius: 12px;
+}
+
+.page-performance-v3
+.performance-empty-v3 > span {
+    font-size: 23px;
+
+    color: #90a7bd;
+}
+
+.page-performance-v3
+.performance-empty-v3 strong {
+    margin-top: 9px;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: #d3e0eb;
+}
+
+.page-performance-v3
+.performance-empty-v3 p {
+    margin-top: 6px;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #9eb3c7;
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+.page-performance-v3
+.performance-grade-item-v3:focus-visible,
+
+.page-performance-v3
+.performance-open-item-v3:focus-visible {
+    outline: 2px solid #8cb9ff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .page-performance-v3 .performance-side-v3 {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .page-performance-v3 .performance-side-v3 {
+        grid-template-columns: 1fr;
+    }
+
+    .page-performance-v3 .performance-grade-item-v3 {
+        grid-template-columns:
+            3px
+            75px
+            minmax(0, 1fr)
+            auto
+            48px;
+
+        gap: 9px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .page-performance-v3
+    .performance-history-v3,
+
+    .page-performance-v3
+    .performance-overview-v3,
+
+    .page-performance-v3
+    .performance-sample-card-v3,
+
+    .page-performance-v3
+    .performance-open-v3 {
+        padding: 16px;
+    }
+
+    .page-performance-v3 .performance-grade-item-v3 {
+        grid-template-columns:
+            3px
+            58px
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+    .page-performance-v3
+    .performance-grade-item-v3 > .performance-status-v3 {
+        grid-column: 3;
+
+        justify-self: start;
+    }
+
+    .page-performance-v3
+    .performance-grade-value-v3 {
+        grid-column: 3;
+
+        align-items: flex-start;
+    }
+}
+
+
+/*
+ * Rendimiento - Legibilidad V4 Final
+ *
+ * Consolidacion visual y accesibilidad.
+ * Exclusivo de page-performance-v3.
+ *
+ * Conserva V1, V2 y V3.
+ */
+
+/* ==========================================
+   CONTENCION DE TEXTOS LARGOS
+========================================== */
+
+.page-performance-v3
+.performance-subject-head-v3 > div > strong {
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+}
+
+.page-performance-v3
+.performance-grade-copy-v3 > strong,
+.page-performance-v3
+.performance-grade-copy-v3 > small {
+    max-width: 100%;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.page-performance-v3
+.performance-open-item-v3 > div {
+    min-width: 0;
+}
+
+.page-performance-v3
+.performance-open-item-v3 small {
+    max-width: 100%;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   NAVEGACION CON TECLADO
+========================================== */
+
+.page-performance-v3
+.performance-subject-card-v3:focus-visible,
+
+.page-performance-v3
+.performance-grade-item-v3:focus-visible,
+
+.page-performance-v3
+.performance-open-item-v3:focus-visible {
+    outline: 2px solid #95baff;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   PANTALLAS ESTRECHAS
+========================================== */
+
+@media (max-width: 420px) {
+
+    .page-performance-v3
+    .performance-metrics-v3 {
+        gap: 9px;
+    }
+
+    .page-performance-v3
+    .performance-metrics-v3 article {
+        min-width: 0;
+        padding: 13px;
+    }
+
+    .page-performance-v3
+    .performance-metrics-v3 span {
+        font-size: 11px;
+    }
+
+    .page-performance-v3
+    .performance-metrics-v3 strong {
+        font-size: 21px;
+    }
+
+    .page-performance-v3
+    .performance-section-head-v3 {
+        gap: 11px;
+        flex-wrap: wrap;
+    }
+
+    .page-performance-v3
+    .performance-grade-item-v3 {
+        padding: 11px 8px;
+    }
+
+    .page-performance-v3
+    .performance-open-item-v3 {
+        gap: 8px;
+    }
+}
+
+/* ==========================================
+   MOVIMIENTO REDUCIDO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-performance-v3
+    .performance-subject-card-v3,
+
+    .page-performance-v3
+    .performance-grade-item-v3,
+
+    .page-performance-v3
+    .performance-open-item-v3 {
+        transition: none;
+    }
+}

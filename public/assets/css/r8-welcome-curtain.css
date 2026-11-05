@@ -1,0 +1,62 @@
+/* R8-R5B: bienvenida poslogin, sin dependencias JS. */
+
+.r8-welcome-curtain {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #080a0d;
+    color: #f7f9fb;
+    z-index: 2147483000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+    will-change: transform;
+    animation: r8-curtain-up 1.9s cubic-bezier(.76,0,.24,1) both;
+}
+
+.r8-welcome-message {
+    font: 750 clamp(2.4rem,5.5vw,5.2rem)/1.1
+        system-ui,-apple-system,Segoe UI,sans-serif;
+    letter-spacing: -.045em;
+    text-align: center;
+    overflow-wrap: anywhere;
+    animation: r8-greeting-reveal 1.35s ease-out both;
+}
+
+@keyframes r8-curtain-up {
+    0%, 38% {
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        transform: translate3d(0,-105%,0);
+    }
+}
+
+@keyframes r8-greeting-reveal {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,15px,0);
+    }
+
+    26%, 70% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(0,-6px,0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .r8-welcome-curtain {
+        display: none !important;
+        animation: none !important;
+    }
+}

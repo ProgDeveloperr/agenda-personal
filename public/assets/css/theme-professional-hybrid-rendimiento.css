@@ -1,0 +1,2087 @@
+/*
+ * ==========================================================
+ * AGENDA PERSONAL
+ * RENDIMIENTO
+ * REN-L1 - PROFESSIONAL HYBRID LIGHT
+ * ==========================================================
+ *
+ * Academic Executive Dashboard
+ *
+ * - canvas light editorial
+ * - hero ejecutivo
+ * - metricas graphite
+ * - rendimiento por materia light
+ * - historial light premium
+ * - panorama graphite
+ * - muestra estadistica graphite-soft
+ * - pendientes light premium
+ *
+ * Sin cambios PHP / JS / DB.
+ * Dark todavia no instalado.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   ROOT
+   ========================================================== */
+
+body.page-performance-v3 {
+    --v3-text:
+        #1d2c39;
+
+    --v3-muted:
+        #617587;
+
+    --v3-muted-2:
+        #7c8e9e;
+
+    --v3-border:
+        rgba(40, 58, 75, .12);
+
+    --v3-border-hover:
+        rgba(40, 58, 75, .22);
+
+    color-scheme:
+        light;
+
+    color:
+        #1e2e3b
+        !important;
+
+    background:
+        radial-gradient(
+            1100px 560px
+            at 9% -8%,
+            rgba(63, 124, 177, .085),
+            transparent 66%
+        ),
+        radial-gradient(
+            820px 450px
+            at 91% 2%,
+            rgba(50, 141, 96, .045),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            #f9fafb 0%,
+            #f1f4f6 100%
+        )
+        !important;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+body.page-performance-v3
+.app-header {
+    border-bottom-color:
+        rgba(42, 60, 78, .10)
+        !important;
+
+    background:
+        rgba(249, 251, 252, .94)
+        !important;
+
+    box-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .90),
+        0 7px 22px
+        rgba(39, 57, 73, .035)
+        !important;
+}
+
+
+body.page-performance-v3
+.app-brand-copy strong {
+    color:
+        #1f2c39
+        !important;
+}
+
+
+body.page-performance-v3
+.app-brand-copy small {
+    color:
+        #718497
+        !important;
+}
+
+
+body.page-performance-v3
+.app-brand-mark {
+    border-color:
+        #cad8e4
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fbfdff,
+            #edf4f9
+        )
+        !important;
+
+    color:
+        #356fae
+        !important;
+
+    box-shadow:
+        0 3px 10px
+        rgba(42, 69, 91, .045),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+body.page-performance-v3
+.app-nav {
+    border-color:
+        rgba(41, 58, 76, .13)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .80)
+        !important;
+
+    box-shadow:
+        0 5px 18px
+        rgba(38, 56, 72, .035),
+        inset 0 1px 0
+        rgba(255, 255, 255, .92)
+        !important;
+}
+
+
+body.page-performance-v3
+.app-nav a {
+    color:
+        #52677b
+        !important;
+}
+
+
+body.page-performance-v3
+.app-nav a:hover {
+    background:
+        #f0f5f9
+        !important;
+
+    color:
+        #25394c
+        !important;
+}
+
+
+body.page-performance-v3
+.app-nav a.active {
+    border-color:
+        #c9daea
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf5fb,
+            #e5eff8
+        )
+        !important;
+
+    color:
+        #245b8d
+        !important;
+
+    box-shadow:
+        inset 0 -2px 0
+        #6197ca
+        !important;
+}
+
+
+body.page-performance-v3
+.notification-bell-v3,
+
+body.page-performance-v3
+.command-trigger-v3 {
+    border-color:
+        #cfdbe5
+        !important;
+
+    background:
+        rgba(255, 255, 255, .84)
+        !important;
+
+    color:
+        #5d7184
+        !important;
+}
+
+
+body.page-performance-v3
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(47, 139, 96, .30)
+        !important;
+
+    background:
+        rgba(48, 145, 99, .055)
+        !important;
+
+    color:
+        #267450
+        !important;
+}
+
+
+body.page-performance-v3
+.app-header-status {
+    color:
+        #566b7d
+        !important;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+body.page-performance-v3
+.section-kicker {
+    color:
+        #287b57
+        !important;
+
+    letter-spacing:
+        .105em
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-hero-v3 h1 {
+    color:
+        #182835
+        !important;
+
+    font-weight:
+        840
+        !important;
+
+    letter-spacing:
+        -.052em
+        !important;
+
+    text-shadow:
+        0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-hero-v3 p {
+    color:
+        #586f82
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-v3 {
+    border-color:
+        #c5d4df
+        !important;
+
+    background:
+        radial-gradient(
+            260px 110px
+            at 100% 0%,
+            rgba(64, 128, 181, .075),
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f8fa
+        )
+        !important;
+
+    border-radius:
+        16px
+        !important;
+
+    box-shadow:
+        0 9px 22px
+        rgba(35, 54, 69, .055),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-v3
+> span {
+    color:
+        #6c8192
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-v3 strong {
+    color:
+        #203545
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-v3 small {
+    color:
+        #788b9b
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS GRAPHITE
+   ========================================================== */
+
+body.page-performance-v3
+.performance-metrics-v3 article {
+    border-color:
+        rgba(130, 154, 174, .21)
+        !important;
+
+    background:
+        radial-gradient(
+            380px 170px
+            at 100% 0%,
+            rgba(75, 143, 195, .10),
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            #192833,
+            #111b24
+        )
+        !important;
+
+    border-radius:
+        16px
+        !important;
+
+    box-shadow:
+        0 15px 34px
+        rgba(25, 41, 55, .16),
+        inset 0 1px 0
+        rgba(255, 255, 255, .04),
+        inset 0 -1px 0
+        rgba(0, 0, 0, .13)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-metrics-v3 span {
+    color:
+        #afbfcc
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-metrics-v3 strong {
+    color:
+        #f5f8fa
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(0, 0, 0, .22)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-metrics-v3 small {
+    color:
+        #8ca0b0
+        !important;
+}
+
+
+/* variantes semanticas */
+
+body.page-performance-v3
+.performance-metric-delivered-v3 {
+    box-shadow:
+        inset 0 3px 0
+        rgba(57, 175, 112, .56),
+        0 15px 34px
+        rgba(25, 41, 55, .16)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-metric-pending-v3 {
+    box-shadow:
+        inset 0 3px 0
+        rgba(83, 143, 207, .55),
+        0 15px 34px
+        rgba(25, 41, 55, .16)
+        !important;
+}
+
+
+/* ==========================================================
+   RENDIMIENTO POR MATERIA
+   ========================================================== */
+
+body.page-performance-v3
+.performance-subjects-v3 {
+    border-color:
+        #c6d4de
+        !important;
+
+    background:
+        radial-gradient(
+            900px 290px
+            at 100% 0%,
+            rgba(64, 126, 180, .050),
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    border-radius:
+        22px
+        !important;
+
+    box-shadow:
+        0 20px 46px
+        rgba(34, 53, 68, .08),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subjects-v3
+.performance-section-head-v3 {
+    border-bottom-color:
+        #dce4ea
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafb
+        )
+        !important;
+
+    border-radius:
+        21px 21px 0 0
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subjects-v3
+.performance-section-head-v3 h2 {
+    color:
+        #203545
+        !important;
+
+    text-shadow:
+        0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subjects-v3
+.performance-section-head-v3
+> span {
+    border-color:
+        #cad8e2
+        !important;
+
+    background:
+        #f0f5f8
+        !important;
+
+    color:
+        #63798b
+        !important;
+}
+
+
+/* ==========================================================
+   SUBJECT CARDS
+   ========================================================== */
+
+body.page-performance-v3
+.performance-subject-card-v3 {
+    border-color:
+        #d2dce4
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    border-radius:
+        17px
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(35, 53, 68, .060),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-card-v3:hover {
+    border-color:
+        #bdccd6
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f8fa
+        )
+        !important;
+
+    box-shadow:
+        0 16px 34px
+        rgba(35, 53, 68, .09),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-accent-v3 {
+    border-radius:
+        17px 17px 0 0
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-head-v3 small {
+    color:
+        #73889a
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-head-v3
+> div
+> strong {
+    color:
+        #203442
+        !important;
+
+    text-shadow:
+        0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-head-v3
+> span {
+    border-color:
+        #cbd7e0
+        !important;
+
+    background:
+        #f2f6f8
+        !important;
+
+    color:
+        #607687
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-stats-v3 span {
+    color:
+        #667c8e
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-stats-v3 strong {
+    color:
+        #2d4454
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-foot-v3 {
+    border-top-color:
+        #dde4e9
+        !important;
+
+    color:
+        #748899
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-foot-v3 span {
+    color:
+        #718596
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-foot-v3
+.with-grade {
+    color:
+        #27754f
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-subject-foot-v3 i {
+    background:
+        #38a66f
+        !important;
+}
+
+
+/* ==========================================================
+   HISTORIAL
+   ========================================================== */
+
+body.page-performance-v3
+.performance-history-v3 {
+    border-color:
+        #c7d5df
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    border-radius:
+        22px
+        !important;
+
+    box-shadow:
+        0 19px 44px
+        rgba(34, 53, 68, .075),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-history-v3
+.performance-section-head-v3 {
+    border-bottom-color:
+        #dce4ea
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafb
+        )
+        !important;
+
+    border-radius:
+        21px 21px 0 0
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-history-v3
+.performance-section-head-v3 h2 {
+    color:
+        #203545
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-history-v3
+.performance-section-head-v3
+> span {
+    border-color:
+        #cad8e2
+        !important;
+
+    background:
+        #f0f5f8
+        !important;
+
+    color:
+        #63798b
+        !important;
+}
+
+
+/* ==========================================================
+   GRADE ITEMS
+   ========================================================== */
+
+body.page-performance-v3
+.performance-grade-item-v3 {
+    border-color:
+        #d8e1e7
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    border-radius:
+        15px
+        !important;
+
+    box-shadow:
+        0 7px 18px
+        rgba(36, 55, 70, .045),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-item-v3:hover {
+    border-color:
+        #c2d0da
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 11px 24px
+        rgba(36, 55, 70, .07),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-date-v3 span {
+    color:
+        #718697
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-copy-v3
+> div {
+    color:
+        #738899
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-copy-v3
+> strong {
+    color:
+        #243a49
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-copy-v3
+> small {
+    color:
+        #718596
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-value-v3 strong {
+    color:
+        #203747
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-grade-value-v3 small {
+    color:
+        #768b9c
+        !important;
+}
+
+
+/* ==========================================================
+   STATUS
+   ========================================================== */
+
+body.page-performance-v3
+.performance-status-v3 {
+    border-color:
+        #d1dce4
+        !important;
+
+    background:
+        #f2f6f8
+        !important;
+
+    color:
+        #687d8e
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+/* ==========================================================
+   SIDE — PANORAMA GRAPHITE
+   ========================================================== */
+
+body.page-performance-v3
+.performance-overview-v3 {
+    border-color:
+        rgba(131, 155, 175, .20)
+        !important;
+
+    background:
+        radial-gradient(
+            430px 210px
+            at 100% 0%,
+            rgba(73, 141, 194, .10),
+            transparent 68%
+        ),
+        linear-gradient(
+            145deg,
+            #192833,
+            #111b24
+        )
+        !important;
+
+    border-radius:
+        20px
+        !important;
+
+    box-shadow:
+        0 18px 40px
+        rgba(25, 41, 55, .18),
+        inset 0 1px 0
+        rgba(255, 255, 255, .035)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-v3
+.section-kicker {
+    color:
+        #70c89e
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-v3 h3 {
+    color:
+        #f1f5f7
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-main-v3
+> strong {
+    color:
+        #f5f8fa
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-main-v3 span {
+    color:
+        #a3b5c2
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-main-v3 small {
+    color:
+        #8499aa
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-track-v3 {
+    background:
+        rgba(154, 177, 194, .14)
+        !important;
+
+    box-shadow:
+        inset 0 1px 2px
+        rgba(0, 0, 0, .22)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-list-v3
+> div {
+    border-color:
+        rgba(154, 176, 193, .09)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .020)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-list-v3 i {
+    box-shadow:
+        0 0 0 4px
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-list-v3 span {
+    color:
+        #9dafbc
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-overview-list-v3 strong {
+    color:
+        #e3eaf0
+        !important;
+}
+
+
+/* ==========================================================
+   SIDE — SAMPLE CARD
+   ========================================================== */
+
+body.page-performance-v3
+.performance-sample-card-v3 {
+    border-color:
+        rgba(131, 155, 175, .18)
+        !important;
+
+    background:
+        radial-gradient(
+            390px 180px
+            at 100% 0%,
+            rgba(54, 151, 103, .075),
+            transparent 70%
+        ),
+        linear-gradient(
+            145deg,
+            #172630,
+            #101a23
+        )
+        !important;
+
+    border-radius:
+        20px
+        !important;
+
+    box-shadow:
+        0 16px 36px
+        rgba(25, 41, 55, .16),
+        inset 0 1px 0
+        rgba(255, 255, 255, .03)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-card-v3
+.section-kicker {
+    color:
+        #70c89e
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-card-v3 h3 {
+    color:
+        #eff4f7
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-grid-v3
+> div {
+    border-color:
+        rgba(151, 174, 193, .10)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .022)
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-grid-v3 strong {
+    color:
+        #e8eef2
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-grid-v3 span {
+    color:
+        #91a6b6
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-sample-card-v3 p {
+    color:
+        #8ca1b2
+        !important;
+}
+
+
+/* ==========================================================
+   SIDE — OPEN ITEMS
+   ========================================================== */
+
+body.page-performance-v3
+.performance-open-v3 {
+    border-color:
+        #c8d5df
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fafb
+        )
+        !important;
+
+    border-radius:
+        20px
+        !important;
+
+    box-shadow:
+        0 15px 34px
+        rgba(35, 53, 68, .07),
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-open-v3 h3 {
+    color:
+        #243948
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-open-item-v3 {
+    border-color:
+        #d9e2e8
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f5f8fa
+        )
+        !important;
+
+    border-radius:
+        13px
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        #ffffff
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-open-item-v3
+> span {
+    color:
+        #6f8495
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-open-item-v3
+> div {
+    color:
+        #64798b
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-open-item-v3 strong {
+    color:
+        #2b4151
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-open-item-v3 small {
+    color:
+        #748899
+        !important;
+}
+
+
+/* ==========================================================
+   EMPTY STATES
+   ========================================================== */
+
+body.page-performance-v3
+.performance-empty-v3,
+
+body.page-performance-v3
+.performance-mini-empty-v3 {
+    border-color:
+        #d5dfe6
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fafcfd,
+            #f4f7f9
+        )
+        !important;
+
+    color:
+        #708596
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-empty-v3 strong {
+    color:
+        #314756
+        !important;
+}
+
+
+body.page-performance-v3
+.performance-empty-v3 p {
+    color:
+        #748899
+        !important;
+}
+
+
+/* ==========================================================
+   FOCUS
+   ========================================================== */
+
+body.page-performance-v3
+.performance-subject-card-v3:focus-visible,
+
+body.page-performance-v3
+.performance-grade-item-v3:focus-visible,
+
+body.page-performance-v3
+.performance-open-item-v3:focus-visible {
+    outline:
+        2px solid
+        #5f96c3
+        !important;
+
+    outline-offset:
+        3px
+        !important;
+}
+
+
+/* ==========================================================
+   NOTIFICATIONS
+   ========================================================== */
+
+body.page-performance-v3
+.notification-popover-v3 {
+    border-color:
+        #d1dce5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 24px 60px
+        rgba(31, 48, 63, .18)
+        !important;
+}
+
+
+body.page-performance-v3
+.notification-popover-head-v3,
+
+body.page-performance-v3
+.notification-popover-footer-v3 {
+    border-color:
+        #e3e8ed
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-performance-v3
+.notification-popover-head-v3 strong,
+
+body.page-performance-v3
+.notification-item-copy-v3 strong {
+    color:
+        #304353
+        !important;
+}
+
+
+body.page-performance-v3
+.notification-item-copy-v3
+> span {
+    color:
+        #718495
+        !important;
+}
+
+
+/* ==========================================================
+   QUICK ADD
+   ========================================================== */
+
+body.page-performance-v3
+.quick-add-dialog-v3 {
+    border-color:
+        #d0dbe4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 35px 90px
+        rgba(26, 43, 58, .25)
+        !important;
+}
+
+
+body.page-performance-v3
+.quick-add-header-v3,
+
+body.page-performance-v3
+.quick-add-footer-v3 {
+    border-color:
+        #e1e7ec
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+body.page-performance-v3
+.quick-add-heading-v3 strong,
+
+body.page-performance-v3
+.quick-add-field-v3 label {
+    color:
+        #304252
+        !important;
+}
+
+
+body.page-performance-v3
+.quick-add-field-v3 input,
+
+body.page-performance-v3
+.quick-add-field-v3 select,
+
+body.page-performance-v3
+.quick-add-field-v3 textarea {
+    border-color:
+        #cfdbe4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #263846
+        !important;
+
+    color-scheme:
+        light;
+}
+
+
+body.page-performance-v3
+.quick-add-save-v3 {
+    border-color:
+        rgba(47, 139, 96, .36)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #39906f,
+            #287456
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+}
+
+
+/* ==========================================================
+   COMMAND PALETTE
+   ========================================================== */
+
+body.page-performance-v3
+.command-dialog-v3 {
+    border-color:
+        #d0dbe4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 35px 90px
+        rgba(26, 43, 58, .25)
+        !important;
+}
+
+
+body.page-performance-v3
+.command-input-v3 {
+    color:
+        #283a49
+        !important;
+}
+
+
+body.page-performance-v3
+.command-context-v3,
+
+body.page-performance-v3
+.command-footer-v3 {
+    border-color:
+        #e2e8ed
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+
+    color:
+        #76899a
+        !important;
+}
+
+
+body.page-performance-v3
+.command-item-v3:hover {
+    background:
+        #f1f6fa
+        !important;
+}
+
+/* ==========================================================
+   AGENDA PERSONAL
+   RENDIMIENTO
+   REN-L1.1 - PREMIUM POLISH
+   ========================================================== */
+
+body.page-performance-v3 .performance-layout-v3,
+body.page-performance-v3 .performance-shell-v3,
+body.page-performance-v3 .performance-main-v3 {
+    gap: 24px !important;
+}
+
+body.page-performance-v3 .performance-subjects-v3,
+body.page-performance-v3 .performance-history-v3,
+body.page-performance-v3 .performance-overview-v3,
+body.page-performance-v3 .performance-sample-card-v3,
+body.page-performance-v3 .performance-open-v3 {
+    overflow: hidden !important;
+}
+
+/* HERO / CABECERA */
+
+body.page-performance-v3 .performance-hero-v3 {
+    margin-bottom: 6px !important;
+}
+
+body.page-performance-v3 .performance-hero-v3 h1 {
+    letter-spacing: -.058em !important;
+    line-height: .95 !important;
+}
+
+body.page-performance-v3 .performance-hero-v3 p {
+    max-width: 760px !important;
+    line-height: 1.55 !important;
+}
+
+body.page-performance-v3 .performance-sample-v3 {
+    border-radius: 18px !important;
+    padding: 18px 18px 16px !important;
+    box-shadow:
+        0 14px 30px rgba(31, 49, 64, .07),
+        inset 0 1px 0 #ffffff !important;
+}
+
+/* METRICAS SUPERIORES */
+
+body.page-performance-v3 .performance-metrics-v3 {
+    gap: 14px !important;
+}
+
+body.page-performance-v3 .performance-metrics-v3 article {
+    min-height: 108px !important;
+    border-radius: 18px !important;
+    padding: 18px 18px 16px !important;
+    box-shadow:
+        0 16px 34px rgba(19, 31, 42, .17),
+        inset 0 1px 0 rgba(255,255,255,.05),
+        inset 0 -1px 0 rgba(0,0,0,.16) !important;
+}
+
+body.page-performance-v3 .performance-metrics-v3 strong {
+    font-size: 2rem !important;
+    line-height: 1 !important;
+    letter-spacing: -.03em !important;
+}
+
+/* BLOQUE RENDIMIENTO POR MATERIA */
+
+body.page-performance-v3 .performance-subjects-v3 {
+    border-radius: 24px !important;
+    box-shadow:
+        0 22px 46px rgba(33, 51, 66, .085),
+        inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3 {
+    padding: 22px 28px 20px !important;
+    border-radius: 24px 24px 0 0 !important;
+}
+
+body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3 h2 {
+    font-size: 1.9rem !important;
+    letter-spacing: -.04em !important;
+}
+
+body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3 > span {
+    border-radius: 999px !important;
+    padding: 8px 14px !important;
+    font-weight: 700 !important;
+}
+
+body.page-performance-v3 .performance-subject-grid-v3,
+body.page-performance-v3 .performance-subjects-grid-v3 {
+    gap: 18px !important;
+    padding: 0 18px 18px !important;
+}
+
+/* TARJETAS DE MATERIA */
+
+body.page-performance-v3 .performance-subject-card-v3 {
+    border-radius: 20px !important;
+    padding: 18px 18px 14px !important;
+    box-shadow:
+        0 12px 26px rgba(36, 54, 69, .055),
+        inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-subject-card-v3:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 18px 34px rgba(36, 54, 69, .085),
+        inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-subject-accent-v3 {
+    height: 4px !important;
+    border-radius: 20px 20px 0 0 !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 {
+    gap: 14px !important;
+    margin-bottom: 14px !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 small {
+    font-weight: 700 !important;
+    letter-spacing: .02em !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 > div > strong {
+    font-size: 1.18rem !important;
+    line-height: 1.2 !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 > span {
+    border-radius: 999px !important;
+    padding: 7px 12px !important;
+    font-size: .77rem !important;
+    font-weight: 800 !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 {
+    gap: 10px !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 > div {
+    border: 1px solid #e3e9ee !important;
+    background: linear-gradient(180deg, #fbfcfd, #f6f9fb) !important;
+    border-radius: 12px !important;
+    padding: 10px 12px !important;
+    min-height: 64px !important;
+    box-shadow: inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 span {
+    font-size: .8rem !important;
+    font-weight: 700 !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 strong {
+    font-size: 1rem !important;
+    line-height: 1.1 !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 {
+    border-top-color: #e4eaef !important;
+    padding-top: 14px !important;
+    margin-top: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 span,
+body.page-performance-v3 .performance-subject-foot-v3 small {
+    font-weight: 700 !important;
+}
+
+/* BOTON VERDE / FLECHA - ARREGLO PREMIUM */
+
+body.page-performance-v3 .performance-subject-foot-v3 a,
+body.page-performance-v3 .performance-subject-foot-v3 button,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="action"],
+body.page-performance-v3 .performance-subject-foot-v3 [class*="open"],
+body.page-performance-v3 .performance-subject-foot-v3 [class*="link"] {
+    min-width: 38px !important;
+    min-height: 38px !important;
+    padding: 0 13px !important;
+    border: 1px solid rgba(47, 139, 96, .24) !important;
+    border-radius: 12px !important;
+    background:
+        linear-gradient(180deg, #44a978, #2f7f5c) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 8px 18px rgba(52, 134, 95, .20),
+        inset 0 1px 0 rgba(255,255,255,.18) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        filter .18s ease !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 a:hover,
+body.page-performance-v3 .performance-subject-foot-v3 button:hover,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="action"]:hover,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="open"]:hover,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="link"]:hover {
+    transform: translateY(-1px) !important;
+    box-shadow:
+        0 12px 24px rgba(52, 134, 95, .25),
+        inset 0 1px 0 rgba(255,255,255,.20) !important;
+    filter: saturate(1.04);
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 a svg,
+body.page-performance-v3 .performance-subject-foot-v3 button svg,
+body.page-performance-v3 .performance-subject-foot-v3 i,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="action"] svg,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="open"] svg,
+body.page-performance-v3 .performance-subject-foot-v3 [class*="link"] svg {
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* HISTORIAL DE NOTAS */
+
+body.page-performance-v3 .performance-history-v3 {
+    border-radius: 24px !important;
+    box-shadow:
+        0 20px 42px rgba(34, 53, 68, .075),
+        inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-history-v3 .performance-section-head-v3 {
+    padding: 22px 28px 18px !important;
+    border-radius: 24px 24px 0 0 !important;
+}
+
+body.page-performance-v3 .performance-history-v3 .performance-section-head-v3 h2 {
+    font-size: 1.72rem !important;
+    letter-spacing: -.035em !important;
+}
+
+body.page-performance-v3 .performance-grade-list-v3 {
+    padding: 0 18px 18px !important;
+    gap: 14px !important;
+}
+
+body.page-performance-v3 .performance-grade-item-v3 {
+    border-radius: 18px !important;
+    padding: 16px 18px !important;
+    min-height: 96px !important;
+}
+
+body.page-performance-v3 .performance-grade-date-v3 {
+    min-width: 92px !important;
+}
+
+body.page-performance-v3 .performance-grade-copy-v3 > strong {
+    font-size: 1.04rem !important;
+}
+
+body.page-performance-v3 .performance-grade-value-v3 strong {
+    font-size: 1.5rem !important;
+    letter-spacing: -.03em !important;
+}
+
+body.page-performance-v3 .performance-status-v3 {
+    border-radius: 999px !important;
+    padding: 7px 12px !important;
+    font-weight: 800 !important;
+}
+
+/* LATERAL DERECHO */
+
+body.page-performance-v3 .performance-overview-v3,
+body.page-performance-v3 .performance-sample-card-v3,
+body.page-performance-v3 .performance-open-v3 {
+    border-radius: 22px !important;
+}
+
+body.page-performance-v3 .performance-overview-v3,
+body.page-performance-v3 .performance-sample-card-v3 {
+    padding: 18px 18px 16px !important;
+}
+
+body.page-performance-v3 .performance-overview-v3 h3,
+body.page-performance-v3 .performance-sample-card-v3 h3,
+body.page-performance-v3 .performance-open-v3 h3 {
+    letter-spacing: -.03em !important;
+}
+
+body.page-performance-v3 .performance-sample-grid-v3 {
+    gap: 10px !important;
+}
+
+body.page-performance-v3 .performance-sample-grid-v3 > div {
+    border-radius: 14px !important;
+    padding: 12px 12px 10px !important;
+}
+
+body.page-performance-v3 .performance-open-v3 {
+    padding: 18px !important;
+    box-shadow:
+        0 16px 34px rgba(35, 53, 68, .075),
+        inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-open-list-v3 {
+    gap: 10px !important;
+}
+
+body.page-performance-v3 .performance-open-item-v3 {
+    border-radius: 15px !important;
+    padding: 12px 13px !important;
+}
+
+/* RESPONSIVE SUAVE */
+
+@media (max-width: 980px) {
+    body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3,
+    body.page-performance-v3 .performance-history-v3 .performance-section-head-v3 {
+        padding: 18px 20px 16px !important;
+    }
+
+    body.page-performance-v3 .performance-subject-grid-v3,
+    body.page-performance-v3 .performance-subjects-grid-v3,
+    body.page-performance-v3 .performance-grade-list-v3 {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+}
+
+
+/* ==========================================================
+   AGENDA PERSONAL
+   RENDIMIENTO
+   REN-L1.2 - PREMIUM FINISH
+   ========================================================== */
+
+/* CONTENEDORES GENERALES */
+
+body.page-performance-v3 .performance-subjects-v3,
+body.page-performance-v3 .performance-history-v3,
+body.page-performance-v3 .performance-overview-v3,
+body.page-performance-v3 .performance-sample-card-v3,
+body.page-performance-v3 .performance-open-v3 {
+    border-radius: 26px !important;
+    overflow: hidden !important;
+    box-shadow:
+        0 22px 48px rgba(27, 44, 58, .08),
+        inset 0 1px 0 rgba(255, 255, 255, .92) !important;
+}
+
+body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3,
+body.page-performance-v3 .performance-history-v3 .performance-section-head-v3 {
+    padding: 24px 28px 20px !important;
+    border-bottom: 1px solid rgba(194, 207, 218, .34) !important;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.72), rgba(248,251,253,.72)) !important;
+}
+
+body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3 h2,
+body.page-performance-v3 .performance-history-v3 .performance-section-head-v3 h2 {
+    font-size: 1.85rem !important;
+    letter-spacing: -.04em !important;
+    line-height: 1.05 !important;
+}
+
+body.page-performance-v3 .performance-subject-grid-v3,
+body.page-performance-v3 .performance-subjects-grid-v3,
+body.page-performance-v3 .performance-grade-list-v3 {
+    gap: 20px !important;
+    padding: 20px !important;
+}
+
+/* TARJETAS DE MATERIA */
+
+body.page-performance-v3 .performance-subject-card-v3 {
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    padding: 18px 18px 16px !important;
+    border: 1px solid rgba(189, 203, 215, .72) !important;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,253,.98)) !important;
+    box-shadow:
+        0 16px 32px rgba(33, 51, 66, .07),
+        0 1px 0 rgba(255,255,255,.95) inset !important;
+}
+
+body.page-performance-v3 .performance-subject-card-v3:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 22px 40px rgba(33, 51, 66, .10),
+        0 1px 0 rgba(255,255,255,.95) inset !important;
+}
+
+body.page-performance-v3 .performance-subject-accent-v3 {
+    height: 4px !important;
+    border-radius: 22px 22px 0 0 !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 {
+    margin-bottom: 14px !important;
+    gap: 14px !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 > div > strong {
+    font-size: 1.16rem !important;
+    line-height: 1.18 !important;
+    letter-spacing: -.02em !important;
+}
+
+body.page-performance-v3 .performance-subject-head-v3 > span,
+body.page-performance-v3 .performance-status-v3 {
+    border-radius: 999px !important;
+    padding: 7px 12px !important;
+    font-size: .76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .02em !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 {
+    gap: 10px !important;
+    margin-top: 12px !important;
+    margin-bottom: 14px !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 > div {
+    border-radius: 14px !important;
+    min-height: 66px !important;
+    padding: 10px 12px !important;
+    background:
+        linear-gradient(180deg, #fbfcfd, #f7fafc) !important;
+    border: 1px solid rgba(220, 228, 235, .95) !important;
+    box-shadow: inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 strong {
+    font-size: 1rem !important;
+    line-height: 1.1 !important;
+}
+
+body.page-performance-v3 .performance-subject-stats-v3 span {
+    font-size: .8rem !important;
+    font-weight: 700 !important;
+}
+
+/* FOOTER DE TARJETA */
+
+body.page-performance-v3 .performance-subject-foot-v3 {
+    margin-top: 12px !important;
+    padding-top: 15px !important;
+    border-top: 1px solid rgba(222, 230, 236, .92) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 > :first-child {
+    color: #7b90a4 !important;
+    font-weight: 700 !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child {
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+}
+
+/* BOTON VERDE PROFESIONAL REAL */
+
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child,
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child a,
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child button,
+body.page-performance-v3 .performance-subject-foot-v3 a:last-child,
+body.page-performance-v3 .performance-subject-foot-v3 button:last-child {
+    min-width: 118px !important;
+    height: 42px !important;
+    padding: 0 16px !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(42, 130, 88, .24) !important;
+    background:
+        linear-gradient(180deg, #4db982 0%, #2f8b63 100%) !important;
+    color: #ffffff !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    box-shadow:
+        0 10px 22px rgba(47, 139, 99, .24),
+        inset 0 1px 0 rgba(255,255,255,.22) !important;
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        filter .18s ease !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child:hover,
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child a:hover,
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child button:hover,
+body.page-performance-v3 .performance-subject-foot-v3 a:last-child:hover,
+body.page-performance-v3 .performance-subject-foot-v3 button:last-child:hover {
+    transform: translateY(-1px) !important;
+    filter: saturate(1.06) !important;
+    box-shadow:
+        0 14px 26px rgba(47, 139, 99, .30),
+        inset 0 1px 0 rgba(255,255,255,.24) !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child svg,
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child a svg,
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child button svg,
+body.page-performance-v3 .performance-subject-foot-v3 a:last-child svg,
+body.page-performance-v3 .performance-subject-foot-v3 button:last-child svg {
+    width: 15px !important;
+    height: 15px !important;
+    stroke: currentColor !important;
+    color: currentColor !important;
+}
+
+body.page-performance-v3 .performance-subject-foot-v3 > :last-child::after,
+body.page-performance-v3 .performance-subject-foot-v3 a:last-child::after,
+body.page-performance-v3 .performance-subject-foot-v3 button:last-child::after {
+    margin-left: 1px !important;
+    font-weight: 900 !important;
+}
+
+/* HISTORIAL */
+
+body.page-performance-v3 .performance-grade-item-v3 {
+    border-radius: 18px !important;
+    min-height: 98px !important;
+    padding: 16px 18px !important;
+    border: 1px solid rgba(214, 224, 232, .92) !important;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,251,253,.96)) !important;
+    box-shadow:
+        0 10px 24px rgba(31, 49, 64, .05),
+        inset 0 1px 0 #ffffff !important;
+}
+
+body.page-performance-v3 .performance-grade-copy-v3 > strong {
+    font-size: 1.04rem !important;
+}
+
+body.page-performance-v3 .performance-grade-value-v3 strong {
+    font-size: 1.5rem !important;
+    letter-spacing: -.03em !important;
+}
+
+/* LATERAL */
+
+body.page-performance-v3 .performance-overview-v3,
+body.page-performance-v3 .performance-sample-card-v3,
+body.page-performance-v3 .performance-open-v3 {
+    padding: 18px 18px 16px !important;
+}
+
+body.page-performance-v3 .performance-overview-v3 h3,
+body.page-performance-v3 .performance-sample-card-v3 h3,
+body.page-performance-v3 .performance-open-v3 h3 {
+    letter-spacing: -.03em !important;
+}
+
+body.page-performance-v3 .performance-sample-grid-v3 > div,
+body.page-performance-v3 .performance-open-item-v3 {
+    border-radius: 15px !important;
+    border: 1px solid rgba(219, 227, 233, .92) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 980px) {
+    body.page-performance-v3 .performance-subject-grid-v3,
+    body.page-performance-v3 .performance-subjects-grid-v3,
+    body.page-performance-v3 .performance-grade-list-v3 {
+        padding: 14px !important;
+    }
+
+    body.page-performance-v3 .performance-subjects-v3 .performance-section-head-v3,
+    body.page-performance-v3 .performance-history-v3 .performance-section-head-v3 {
+        padding: 18px 20px 16px !important;
+    }
+}
+

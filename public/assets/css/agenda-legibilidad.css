@@ -1,0 +1,610 @@
+/*
+ * Agenda Personal
+ * Agenda Academica - Legibilidad V1
+ *
+ * Alcance exclusivo: page-agenda-v3
+ * Encabezado e indicadores.
+ */
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.page-agenda-v3
+.agenda-hero-v3 > div:first-child > p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b0bfd0;
+}
+
+/* ==========================================
+   INDICADORES SUPERIORES
+========================================== */
+
+.page-agenda-v3 .agenda-metrics-v3 {
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.page-agenda-v3 .agenda-metrics-v3 article {
+    min-height: 103px;
+    padding: 16px 18px;
+    border-radius: 12px;
+}
+
+/* Etiquetas */
+
+.page-agenda-v3
+.agenda-metrics-v3 .agenda-metric-label-v3 {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #aabdcf;
+}
+
+/* Valores numericos */
+
+.page-agenda-v3
+.agenda-metrics-v3 article strong {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+/* Informacion secundaria */
+
+.page-agenda-v3
+.agenda-metrics-v3 article small,
+.page-agenda-v3
+.agenda-metrics-v3 article p {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #a2b5c8;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 760px) {
+
+    .page-agenda-v3 .agenda-metrics-v3 {
+        gap: 10px;
+    }
+
+    .page-agenda-v3 .agenda-metrics-v3 article {
+        min-height: 94px;
+        padding: 13px 14px;
+    }
+
+    .page-agenda-v3
+    .agenda-metrics-v3 article strong {
+        font-size: 23px;
+    }
+}
+
+/*
+ * Agenda - Legibilidad V2 Formulario
+ *
+ * Alcance: Crear y editar evento.
+ * No modifica comportamiento, validaciones ni estructura HTML.
+ */
+
+/* ==========================================
+   ENCABEZADO DEL FORMULARIO
+========================================== */
+
+.page-agenda-v3 .composer-heading-v3 {
+    gap: 13px;
+    padding: 20px;
+}
+
+.page-agenda-v3 .composer-kicker-v3 {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .composer-heading-v3 h2 {
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.page-agenda-v3 .composer-heading-v3 p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #a5b7c9;
+}
+
+/* ==========================================
+   DISTRIBUCION DEL FORMULARIO
+========================================== */
+
+.page-agenda-v3 .agenda-form-v3 {
+    gap: 15px;
+    padding: 19px;
+}
+
+.page-agenda-v3 .agenda-form-row-v3 {
+    gap: 12px;
+}
+
+.page-agenda-v3 .agenda-field-v3 {
+    min-width: 0;
+    gap: 8px;
+}
+
+/* ==========================================
+   ETIQUETAS
+========================================== */
+
+.page-agenda-v3 .agenda-field-v3 label {
+    gap: 8px;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+
+    color: #bdccda;
+}
+
+.page-agenda-v3 .agenda-field-v3 label small {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #91a8bd;
+}
+
+/* ==========================================
+   CAMPOS Y SELECTORES
+========================================== */
+
+.page-agenda-v3 .agenda-field-v3 input,
+.page-agenda-v3 .agenda-field-v3 select,
+.page-agenda-v3 .agenda-field-v3 textarea {
+    min-width: 0;
+
+    font-size: 13px;
+    line-height: 1.45;
+
+    color: #edf3f9;
+
+    border-radius: 9px;
+}
+
+.page-agenda-v3 .agenda-field-v3 input,
+.page-agenda-v3 .agenda-field-v3 select {
+    min-height: 44px;
+    padding: 0 12px;
+}
+
+.page-agenda-v3 .agenda-field-v3 textarea {
+    min-height: 108px;
+    padding: 12px;
+
+    line-height: 1.5;
+}
+
+/* Placeholders */
+
+.page-agenda-v3 .agenda-field-v3 input::placeholder,
+.page-agenda-v3 .agenda-field-v3 textarea::placeholder {
+    color: #91a4b8;
+    opacity: 1;
+}
+
+/* Opciones del desplegable */
+
+.page-agenda-v3 .agenda-field-v3 select option {
+    background: #111b27;
+    color: #edf3f9;
+}
+
+/* ==========================================
+   ESTADOS DE INTERACCION
+========================================== */
+
+.page-agenda-v3 .agenda-field-v3 input:hover,
+.page-agenda-v3 .agenda-field-v3 select:hover,
+.page-agenda-v3 .agenda-field-v3 textarea:hover {
+    border-color: rgba(151, 180, 210, .38);
+}
+
+.page-agenda-v3 .agenda-field-v3 input:focus,
+.page-agenda-v3 .agenda-field-v3 select:focus,
+.page-agenda-v3 .agenda-field-v3 textarea:focus {
+    border-color: #79a9fa;
+
+    box-shadow:
+        0 0 0 3px rgba(87, 148, 255, .15);
+}
+
+/* ==========================================
+   CAMPO NOTA
+========================================== */
+
+.page-agenda-v3 .agenda-field-note-v3 {
+    max-width: none;
+    width: 100%;
+}
+
+/* ==========================================
+   ACCIONES
+========================================== */
+
+.page-agenda-v3 .composer-actions-v3 {
+    gap: 11px;
+    padding-top: 5px;
+}
+
+.page-agenda-v3 .composer-save-v3 {
+    min-height: 46px;
+    padding: 0 15px;
+
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 750;
+}
+
+.page-agenda-v3 .composer-cancel-v3 {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #a5b6c8;
+}
+
+/* ==========================================
+   MODO EDICION
+========================================== */
+
+.page-agenda-v3 .editing-banner-v3 {
+    gap: 5px;
+    padding: 13px;
+}
+
+.page-agenda-v3 .editing-banner-v3 span {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .editing-banner-v3 strong {
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 520px) {
+
+    .page-agenda-v3 .agenda-form-v3 {
+        padding: 15px;
+    }
+
+    .page-agenda-v3 .composer-heading-v3 {
+        padding: 16px;
+    }
+
+    .page-agenda-v3 .agenda-form-row-v3 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .page-agenda-v3 .agenda-field-v3 input,
+    .page-agenda-v3 .agenda-field-v3 select {
+        min-height: 44px;
+    }
+}
+
+/*
+ * Agenda - Legibilidad V3
+ *
+ * Filtros, proximos eventos e historial.
+ * No modifica formularios ni logica funcional.
+ */
+
+/* ==========================================
+   FILTROS
+========================================== */
+
+.page-agenda-v3 .agenda-filterbar-v3 {
+    gap: 14px;
+    padding: 16px;
+}
+
+.page-agenda-v3 .filterbar-heading-v3 span {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #a4b7ca;
+}
+
+.page-agenda-v3 .filterbar-heading-v3 strong {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .agenda-filters-v3 {
+    gap: 9px;
+}
+
+.page-agenda-v3 .agenda-filters-v3 > div {
+    min-width: 0;
+    gap: 6px;
+}
+
+.page-agenda-v3 .agenda-filters-v3 label {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #a9bbce;
+}
+
+.page-agenda-v3 .agenda-filters-v3 select {
+    min-width: 0;
+    min-height: 42px;
+
+    padding: 0 11px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .filter-apply-v3,
+.page-agenda-v3 .filter-clear-v3 {
+    min-height: 42px;
+    padding: 0 12px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .filter-clear-v3 {
+    color: #a9b9cb;
+}
+
+.page-agenda-v3 .agenda-filters-v3 select:focus-visible,
+.page-agenda-v3 .filter-apply-v3:focus-visible,
+.page-agenda-v3 .filter-clear-v3:focus-visible {
+    outline: 2px solid #79a9fa;
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   CONTADORES DE SECCION
+========================================== */
+
+.page-agenda-v3 .agenda-section-count-v3 {
+    min-width: 31px;
+    height: 31px;
+
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* ==========================================
+   PROXIMOS EVENTOS
+========================================== */
+
+.page-agenda-v3 .agenda-event-card-v3 {
+    min-height: 148px;
+}
+
+/* Fecha */
+
+.page-agenda-v3 .agenda-weekday-v3 {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #9eb2c7;
+}
+
+.page-agenda-v3 .agenda-date-v3 strong {
+    font-size: 31px;
+}
+
+.page-agenda-v3
+.agenda-date-v3 > span:not(.agenda-weekday-v3) {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .agenda-date-v3 small {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #9aafc3;
+}
+
+/* Informacion principal */
+
+.page-agenda-v3 .agenda-event-main-v3 {
+    min-width: 0;
+    padding: 20px 22px;
+}
+
+.page-agenda-v3 .agenda-event-meta-v3 {
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 9px;
+}
+
+.page-agenda-v3 .agenda-type-v3 {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .agenda-status-v3 {
+    padding: 4px 8px;
+
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.page-agenda-v3 .agenda-event-main-v3 h3 {
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.page-agenda-v3 .agenda-course-v3 {
+    margin-top: 7px;
+
+    font-size: 13px;
+    line-height: 1.45;
+
+    color: #a7b9cb;
+}
+
+.page-agenda-v3 .agenda-course-v3 span {
+    color: #9aafc3;
+}
+
+/* Hora, lugar y detalles */
+
+.page-agenda-v3 .agenda-event-details-v3 {
+    gap: 8px 16px;
+    margin-top: 14px;
+}
+
+.page-agenda-v3 .agenda-event-details-v3 > span {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #a6b8cb;
+}
+
+.page-agenda-v3 .agenda-event-details-v3 svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Descripcion */
+
+.page-agenda-v3 .agenda-description-v3 {
+    margin-top: 13px;
+    padding-top: 12px;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #a3b5c8;
+}
+
+/* ==========================================
+   ACCIONES DE EVENTOS
+========================================== */
+
+.page-agenda-v3 .agenda-event-side-v3 {
+    gap: 11px;
+}
+
+.page-agenda-v3 .agenda-countdown-v3 {
+    padding: 6px 10px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .agenda-edit-v3 {
+    min-height: 35px;
+    padding: 0 11px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #a9bdd1;
+}
+
+.page-agenda-v3 .agenda-edit-v3 svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================
+   HISTORIAL
+========================================== */
+
+.page-agenda-v3 .agenda-history-list-v3 {
+    border-radius: 13px;
+}
+
+.page-agenda-v3 .agenda-history-item-v3 {
+    min-height: 72px;
+    padding: 14px 16px;
+    gap: 12px;
+}
+
+.page-agenda-v3 .agenda-history-item-v3 > div {
+    min-width: 0;
+    gap: 5px;
+}
+
+.page-agenda-v3 .agenda-history-item-v3 > div > strong {
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: #e8eff6;
+}
+
+.page-agenda-v3 .agenda-history-item-v3 > div > span {
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #9fb2c6;
+}
+
+.page-agenda-v3
+.agenda-history-item-v3 .agenda-status-v3 {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-agenda-v3 .agenda-history-edit-v3 {
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #abc0d5;
+}
+
+/* Estado vacio */
+
+.page-agenda-v3 .agenda-history-empty-v3 {
+    min-height: 110px;
+    padding: 16px;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #a5b8cb;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1180px) {
+
+    .page-agenda-v3 .agenda-filterbar-v3 {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .page-agenda-v3 .agenda-event-main-v3 {
+        padding: 17px;
+    }
+
+    .page-agenda-v3 .agenda-event-side-v3 {
+        padding: 0 17px 17px;
+    }
+
+    .page-agenda-v3 .agenda-history-item-v3 {
+        gap: 9px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .page-agenda-v3 .agenda-filterbar-v3 {
+        padding: 13px;
+    }
+
+    .page-agenda-v3 .agenda-event-details-v3 {
+        gap: 8px 12px;
+    }
+}

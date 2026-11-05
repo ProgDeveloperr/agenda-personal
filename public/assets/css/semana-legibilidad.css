@@ -1,0 +1,703 @@
+/*
+ * Semana - Legibilidad V1
+ * Encabezado e indicadores.
+ * Alcance exclusivo: page-week-v3.
+ */
+
+.page-week-v3 .week-hero-v3 {
+    gap: 28px;
+}
+
+.page-week-v3 .week-hero-v3 p {
+    max-width: 690px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b0c1d2;
+}
+
+.page-week-v3 .week-hero-metrics-v3 {
+    gap: 11px;
+}
+
+.page-week-v3 .week-hero-metrics-v3 article {
+    min-height: 104px;
+    padding: 16px 18px;
+    border-radius: 12px;
+}
+
+.page-week-v3 .week-hero-metrics-v3 span {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #acbed0;
+}
+
+.page-week-v3 .week-hero-metrics-v3 strong {
+    font-size: 26px;
+    line-height: 1.2;
+    color: #edf3f8;
+}
+
+.page-week-v3 .week-hero-metrics-v3 small {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #a2b5c8;
+}
+
+@media (max-width: 760px) {
+    .page-week-v3 .week-hero-v3 {
+        gap: 17px;
+    }
+
+    .page-week-v3 .week-hero-metrics-v3 {
+        gap: 9px;
+    }
+
+    .page-week-v3 .week-hero-metrics-v3 article {
+        min-height: 96px;
+        padding: 13px 14px;
+    }
+
+    .page-week-v3 .week-hero-metrics-v3 strong {
+        font-size: 23px;
+    }
+}
+
+/*
+ * Semana - Legibilidad V2
+ *
+ * Navegacion y calendario de siete dias.
+ * No modifica los titulos generales ni la logica funcional.
+ */
+
+/* ==========================================
+   NAVEGACION ENTRE SEMANAS
+========================================== */
+
+.page-week-v3 .week-toolbar-v3 {
+    min-height: 76px;
+    gap: 16px;
+    padding: 12px 15px;
+}
+
+.page-week-v3 .week-nav-v3 {
+    gap: 8px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #adbed0;
+}
+
+.page-week-v3 .week-current-v3 > span {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.page-week-v3 .week-current-v3 strong {
+    margin-top: 4px;
+
+    font-size: 16px;
+    line-height: 1.35;
+
+    color: #eaf1f7;
+}
+
+.page-week-v3 .week-current-v3 small {
+    margin-top: 3px;
+
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #a2b5c9;
+}
+
+.page-week-v3 .week-today-v3 {
+    padding: 7px 10px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   ENCABEZADO DEL CALENDARIO
+========================================== */
+
+.page-week-v3 .week-global-add-v3 {
+    min-height: 36px;
+    padding: 0 12px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.page-week-v3 .week-global-add-v3 svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================
+   DISTRIBUCION DE LOS SIETE DIAS
+========================================== */
+
+.page-week-v3 .week-board-scroll-v3 {
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 8px;
+}
+
+.page-week-v3 .week-board-v3 {
+    min-width: 1190px;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    gap: 9px;
+}
+
+.page-week-v3 .week-day-v3 {
+    min-width: 0;
+    min-height: 315px;
+}
+
+/* ==========================================
+   ENCABEZADOS DE LOS DIAS
+========================================== */
+
+.page-week-v3 .week-day-header-v3 {
+    min-height: 76px;
+
+    gap: 7px;
+    padding: 11px 10px;
+}
+
+.page-week-v3
+.week-day-header-v3 > div:first-child > span {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a9bbcd;
+}
+
+.page-week-v3 .week-day-header-v3 strong {
+    font-size: 23px;
+    line-height: 1.1;
+}
+
+.page-week-v3 .week-day-header-v3 small {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #9caec1;
+}
+
+/* Etiqueta HOY */
+
+.page-week-v3 .week-today-badge-v3 {
+    padding: 4px 6px;
+
+    font-size: 9px;
+    line-height: 1.3;
+}
+
+/* Boton agregar */
+
+.page-week-v3 .week-day-add-v3 {
+    width: 28px;
+    height: 28px;
+
+    font-size: 16px;
+    line-height: 1;
+}
+
+.page-week-v3 .week-day-add-v3:focus-visible,
+.page-week-v3 .week-nav-v3:focus-visible,
+.page-week-v3 .week-global-add-v3:focus-visible {
+    outline: 2px solid #79a9fa;
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   CONTENIDO DE CADA DIA
+========================================== */
+
+.page-week-v3 .week-day-body-v3 {
+    gap: 8px;
+    padding: 8px;
+}
+
+/* Dias vacios */
+
+.page-week-v3 .week-day-empty-v3 {
+    min-height: 155px;
+    gap: 10px;
+}
+
+.page-week-v3 .week-day-empty-v3 small {
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #91a6ba;
+}
+
+/* ==========================================
+   TARJETAS DE EVENTOS
+========================================== */
+
+.page-week-v3 .week-event-card-v3 {
+    min-height: 125px;
+
+    padding: 11px 10px 11px 12px;
+
+    border-radius: 9px;
+}
+
+.page-week-v3 .week-event-top-v3 {
+    flex-wrap: wrap;
+
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+/* Horario */
+
+.page-week-v3
+.week-event-top-v3 > span:first-child {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a8bacd;
+}
+
+/* Nombre del evento */
+
+.page-week-v3 .week-event-title-v3 {
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #e6eef5;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Materia */
+
+.page-week-v3 .week-event-subject-v3 {
+    margin-top: 6px;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* Tipo */
+
+.page-week-v3 .week-event-type-v3 {
+    padding-top: 9px;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #9aafc3;
+}
+
+/* ==========================================
+   ESTADOS DE EVENTOS
+========================================== */
+
+.page-week-v3 .week-status-v3 {
+    min-height: 22px;
+
+    padding: 3px 7px;
+
+    font-size: 9px;
+    line-height: 1.3;
+}
+
+/* ==========================================
+   TARJETAS DE TAREAS
+========================================== */
+
+.page-week-v3 .week-task-card-v4 {
+    padding: 11px 10px 11px 12px;
+
+    border-radius: 9px;
+}
+
+/* Encabezado */
+
+.page-week-v3 .week-task-top-v4 {
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.page-week-v3
+.week-task-top-v4 > span:first-child {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a7bacd;
+}
+
+/* Tipo de tarea */
+
+.page-week-v3 .week-task-kind-v4 {
+    min-height: 22px;
+
+    padding: 3px 7px;
+
+    font-size: 9px;
+    line-height: 1.3;
+}
+
+/* Titulo */
+
+.page-week-v3 .week-task-title-v4 {
+    margin-top: 9px;
+
+    font-size: 11.5px;
+    line-height: 1.45;
+
+    color: #e6eef5;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Materia */
+
+.page-week-v3 .week-task-subject-v4 {
+    margin-top: 7px;
+
+    font-size: 10px;
+    line-height: 1.45;
+
+    color: #a0b6ca;
+
+    overflow-wrap: anywhere;
+}
+
+/* Pie de tarjeta */
+
+.page-week-v3 .week-task-footer-v4 {
+    flex-wrap: wrap;
+
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.page-week-v3
+.week-task-footer-v4 > span {
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.page-week-v3
+.week-task-footer-v4 > small {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #9aadc1;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+/*
+ * El calendario conserva sus siete columnas.
+ * Cuando no entra, el contenedor permite desplazamiento
+ * horizontal en lugar de comprimir las tarjetas.
+ */
+
+@media (max-width: 1150px) {
+
+    .page-week-v3 .week-board-v3 {
+        min-width: 1190px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .page-week-v3 .week-toolbar-v3 {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .page-week-v3 .week-nav-v3 {
+        font-size: 11px;
+    }
+}
+
+/*
+ * Semana - Legibilidad V3 Detalle
+ *
+ * Agenda de la semana.
+ * Alcance exclusivo: page-week-v3.
+ * No modifica el calendario ni las operaciones funcionales.
+ */
+
+/* ==========================================
+   ENCABEZADO DEL DETALLE
+========================================== */
+
+.page-week-v3
+.week-section-heading-v3 > span {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #a6b9cc;
+}
+
+/* ==========================================
+   CONTENEDOR DE REGISTROS
+========================================== */
+
+.page-week-v3 .week-detail-list-v3 {
+    gap: 9px;
+}
+
+.page-week-v3 .week-detail-item-v3 {
+    grid-template-columns:
+        3px
+        58px
+        minmax(0, 1fr)
+        auto
+        62px;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 88px;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+}
+
+/* Acento de color */
+
+.page-week-v3 .week-detail-accent-v3 {
+    height: 44px;
+}
+
+/* ==========================================
+   FECHA
+========================================== */
+
+.page-week-v3 .week-detail-date-v3 {
+    gap: 3px;
+}
+
+.page-week-v3 .week-detail-date-v3 span {
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #a4b8cc;
+}
+
+.page-week-v3 .week-detail-date-v3 strong {
+    font-size: 22px;
+    line-height: 1.15;
+
+    color: #ecf2f7;
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+========================================== */
+
+.page-week-v3 .week-detail-copy-v3 {
+    min-width: 0;
+    gap: 4px;
+}
+
+/* Codigo de materia y tipo de actividad */
+
+.page-week-v3 .week-detail-copy-v3 > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 4px 7px;
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.page-week-v3 .week-detail-copy-v3 > div a {
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.page-week-v3 .week-detail-copy-v3 > div span {
+    font-size: 11px;
+    line-height: 1.45;
+
+    color: #a2b6ca;
+}
+
+/* Titulo del evento o tarea */
+
+.page-week-v3 .week-detail-copy-v3 > a {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 15px;
+    line-height: 1.4;
+
+    color: #e9f0f6;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    text-overflow: clip;
+}
+
+/* Hora, lugar y metadatos */
+
+.page-week-v3 .week-detail-copy-v3 small {
+    margin-top: 2px;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    color: #a4b7cb;
+
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   ESTADOS
+========================================== */
+
+.page-week-v3
+.week-detail-item-v3 > .week-status-v3 {
+    min-height: 26px;
+
+    padding: 5px 9px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   NOTAS
+========================================== */
+
+.page-week-v3 .week-detail-grade-v3 {
+    gap: 3px;
+}
+
+.page-week-v3 .week-detail-grade-v3 strong {
+    font-size: 17px;
+    line-height: 1.2;
+
+    color: #edf3f8;
+}
+
+.page-week-v3 .week-detail-grade-v3 small {
+    font-size: 10px;
+    line-height: 1.4;
+
+    color: #a0b3c7;
+}
+
+/* ==========================================
+   ENLACES Y FLECHAS
+========================================== */
+
+.page-week-v3 .week-detail-arrow-v3 {
+    font-size: 16px;
+    line-height: 1.3;
+
+    color: #9eb4c9;
+}
+
+.page-week-v3 .week-detail-arrow-v3:hover {
+    color: #d4e4f4;
+}
+
+.page-week-v3
+.week-detail-item-v3 a:focus-visible {
+    outline: 2px solid #79a9fa;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* ==========================================
+   ESTADO VACIO
+========================================== */
+
+.page-week-v3 .week-detail-empty-v3 {
+    min-height: 155px;
+    padding: 22px;
+    gap: 5px;
+}
+
+.page-week-v3 .week-detail-empty-v3 strong {
+    font-size: 15px;
+    line-height: 1.4;
+
+    color: #dce7f1;
+}
+
+.page-week-v3 .week-detail-empty-v3 p {
+    max-width: 440px;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    color: #a3b7ca;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 760px) {
+
+    .page-week-v3 .week-detail-item-v3 {
+        grid-template-columns:
+            3px
+            52px
+            minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding: 12px;
+    }
+
+    .page-week-v3
+    .week-detail-item-v3 > .week-status-v3 {
+        grid-column: 3;
+        justify-self: start;
+    }
+
+    .page-week-v3 .week-detail-grade-v3,
+    .page-week-v3 .week-detail-arrow-v3 {
+        grid-column: 3;
+        justify-self: start;
+    }
+
+    .page-week-v3 .week-detail-copy-v3 > a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .page-week-v3 .week-detail-item-v3 {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .page-week-v3 .week-detail-date-v3 strong {
+        font-size: 20px;
+    }
+
+    .page-week-v3 .week-detail-copy-v3 small {
+        font-size: 11px;
+    }
+}

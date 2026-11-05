@@ -1,0 +1,2683 @@
+/*
+ * ==========================================================
+ * Agenda Personal
+ * Professional Hybrid - Agenda R1
+ * ==========================================================
+ *
+ * LIGHT:
+ * - canvas
+ * - header
+ * - hero
+ * - filtros
+ * - historial
+ *
+ * DARK:
+ * - métricas
+ * - composer
+ * - eventos próximos
+ *
+ * Capa visual solamente.
+ * No modifica estructura ni responsive.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   CANVAS
+   ========================================================== */
+
+body.ui-v3.page-agenda-v3 {
+    color-scheme:
+        light;
+
+    background:
+        radial-gradient(
+            950px 500px
+            at 10% -12%,
+            rgba(53, 111, 174, .055),
+            transparent 68%
+        ),
+        linear-gradient(
+            180deg,
+            #f9fafb 0%,
+            #f4f6f8 55%,
+            #eef2f5 100%
+        )
+        !important;
+}
+
+
+body.page-agenda-v3 ::selection {
+    color:
+        #17304c;
+
+    background:
+        rgba(53, 111, 174, .18);
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+body.page-agenda-v3
+.app-header {
+    border-bottom:
+        1px solid
+        rgba(36, 52, 69, .09)
+        !important;
+
+    background:
+        rgba(250, 252, 253, .95)
+        !important;
+
+    box-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .90),
+        0 8px 24px
+        rgba(38, 49, 61, .035)
+        !important;
+
+    backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(125%)
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-brand-mark {
+    border-color:
+        rgba(53, 111, 174, .20)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f6f9fc,
+            #edf3f8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-brand-mark svg {
+    stroke:
+        #356fae
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-brand-copy strong {
+    color:
+        #1d2936
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-brand-copy small {
+    color:
+        #718091
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-nav {
+    border-color:
+        #dbe2e8
+        !important;
+
+    background:
+        rgba(255, 255, 255, .90)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .98),
+        0 3px 12px
+        rgba(39, 52, 65, .035)
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-nav a {
+    color:
+        #687889
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-nav a:hover {
+    color:
+        #2b3b4b
+        !important;
+
+    background:
+        #f1f4f7
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-nav a.active {
+    color:
+        #234f7e
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #edf4fb,
+            #e6eff8
+        )
+        !important;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(53, 111, 174, .16)
+        !important;
+}
+
+
+/* Campana */
+
+body.page-agenda-v3
+.notification-bell-v3 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #536a7f
+        !important;
+}
+
+
+body.page-agenda-v3
+.notification-bell-v3:hover,
+
+body.page-agenda-v3
+.notification-center-v3.is-open
+.notification-bell-v3 {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        #f2f6fb
+        !important;
+
+    color:
+        #356fae
+        !important;
+}
+
+
+/* Nuevo */
+
+body.page-agenda-v3
+.quick-add-trigger-v3 {
+    border-color:
+        rgba(35, 138, 87, .30)
+        !important;
+
+    background:
+        #f1faf5
+        !important;
+
+    color:
+        #216e49
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-trigger-v3 kbd {
+    border-color:
+        rgba(35, 138, 87, .22)
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #4d715f
+        !important;
+}
+
+
+/* Buscar */
+
+body.page-agenda-v3
+.command-trigger-v3 {
+    border-color:
+        #d3dde5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #52687c
+        !important;
+}
+
+
+body.page-agenda-v3
+.command-trigger-v3 svg {
+    stroke:
+        #60778c
+        !important;
+}
+
+
+body.page-agenda-v3
+.command-trigger-v3 kbd {
+    border-color:
+        #d5dde4
+        !important;
+
+    background:
+        #f0f3f6
+        !important;
+
+    color:
+        #637586
+        !important;
+}
+
+
+body.page-agenda-v3
+.app-header-status {
+    color:
+        #4f6477
+        !important;
+}
+
+
+body.page-agenda-v3
+.status-dot-online {
+    background:
+        #25945d
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 148, 93, .09)
+        !important;
+}
+
+
+/* ==========================================================
+   HERO - LIGHT
+   ========================================================== */
+
+body.page-agenda-v3
+.hero-eyebrow {
+    color:
+        #23794f
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-hero-v3 h1 {
+    color:
+        #1c2936
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-hero-v3 p {
+    color:
+        #607487
+        !important;
+}
+
+
+/* Ver calendario */
+
+body.page-agenda-v3
+.agenda-outline-action-v3 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #41637f
+        !important;
+
+    box-shadow:
+        0 4px 14px
+        rgba(35, 48, 62, .035)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-outline-action-v3:hover {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        #f2f6fa
+        !important;
+
+    color:
+        #356fae
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-outline-action-v3 svg {
+    stroke:
+        currentColor
+        !important;
+}
+
+
+/* Contador */
+
+body.page-agenda-v3
+.agenda-count-v3 {
+    border-color:
+        #d8e1e8
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7f9fb
+        )
+        !important;
+
+    box-shadow:
+        0 5px 16px
+        rgba(35, 48, 62, .035)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-count-v3 strong {
+    color:
+        #263747
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-count-v3 span {
+    color:
+        #708294
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS - DARK
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-metrics-v3 article {
+    border-color:
+        rgba(151, 166, 184, .11)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111a25,
+            #0b121b
+        )
+        !important;
+
+    box-shadow:
+        0 9px 24px
+        rgba(20, 29, 38, .085),
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-metric-label-v3 {
+    color:
+        #91a5b8
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-metrics-v3 strong {
+    color:
+        #f2f6fa
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-metrics-v3 small {
+    color:
+        #778da1
+        !important;
+}
+
+
+/* ==========================================================
+   MENSAJES
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-message-success-v3 {
+    border-color:
+        #c8e6d4
+        !important;
+
+    background:
+        #edf8f1
+        !important;
+
+    color:
+        #28794d
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-message-success-v3
+.agenda-message-icon-v3 {
+    background:
+        #dff2e7
+        !important;
+
+    color:
+        #238457
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-message-error-v3 {
+    border-color:
+        #eed0d4
+        !important;
+
+    background:
+        #fbecee
+        !important;
+
+    color:
+        #a9444c
+        !important;
+}
+
+
+/* ==========================================================
+   COMPOSER - DARK
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-composer-inner-v3 {
+    border-color:
+        rgba(151, 166, 184, .12)
+        !important;
+
+    background:
+        linear-gradient(
+            155deg,
+            #111a26,
+            #0a1119
+        )
+        !important;
+
+    box-shadow:
+        0 12px 32px
+        rgba(20, 29, 38, .10),
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-heading-v3 {
+    border-bottom-color:
+        rgba(151, 166, 184, .10)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-icon-v3 {
+    border-color:
+        rgba(87, 148, 255, .22)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .085)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-icon-v3 svg {
+    stroke:
+        #82adff
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-kicker-v3 {
+    color:
+        #5dd58a
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-heading-v3 h2 {
+    color:
+        #f3f7fb
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-heading-v3 p {
+    color:
+        #9eb1c3
+        !important;
+}
+
+
+/* Labels */
+
+body.page-agenda-v3
+.agenda-field-v3 label {
+    color:
+        #c1cfdb
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 label small {
+    color:
+        #92a7ba
+        !important;
+}
+
+
+/* Campos */
+
+body.page-agenda-v3
+.agenda-field-v3 input,
+
+body.page-agenda-v3
+.agenda-field-v3 select,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea {
+    border-color:
+        rgba(151, 166, 184, .17)
+        !important;
+
+    background:
+        rgba(3, 8, 14, .42)
+        !important;
+
+    color:
+        #edf3f9
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 input::placeholder,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea::placeholder {
+    color:
+        #8196aa
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 select option {
+    background:
+        #111b27
+        !important;
+
+    color:
+        #edf3f9
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 input:hover,
+
+body.page-agenda-v3
+.agenda-field-v3 select:hover,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea:hover {
+    border-color:
+        rgba(151, 180, 210, .40)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 input:focus,
+
+body.page-agenda-v3
+.agenda-field-v3 select:focus,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea:focus {
+    border-color:
+        #79a9fa
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(87, 148, 255, .15)
+        !important;
+}
+
+
+/* Guardar */
+
+body.page-agenda-v3
+.composer-save-v3 {
+    border-color:
+        rgba(87, 148, 255, .45)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4f8df5,
+            #3977de
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 7px 20px
+        rgba(79, 141, 245, .14)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-cancel-v3 {
+    color:
+        #91a5b8
+        !important;
+}
+
+
+/* ==========================================================
+   FILTROS - LIGHT
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-filterbar-v3 {
+    border-color:
+        #d7e0e7
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafb
+        )
+        !important;
+
+    box-shadow:
+        0 8px 22px
+        rgba(35, 48, 62, .045),
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-agenda-v3
+.filterbar-heading-v3 span {
+    color:
+        #708294
+        !important;
+}
+
+
+body.page-agenda-v3
+.filterbar-heading-v3 strong {
+    color:
+        #263747
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 label {
+    color:
+        #617587
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 select {
+    border-color:
+        #d5dee5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #283a4a
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 select:hover {
+    border-color:
+        #bdcad5
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 select:focus {
+    border-color:
+        #6f9ed0
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(53, 111, 174, .09)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 select option {
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #283a4a
+        !important;
+}
+
+
+/* Aplicar */
+
+body.page-agenda-v3
+.filter-apply-v3 {
+    border-color:
+        rgba(53, 111, 174, .28)
+        !important;
+
+    background:
+        #edf4fb
+        !important;
+
+    color:
+        #356fae
+        !important;
+}
+
+
+body.page-agenda-v3
+.filter-apply-v3:hover {
+    border-color:
+        rgba(53, 111, 174, .38)
+        !important;
+
+    background:
+        #e4eff9
+        !important;
+
+    color:
+        #295d91
+        !important;
+}
+
+
+/* Limpiar */
+
+body.page-agenda-v3
+.filter-clear-v3 {
+    border-color:
+        #d6dfe6
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #637789
+        !important;
+}
+
+
+body.page-agenda-v3
+.filter-clear-v3:hover {
+    border-color:
+        #c4d0da
+        !important;
+
+    background:
+        #f5f7f9
+        !important;
+
+    color:
+        #3f5569
+        !important;
+}
+
+
+/* ==========================================================
+   TITULOS DE SECCION SOBRE CANVAS LIGHT
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-section-heading-v3 h2 {
+    color:
+        #20303f
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-section-count-v3 {
+    border-color:
+        #d6e0e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #667b8e
+        !important;
+}
+
+
+/* ==========================================================
+   EVENTOS PROXIMOS - DARK
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-event-card-v3 {
+    border-color:
+        rgba(151, 166, 184, .12)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #101925,
+            #0a1119
+        )
+        !important;
+
+    box-shadow:
+        0 9px 24px
+        rgba(20, 29, 38, .085),
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-event-card-v3:hover {
+    border-color:
+        rgba(87, 148, 255, .30)
+        !important;
+
+    box-shadow:
+        0 14px 34px
+        rgba(20, 29, 38, .13)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-weekday-v3 {
+    color:
+        #748da3
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-date-v3 strong {
+    color:
+        #f5f8fb
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-event-main-v3 h3 {
+    color:
+        #f5f7fa
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-course-v3 {
+    color:
+        #91a5b8
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-course-v3 span {
+    color:
+        #768ea4
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-event-details-v3 > span {
+    color:
+        #8499ad
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-description-v3 {
+    color:
+        #7b90a4
+        !important;
+}
+
+
+/* Countdown */
+
+body.page-agenda-v3
+.agenda-countdown-v3 {
+    border-color:
+        rgba(151, 166, 184, .16)
+        !important;
+
+    background:
+        rgba(0, 0, 0, .18)
+        !important;
+
+    color:
+        #e3ebf2
+        !important;
+}
+
+
+/* Editar */
+
+body.page-agenda-v3
+.agenda-edit-v3 {
+    border-color:
+        rgba(151, 166, 184, .15)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .025)
+        !important;
+
+    color:
+        #8ca2b7
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-edit-v3:hover {
+    border-color:
+        rgba(87, 148, 255, .27)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .065)
+        !important;
+
+    color:
+        #b4ceff
+        !important;
+}
+
+
+/* ==========================================================
+   HISTORIAL - LIGHT
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-history-list-v3 {
+    border-color:
+        #d8e1e8
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f9fbfc
+        )
+        !important;
+
+    box-shadow:
+        0 7px 20px
+        rgba(35, 48, 62, .035),
+        inset 0 1px 0
+        rgba(255, 255, 255, .96)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3 {
+    border-bottom-color:
+        #e4e9ee
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3 strong {
+    color:
+        #283a49
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3 > div span {
+    color:
+        #718496
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-edit-v3 {
+    color:
+        #55728e
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-edit-v3:hover {
+    color:
+        #356fae
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-empty-v3 {
+    border-color:
+        #d8e1e8
+        !important;
+
+    background:
+        #f9fbfc
+        !important;
+
+    color:
+        #718496
+        !important;
+}
+
+
+/* ==========================================================
+   EMPTY STATE DE EVENTOS - DARK
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-empty-v3 {
+    border-color:
+        rgba(151, 166, 184, .15)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101925,
+            #0b121b
+        )
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-empty-v3 strong {
+    color:
+        #e6edf3
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-empty-v3 p {
+    color:
+        #7c91a5
+        !important;
+}
+
+
+/* ==========================================================
+   QUICK ADD - LIGHT
+   ========================================================== */
+
+body.page-agenda-v3
+.quick-add-overlay-v3 {
+    background:
+        rgba(36, 46, 57, .36)
+        !important;
+
+    backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-dialog-v3 {
+    border-color:
+        #d7e0e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 34px 90px
+        rgba(29, 39, 50, .20)
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-header-v3 {
+    border-bottom-color:
+        #e4e9ee
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f7f9fb
+        )
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-heading-v3 h2 {
+    color:
+        #1c2734
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-heading-v3 p,
+
+body.page-agenda-v3
+.quick-add-field-v3 label,
+
+body.page-agenda-v3
+.quick-add-note-help-v3 {
+    color:
+        #667687
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-field-v3 input,
+
+body.page-agenda-v3
+.quick-add-field-v3 select,
+
+body.page-agenda-v3
+.quick-add-field-v3 textarea {
+    border-color:
+        #d9e1e7
+        !important;
+
+    background:
+        #fafbfd
+        !important;
+
+    color:
+        #202d3a
+        !important;
+}
+
+
+body.page-agenda-v3
+.quick-add-footer-v3 {
+    border-top-color:
+        #e4e9ee
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}
+
+
+/* ==========================================================
+   MOBILE SHELL - LIGHT
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    body.page-agenda-v3
+    .mobile-bottom-nav-v3 {
+        border-top-color:
+            #dce3e9
+            !important;
+
+        background:
+            rgba(255, 255, 255, .96)
+            !important;
+
+        box-shadow:
+            0 -8px 28px
+            rgba(35, 48, 61, .055)
+            !important;
+    }
+
+
+    body.page-agenda-v3
+    .mobile-bottom-nav-item-v3 {
+        color:
+            #697988
+            !important;
+    }
+
+
+    body.page-agenda-v3
+    .mobile-bottom-nav-item-v3.active,
+
+    body.page-agenda-v3
+    .mobile-bottom-nav-item-v3.is-active,
+
+    body.page-agenda-v3
+    .mobile-bottom-nav-item-v3[aria-current="page"] {
+        color:
+            #356fae
+            !important;
+
+        background:
+            #edf4fb
+            !important;
+    }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY FOCUS
+   ========================================================== */
+
+body.page-agenda-v3
+a:focus-visible,
+
+body.page-agenda-v3
+button:focus-visible,
+
+body.page-agenda-v3
+input:focus-visible,
+
+body.page-agenda-v3
+select:focus-visible,
+
+body.page-agenda-v3
+textarea:focus-visible {
+    outline-color:
+        #356fae
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * AGENDA R1.1 - PULIDO PROFESIONAL PROFUNDO
+ * ==========================================================
+ *
+ * Exclusivamente visual:
+ * - profundidad
+ * - contraste fino
+ * - superficies
+ * - bordes
+ * - sombras
+ * - jerarquía
+ *
+ * Sin geometría.
+ * ==========================================================
+ */
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+body.page-agenda-v3
+.hero-eyebrow {
+    color:
+        #238457
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-hero-v3 h1 {
+    color:
+        #213141
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .70)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-hero-v3 p {
+    color:
+        #607487
+        !important;
+}
+
+
+/* Hero actions */
+
+body.page-agenda-v3
+.agenda-outline-action-v3 {
+    border-color:
+        #ced9e2
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    color:
+        #49677f
+        !important;
+
+    box-shadow:
+        0 5px 16px
+        rgba(38, 53, 67, .045),
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-count-v3 {
+    border-color:
+        #d1dce4
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f6f9fb
+        )
+        !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(37, 51, 65, .045),
+        inset 0 1px 0
+        rgba(255, 255, 255, .96)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-count-v3 strong {
+    color:
+        #26394a
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-count-v3 span {
+    color:
+        #6b8092
+        !important;
+}
+
+
+/* ==========================================================
+   METRICAS
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-metrics-v3 article {
+    border-color:
+        rgba(151, 166, 184, .13)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121d2a,
+            #0c151f
+        )
+        !important;
+
+    box-shadow:
+        0 11px 26px
+        rgba(17, 26, 35, .105),
+        inset 0 1px 0
+        rgba(255, 255, 255, .026)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-metric-label-v3 {
+    color:
+        #9aadc0
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-metrics-v3 strong {
+    color:
+        #f7faff
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-metrics-v3 small {
+    color:
+        #8095a8
+        !important;
+}
+
+
+/* ==========================================================
+   COMPOSER
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-composer-inner-v3 {
+    border-color:
+        rgba(151, 166, 184, .14)
+        !important;
+
+    background:
+        linear-gradient(
+            155deg,
+            #121d29,
+            #0a131d
+        )
+        !important;
+
+    box-shadow:
+        0 16px 38px
+        rgba(17, 26, 35, .14),
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+/* Heading */
+
+body.page-agenda-v3
+.composer-heading-v3 {
+    border-bottom-color:
+        rgba(151, 166, 184, .11)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, .018),
+            rgba(255, 255, 255, .004)
+        )
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-icon-v3 {
+    border-color:
+        rgba(87, 148, 255, .25)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .095)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-kicker-v3 {
+    color:
+        #5dd98b
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-heading-v3 h2 {
+    color:
+        #f6f9fc
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-heading-v3 p {
+    color:
+        #9db0c2
+        !important;
+}
+
+
+/* Labels */
+
+body.page-agenda-v3
+.agenda-field-v3 label {
+    color:
+        #c8d4df
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 label small {
+    color:
+        #8fa5b8
+        !important;
+}
+
+
+/* Inputs */
+
+body.page-agenda-v3
+.agenda-field-v3 input,
+
+body.page-agenda-v3
+.agenda-field-v3 select,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea {
+    border-color:
+        rgba(151, 166, 184, .19)
+        !important;
+
+    background:
+        rgba(3, 9, 15, .54)
+        !important;
+
+    color:
+        #f0f5fa
+        !important;
+
+    box-shadow:
+        inset 0 1px 2px
+        rgba(0, 0, 0, .10),
+        inset 0 1px 0
+        rgba(255, 255, 255, .012)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 input::placeholder,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea::placeholder {
+    color:
+        #8095a8
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 input:hover,
+
+body.page-agenda-v3
+.agenda-field-v3 select:hover,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea:hover {
+    border-color:
+        rgba(143, 174, 205, .42)
+        !important;
+
+    background:
+        rgba(4, 11, 18, .64)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-field-v3 input:focus,
+
+body.page-agenda-v3
+.agenda-field-v3 select:focus,
+
+body.page-agenda-v3
+.agenda-field-v3 textarea:focus {
+    border-color:
+        #75a5ef
+        !important;
+
+    background:
+        rgba(5, 12, 20, .74)
+        !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(87, 148, 255, .14),
+        inset 0 1px 2px
+        rgba(0, 0, 0, .08)
+        !important;
+}
+
+
+/* Save */
+
+body.page-agenda-v3
+.composer-save-v3 {
+    border-color:
+        rgba(87, 148, 255, .52)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #548ff4,
+            #3976dc
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 8px 22px
+        rgba(57, 118, 220, .20),
+        inset 0 1px 0
+        rgba(255, 255, 255, .13)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-cancel-v3 {
+    color:
+        #9bafc1
+        !important;
+}
+
+
+/* ==========================================================
+   FILTER BAR
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-filterbar-v3 {
+    border-color:
+        #d2dce4
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7f9fb
+        )
+        !important;
+
+    box-shadow:
+        0 10px 26px
+        rgba(36, 50, 64, .055),
+        inset 0 1px 0
+        rgba(255, 255, 255, .97)
+        !important;
+}
+
+
+body.page-agenda-v3
+.filterbar-heading-v3 span {
+    color:
+        #708497
+        !important;
+}
+
+
+body.page-agenda-v3
+.filterbar-heading-v3 strong {
+    color:
+        #203343
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 label {
+    color:
+        #62778a
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 select {
+    border-color:
+        #d0dae3
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #263949
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .95)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-filters-v3 select:hover {
+    border-color:
+        #b9c8d4
+        !important;
+}
+
+
+body.page-agenda-v3
+.filter-apply-v3 {
+    border-color:
+        rgba(53, 111, 174, .30)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eff6fc,
+            #e8f1f9
+        )
+        !important;
+
+    color:
+        #326a9f
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .92)
+        !important;
+}
+
+
+body.page-agenda-v3
+.filter-clear-v3 {
+    border-color:
+        #d2dce4
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #617587
+        !important;
+}
+
+
+/* ==========================================================
+   SECTION HEADINGS
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-section-heading-v3 h2 {
+    color:
+        #203242
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(255, 255, 255, .65)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-section-count-v3 {
+    border-color:
+        #d3dde5
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    color:
+        #607589
+        !important;
+
+    box-shadow:
+        0 2px 8px
+        rgba(35, 48, 62, .025)
+        !important;
+}
+
+
+/* ==========================================================
+   EVENT CARDS
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-event-card-v3 {
+    border-color:
+        rgba(151, 166, 184, .14)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #121d2a,
+            #0c151f
+        )
+        !important;
+
+    box-shadow:
+        0 11px 26px
+        rgba(17, 26, 35, .105),
+        inset 0 1px 0
+        rgba(255, 255, 255, .024)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-event-card-v3:hover {
+    border-color:
+        rgba(87, 148, 255, .34)
+        !important;
+
+    background:
+        linear-gradient(
+            120deg,
+            #142131,
+            #0d1722
+        )
+        !important;
+
+    box-shadow:
+        0 16px 36px
+        rgba(17, 26, 35, .15),
+        inset 0 1px 0
+        rgba(255, 255, 255, .03)
+        !important;
+}
+
+
+/* Date */
+
+body.page-agenda-v3
+.agenda-date-v3 {
+    border-right-color:
+        rgba(151, 166, 184, .10)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .008)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-weekday-v3 {
+    color:
+        #8298ac
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-date-v3 strong {
+    color:
+        #f7faff
+        !important;
+}
+
+
+/* Main */
+
+body.page-agenda-v3
+.agenda-event-main-v3 h3 {
+    color:
+        #f7faff
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-event-meta-v3 {
+    color:
+        #8da2b6
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-course-v3 {
+    color:
+        #9aafc1
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-course-v3 span {
+    color:
+        #8096aa
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-event-details-v3 > span {
+    color:
+        #8ba0b4
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-description-v3 {
+    color:
+        #8499ad
+        !important;
+}
+
+
+/* Side */
+
+body.page-agenda-v3
+.agenda-event-side-v3 {
+    color:
+        #8ca1b4
+        !important;
+}
+
+
+/* ==========================================================
+   STATUS BADGES
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-status-v3 {
+    border:
+        1px solid
+        rgba(151, 166, 184, .10)
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .025)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-status-pendiente {
+    border-color:
+        rgba(87, 148, 255, .18)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .11)
+        !important;
+
+    color:
+        #91bbff
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-status-entregado {
+    border-color:
+        rgba(82, 215, 234, .18)
+        !important;
+
+    background:
+        rgba(82, 215, 234, .10)
+        !important;
+
+    color:
+        #81e1ed
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-status-aprobado {
+    border-color:
+        rgba(54, 227, 121, .18)
+        !important;
+
+    background:
+        rgba(54, 227, 121, .10)
+        !important;
+
+    color:
+        #77e99f
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-status-desaprobado {
+    border-color:
+        rgba(255, 109, 117, .18)
+        !important;
+
+    background:
+        rgba(255, 109, 117, .10)
+        !important;
+
+    color:
+        #ff8f96
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-status-ausente,
+
+body.page-agenda-v3
+.agenda-status-cancelado {
+    border-color:
+        rgba(151, 166, 184, .14)
+        !important;
+
+    background:
+        rgba(151, 166, 184, .09)
+        !important;
+
+    color:
+        #91a4b7
+        !important;
+}
+
+
+/* ==========================================================
+   COUNTDOWN + EDIT
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-countdown-v3 {
+    border-color:
+        rgba(151, 166, 184, .18)
+        !important;
+
+    background:
+        rgba(0, 0, 0, .22)
+        !important;
+
+    color:
+        #e9f0f6
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .02)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-edit-v3 {
+    border-color:
+        rgba(151, 166, 184, .17)
+        !important;
+
+    background:
+        rgba(255, 255, 255, .028)
+        !important;
+
+    color:
+        #93a9bc
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-edit-v3:hover {
+    border-color:
+        rgba(87, 148, 255, .32)
+        !important;
+
+    background:
+        rgba(87, 148, 255, .075)
+        !important;
+
+    color:
+        #bdd3ff
+        !important;
+}
+
+
+/* ==========================================================
+   HISTORY
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-history-list-v3 {
+    border-color:
+        #d4dee6
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        )
+        !important;
+
+    box-shadow:
+        0 10px 26px
+        rgba(35, 49, 63, .05),
+        inset 0 1px 0
+        rgba(255, 255, 255, .98)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3 {
+    border-bottom-color:
+        #e1e7ec
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3:hover {
+    background:
+        rgba(238, 244, 249, .72)
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3 strong {
+    color:
+        #263949
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-item-v3 > div span {
+    color:
+        #6c8194
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-edit-v3 {
+    color:
+        #57738e
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-history-edit-v3:hover {
+    color:
+        #2f6da7
+        !important;
+}
+
+
+/* ==========================================================
+   EMPTY STATES
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-empty-v3 {
+    border-color:
+        rgba(151, 166, 184, .16)
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121d29,
+            #0c151f
+        )
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-empty-v3 strong {
+    color:
+        #edf3f8
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-empty-v3 p {
+    color:
+        #8297aa
+        !important;
+}
+
+
+/* ==========================================================
+   MESSAGES
+   ========================================================== */
+
+body.page-agenda-v3
+.agenda-message-success-v3 {
+    border-color:
+        #c4e3d1
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1faf4,
+            #eaf6ef
+        )
+        !important;
+
+    color:
+        #28774c
+        !important;
+}
+
+
+body.page-agenda-v3
+.agenda-message-error-v3 {
+    border-color:
+        #ebccd1
+        !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff3f4,
+            #fae9eb
+        )
+        !important;
+
+    color:
+        #a9444d
+        !important;
+}
+
+
+/*
+ * ==========================================================
+ * AGENDA R1.2 - SAVE BUTTON REFINEMENT
+ * ==========================================================
+ * Alcance exclusivo:
+ * - botón Guardar evento
+ * - hover / focus / active / disabled
+ * Sin cambios estructurales.
+ * ==========================================================
+ */
+
+body.page-agenda-v3
+.composer-save-v3 {
+    border: 1px solid rgba(53, 110, 190, .68) !important;
+    background:
+        linear-gradient(
+            180deg,
+            #5d97f6 0%,
+            #4b86eb 52%,
+            #3e74d8 100%
+        ) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: .01em !important;
+    text-shadow: 0 1px 0 rgba(19, 43, 78, .24) !important;
+    box-shadow:
+        0 10px 24px rgba(58, 112, 212, .24),
+        0 2px 6px rgba(26, 58, 108, .10),
+        inset 0 1px 0 rgba(255, 255, 255, .26),
+        inset 0 -1px 0 rgba(28, 61, 114, .18) !important;
+}
+
+body.page-agenda-v3
+.composer-save-v3:hover {
+    border-color: rgba(51, 107, 188, .82) !important;
+    background:
+        linear-gradient(
+            180deg,
+            #6aa2fb 0%,
+            #568ff0 52%,
+            #467bdf 100%
+        ) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 14px 30px rgba(58, 112, 212, .28),
+        0 3px 10px rgba(26, 58, 108, .12),
+        inset 0 1px 0 rgba(255, 255, 255, .30),
+        inset 0 -1px 0 rgba(28, 61, 114, .16) !important;
+}
+
+body.page-agenda-v3
+.composer-save-v3:focus,
+body.page-agenda-v3
+.composer-save-v3:focus-visible {
+    border-color: #6aa2fb !important;
+    background:
+        linear-gradient(
+            180deg,
+            #689ffa 0%,
+            #548df0 52%,
+            #4479de 100%
+        ) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 0 0 4px rgba(87, 148, 255, .18),
+        0 14px 30px rgba(58, 112, 212, .25),
+        inset 0 1px 0 rgba(255, 255, 255, .28),
+        inset 0 -1px 0 rgba(28, 61, 114, .16) !important;
+}
+
+body.page-agenda-v3
+.composer-save-v3:active {
+    border-color: rgba(46, 97, 173, .88) !important;
+    background:
+        linear-gradient(
+            180deg,
+            #4b86eb 0%,
+            #3f79dd 52%,
+            #366dcb 100%
+        ) !important;
+    box-shadow:
+        0 6px 16px rgba(58, 112, 212, .18),
+        inset 0 1px 1px rgba(24, 49, 92, .24),
+        inset 0 1px 0 rgba(255, 255, 255, .14) !important;
+}
+
+body.page-agenda-v3
+.composer-save-v3[disabled],
+body.page-agenda-v3
+.composer-save-v3:disabled {
+    border-color: rgba(151, 166, 184, .22) !important;
+    background:
+        linear-gradient(
+            180deg,
+            #d8e2f0 0%,
+            #ccd8e8 100%
+        ) !important;
+    color: #6f8297 !important;
+    text-shadow: none !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .55) !important;
+}
+
+
+/*
+ * ==========================================================
+ * AGENDA R1.3 - SAVE BUTTON EMERALD
+ * ==========================================================
+ *
+ * Reemplaza exclusivamente el esquema azul
+ * del botón Guardar evento por verde petróleo.
+ * ==========================================================
+ */
+
+body.page-agenda-v3
+.composer-save-v3 {
+    border-color:
+        rgba(46, 126, 102, .82)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #3f9a7d 0%,
+            #328268 52%,
+            #296e5b 100%
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    text-shadow:
+        0 1px 0
+        rgba(15, 56, 44, .30)
+        !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(34, 112, 87, .22),
+        0 2px 6px
+        rgba(18, 66, 51, .12),
+        inset 0 1px 0
+        rgba(255, 255, 255, .20),
+        inset 0 -1px 0
+        rgba(15, 66, 50, .20)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-save-v3:hover {
+    border-color:
+        rgba(52, 145, 114, .90)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #49a989 0%,
+            #388e72 52%,
+            #2e7963 100%
+        )
+        !important;
+
+    color:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 14px 30px
+        rgba(34, 112, 87, .26),
+        0 3px 10px
+        rgba(18, 66, 51, .14),
+        inset 0 1px 0
+        rgba(255, 255, 255, .22),
+        inset 0 -1px 0
+        rgba(15, 66, 50, .18)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-save-v3:focus,
+
+body.page-agenda-v3
+.composer-save-v3:focus-visible {
+    border-color:
+        #56b293
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #47a586 0%,
+            #378b70 52%,
+            #2d7661 100%
+        )
+        !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(52, 145, 114, .16),
+        0 14px 30px
+        rgba(34, 112, 87, .24),
+        inset 0 1px 0
+        rgba(255, 255, 255, .22)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-save-v3:active {
+    border-color:
+        rgba(35, 105, 82, .92)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #337f67 0%,
+            #2b715c 52%,
+            #245f4f 100%
+        )
+        !important;
+
+    box-shadow:
+        0 6px 16px
+        rgba(28, 91, 70, .18),
+        inset 0 1px 1px
+        rgba(10, 45, 34, .28),
+        inset 0 1px 0
+        rgba(255, 255, 255, .12)
+        !important;
+}
+
+
+body.page-agenda-v3
+.composer-save-v3:disabled,
+
+body.page-agenda-v3
+.composer-save-v3[disabled] {
+    border-color:
+        rgba(151, 166, 184, .22)
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #d6dfdd,
+            #c9d4d1
+        )
+        !important;
+
+    color:
+        #687b76
+        !important;
+
+    text-shadow:
+        none
+        !important;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, .55)
+        !important;
+}
