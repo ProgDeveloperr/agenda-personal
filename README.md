@@ -40,3 +40,14 @@ Desarrollado por [ProgDeveloperr](https://github.com/ProgDeveloperr).
 ## Configuración
 
 Definir las variables de entorno según `.env.example`. Las credenciales y bases de datos productivas no forman parte del repositorio. El código utiliza rutas de contenedor que deben adaptarse al entorno de despliegue.
+
+
+## Capturas de pantalla
+
+Vistas de la interfaz de Agenda Personal v11, con navegación, organización académica y seguimiento de actividades.
+
+| Inicio | Agenda | Calendario |
+|:---:|:---:|:---:|
+| ![Panel de inicio](docs/screenshots/inicio.webp) | ![Agenda académica](docs/screenshots/agenda.webp) | ![Calendario mensual](docs/screenshots/calendario.webp) |
+
+La **[galería completa de 9 pantallas](docs/SCREENSHOTS.md)** incluye también Hoy, Tareas, Semana, Vida, Materias y Rendimiento.
