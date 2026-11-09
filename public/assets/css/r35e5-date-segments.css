@@ -1,0 +1,123 @@
+
+/* ARK3360_R35E5_DATE_SEGMENTS */
+
+body.page-agenda-v3
+input.r35e-date-visible.r35e5-original-visual {
+    display: none !important;
+}
+
+body.page-agenda-v3 .r35e5-date-segments {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+    gap: 3px;
+    padding: 5px 7px;
+    border: 1px solid color-mix(
+        in srgb, currentColor 25%, transparent
+    );
+    border-radius: 11px;
+    background: color-mix(
+        in srgb, currentColor 5%, transparent
+    );
+    color: inherit;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(
+        59, 130, 246, .14
+    );
+}
+
+body.page-agenda-v3
+.r35e5-date-segments.r35e5-invalid {
+    border-color: #cc3b48;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments > input {
+    display: block !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    min-height: 28px !important;
+    height: 29px !important;
+    margin: 0 !important;
+    padding: 2px !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    font: inherit !important;
+    font-size: 14px !important;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments > input[data-piece="day"],
+body.page-agenda-v3
+.r35e5-date-segments > input[data-piece="month"] {
+    flex: 1 1 2.6em !important;
+    max-width: 4em;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments > input[data-piece="year"] {
+    flex: 1.7 1 4.5em !important;
+    max-width: 7em;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments > input:focus-visible {
+    background: color-mix(
+        in srgb, #3b82f6 12%, transparent
+    ) !important;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments .r35e5-separator {
+    flex: 0 0 auto;
+    opacity: .6;
+    font-size: 13px;
+    user-select: none;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments
+> button.r35e5-calendar-button {
+    display: grid !important;
+    place-items: center !important;
+    box-sizing: border-box !important;
+    flex: 0 0 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-height: 0 !important;
+    margin: 0 0 0 auto !important;
+    padding: 5px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    color: inherit !important;
+    cursor: pointer !important;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments
+> button.r35e5-calendar-button:hover {
+    background: color-mix(
+        in srgb, currentColor 10%, transparent
+    ) !important;
+}
+
+body.page-agenda-v3
+.r35e5-date-segments
+> button.r35e5-calendar-button:focus-visible {
+    outline: 2px solid #3b82f6 !important;
+    outline-offset: 1px;
+}

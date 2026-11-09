@@ -1,0 +1,61 @@
+/* ARK3360_R35M_B_NAVBAR_BRAND_PILOT */
+/* Only Inicio; exact original designer artwork is rendered as an SVG image. */
+body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand {
+    display: inline-flex !important;
+    flex: 0 0 215px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 215px !important;
+    min-width: 0 !important;
+    max-width: 215px !important;
+    gap: 0 !important;
+    text-decoration: none;
+}
+body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand > .r35m-brand-lockup {
+    display: block !important;
+    flex: 0 0 215px !important;
+    width: 215px !important;
+    max-width: 215px !important;
+    line-height: 0 !important;
+    height: auto !important;
+}
+body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand .r35m-brand-image {
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand img.r35m-brand-dark {
+    display: none !important;
+}
+html[data-theme="dark"] body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand img.r35m-brand-light,
+html.theme-dark body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand img.r35m-brand-light {
+    display: none !important;
+}
+html[data-theme="dark"] body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand img.r35m-brand-dark,
+html.theme-dark body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand img.r35m-brand-dark {
+    display: block !important;
+}
+body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand:focus-visible {
+    outline: 2px solid #5794ff !important;
+    outline-offset: 3px !important;
+    border-radius: 6px;
+}
+@media (max-width: 760px) {
+    body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand,
+    body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand > .r35m-brand-lockup {
+        flex: 0 0 176px !important;
+        width: 176px !important;
+        max-width: 176px !important;
+    }
+}
+@media (max-width: 390px) {
+    body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand,
+    body.ui-v3.page-dashboard-v3 a.app-brand.r35m-brand > .r35m-brand-lockup {
+        flex: 0 0 155px !important;
+        width: 155px !important;
+        max-width: 155px !important;
+    }
+}

@@ -277,7 +277,25 @@ if (
 
     try {
 
-        if ($accion === 'crear') {
+                // ARK3360_R36F_TASK_DELETE_PILOT_HANDLER
+        if ($accion === 'r36f_eliminar_tarea') {
+            $id = filter_var(
+                $_POST['id'] ?? null,
+                FILTER_VALIDATE_INT,
+                ['options' => ['min_range' => 1]]
+            );
+            if ($id === false || $id === null ||
+                ($_POST['confirmacion'] ?? '') !== 'ELIMINAR_DEFINITIVAMENTE') {
+                throw new InvalidArgumentException(
+                    'Confirmación de eliminación inválida.'
+                );
+            }
+            eliminarTareaIndividualR36F($tenantUserId, (int) $id);
+            tareaFlash('success', 'Tarea eliminada definitivamente. Sus notificaciones vinculadas también se eliminaron.');
+            tareaRedirect();
+        }
+
+if ($accion === 'crear') {
 
             $frecuencia =
                 strtoupper(
@@ -1302,24 +1320,10 @@ $csrf =
         rel="stylesheet"
         href="/assets/css/ui-v3.css?v=26"
     >
+<!-- ARK3360_R35N_B_AGIL_ICON -->
 
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
-    <link
-        rel="icon"
-        href="/assets/icons/agenda-personal.svg"
-        type="image/svg+xml"
-    >
-
-    <link
-        rel="apple-touch-icon"
-        href="/assets/icons/icon-180.png"
-    >
-
-    <meta
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
+<meta
         name="application-name"
         content="Agenda Personal"
     >
@@ -1354,6 +1358,50 @@ $csrf =
     <link rel="stylesheet" href="/assets/css/global-overlays-premium.css?v=2">
     <link rel="stylesheet" href="/assets/css/r8-account-placement.css?v=1">
     <script src="/assets/js/r8-account-placement.js?v=1" defer></script>
+    <!-- ARK3360_R35B3_NOTIFICATION_BADGE -->
+    <link rel="stylesheet" href="/assets/css/r35b-notification-badge.css?v=1">
+
+<!-- ARK3360_R35D_ACCOUNT_LIGHT -->
+<link rel="stylesheet" href="/assets/css/r35d-account-light-fix.css?v=1">
+<!-- ARK3360_R35E7D_TASKS_CANARY -->
+<link rel="stylesheet" href="/assets/vendor/flatpickr-4.6.13/flatpickr.min.css?v=1">
+<link rel="stylesheet" href="/assets/css/r35e7d-tareas-datepicker.css?v=2">
+<script src="/assets/vendor/flatpickr-4.6.13/flatpickr.min.js?v=1" defer></script>
+<script src="/assets/vendor/flatpickr-4.6.13/es.js?v=1" defer></script>
+<script src="/assets/js/r35e7d-tareas-date-pilot.js?v=2" defer></script>
+<script src="/assets/js/r35e5-date-segments.js?v=2" defer></script>
+<!-- /ARK3360_R35E7D_TASKS_CANARY -->
+<!-- ARK3360_R35I_C2_VISUAL_UNIFIED -->
+<link rel="stylesheet" href="/assets/css/r35i-c2-date-visual-unified.css?v=1">
+<!-- /ARK3360_R35I_C2_VISUAL_UNIFIED -->
+<!-- ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+<link rel="stylesheet" href="/assets/css/r35i-e2-quick-date-parity.css?v=1">
+<!-- /ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+
+<!-- ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+<link rel="stylesheet" href="/assets/css/r35m-d-navbar-brand-global.css?v=5905e4aebab7f230">
+<!-- /ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+
+<!-- ARK3360_R35O_B_DATE_DARK_SURFACE -->
+<link rel="stylesheet" href="/assets/css/r35o-b-agenda-tareas-date-dark.css?v=e8326955199d4791">
+<!-- /ARK3360_R35O_B_DATE_DARK_SURFACE -->
+
+    <!-- ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+    <link rel="stylesheet" href="/assets/css/r35q-d-mobile-theme-global.css?v=bb89cc627441c62d">
+    <script src="/assets/js/r35s-d-mobile-theme-global.js?v=2abb38c899b16f70" defer></script>
+    <!-- /ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+
+    <!-- ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+    <script src="/assets/js/r35s-c-viewport-cssom-pilot.js?v=a1b051a863df6f0f"></script>
+    <!-- /ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+<link rel="stylesheet" href="/assets/css/r36f-tareas-delete-pilot.css?v=bc0a16937eedb0e8">
 </head>
 
 
@@ -1364,49 +1412,15 @@ $csrf =
     <div class="app-header-inner">
 
         <a
-            class="app-brand"
+            class="app-brand r35m-brand"
             href="/"
             aria-label="Agenda Personal"
         >
-
-            <span class="app-brand-mark">
-
-                <svg viewBox="0 0 24 24">
-
-                    <rect
-                        x="4"
-                        y="5"
-                        width="16"
-                        height="15"
-                        rx="3"
-                    />
-
-                    <path
-                        d="M8 3v4M16 3v4M4 10h16"
-                    />
-
-                    <path
-                        d="M8 14h3M13 14h3M8 17h3"
-                    />
-
-                </svg>
-
-            </span>
-
-
-            <span class="app-brand-copy">
-
-                <strong>
-                    Agenda Personal
-                </strong>
-
-                <small>
-                    Workspace
-                </small>
-
-            </span>
-
-        </a>
+      <span class="r35m-brand-lockup">
+        <img class="r35m-brand-image r35m-brand-light" src="/assets/brand/agenda-personal-premium.svg?v=f471ddad7269fdfd" alt="Agenda Personal" width="259" height="76" decoding="async">
+        <img class="r35m-brand-image r35m-brand-dark" src="/assets/brand/agenda-personal-premium-oscuro.svg?v=f20f6bada98c57b3" alt="Agenda Personal" width="259" height="76" decoding="async">
+      </span>
+    </a>
 
 
         <nav
@@ -3538,6 +3552,29 @@ $csrf =
 
 
                             <div class="task-actions-v4">
+                                <?php if (!$esRecurrente): ?>
+                                    <!-- ARK3360_R36F_TASK_DELETE_PILOT_BUTTON -->
+                                    <form method="post" action="/tareas.php"
+                                          class="r36f-task-delete-form"
+                                          data-r36f-title="<?= h((string) $tarea['titulo']) ?>"
+                                          onsubmit="return window.confirm('¿Eliminar definitivamente la tarea «' + this.dataset.r36fTitle + '»?\n\nTambién se eliminarán sus notificaciones asociadas.\nEsta acción no se puede deshacer.');">
+                                        <input type="hidden" name="csrf_token" value="<?= h($csrf) ?>">
+                                        <input type="hidden" name="accion" value="r36f_eliminar_tarea">
+                                        <input type="hidden" name="id" value="<?= (int) $tarea['id'] ?>">
+                                        <input type="hidden" name="confirmacion" value="ELIMINAR_DEFINITIVAMENTE">
+                                        <button type="submit" class="r36f-task-delete-button"
+                                                title="Eliminar definitivamente"
+                                                aria-label="Eliminar tarea definitivamente">
+                                            <svg viewBox="0 0 24 24" width="17" height="17"
+                                                 fill="none" stroke="currentColor" stroke-width="1.8"
+                                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M3 6h18M8 6V4h8v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/>
+                                            </svg>
+                                            <span>Eliminar</span>
+                                        </button>
+                                    </form>
+                                <?php endif; ?>
+
 
                                 <a
                                     href="/tareas.php?editar=<?= (int)
@@ -3739,17 +3776,17 @@ $csrf =
 
 
 <script
-    src="/assets/js/command-palette.js?v=6"
+    src="/assets/js/command-palette.js?v=r35ie1-c8ba12954f606e8f"
     defer
 ></script>
 
 <script
-    src="/assets/js/quick-add.js?v=2"
+    src="/assets/js/quick-add.js?v=r35ie3-ec2ed63bd623c25f60b6"
     defer
 ></script>
 
 <script
-    src="/assets/js/notifications.js?v=2"
+    src="/assets/js/notifications.js?v=3"
     defer
 ></script>
 

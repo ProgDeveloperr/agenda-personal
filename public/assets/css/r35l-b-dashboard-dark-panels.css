@@ -1,0 +1,41 @@
+
+/* ARK3360_R35L_B_DASHBOARD_DARK_PANELS */
+
+/*
+ * Referencia exacta: paneles de Hoy.
+ * Alcance: exclusivamente Inicio en tema claro.
+ *
+ * No se modifican colores semanticos,
+ * bordes, iconos, botones ni interacciones.
+ */
+
+/* Indicadores superiores: misma superficie de Hoy. */
+
+html:not([data-theme="dark"]):not(.theme-dark)
+body.ui-v3.page-dashboard-v3:not(.theme-dark)
+.dashboard-metrics-v3 article {
+    background: linear-gradient(
+        145deg,
+        #111a25,
+        #0b121b
+    ) !important;
+}
+
+/* Contenedores principales y laterales. */
+
+html:not([data-theme="dark"]):not(.theme-dark)
+body.ui-v3.page-dashboard-v3:not(.theme-dark)
+:is(
+    .dashboard-focus-v3,
+    .dashboard-upcoming-v3,
+    .dashboard-state-card-v3,
+    .dashboard-activity-v3,
+    .dashboard-quick-v3,
+    .dashboard-subjects-v3
+) {
+    background: linear-gradient(
+        145deg,
+        #101925,
+        #0a1119
+    ) !important;
+}

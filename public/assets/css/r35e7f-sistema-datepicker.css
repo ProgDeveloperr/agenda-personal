@@ -1,0 +1,172 @@
+/* ARK3360_R35E7F_SISTEMA */
+/* ARK3360_R35E7D2_TASKS_CANARY */
+
+/* ARK3360_R35E4A_DATE_PILOT */
+
+body.r35e7f-sistema-dates
+.agenda-field-v3 input.r35e-date-visible,
+body.r35e7f-sistema-dates
+.quick-add-field-v3 input.r35e-date-visible {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body.r35e7f-sistema-dates
+input.r35e-date-visible::placeholder {
+    opacity: .7;
+}
+
+.flatpickr-calendar {
+    z-index: 2147483000 !important;
+}
+
+.flatpickr-calendar
+.flatpickr-day.selected {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+@media (max-width: 640px) {
+    .flatpickr-calendar {
+        max-width: calc(100vw - 16px);
+    }
+}
+
+
+/* ARK3360_R35E5_DATE_SEGMENTS */
+
+body.r35e7f-sistema-dates
+input.r35e-date-visible.r35e5-original-visual {
+    display: none !important;
+}
+
+body.r35e7f-sistema-dates .r35e5-date-segments {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+    gap: 3px;
+    padding: 5px 7px;
+    border: 1px solid color-mix(
+        in srgb, currentColor 25%, transparent
+    );
+    border-radius: 11px;
+    background: color-mix(
+        in srgb, currentColor 5%, transparent
+    );
+    color: inherit;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(
+        59, 130, 246, .14
+    );
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments.r35e5-invalid {
+    border-color: #cc3b48;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments > input {
+    display: block !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    min-height: 28px !important;
+    height: 29px !important;
+    margin: 0 !important;
+    padding: 2px !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    font: inherit !important;
+    font-size: 14px !important;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments > input[data-piece="day"],
+body.r35e7f-sistema-dates
+.r35e5-date-segments > input[data-piece="month"] {
+    flex: 1 1 2.6em !important;
+    max-width: 4em;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments > input[data-piece="year"] {
+    flex: 1.7 1 4.5em !important;
+    max-width: 7em;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments > input:focus-visible {
+    background: color-mix(
+        in srgb, #3b82f6 12%, transparent
+    ) !important;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments .r35e5-separator {
+    flex: 0 0 auto;
+    opacity: .6;
+    font-size: 13px;
+    user-select: none;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments
+> button.r35e5-calendar-button {
+    display: grid !important;
+    place-items: center !important;
+    box-sizing: border-box !important;
+    flex: 0 0 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-height: 0 !important;
+    margin: 0 0 0 auto !important;
+    padding: 5px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    color: inherit !important;
+    cursor: pointer !important;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments
+> button.r35e5-calendar-button:hover {
+    background: color-mix(
+        in srgb, currentColor 10%, transparent
+    ) !important;
+}
+
+body.r35e7f-sistema-dates
+.r35e5-date-segments
+> button.r35e5-calendar-button:focus-visible {
+    outline: 2px solid #3b82f6 !important;
+    outline-offset: 1px;
+}
+
+body.r35e7f-sistema-dates .r35e5-date-segments {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.r35e7f-sistema-dates .r35e5-date-segments > input {
+  width: auto !important;
+  min-width: 0 !important;
+}

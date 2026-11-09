@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256" role="img" aria-label="Agenda Personal"><title>Agenda Personal</title>
+<defs><linearGradient id="ibg" x1="6" y1="0" x2="58" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8293FF"/><stop offset=".36" stop-color="#4F4FF4"/><stop offset=".74" stop-color="#3022C8"/><stop offset="1" stop-color="#1C1290"/></linearGradient>
+<radialGradient id="ivio" cx="56" cy="62" r="36" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B25CFF" stop-opacity=".40"/><stop offset="1" stop-color="#B25CFF" stop-opacity="0"/></radialGradient>
+<radialGradient id="igl" cx="16" cy="-4" r="50" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".46"/><stop offset=".55" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="isd" x1="0" y1="30" x2="0" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0A0460" stop-opacity="0"/><stop offset="1" stop-color="#0A0460" stop-opacity=".34"/></linearGradient>
+<linearGradient id="irim" x1="4" y1="0" x2="60" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".80"/><stop offset=".45" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#CDBBFF" stop-opacity=".32"/></linearGradient>
+<linearGradient id="ied" x1="0" y1="10" x2="0" y2="54" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#EDF0FF"/><stop offset="1" stop-color="#C3CCFF"/></linearGradient>
+<linearGradient id="ico" x1="0" y1="10" x2="0" y2="54" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDF0FF"/></linearGradient>
+<linearGradient id="iac" x1="22" y1="0" x2="42" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#A9FFE4"/><stop offset=".55" stop-color="#3DEBC0"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+<filter id="ib1" x="-40%" y="-40%" width="180%" height="190%"><feGaussianBlur stdDeviation="2.2"/></filter>
+<filter id="ib2" x="-60%" y="-120%" width="220%" height="340%"><feGaussianBlur stdDeviation="3.2"/></filter></defs><path d="M64 32C64 63.6 63.6 64 32 64C.4 64 0 63.6 0 32C0 .4 .4 0 32 0C63.6 0 64 .4 64 32Z" fill="url(#ibg)"/>
+<path d="M64 32C64 63.6 63.6 64 32 64C.4 64 0 63.6 0 32C0 .4 .4 0 32 0C63.6 0 64 .4 64 32Z" fill="url(#ivio)"/>
+<path d="M64 32C64 63.6 63.6 64 32 64C.4 64 0 63.6 0 32C0 .4 .4 0 32 0C63.6 0 64 .4 64 32Z" fill="url(#igl)"/>
+<path d="M64 32C64 63.6 63.6 64 32 64C.4 64 0 63.6 0 32C0 .4 .4 0 32 0C63.6 0 64 .4 64 32Z" fill="url(#isd)"/>
+<path d="M64 32C64 63.6 63.6 64 32 64C.4 64 0 63.6 0 32C0 .4 .4 0 32 0C63.6 0 64 .4 64 32Z" transform="translate(.5 .5) scale(.984)" fill="none" stroke="url(#irim)" stroke-width="1"/>
+<g filter="url(#ib1)" opacity=".55" transform="translate(0 2.8)"><path d="M16 50L32 14L48 50" fill="none" stroke="#0B0670" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g filter="url(#ib2)" opacity=".5" transform="translate(0 1.2)"><rect x="24" y="38.4" width="16" height="5" rx="2.5" fill="#2EF0C4"/></g>
+<rect x="19" y="37.5" width="26" height="6" rx="2" fill="url(#iac)"/>
+<rect x="24" y="37.8" width="16" height="1" rx=".5" fill="#fff" opacity=".5"/>
+<path d="M16 50L32 14L48 50" fill="none" stroke="url(#ied)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 50L32 14L48 50" fill="none" stroke="url(#ico)" stroke-width="6.9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

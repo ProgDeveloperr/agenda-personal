@@ -287,7 +287,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
 
-        if ($accion === 'crear') {
+                // ARK3360_R36H_MATERIA_DELETE_HANDLER
+        if ($accion === 'r36h_eliminar_materia') {
+            $id = filter_var(
+                $_POST['id'] ?? null,
+                FILTER_VALIDATE_INT,
+                ['options' => ['min_range' => 1]]
+            );
+            if ($id === false || $id === null ||
+                ($_POST['confirmacion'] ?? '') !== 'ELIMINAR_DEFINITIVAMENTE') {
+                throw new RuntimeException('Confirmación de eliminación inválida.');
+            }
+            try {
+                $resultado = eliminarMateriaSeguraR36H($tenantUserId, (int) $id);
+            } catch (InvalidArgumentException $e) {
+                guardarMensaje('error', $e->getMessage());
+                redirigirMaterias();
+            }
+            guardarMensaje('exito', sprintf(
+                'Materia eliminada definitivamente. Se conservaron %d tareas y %d series, desvinculadas de esa materia.',
+                $resultado['tareas'], $resultado['series']
+            ));
+            redirigirMaterias();
+        }
+
+if ($accion === 'crear') {
 
             $datos =
                 validarMateria($_POST);
@@ -629,7 +653,10 @@ $token =
         Materias | Agenda Personal
     </title>
 
-    <link
+        <!-- ARK3360_R35J_D_FLATPICKR_BASE_CSS -->
+    <link rel="stylesheet" href="/assets/vendor/flatpickr-4.6.13/flatpickr.min.css?v=1b34a42552c96f10">
+    <!-- /ARK3360_R35J_D_FLATPICKR_BASE_CSS -->
+<link
         rel="stylesheet"
         href="/assets/css/style.css"
     >
@@ -647,17 +674,9 @@ $token =
 
 
     <!-- R3-I1 PWA META -->
+<!-- ARK3360_R35N_B_AGIL_ICON -->
 
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
-    <link
-        rel="icon"
-        href="/assets/icons/agenda-personal.svg"
-        type="image/svg+xml"
-    >
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
 
     <meta
         name="application-name"
@@ -683,15 +702,7 @@ $token =
         name="apple-mobile-web-app-title"
         content="Agenda Personal"
     >
-
-
-
-    <link
-        rel="apple-touch-icon"
-        href="/assets/icons/icon-180.png"
-    >
-
-    <link rel="stylesheet" href="/assets/css/materias-legibilidad.css?v=4">
+<link rel="stylesheet" href="/assets/css/materias-legibilidad.css?v=4">
     <link rel="stylesheet" href="/assets/css/global-shell-legibilidad.css?v=3">
     <link rel="stylesheet" href="/assets/css/quick-add-mobile.css?v=1">
     <link rel="stylesheet" href="/assets/css/theme-professional-hybrid-materias.css?v=5">
@@ -701,6 +712,35 @@ $token =
     <link rel="stylesheet" href="/assets/css/global-overlays-premium.css?v=2">
     <link rel="stylesheet" href="/assets/css/r8-account-placement.css?v=1">
     <script src="/assets/js/r8-account-placement.js?v=1" defer></script>
+    <!-- ARK3360_R35B3_NOTIFICATION_BADGE -->
+    <link rel="stylesheet" href="/assets/css/r35b-notification-badge.css?v=1">
+<!-- ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+<link rel="stylesheet" href="/assets/css/r35i-e2-quick-date-parity.css?v=1">
+<!-- /ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+    <!-- ARK3360_R35K_B_SEARCH_DARK_PARITY -->
+    <link rel="stylesheet" href="/assets/css/r35k-b-search-dark-parity.css?v=r35kb-674398ee8d57edad">
+    <!-- /ARK3360_R35K_B_SEARCH_DARK_PARITY -->
+
+<!-- ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+<link rel="stylesheet" href="/assets/css/r35m-d-navbar-brand-global.css?v=5905e4aebab7f230">
+<!-- /ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+
+    <!-- ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+    <link rel="stylesheet" href="/assets/css/r35q-d-mobile-theme-global.css?v=bb89cc627441c62d">
+    <script src="/assets/js/r35s-d-mobile-theme-global.js?v=2abb38c899b16f70" defer></script>
+    <!-- /ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+
+    <!-- ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+    <script src="/assets/js/r35s-c-viewport-cssom-pilot.js?v=a1b051a863df6f0f"></script>
+    <!-- /ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+<link rel="stylesheet" href="/assets/css/r36h-materias-delete-pilot.css?v=5d4e1cc76da941ff">
 </head>
 
 
@@ -712,43 +752,14 @@ $token =
     <div class="app-header-inner">
 
         <a
-            class="app-brand"
+            class="app-brand r35m-brand"
             href="/"
         >
-
-            <span class="app-brand-mark">
-
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M7 3.75h8.5A2.5 2.5 0 0 1 18 6.25v11.5a2.5 2.5 0 0 1-2.5 2.5H7a2.5 2.5 0 0 1-2.5-2.5V6.25A2.5 2.5 0 0 1 7 3.75Z"
-                    />
-                    <path
-                        d="M8.5 2v3.5M14 2v3.5M4.5 8.5H18"
-                    />
-                    <path
-                        d="m8.5 13 2 2 4-4"
-                    />
-                </svg>
-
-            </span>
-
-
-            <span class="app-brand-copy">
-
-                <strong>
-                    Agenda Personal
-                </strong>
-
-                <small>
-                    Workspace
-                </small>
-
-            </span>
-
-        </a>
+      <span class="r35m-brand-lockup">
+        <img class="r35m-brand-image r35m-brand-light" src="/assets/brand/agenda-personal-premium.svg?v=f471ddad7269fdfd" alt="Agenda Personal" width="259" height="76" decoding="async">
+        <img class="r35m-brand-image r35m-brand-dark" src="/assets/brand/agenda-personal-premium-oscuro.svg?v=f20f6bada98c57b3" alt="Agenda Personal" width="259" height="76" decoding="async">
+      </span>
+    </a>
 
 
         <nav
@@ -1861,6 +1872,28 @@ $token =
 
                                     </form>
 
+                                    <!-- ARK3360_R36H_MATERIA_DELETE_BUTTON -->
+                                    <form method="post" action="/materias.php"
+                                          class="r36h-subject-delete-form"
+                                          data-r36h-title="<?= h((string) $materia['nombre']) ?>"
+                                          onsubmit="return window.confirm('¿Eliminar definitivamente la materia «' + this.dataset.r36hTitle + '»?\n\nSi tiene eventos asociados, la eliminación será bloqueada. Las tareas y series vinculadas se conservarán, pero perderán la referencia a esta materia.\n\nEsta acción no se puede deshacer.');">
+                                        <input type="hidden" name="csrf_token" value="<?= h($token) ?>">
+                                        <input type="hidden" name="accion" value="r36h_eliminar_materia">
+                                        <input type="hidden" name="id" value="<?= (int) $materia['id'] ?>">
+                                        <input type="hidden" name="confirmacion" value="ELIMINAR_DEFINITIVAMENTE">
+                                        <button type="submit" class="r36h-subject-delete-button"
+                                                title="Eliminar materia definitivamente"
+                                                aria-label="Eliminar materia definitivamente">
+                                            <svg viewBox="0 0 24 24" width="17" height="17" fill="none"
+                                                 stroke="currentColor" stroke-width="1.8"
+                                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M3 6h18M8 6V4h8v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/>
+                                            </svg>
+                                            <span>Eliminar</span>
+                                        </button>
+                                    </form>
+
+
                                 </div>
 
                             </article>
@@ -1884,10 +1917,10 @@ $token =
 
 </main>
 
-    <script src="/assets/js/command-palette.js?v=6" defer></script>
-    <script src="/assets/js/quick-add.js?v=2" defer></script>
+    <script src="/assets/js/command-palette.js?v=r35ie1-c8ba12954f606e8f" defer></script>
+    <script src="/assets/js/quick-add.js?v=r35ie3-ec2ed63bd623c25f60b6" defer></script>
 <script
-    src="/assets/js/notifications.js?v=2"
+    src="/assets/js/notifications.js?v=3"
     defer
 ></script>
 

@@ -678,3 +678,82 @@ function listarCentroNotificaciones(
             PDO::FETCH_ASSOC
         );
 }
+
+// ARK3360_R36J2_REPOSITORY_PERMANENT_DELETE
+function r36j2Acquire(PDO $pdo): void {
+    $s = $pdo->query("SELECT GET_LOCK('ark3360:r36j2:notificaciones', 30)");
+    if ((int) $s->fetchColumn() !== 1) {
+        throw new RuntimeException('No se pudo bloquear la bandeja. Reintentá.');
+    }
+}
+function r36j2Release(PDO $pdo): void {
+    $s = $pdo->query("SELECT RELEASE_LOCK('ark3360:r36j2:notificaciones')");
+    if ((int) $s->fetchColumn() !== 1) {
+        error_log('R36J2: fallo al liberar el bloqueo del centro.');
+    }
+}
+function r36j2Exclude(PDO $pdo, int $uid, string $key): void {
+    if ($key === '' || strlen($key) > 120) {
+        throw new RuntimeException('Clave de notificación inválida.');
+    }
+    $s = $pdo->prepare(
+        'INSERT IGNORE INTO notificaciones_exclusiones_r36j2(user_id,clave_hash) '
+        . 'VALUES(:uid,:hash)'
+    );
+    $s->execute(['uid'=>$uid, 'hash'=>hash('sha256', $key)]);
+}
+function r36j2HistoryCount(int $uid): int {
+    $s = db()->prepare('SELECT COUNT(*) FROM notificaciones WHERE user_id=:uid '
+        . 'AND (resuelta_at IS NOT NULL OR descartada_at IS NOT NULL)');
+    $s->execute(['uid'=>$uid]);
+    return (int) $s->fetchColumn();
+}
+function r36j2DeleteOne(int $uid, int $id): void {
+    if ($uid <= 0 || $id <= 0) throw new InvalidArgumentException('Identificador inválido.');
+    $pdo = db();
+    if ($pdo->inTransaction()) throw new RuntimeException('Transacción anidada no permitida.');
+    r36j2Acquire($pdo);
+    try {
+        $pdo->beginTransaction();
+        $s = $pdo->prepare('SELECT clave_unica FROM notificaciones '
+            . 'WHERE id=:id AND user_id=:uid FOR UPDATE');
+        $s->execute(['id'=>$id, 'uid'=>$uid]);
+        $key = $s->fetchColumn();
+        if ($key === false) throw new InvalidArgumentException('Notificación inexistente o ajena.');
+        r36j2Exclude($pdo, $uid, (string) $key);
+        $d = $pdo->prepare('DELETE FROM notificaciones WHERE id=:id AND user_id=:uid');
+        $d->execute(['id'=>$id, 'uid'=>$uid]);
+        if ($d->rowCount() !== 1) throw new RuntimeException('Eliminación inconsistente.');
+        $pdo->commit();
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) $pdo->rollBack();
+        throw $e;
+    } finally { r36j2Release($pdo); }
+}
+function r36j2ClearHistory(int $uid): int {
+    if ($uid <= 0) throw new InvalidArgumentException('Usuario inválido.');
+    $pdo = db();
+    if ($pdo->inTransaction()) throw new RuntimeException('Transacción anidada no permitida.');
+    r36j2Acquire($pdo);
+    try {
+        $pdo->beginTransaction();
+        $s = $pdo->prepare('SELECT id,clave_unica FROM notificaciones '
+            . 'WHERE user_id=:uid AND (resuelta_at IS NOT NULL OR descartada_at IS NOT NULL) '
+            . 'ORDER BY id FOR UPDATE');
+        $s->execute(['uid'=>$uid]);
+        $rows = $s->fetchAll(PDO::FETCH_ASSOC);
+        if (count($rows) > 2000) throw new InvalidArgumentException('Historial demasiado grande; revisión requerida.');
+        $d = $pdo->prepare('DELETE FROM notificaciones WHERE id=:id AND user_id=:uid '
+            . 'AND (resuelta_at IS NOT NULL OR descartada_at IS NOT NULL)');
+        foreach ($rows as $row) {
+            r36j2Exclude($pdo, $uid, (string) $row['clave_unica']);
+            $d->execute(['id'=>(int)$row['id'], 'uid'=>$uid]);
+            if ($d->rowCount() !== 1) throw new RuntimeException('Limpieza inconsistente; revertida.');
+        }
+        $pdo->commit();
+        return count($rows);
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) $pdo->rollBack();
+        throw $e;
+    } finally { r36j2Release($pdo); }
+}

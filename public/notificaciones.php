@@ -206,7 +206,47 @@ if (
 
         switch ($accion) {
 
-            case 'mark_all_read':
+                        // ARK3360_R36J2_POST_ACTIONS
+            case 'r36j2_delete_one':
+                if ($id === false || $id === null ||
+                    ($_POST['confirmacion'] ?? '') !== 'ELIMINAR_DEFINITIVAMENTE') {
+                    http_response_code(422);
+                    $error = 'Confirmación inválida.';
+                    break;
+                }
+                try {
+                    r36j2DeleteOne($tenantUserId, (int)$id);
+                    $_SESSION['r36j2_flash'] = 'Notificación eliminada definitivamente.';
+                    redirigirCentro($filtro);
+                } catch (InvalidArgumentException $e) {
+                    http_response_code(422);
+                    $error = $e->getMessage();
+                } catch (Throwable $e) {
+                    error_log('R36J2 DELETE: ' . $e->getMessage());
+                    http_response_code(500);
+                    $error = 'No se pudo eliminar la notificación.';
+                }
+                break;
+            case 'r36j2_clear_history':
+                if (($_POST['confirmacion'] ?? '') !== 'LIMPIAR_HISTORIAL') {
+                    http_response_code(422);
+                    $error = 'Confirmación inválida.';
+                    break;
+                }
+                try {
+                    $deleted = r36j2ClearHistory($tenantUserId);
+                    $_SESSION['r36j2_flash'] = $deleted . ' avisos históricos eliminados definitivamente.';
+                    redirigirCentro($filtro);
+                } catch (InvalidArgumentException $e) {
+                    http_response_code(422);
+                    $error = $e->getMessage();
+                } catch (Throwable $e) {
+                    error_log('R36J2 CLEANUP: ' . $e->getMessage());
+                    http_response_code(500);
+                    $error = 'No se pudo limpiar el historial.';
+                }
+                break;
+case 'mark_all_read':
 
                 marcarTodasNotificacionesLeidas($tenantUserId);
 
@@ -352,6 +392,7 @@ if (
 
 $conteos =
     contarCentroNotificaciones($tenantUserId);
+$r36j2Count=r36j2HistoryCount($tenantUserId);
 
 
 $notificaciones =
@@ -406,7 +447,10 @@ $etiquetasFiltro = [
         Notificaciones | Agenda Personal
     </title>
 
-    <link
+        <!-- ARK3360_R35J_D_FLATPICKR_BASE_CSS -->
+    <link rel="stylesheet" href="/assets/vendor/flatpickr-4.6.13/flatpickr.min.css?v=1b34a42552c96f10">
+    <!-- /ARK3360_R35J_D_FLATPICKR_BASE_CSS -->
+<link
         rel="stylesheet"
         href="/assets/css/style.css"
     >
@@ -424,17 +468,9 @@ $etiquetasFiltro = [
 
 
     <!-- R3-I1 PWA META -->
+<!-- ARK3360_R35N_B_AGIL_ICON -->
 
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
-    <link
-        rel="icon"
-        href="/assets/icons/agenda-personal.svg"
-        type="image/svg+xml"
-    >
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
 
     <meta
         name="application-name"
@@ -460,15 +496,7 @@ $etiquetasFiltro = [
         name="apple-mobile-web-app-title"
         content="Agenda Personal"
     >
-
-
-
-    <link
-        rel="apple-touch-icon"
-        href="/assets/icons/icon-180.png"
-    >
-
-    <link rel="stylesheet" href="/assets/css/global-shell-legibilidad.css?v=3">
+<link rel="stylesheet" href="/assets/css/global-shell-legibilidad.css?v=3">
     <link rel="stylesheet" href="/assets/css/notificaciones-legibilidad.css?v=3">
     <link rel="stylesheet" href="/assets/css/quick-add-mobile.css?v=1">
     <link rel="stylesheet" href="/assets/css/global-overlays-premium.css?v=2">
@@ -478,6 +506,52 @@ $etiquetasFiltro = [
     <script src="/assets/js/theme-switcher.js?v=1" defer></script>
     <link rel="stylesheet" href="/assets/css/r8-account-placement.css?v=1">
     <script src="/assets/js/r8-account-placement.js?v=1" defer></script>
+    <!-- ARK3360_R35B3_NOTIFICATION_BADGE -->
+    <link rel="stylesheet" href="/assets/css/r35b-notification-badge.css?v=1">
+<!-- ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+<link rel="stylesheet" href="/assets/css/r35i-e2-quick-date-parity.css?v=1">
+<!-- /ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+
+<!-- ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+<link rel="stylesheet" href="/assets/css/r35m-d-navbar-brand-global.css?v=5905e4aebab7f230">
+<!-- /ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+
+    <!-- ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+    <link rel="stylesheet" href="/assets/css/r35q-d-mobile-theme-global.css?v=bb89cc627441c62d">
+    <script src="/assets/js/r35s-d-mobile-theme-global.js?v=2abb38c899b16f70" defer></script>
+    <!-- /ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+
+    <!-- ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+    <script src="/assets/js/r35s-c-viewport-cssom-pilot.js?v=a1b051a863df6f0f"></script>
+    <!-- /ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+
+    <!-- ARK3360_R35S_E2_NOTIFICACIONES_HERO_ALIGN -->
+    <link rel="stylesheet" href="/assets/css/r35s-e2-notificaciones-hero-align.css?v=91a6d7bca6877ac4">
+    <!-- /ARK3360_R35S_E2_NOTIFICACIONES_HERO_ALIGN -->
+
+<!-- ARK3360_R35S_E3_NOTIFICACIONES_HERO_CENTER -->
+<link rel="stylesheet" href="/assets/css/r35s-e3-notificaciones-hero-center.css?v=e7f09b2a5bf5fc18">
+<!-- /ARK3360_R35S_E3_NOTIFICACIONES_HERO_CENTER -->
+
+<!-- ARK3360_R35S_E4_NOTIFICATION_PARAGRAPH_CENTER -->
+<link rel="stylesheet" href="/assets/css/r35s-e4-notificaciones-parrafo-center.css?v=5ba50c285947d0f4">
+<!-- /ARK3360_R35S_E4_NOTIFICATION_PARAGRAPH_CENTER -->
+
+<!-- ARK3360_R35T_B_NOTIFICACIONES_CARDS_LIGHT_PILOT -->
+<link rel="stylesheet" href="/assets/css/r35t-b-notificaciones-cards-light-pilot.css?v=77233bc49ade3f84">
+<!-- /ARK3360_R35T_B_NOTIFICACIONES_CARDS_LIGHT_PILOT -->
+
+<!-- ARK3360_R35T_C_COMPACT_NOTIFICATION_CARDS -->
+<link rel="stylesheet" href="/assets/css/r35t-c-notificaciones-cards-compact.css?v=42a8e20f5d2d110b">
+<!-- /ARK3360_R35T_C_COMPACT_NOTIFICATION_CARDS -->
+<link rel="stylesheet" href="/assets/css/r36j2-notificaciones-delete.css?v=bfad74dcb0efe99f">
 </head>
 
 
@@ -489,40 +563,14 @@ $etiquetasFiltro = [
     <div class="app-header-inner">
 
         <a
-            class="app-brand"
+            class="app-brand r35m-brand"
             href="/"
         >
-
-            <span class="app-brand-mark">
-
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M7 3.75h8.5A2.5 2.5 0 0 1 18 6.25v11.5a2.5 2.5 0 0 1-2.5 2.5H7a2.5 2.5 0 0 1-2.5-2.5V6.25A2.5 2.5 0 0 1 7 3.75Z"
-                    />
-                    <path
-                        d="M8.5 2v3.5M14 2v3.5M4.5 8.5H18"
-                    />
-                    <path
-                        d="m8.5 13 2 2 4-4"
-                    />
-                </svg>
-
-            </span>
-
-
-            <span class="app-brand-copy">
-
-                <strong>
-                    Agenda Personal
-                </strong>
-
-                <small>
-                    Workspace
-                </small>
-
-            </span>
-
-        </a>
+      <span class="r35m-brand-lockup">
+        <img class="r35m-brand-image r35m-brand-light" src="/assets/brand/agenda-personal-premium.svg?v=f471ddad7269fdfd" alt="Agenda Personal" width="259" height="76" decoding="async">
+        <img class="r35m-brand-image r35m-brand-dark" src="/assets/brand/agenda-personal-premium-oscuro.svg?v=f20f6bada98c57b3" alt="Agenda Personal" width="259" height="76" decoding="async">
+      </span>
+    </a>
 
 
         <nav
@@ -781,6 +829,26 @@ $etiquetasFiltro = [
             <?php endif; ?>
 
         </header>
+
+        <!-- ARK3360_R36J2_HISTORY_TOOLBAR -->
+        <?php if ($r36j2Count > 0): ?>
+            <div class="r36j2-toolbar">
+                <form method="post" action="/notificaciones.php"
+                      data-count="<?= (int)$r36j2Count ?>"
+                      onsubmit="return window.confirm('¿Eliminar definitivamente ' + this.dataset.count + ' avisos resueltos o descartados?\n\nLos avisos activos permanecerán. Esta acción no se puede deshacer.');">
+                    <input type="hidden" name="csrf_token" value="<?= h($csrf) ?>">
+                    <input type="hidden" name="action" value="r36j2_clear_history">
+                    <input type="hidden" name="filtro" value="<?= h($filtro) ?>">
+                    <input type="hidden" name="confirmacion" value="LIMPIAR_HISTORIAL">
+                    <button type="submit" class="r36j2-delete-button">Limpiar historial (<?= (int)$r36j2Count ?>)</button>
+                </form>
+            </div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['r36j2_flash'])): ?>
+            <p class="r36j2-flash"><?= h((string)$_SESSION['r36j2_flash']) ?></p>
+            <?php unset($_SESSION['r36j2_flash']); ?>
+        <?php endif; ?>
+
 
 
         <nav
@@ -1278,7 +1346,27 @@ $etiquetasFiltro = [
 
                         <?php endif; ?>
 
-                    </div>
+                    
+                        <!-- ARK3360_R36J2_SINGLE_BUTTON -->
+                        <form method="post" action="/notificaciones.php"
+                              class="r36j2-delete-form"
+                              data-title="<?= h((string)$notificacion['titulo']) ?>"
+                              onsubmit="return window.confirm('¿Eliminar definitivamente «' + this.dataset.title + '»?\n\nNo volverá a generarse. Esta acción no se puede deshacer.');">
+                            <input type="hidden" name="csrf_token" value="<?= h($csrf) ?>">
+                            <input type="hidden" name="action" value="r36j2_delete_one">
+                            <input type="hidden" name="id" value="<?= (int)$notificacion['id'] ?>">
+                            <input type="hidden" name="filtro" value="<?= h($filtro) ?>">
+                            <input type="hidden" name="confirmacion" value="ELIMINAR_DEFINITIVAMENTE">
+                            <button type="submit" class="r36j2-delete-button" title="Eliminar definitivamente">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                     stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 6h18M8 6V4h8v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/>
+                                </svg><span>Eliminar</span>
+                            </button>
+                        </form>
+
+</div>
 
                 </article>
 
@@ -1338,17 +1426,17 @@ $etiquetasFiltro = [
 
 
 <script
-    src="/assets/js/command-palette.js?v=6"
+    src="/assets/js/command-palette.js?v=r35ie1-c8ba12954f606e8f"
     defer
 ></script>
 
 <script
-    src="/assets/js/quick-add.js?v=2"
+    src="/assets/js/quick-add.js?v=r35ie3-ec2ed63bd623c25f60b6"
     defer
 ></script>
 
 <script
-    src="/assets/js/notifications.js?v=2"
+    src="/assets/js/notifications.js?v=3"
     defer
 ></script>
 

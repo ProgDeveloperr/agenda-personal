@@ -396,3 +396,47 @@ function listarEventosPorMateria(
 
     return $stmt->fetchAll();
 }
+
+
+// ARK3360_R36G_EVENT_DELETE_PILOT_REPOSITORY
+function eliminarEventoR36G(int $userId, int $id): void
+{
+    if ($userId <= 0 || $id <= 0) {
+        throw new InvalidArgumentException('Identificador inválido.');
+    }
+
+    $pdo = db();
+    if ($pdo->inTransaction()) {
+        throw new RuntimeException('No se puede iniciar una eliminación anidada.');
+    }
+    $pdo->beginTransaction();
+    try {
+        $consulta = $pdo->prepare(
+            'SELECT id FROM eventos_academicos '
+            . 'WHERE id=:id AND user_id=:user_id FOR UPDATE'
+        );
+        $consulta->execute(['id' => $id, 'user_id' => $userId]);
+        if ($consulta->fetchColumn() === false) {
+            throw new InvalidArgumentException(
+                'El evento no existe o no te pertenece.'
+            );
+        }
+
+        // Las FK vigentes: notificaciones CASCADE;
+        // tareas y series_tareas SET NULL. Nunca se borran tareas.
+        $eliminar = $pdo->prepare(
+            'DELETE FROM eventos_academicos '
+            . 'WHERE id=:id AND user_id=:user_id'
+        );
+        $eliminar->execute(['id' => $id, 'user_id' => $userId]);
+        if ($eliminar->rowCount() !== 1) {
+            throw new RuntimeException('No se pudo verificar la eliminación.');
+        }
+        $pdo->commit();
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        throw $e;
+    }
+}

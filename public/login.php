@@ -1,17 +1,26 @@
 <?php
 declare(strict_types=1);
+require_once '/var/www/app/public_host.php';
+try {
+    $agendaPublicHost = agendaPublicHost();
+} catch (Throwable $e) {
+    http_response_code(503);
+    header('Cache-Control: no-store');
+    exit('Configuracion de host no disponible.');
+}
+
 
 // Las credenciales se ingresan por Tailscale HTTPS.
 $hostActual = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
 $hostActual = preg_replace('/:443$/', '', $hostActual);
 $proxyProtocol = strtolower(trim((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')));
-if ($hostActual !== ((getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com')) || $proxyProtocol !== 'https') {
+if (!in_array($hostActual, [$agendaPublicHost, ($agendaPublicHost . ':10000')], true) || $proxyProtocol !== 'https') {
     if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         http_response_code(403);
         header('Cache-Control: no-store');
         exit;
     }
-    header(('Location: https://' . (getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com') . '/login.php'), true, 308);
+    header('Location: https://' . $agendaPublicHost . '/login.php', true, 308);
     header('Cache-Control: no-store');
     exit;
 }
@@ -35,6 +44,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (validarCsrf() && is_string($name) && is_string($pass)
         && agendaIntentarLogin($name, $pass)) {
         // Bienvenida tras autenticar correctamente.
+        if (
+            isset($_SESSION['mfa_pending_user_id'])
+        ) {
+            header(
+                'Location: /mfa-verificar.php',
+                true,
+                303
+            );
+            exit;
+        }
+
         $_SESSION['r8_welcome_pending'] = true;
         header('Location: /', true, 303);
         exit;
@@ -53,6 +73,16 @@ $token = htmlspecialchars(csrfToken(), ENT_QUOTES, 'UTF-8');
 <meta name="theme-color" content="#0b121b">
 <title>Ingresar · Agenda Personal</title>
 <link rel="stylesheet" href="/assets/css/r8-login-premium.css?v=2">
+<!-- ARK3360_R35N_B_AGIL_ICON -->
+
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
 </head>
 <body>
 <div class="login-scene">

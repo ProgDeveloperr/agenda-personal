@@ -1,0 +1,47 @@
+/* ARK3360_R35Q_D_MOBILE_THEME_GLOBAL */
+/* Pilot exclusively on Inicio. Theme, account and notification functionality unchanged. */
+@media (max-width: 760px) {
+  body.ui-v3:not(.page-dashboard-v3) .app-header-inner {
+    grid-template-columns: minmax(0, 1fr) 126px !important;
+    column-gap: 8px !important;
+  }
+
+  body.ui-v3:not(.page-dashboard-v3) .app-header-inner
+    > .notification-center-v3.notification-center-v3:has(> .r8-account-menu) {
+    grid-column: 2 !important;
+    justify-self: end !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    width: 126px !important;
+    min-width: 126px !important;
+    max-width: 126px !important;
+    overflow: visible !important;
+  }
+
+  body.ui-v3:not(.page-dashboard-v3) .app-header-inner
+    > .notification-center-v3 > .theme-toggle-v3[data-theme-toggle] {
+    display: inline-grid !important;
+    place-items: center !important;
+    order: -2 !important;
+    flex: 0 0 36px !important;
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body.ui-v3:not(.page-dashboard-v3) .app-header-inner
+    > .notification-center-v3 > .r8-account-menu {
+    order: -1 !important;
+    flex: 0 0 36px !important;
+  }
+
+  body.ui-v3:not(.page-dashboard-v3) .app-header-inner
+    > .notification-center-v3 > .notification-bell-v3 {
+    order: 0 !important;
+    flex: 0 0 42px !important;
+  }
+}

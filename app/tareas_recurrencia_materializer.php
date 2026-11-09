@@ -6,7 +6,7 @@ require_once __DIR__
     . '/tareas_recurrencia_repository.php';
 
 
-function listarOcurrenciasAbiertasSerieTarea(int $userId,
+function listarOcurrenciasAbiertasSerieTarea(int $userId, 
     int $serieId
 ): array {
 
@@ -58,7 +58,7 @@ function listarOcurrenciasAbiertasSerieTarea(int $userId,
 }
 
 
-function ultimaFechaMaterializadaSerieTarea(int $userId,
+function ultimaFechaMaterializadaSerieTarea(int $userId, 
     int $serieId
 ): ?string {
 
@@ -104,7 +104,7 @@ function ultimaFechaMaterializadaSerieTarea(int $userId,
 }
 
 
-function procesarSerieTareaMaterializador(int $userId,
+function procesarSerieTareaMaterializador(int $userId, 
     array $serie
 ): array {
     $serieOwnerId =
@@ -157,7 +157,7 @@ function procesarSerieTareaMaterializador(int $userId,
 
 
     $abiertas =
-        listarOcurrenciasAbiertasSerieTarea($userId,
+        listarOcurrenciasAbiertasSerieTarea($userId, 
             $serieId
         );
 
@@ -196,7 +196,7 @@ function procesarSerieTareaMaterializador(int $userId,
 
 
     $ultima =
-        ultimaFechaMaterializadaSerieTarea($userId,
+        ultimaFechaMaterializadaSerieTarea($userId, 
             $serieId
         );
 
@@ -239,7 +239,7 @@ function procesarSerieTareaMaterializador(int $userId,
 
 
     $tareaId =
-        crearOcurrenciaSerieTarea($userId,
+        crearOcurrenciaSerieTarea($userId, 
             $serieId,
             $candidata
         );
@@ -326,7 +326,7 @@ function ejecutarMaterializadorRecurrencias(): int
             try {
 
                 $resultado =
-                    procesarSerieTareaMaterializador((int) ($serie['user_id'] ?? 0),
+                    procesarSerieTareaMaterializador((int) ($serie['user_id'] ?? 0), 
                         $serie
                     );
 

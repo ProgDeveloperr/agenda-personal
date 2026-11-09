@@ -1,0 +1,127 @@
+
+/* ARK3360_R35K_B_SEARCH_DARK_PARITY */
+
+/*
+ * Restablece el tema oscuro del buscador
+ * solamente en cuatro secciones.
+ *
+ * No afecta el boton Buscar del navbar,
+ * la X, el teclado ni los eventos JS.
+ *
+ * En data-theme="dark" se conserva
+ * el diseño oscuro existente.
+ */
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3 .command-dialog-v3 {
+    background: linear-gradient(
+        155deg,
+        rgba(15, 24, 36, .99),
+        rgba(7, 13, 20, .995)
+    ) !important;
+
+    border: 1px solid
+        rgba(151, 166, 184, .19) !important;
+
+    box-shadow:
+        0 38px 110px rgba(0, 0, 0, .62),
+        0 0 0 1px rgba(255,255,255,.018)
+        !important;
+
+    color: #dfe7ef !important;
+}
+
+/* Campo Buscar: texto claro sobre fondo oscuro. */
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3 .command-input-v3 {
+    color: #f2f6fa !important;
+    background: transparent !important;
+}
+
+/* Barras de contexto y pie: eliminar el fondo blanco. */
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3
+:is(.command-context-v3, .command-footer-v3) {
+    background: #0e1821 !important;
+    border-color:
+        rgba(151, 174, 193, .09) !important;
+    color: #8196a7 !important;
+}
+
+/* Filas: mismo fondo y hover del buscador original. */
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3 .command-item-v3 {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3
+:is(.command-item-v3:hover, .command-item-active-v3) {
+    background: linear-gradient(
+        90deg,
+        rgba(87, 148, 255, .078),
+        rgba(87, 148, 255, .025)
+    ) !important;
+    border-color:
+        rgba(87, 148, 255, .17) !important;
+}
+
+/* Garantizar contraste de los titulos. */
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3
+.command-item-content-v3 strong {
+    color: #dfe7ef !important;
+}
+
+html:not([data-theme="dark"])
+body.ui-v3:is(
+    .page-calendar-v3,
+    .page-life-v3,
+    .page-subjects-v3,
+    .page-performance-v3
+)
+.command-overlay-v3
+.command-item-content-v3 small {
+    color: #657c92 !important;
+}

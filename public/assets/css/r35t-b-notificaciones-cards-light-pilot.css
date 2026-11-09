@@ -1,0 +1,83 @@
+/* ARK3360-R35T-B | PILOTO: tarjetas de lista, solo tema claro.
+   NO cambia grillas, cards globales, dark, navbar, header o funcionalidad. */
+
+/* Superficie neutra con contorno visible; conserva distincion de no leida. */
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-item-v3 {
+  background: linear-gradient(160deg, #ffffff 0%, #f9fbfe 100%) !important;
+  border: 1px solid #cbd9e6 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 7px 24px rgba(28, 52, 77, .055) !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-item-v3:hover {
+  border-color: #a9c3da !important;
+  box-shadow: 0 10px 26px rgba(28, 52, 77, .085) !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-item-unread-v3 {
+  border-color: #86aeea !important;
+  box-shadow: 0 8px 25px rgba(47, 110, 198, .095) !important;
+}
+/* Las descartadas/resueltas siguen diferenciadas, pero son legibles. */
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 :is(.notifications-center-item-dismissed, .notifications-center-item-resolved,
+.notifications-center-item-dismissed-v3, .notifications-center-item-resolved-v3) {
+  opacity: .88 !important;
+  background: #f7f9fc !important;
+}
+
+/* Jerarquia de lectura. No se toca posicion, orden ni dimensiones de grilla. */
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-meta-v3 {
+  color: #536b80 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  font-weight: 650 !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-meta-v3 a {
+  color: #285c91 !important;
+  font-weight: 750 !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-copy-v3 > strong {
+  color: #203448 !important;
+  font-size: 17px !important;
+  font-weight: 760 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -.012em !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-copy-v3 > p {
+  color: #455d72 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  opacity: 1 !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-copy-v3 > small {
+  color: #526d82 !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 .notifications-center-state-v3 span {
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  font-weight: 700 !important;
+}
+/* Acciones mas faciles de leer. Sin alterar enlaces, eventos o estados disabled. */
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 :is(.notifications-open-v3, .notifications-secondary-v3) {
+  font-size: 13px !important;
+  font-weight: 740 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+.notifications-list-center-v3 :is(.notifications-open-v3, .notifications-secondary-v3):focus-visible {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 2px !important;
+}

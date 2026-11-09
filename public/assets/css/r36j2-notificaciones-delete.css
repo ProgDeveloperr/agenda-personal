@@ -1,0 +1,21 @@
+/* R36-J2: solo botones nuevos. CSS previo intacto. */
+.notifications-center-actions-v3 form.r36j2-delete-form {display:inline-flex;min-width:0;max-width:100%;margin:0}
+.r36j2-delete-form .r36j2-delete-button,.r36j2-toolbar .r36j2-delete-button {
+ display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;
+ padding:8px 12px;border:1px solid #e6a8ad;border-radius:10px;background:#fff5f5;
+ color:#972e3c;font:inherit;font-size:13px;font-weight:650;line-height:1.2;
+ cursor:pointer;white-space:normal;text-align:center
+}
+.r36j2-delete-form .r36j2-delete-button:hover,.r36j2-toolbar .r36j2-delete-button:hover {
+ background:#fee4e4;border-color:#cd6570
+}
+html[data-theme="dark"] .r36j2-delete-form .r36j2-delete-button,
+html[data-theme="dark"] .r36j2-toolbar .r36j2-delete-button {
+ background:rgba(165,42,52,.14);border-color:rgba(254,150,158,.44);color:#ffb8bd
+}
+.r36j2-toolbar{display:flex;justify-content:flex-end;gap:10px;padding:10px 16px;flex-wrap:wrap}
+.r36j2-toolbar form{margin:0}
+.r36j2-flash{margin:10px 16px;padding:12px 14px;border-radius:12px;
+ background:rgba(34,170,107,.09);border:1px solid rgba(34,170,107,.3);color:#157453}
+html[data-theme="dark"] .r36j2-flash{color:#a1e5c2}
+@media(max-width:600px){.r36j2-toolbar{padding:10px}.r36j2-toolbar form,.r36j2-toolbar button{width:100%}}

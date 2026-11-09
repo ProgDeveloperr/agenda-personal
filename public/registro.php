@@ -1,5 +1,14 @@
 <?php
 declare(strict_types=1);
+require_once '/var/www/app/public_host.php';
+try {
+    $agendaPublicHost = agendaPublicHost();
+} catch (Throwable $e) {
+    http_response_code(503);
+    header('Cache-Control: no-store');
+    exit('Configuracion de host no disponible.');
+}
+
 
 // Registro disponible solamente por la ruta HTTPS privada.
 $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
@@ -8,7 +17,7 @@ $proto = strtolower(trim(
     (string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')
 ));
 
-if ($host !== ((getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com')) || $proto !== 'https') {
+if (!in_array($host, [$agendaPublicHost, ($agendaPublicHost . ':10000')], true) || $proto !== 'https') {
     if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         http_response_code(403);
         header('Cache-Control: no-store');
@@ -16,7 +25,7 @@ if ($host !== ((getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com')) || $proto
     }
 
     header(
-        ('Location: https://' . (getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com') . '/registro.php'),
+        'Location: https://' . $agendaPublicHost . '/registro.php',
         true, 308
     );
     exit;
@@ -170,6 +179,16 @@ $usuarioSeguro = htmlspecialchars(
 <meta name="theme-color" content="#0b121b">
 <title>Crear cuenta · Agenda Personal</title>
 <link rel="stylesheet" href="/assets/css/r9-registro.css?v=1">
+<!-- ARK3360_R35N_B_AGIL_ICON -->
+
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
 </head>
 <body>
 <div class="register-scene">

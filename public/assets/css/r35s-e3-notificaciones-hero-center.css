@@ -1,0 +1,11 @@
+/* R35S-E3 | NOTIFICACIONES | CENTRADO QUIRURGICO
+   Solo viewport movil ancho: width <1450 o height <897.
+   Excluye el movil angosto de 760px o menos. */
+@media (width > 760px) and (width < 1450px),
+       (width > 760px) and (height < 897px) {
+  body.ui-v3.page-notifications-v3 .notifications-hero-v3 > div:first-child {
+    align-self: center !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}

@@ -10,7 +10,7 @@ function appConfig(): array
         return $config;
     }
 
-    $path = (getenv('AGENDA_ENV_FILE') ?: dirname(__DIR__) . '/.env');
+    $path = '/run/agenda/agenda.env';
 
     if (!is_readable($path)) {
         throw new RuntimeException(

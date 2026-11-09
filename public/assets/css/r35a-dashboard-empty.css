@@ -1,0 +1,38 @@
+/* ARK3360_R35A_EMPTY_ACTIONS
+   Alcance: estado vacio de Proximas acciones.
+   No modifica tarjetas con tareas.
+*/
+
+body.page-dashboard-v3 .dashboard-actions-v4 .dashboard-empty-compact-v3 {
+    min-height: 156px !important;
+    padding: 22px 18px !important;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    text-align: center !important;
+}
+
+body.page-dashboard-v3 .dashboard-actions-v4 .dashboard-empty-compact-v3 strong {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+}
+
+body.page-dashboard-v3 .dashboard-actions-v4 .dashboard-empty-compact-v3 p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    max-width: 460px;
+    margin: 0 !important;
+}
+
+
+
+@media (max-width: 640px) {
+    body.page-dashboard-v3 .dashboard-actions-v4 .dashboard-empty-compact-v3 {
+        min-height: 146px !important;
+        padding: 20px 14px !important;
+    }
+}

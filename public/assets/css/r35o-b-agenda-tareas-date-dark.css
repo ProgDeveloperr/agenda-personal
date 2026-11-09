@@ -1,0 +1,24 @@
+
+/* ARK3360_R35O_B_DATE_DARK_SURFACE */
+
+/*
+ * Solo los campos de fecha segmentados
+ * de los formularios de Agenda y Tareas.
+ *
+ * Quedan excluidos los campos de Quick Add.
+ * No modifica tamaños, posicion, validaciones,
+ * Flatpickr ni estados de foco/error.
+ */
+
+html body.ui-v3.page-agenda-v3
+.r35e5-date-segments:not(
+    .quick-add-overlay-v3 .r35e5-date-segments
+),
+html body.ui-v3.page-tasks-v4
+.r35e5-date-segments:not(
+    .quick-add-overlay-v3 .r35e5-date-segments
+) {
+    background: #0d151d !important;
+    border-color: rgba(157, 177, 196, .15) !important;
+    color: #e8eef4 !important;
+}

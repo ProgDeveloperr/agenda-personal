@@ -1,0 +1,17 @@
+/* ARK3360_R35S_E2_NOTIFICACIONES_HERO_ALIGN
+ * Fix only the position of the three header texts inside Notificaciones.
+ * Approved compact viewport: width < 1450px OR height < 897px.
+ * Exclude narrow <= 760px, where the existing presentation is approved.
+ *
+ * Use Media Queries Level 4 range syntax deliberately: the existing R35S-C
+ * CSSOM bridge rewrites max-width 760px and min-width 761px rules.
+ * This new CSS must NOT be rewritten by the bridge.
+ * No color, size, spacing, layout grid, notification data or functionality
+ * is changed. The NO LEIDAS status block keeps its existing alignment.
+ */
+@media (width > 760px) and (width < 1450px),
+       (width > 760px) and (height < 897px) {
+  body.ui-v3.page-notifications-v3 .notifications-hero-v3 > div:first-child {
+    align-self: flex-start !important;
+  }
+}

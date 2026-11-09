@@ -1,0 +1,44 @@
+/* ARK3360_R36F_TASK_DELETE_PILOT_CSS | Exclusivo del boton nuevo */
+.task-actions-v4 form.r36f-task-delete-form {
+  display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+.task-actions-v4 form.r36f-task-delete-form .r36f-task-delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid #e6a8ad;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #972e3c;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.task-actions-v4 form.r36f-task-delete-form .r36f-task-delete-button:hover,
+.task-actions-v4 form.r36f-task-delete-form .r36f-task-delete-button:focus-visible {
+  background: #fee4e4;
+  border-color: #cd6570;
+}
+html[data-theme="dark"] .task-actions-v4 form.r36f-task-delete-form .r36f-task-delete-button {
+  background: rgba(165, 42, 52, .14);
+  border-color: rgba(254, 150, 158, .44);
+  color: #ffb8bd;
+}
+html[data-theme="dark"] .task-actions-v4 form.r36f-task-delete-form .r36f-task-delete-button:hover {
+  background: rgba(165, 42, 52, .26);
+}
+@media (max-width: 600px) {
+  .task-actions-v4 form.r36f-task-delete-form .r36f-task-delete-button {
+    min-height: 40px;
+    padding: 9px 12px;
+  }
+}

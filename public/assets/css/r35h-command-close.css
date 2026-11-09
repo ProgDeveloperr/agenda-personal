@@ -1,0 +1,167 @@
+/* ARK3360_R35H_CLOSE_BUTTON */
+
+body.ui-v3
+.command-overlay-v3
+.command-dialog-v3 {
+    position: relative !important;
+}
+
+body.ui-v3
+.command-overlay-v3
+.command-dialog-v3
+> button.r35h-command-close {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    z-index: 3 !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+
+    min-width: 66px !important;
+    height: 40px !important;
+    padding: 0 12px !important;
+    margin: 0 !important;
+
+    border: 1px solid color-mix(
+        in srgb,
+        currentColor 10%,
+        transparent
+    ) !important;
+    border-radius: 12px !important;
+
+    background: color-mix(
+        in srgb,
+        currentColor 2%,
+        transparent
+    ) !important;
+    color: inherit !important;
+
+    font: inherit !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+    appearance: none !important;
+    cursor: pointer !important;
+
+    opacity: .9;
+    transition:
+        background-color .15s ease,
+        opacity .15s ease,
+        border-color .15s ease;
+}
+
+body.ui-v3
+.command-overlay-v3
+.command-dialog-v3
+> button.r35h-command-close:hover {
+    opacity: 1;
+    background: color-mix(
+        in srgb,
+        currentColor 8%,
+        transparent
+    ) !important;
+    border-color: color-mix(
+        in srgb,
+        currentColor 16%,
+        transparent
+    ) !important;
+}
+
+body.ui-v3
+.command-overlay-v3
+.command-dialog-v3
+> button.r35h-command-close:focus-visible {
+    opacity: 1;
+    outline: 2px solid #3b82f6 !important;
+    outline-offset: 2px;
+}
+
+body.ui-v3
+.command-overlay-v3
+.command-dialog-v3
+> button.r35h-command-close > span {
+    font-size: 18px !important;
+    line-height: 1 !important;
+    opacity: .9;
+}
+
+body.ui-v3
+.command-overlay-v3
+.command-dialog-v3
+> button.r35h-command-close > kbd {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+    font: inherit !important;
+    font-size: 11px !important;
+    letter-spacing: .04em;
+    opacity: .72;
+    box-shadow: none !important;
+}
+
+@media (max-width: 650px) {
+    body.ui-v3
+    .command-overlay-v3
+    .command-dialog-v3
+    > button.r35h-command-close {
+        top: 12px !important;
+        right: 12px !important;
+        min-width: 62px !important;
+        height: 38px !important;
+        padding: 0 10px !important;
+        border-radius: 11px !important;
+    }
+
+    body.ui-v3
+    .command-overlay-v3
+    .command-dialog-v3
+    > button.r35h-command-close > span {
+        font-size: 17px !important;
+    }
+
+    body.ui-v3
+    .command-overlay-v3
+    .command-dialog-v3
+    > button.r35h-command-close > kbd {
+        font-size: 10px !important;
+    }
+}
+
+
+/* ARK3360_R35H_E2_SEARCH_GAP */
+
+/*
+ * Espacio reservado al boton X ESC.
+ * No modifica su posicion ni funcionalidad.
+ */
+
+body.ui-v3
+.command-overlay-v3
+.command-search-v3 {
+    box-sizing: border-box !important;
+    padding-right: 92px !important;
+}
+
+body.ui-v3
+.command-overlay-v3
+.command-search-v3
+> input.command-input-v3 {
+    min-width: 0 !important;
+    width: auto !important;
+    flex: 1 1 auto !important;
+}
+
+/* Adaptacion a pantallas pequenas */
+
+@media (max-width: 650px) {
+    body.ui-v3
+    .command-overlay-v3
+    .command-search-v3 {
+        padding-right: 90px !important;
+    }
+}

@@ -1,0 +1,61 @@
+/*
+ * ARK3360_R35D_ACCOUNT_LIGHT
+ *
+ * Corrige contraste del boton de cuenta en:
+ * Hoy, Agenda, Tareas y Semana.
+ *
+ * Solo tema claro.
+ * Sin cambios de dimensiones, posicion o logica.
+ */
+
+html:not([data-theme="dark"]):not(.theme-dark)
+body:is(
+    .page-today-v4,
+    .page-agenda-v3,
+    .page-tasks-v4,
+    .page-week-v3
+):not([data-theme="dark"]):not(.theme-dark)
+.r8-account-menu > summary {
+    color: #26394d !important;
+    background: #f6f9fc !important;
+    border-color: #ccd8e4 !important;
+}
+
+html:not([data-theme="dark"]):not(.theme-dark)
+body:is(
+    .page-today-v4,
+    .page-agenda-v3,
+    .page-tasks-v4,
+    .page-week-v3
+):not([data-theme="dark"]):not(.theme-dark)
+.r8-account-menu > summary > svg {
+    color: #26394d !important;
+    stroke: #26394d !important;
+    fill: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+html:not([data-theme="dark"]):not(.theme-dark)
+body:is(
+    .page-today-v4,
+    .page-agenda-v3,
+    .page-tasks-v4,
+    .page-week-v3
+):not([data-theme="dark"]):not(.theme-dark)
+.r8-account-menu > summary:hover {
+    background: #eaf1f8 !important;
+    border-color: #b8cada !important;
+}
+
+html:not([data-theme="dark"]):not(.theme-dark)
+body:is(
+    .page-today-v4,
+    .page-agenda-v3,
+    .page-tasks-v4,
+    .page-week-v3
+):not([data-theme="dark"]):not(.theme-dark)
+.r8-account-menu[open] > summary {
+    background: #eaf1f8 !important;
+    border-color: #b8cada !important;
+}

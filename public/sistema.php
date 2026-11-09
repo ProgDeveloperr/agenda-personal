@@ -720,17 +720,9 @@ if (
 
 
     <!-- R3-I1 PWA META -->
+<!-- ARK3360_R35N_B_AGIL_ICON -->
 
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
-    <link
-        rel="icon"
-        href="/assets/icons/agenda-personal.svg"
-        type="image/svg+xml"
-    >
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
 
     <meta
         name="application-name"
@@ -756,15 +748,7 @@ if (
         name="apple-mobile-web-app-title"
         content="Agenda Personal"
     >
-
-
-
-    <link
-        rel="apple-touch-icon"
-        href="/assets/icons/icon-180.png"
-    >
-
-    <link rel="stylesheet" href="/assets/css/global-shell-legibilidad.css?v=3">
+<link rel="stylesheet" href="/assets/css/global-shell-legibilidad.css?v=3">
     <link rel="stylesheet" href="/assets/css/quick-add-mobile.css?v=1">
     <link rel="stylesheet" href="/assets/css/sistema-mobile.css?v=1">
     <link rel="stylesheet" href="/assets/css/global-overlays-premium.css?v=2">
@@ -774,6 +758,42 @@ if (
     <script src="/assets/js/theme-switcher.js?v=1" defer></script>
     <link rel="stylesheet" href="/assets/css/r8-account-placement.css?v=1">
     <script src="/assets/js/r8-account-placement.js?v=1" defer></script>
+    <!-- ARK3360_R35B3_NOTIFICATION_BADGE -->
+    <link rel="stylesheet" href="/assets/css/r35b-notification-badge.css?v=1">
+<!-- ARK3360_R35E7F_SISTEMA_INTEGRATION -->
+<link rel="stylesheet" href="/assets/vendor/flatpickr-4.6.13/flatpickr.min.css?v=1">
+<link rel="stylesheet" href="/assets/css/r35e7f-sistema-datepicker.css?v=1">
+<script src="/assets/vendor/flatpickr-4.6.13/flatpickr.min.js?v=1" defer></script>
+<script src="/assets/vendor/flatpickr-4.6.13/es.js?v=1" defer></script>
+<script src="/assets/js/r35e7f-sistema-date-pilot.js?v=1" defer></script>
+<script src="/assets/js/r35e5-date-segments.js?v=2" defer></script>
+<!-- /ARK3360_R35E7F_SISTEMA_INTEGRATION -->
+<!-- ARK3360_R35I_C2_VISUAL_UNIFIED -->
+<link rel="stylesheet" href="/assets/css/r35i-c2-date-visual-unified.css?v=1">
+<!-- /ARK3360_R35I_C2_VISUAL_UNIFIED -->
+<!-- ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+<link rel="stylesheet" href="/assets/css/r35i-e2-quick-date-parity.css?v=1">
+<!-- /ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+
+<!-- ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+<link rel="stylesheet" href="/assets/css/r35m-d-navbar-brand-global.css?v=5905e4aebab7f230">
+<!-- /ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+
+    <!-- ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+    <link rel="stylesheet" href="/assets/css/r35q-d-mobile-theme-global.css?v=bb89cc627441c62d">
+    <script src="/assets/js/r35s-d-mobile-theme-global.js?v=2abb38c899b16f70" defer></script>
+    <!-- /ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+
+    <!-- ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
+    <script src="/assets/js/r35s-c-viewport-cssom-pilot.js?v=a1b051a863df6f0f"></script>
+    <!-- /ARK3360_R35S_D_PROGRESSIVE_RESPONSIVE -->
 </head>
 
 
@@ -784,49 +804,15 @@ if (
     <div class="app-header-inner">
 
         <a
-            class="app-brand"
+            class="app-brand r35m-brand"
             href="/"
             aria-label="Agenda Personal"
         >
-
-            <span class="app-brand-mark">
-
-                <svg viewBox="0 0 24 24">
-
-                    <rect
-                        x="4"
-                        y="5"
-                        width="16"
-                        height="15"
-                        rx="3"
-                    />
-
-                    <path
-                        d="M8 3v4M16 3v4M4 10h16"
-                    />
-
-                    <path
-                        d="M8 14h3M13 14h3M8 17h3"
-                    />
-
-                </svg>
-
-            </span>
-
-
-            <span>
-
-                <strong>
-                    Agenda Personal
-                </strong>
-
-                <small>
-                    Workspace
-                </small>
-
-            </span>
-
-        </a>
+      <span class="r35m-brand-lockup">
+        <img class="r35m-brand-image r35m-brand-light" src="/assets/brand/agenda-personal-premium.svg?v=f471ddad7269fdfd" alt="Agenda Personal" width="259" height="76" decoding="async">
+        <img class="r35m-brand-image r35m-brand-dark" src="/assets/brand/agenda-personal-premium-oscuro.svg?v=f20f6bada98c57b3" alt="Agenda Personal" width="259" height="76" decoding="async">
+      </span>
+    </a>
 
 
         <nav
@@ -1882,17 +1868,17 @@ if (
 
 
 <script
-    src="/assets/js/command-palette.js?v=6"
+    src="/assets/js/command-palette.js?v=r35ie1-c8ba12954f606e8f"
     defer
 ></script>
 
 <script
-    src="/assets/js/quick-add.js?v=2"
+    src="/assets/js/quick-add.js?v=r35ie3-ec2ed63bd623c25f60b6"
     defer
 ></script>
 
 <script
-    src="/assets/js/notifications.js?v=2"
+    src="/assets/js/notifications.js?v=3"
     defer
 ></script>
 

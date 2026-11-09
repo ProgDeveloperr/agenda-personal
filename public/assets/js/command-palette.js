@@ -999,6 +999,72 @@
     };
 
 
+
+    // ARK3360_R35H_CLOSE_BUTTON
+    // Reutiliza el cierre nativo del buscador.
+    const r35hDialog = overlay.querySelector(
+        '.command-dialog-v3'
+    );
+
+    if (r35hDialog) {
+        const r35hClose = document.createElement('button');
+
+        r35hClose.type = 'button';
+        r35hClose.className = 'r35h-command-close';
+        r35hClose.title = 'Cerrar búsqueda';
+
+        r35hClose.setAttribute(
+            'aria-label',
+            'Cerrar búsqueda'
+        );
+
+        r35hClose.innerHTML =
+            '<span aria-hidden="true">×</span><kbd>ESC</kbd>';
+
+        r35hClose.addEventListener(
+            'click',
+            closePalette
+        );
+
+        // ARK3360_R35H_D2_HIDE_DUPLICATE_ESC
+        // El boton nuevo ya contiene X + ESC.
+        // Ocultamos solamente el ESC visual anterior.
+        const r35hOriginalEsc = overlay.querySelector(
+            '.command-search-v3 .command-escape-v3'
+        );
+
+        if (r35hOriginalEsc) {
+            r35hOriginalEsc.hidden = true;
+
+            r35hOriginalEsc.style.setProperty(
+                'display',
+                'none',
+                'important'
+            );
+
+            r35hOriginalEsc.setAttribute(
+                'aria-hidden',
+                'true'
+            );
+        }
+
+        r35hDialog.appendChild(r35hClose);
+
+        if (!document.querySelector(
+            'link[data-r35h-command-close]'
+        )) {
+            const r35hCSS = document.createElement('link');
+
+            r35hCSS.rel = 'stylesheet';
+            r35hCSS.href =
+                '/assets/css/r35h-command-close.css?v=r35ie1-c277aa722eb1176e';
+
+            r35hCSS.dataset.r35hCommandClose = '1';
+
+            document.head.appendChild(r35hCSS);
+        }
+    }
+
     input.addEventListener(
         'input',
         () => {

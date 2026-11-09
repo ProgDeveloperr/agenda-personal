@@ -1,0 +1,113 @@
+/* ARK3360_R35I_D2_QUICK_ADD_PARITY */
+/*
+ * Referencia visual: Quick Add de Agenda.
+ * Aplicacion exclusiva: Calendario, modo claro.
+ * Sin modificar JS ni formularios.
+ */
+
+/* Agenda reference rule 1 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-overlay-v3 {
+    background:
+        rgba(36, 46, 57, .36)
+        !important;
+
+    backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(105%)
+        !important;
+}
+
+/* Agenda reference rule 2 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-dialog-v3 {
+    border-color:
+        #d7e0e7
+        !important;
+
+    background:
+        #ffffff
+        !important;
+
+    box-shadow:
+        0 34px 90px
+        rgba(29, 39, 50, .20)
+        !important;
+}
+
+/* Agenda reference rule 3 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-header-v3 {
+    border-bottom-color:
+        #e4e9ee
+        !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfcfd,
+            #f7f9fb
+        )
+        !important;
+}
+
+/* Agenda reference rule 4 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-heading-v3 h2 {
+    color:
+        #1c2734
+        !important;
+}
+
+/* Agenda reference rule 5 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-heading-v3 p,
+
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-field-v3 label,
+
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-note-help-v3 {
+    color:
+        #667687
+        !important;
+}
+
+/* Agenda reference rule 6 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-field-v3 input:not([data-piece]),
+
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-field-v3 select,
+
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-field-v3 textarea {
+    border-color:
+        #d9e1e7
+        !important;
+
+    background:
+        #fafbfd
+        !important;
+
+    color:
+        #202d3a
+        !important;
+}
+
+/* Agenda reference rule 7 */
+html:not([data-theme="dark"]) body.ui-v3.page-calendar-v3
+.quick-add-footer-v3 {
+    border-top-color:
+        #e4e9ee
+        !important;
+
+    background:
+        #f8fafb
+        !important;
+}

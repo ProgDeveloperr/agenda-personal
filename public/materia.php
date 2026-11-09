@@ -451,7 +451,10 @@ $porcentajeOtros =
             : 'Materia | Agenda Personal' ?>
     </title>
 
-    <link
+        <!-- ARK3360_R35J_D_FLATPICKR_BASE_CSS -->
+    <link rel="stylesheet" href="/assets/vendor/flatpickr-4.6.13/flatpickr.min.css?v=1b34a42552c96f10">
+    <!-- /ARK3360_R35J_D_FLATPICKR_BASE_CSS -->
+<link
         rel="stylesheet"
         href="/assets/css/style.css"
     >
@@ -469,17 +472,9 @@ $porcentajeOtros =
 
 
     <!-- R3-I1 PWA META -->
+<!-- ARK3360_R35N_B_AGIL_ICON -->
 
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
-    <link
-        rel="icon"
-        href="/assets/icons/agenda-personal.svg"
-        type="image/svg+xml"
-    >
+<!-- /ARK3360_R35N_B_AGIL_ICON -->
 
     <meta
         name="application-name"
@@ -505,15 +500,7 @@ $porcentajeOtros =
         name="apple-mobile-web-app-title"
         content="Agenda Personal"
     >
-
-
-
-    <link
-        rel="apple-touch-icon"
-        href="/assets/icons/icon-180.png"
-    >
-
-    <link rel="stylesheet" href="/assets/css/materia-workspace-legibilidad.css?v=4">
+<link rel="stylesheet" href="/assets/css/materia-workspace-legibilidad.css?v=4">
     <link rel="stylesheet" href="/assets/css/global-shell-legibilidad.css?v=3">
     <link rel="stylesheet" href="/assets/css/quick-add-mobile.css?v=1">
     <link rel="stylesheet" href="/assets/css/theme-professional-hybrid-materia.css?v=2">
@@ -523,6 +510,35 @@ $porcentajeOtros =
     <link rel="stylesheet" href="/assets/css/global-overlays-premium.css?v=2">
     <link rel="stylesheet" href="/assets/css/r8-account-placement.css?v=1">
     <script src="/assets/js/r8-account-placement.js?v=1" defer></script>
+    <!-- ARK3360_R35B3_NOTIFICATION_BADGE -->
+    <link rel="stylesheet" href="/assets/css/r35b-notification-badge.css?v=1">
+<!-- ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+<link rel="stylesheet" href="/assets/css/r35i-e2-quick-date-parity.css?v=1">
+<!-- /ARK3360_R35I_E2_QUICK_DATE_PARITY -->
+
+<!-- ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+<link rel="stylesheet" href="/assets/css/r35m-d-navbar-brand-global.css?v=5905e4aebab7f230">
+<!-- /ARK3360_R35M_D_NAVBAR_BRAND_GLOBAL -->
+
+    <!-- ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+    <link rel="icon" href="/assets/icons/agil-hola-taskbar-32.png?v=3e4f3c6e8665eba2" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/agil-hola-taskbar.ico?v=3e4f3c6e8665eba2">
+    <link rel="apple-touch-icon" href="/assets/icons/agil-hola-taskbar-180.png?v=3e4f3c6e8665eba2">
+    <link rel="manifest" href="/manifest.webmanifest?v=cba488cbbc0c086a">
+    <!-- /ARK3360_R35N_C_AGIL_TASKBAR_BOOST -->
+
+<!-- ARK3360_R35P_B_TASK_GRID_THREE_COLS -->
+<link rel="stylesheet" href="/assets/css/r35p-b-materia-task-grid.css?v=dab15adb976b33a2">
+<!-- /ARK3360_R35P_B_TASK_GRID_THREE_COLS -->
+
+<!-- ARK3360_R35P_C_MATERIA_TASK_SURFACE -->
+<link rel="stylesheet" href="/assets/css/r35p-c-materia-task-surface.css?v=2ee9bbb9c7f1edc0">
+<!-- /ARK3360_R35P_C_MATERIA_TASK_SURFACE -->
+
+    <!-- ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
+    <link rel="stylesheet" href="/assets/css/r35q-d-mobile-theme-global.css?v=bb89cc627441c62d">
+    <script src="/assets/js/r35q-d-mobile-theme-global.js?v=789d378f0a4e1e6e" defer></script>
+    <!-- /ARK3360_R35Q_D_MOBILE_THEME_GLOBAL -->
 </head>
 
 
@@ -534,42 +550,14 @@ $porcentajeOtros =
     <div class="app-header-inner">
 
         <a
-            class="app-brand"
+            class="app-brand r35m-brand"
             href="/"
         >
-
-            <span class="app-brand-mark">
-
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M7 3.75h8.5A2.5 2.5 0 0 1 18 6.25v11.5a2.5 2.5 0 0 1-2.5 2.5H7a2.5 2.5 0 0 1-2.5-2.5V6.25A2.5 2.5 0 0 1 7 3.75Z"
-                    />
-                    <path
-                        d="M8.5 2v3.5M14 2v3.5M4.5 8.5H18"
-                    />
-                    <path
-                        d="m8.5 13 2 2 4-4"
-                    />
-                </svg>
-
-            </span>
-
-            <span class="app-brand-copy">
-
-                <strong>
-                    Agenda Personal
-                </strong>
-
-                <small>
-                    Workspace
-                </small>
-
-            </span>
-
-        </a>
+      <span class="r35m-brand-lockup">
+        <img class="r35m-brand-image r35m-brand-light" src="/assets/brand/agenda-personal-premium.svg?v=f471ddad7269fdfd" alt="Agenda Personal" width="259" height="76" decoding="async">
+        <img class="r35m-brand-image r35m-brand-dark" src="/assets/brand/agenda-personal-premium-oscuro.svg?v=f20f6bada98c57b3" alt="Agenda Personal" width="259" height="76" decoding="async">
+      </span>
+    </a>
 
 
         <nav
@@ -1835,17 +1823,17 @@ $porcentajeOtros =
 
 
 <script
-    src="/assets/js/command-palette.js?v=6"
+    src="/assets/js/command-palette.js?v=r35ie1-c8ba12954f606e8f"
     defer
 ></script>
 
 <script
-    src="/assets/js/quick-add.js?v=2"
+    src="/assets/js/quick-add.js?v=r35ie3-ec2ed63bd623c25f60b6"
     defer
 ></script>
 
 <script
-    src="/assets/js/notifications.js?v=2"
+    src="/assets/js/notifications.js?v=3"
     defer
 ></script>
 

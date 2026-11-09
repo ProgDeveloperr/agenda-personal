@@ -51,3 +51,10 @@ Vistas de la interfaz de Agenda Personal v11, con navegación, organización aca
 | ![Panel de inicio](docs/screenshots/inicio.webp) | ![Agenda académica](docs/screenshots/agenda.webp) | ![Calendario mensual](docs/screenshots/calendario.webp) |
 
 La **[galería completa de 9 pantallas](docs/SCREENSHOTS.md)** incluye también Hoy, Tareas, Semana, Vida, Materias y Rendimiento.
+
+## Despliegue y reproducibilidad
+
+Revisá la [guía de despliegue](docs/DEPLOYMENT.md) antes de crear una nueva
+instancia. El repositorio contiene código y recursos, no credenciales, bases de
+datos reales ni un `compose.yml` de producción. Es necesario configurar HTTPS,
+MariaDB, las variables privadas y los procesos programados en el entorno destino.

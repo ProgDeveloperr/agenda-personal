@@ -1309,3 +1309,86 @@
     );
 
 })();
+
+/* ARK3360_R35E7G_GLOBAL_QUICK_DATE_LOADER */
+(() => {
+  'use strict';
+
+  const MARKER = 'ARK3360_R35E7G_GLOBAL_QUICK_DATE_LOADER';
+  const FIELD = '.quick-add-overlay-v3 input[type="date"][name="fecha"]';
+  const BASE = '/assets/vendor/flatpickr-4.6.13/';
+
+  function script(url) {
+    return new Promise((resolve, reject) => {
+      const tag = document.createElement('script');
+      tag.src = url;
+      tag.async = false;
+      tag.onload = resolve;
+      tag.onerror = () => reject(new Error('No se pudo cargar ' + url));
+      document.head.appendChild(tag);
+    });
+  }
+
+  function stylesheet(url) {
+    return new Promise((resolve, reject) => {
+      if (document.querySelector('link[data-r35e7g-quick-date]')) {
+        resolve();
+        return;
+      }
+
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = url;
+      link.dataset.r35e7gQuickDate = '1';
+      link.onload = resolve;
+      link.onerror = () => reject(new Error('No se pudo cargar ' + url));
+      document.head.appendChild(link);
+    });
+  }
+
+  async function boot() {
+    const dateInput = document.querySelector(FIELD);
+
+    if (!dateInput) {
+      console.warn(MARKER + ': campo quick_fecha no encontrado');
+      return;
+    }
+
+    try {
+      await stylesheet('/assets/css/r35e7g-quick-date.css?v=2');
+
+      if (typeof window.flatpickr !== 'function') {
+        await script(BASE + 'flatpickr.min.js?v=1');
+      }
+
+      if (!window.flatpickr?.l10ns?.es) {
+        await script(BASE + 'es.js?v=1');
+      }
+
+      const alreadyHasSegments = Array.from(document.scripts).some(el => {
+        try {
+          return new URL(el.src).pathname ===
+            '/assets/js/r35e5-date-segments.js';
+        } catch (_) {
+          return false;
+        }
+      });
+
+      if (!alreadyHasSegments) {
+        await script('/assets/js/r35e5-date-segments.js?v=2');
+      }
+
+      await script('/assets/js/r35e7g-quick-date-pilot.js?v=1');
+
+      console.info(MARKER + ': assets listos');
+    } catch (error) {
+      console.warn(MARKER + ': se conserva campo nativo', error);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, {once: true});
+  } else {
+    boot();
+  }
+})();

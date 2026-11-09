@@ -1,0 +1,162 @@
+/* R35T-C | premium identity for notification cards in compact mode.
+   Light theme only, same threshold as approved R35S responsive rollout.
+   No changes to desktop, dark theme, header, filters, data, or behaviors. */
+@media (width < 1450px), (height < 897px) {
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    align-items: start !important;
+    column-gap: 14px !important;
+    row-gap: 12px !important;
+    padding: 18px 17px 18px 21px !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    background: linear-gradient(160deg, #ffffff, #f8fbfe) !important;
+    border-color: #cbd9e6 !important;
+    box-shadow: 0 8px 25px rgba(31, 52, 75, .075) !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-unread-v3 {
+    border-color: #8db5ec !important;
+    box-shadow: 0 8px 26px rgba(49, 102, 182, .095) !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 :is(.notifications-center-item-dismissed,
+  .notifications-center-item-resolved, .notifications-center-item-dismissed-v3,
+  .notifications-center-item-resolved-v3) {
+    opacity: 1 !important;
+    background: #f7f9fc !important;
+  }
+  /* Restore categorical stripe and icon hidden by legacy mobile styling. */
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-accent-v3 {
+    display: block !important;
+    position: absolute !important;
+    inset: 16px auto 16px 0 !important;
+    width: 4px !important;
+    height: auto !important;
+    margin: 0 !important;
+    border-radius: 0 8px 8px 0 !important;
+    background: var(--notification-color, #4682c6) !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-icon-v3 {
+    display: grid !important;
+    place-items: center !important;
+    position: static !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: var(--notification-color, #3769b5) !important;
+    background: color-mix(in srgb, var(--notification-color, #4785c9) 10%, white) !important;
+    border: 1px solid color-mix(in srgb, var(--notification-color, #4785c9) 30%, white) !important;
+    border-radius: 12px !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-icon-v3 svg {
+    display: block !important;
+    width: 19px !important;
+    height: 19px !important;
+    opacity: 1 !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-copy-v3 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
+    width: auto !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-state-v3 {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    justify-self: start !important;
+    align-self: start !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-actions-v3 {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 9px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3
+  .notifications-center-actions-v3 :is(.notifications-open-v3, .notifications-secondary-v3) {
+    flex: 1 1 140px !important;
+    min-height: 42px !important;
+    height: auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 10px 12px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    opacity: 1 !important;
+  }
+}
+/* Wider compact windows: preserve the mobile shell, but let cards read like
+   the approved desktop cards (icon/text/status/inline actions). IMPORTANT:
+   use CSS range features, not min-width:761, because the R35S bridge protects
+   legacy desktop-only media queries. */
+@media (width > 980px) and (width < 1450px),
+       (width > 980px) and (height < 897px) {
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 {
+    grid-template-columns: 46px minmax(0, 1fr) auto auto !important;
+    column-gap: 16px !important;
+    row-gap: 0 !important;
+    align-items: center !important;
+    padding: 19px 19px 19px 21px !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-copy-v3 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-state-v3 {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    align-self: center !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3 .notifications-center-actions-v3 {
+    grid-column: 4 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+  html:not([data-theme="dark"]) body.ui-v3.page-notifications-v3
+  .notifications-list-center-v3 .notifications-center-item-v3
+  .notifications-center-actions-v3 :is(.notifications-open-v3, .notifications-secondary-v3) {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+}

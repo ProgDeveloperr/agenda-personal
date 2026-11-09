@@ -1,0 +1,111 @@
+.mfa-setup {
+  max-width: 660px;
+  width: min(100%, 660px);
+  margin-inline: auto;
+}
+
+.mfa-kicker {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  color: #9fb2c8;
+}
+
+.mfa-setup h1 {
+  line-height: 1.1;
+}
+
+.mfa-setup p {
+  line-height: 1.6;
+}
+
+.mfa-setup a {
+  color: #7ee4c0;
+}
+
+.mfa-setup label {
+  display: block;
+  font-size: .95rem;
+  margin: .8rem 0 .45rem;
+}
+
+.mfa-setup input:not([type=hidden]):not([type=checkbox]) {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #64748b;
+  border-radius: 10px;
+  padding: .85rem;
+  font-size: 1rem;
+  background: #111c2a;
+  color: #fff;
+}
+
+.mfa-secret {
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #0d1a28;
+  color: #c5f8e4;
+  border: 1px solid #506779;
+  border-radius: 12px;
+  padding: 1rem;
+  line-height: 1.75;
+  font-size: 1rem;
+  user-select: text;
+}
+
+.mfa-recovery {
+  font-size: .9rem;
+  letter-spacing: .035em;
+}
+
+.mfa-error {
+  background: #43272b;
+  border: 1px solid #bf6d76;
+  border-radius: 9px;
+  color: #ffe6e8;
+  padding: .8rem;
+}
+
+.mfa-ok {
+  background: #16372f;
+  border: 1px solid #32866b;
+  border-radius: 9px;
+  color: #d1fbe5;
+  padding: .8rem;
+}
+
+.mfa-check {
+  display: flex !important;
+  align-items: flex-start;
+  gap: .65rem;
+}
+
+.mfa-check input {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
+.mfa-cancel {
+  margin-top: 1.5rem;
+}
+
+.mfa-cancel button {
+  border: 1px solid #68768a;
+  color: #e2e8f0;
+  background: transparent;
+  border-radius: 9px;
+  padding: .65rem 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .mfa-secret {
+    font-size: .9rem;
+  }
+
+  .mfa-recovery {
+    font-size: .75rem;
+  }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "/",
+    "name": "Agenda Personal",
+    "short_name": "Agenda",
+    "description": "Workspace personal para agenda académica, calendario, rendimiento, notificaciones y vida.",
+    "lang": "es-AR",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#07111b",
+    "theme_color": "#07111b",
+    "icons": [
+        {
+            "src": "/assets/icons/agil-hola-taskbar-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/assets/icons/agil-hola-taskbar-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Agenda",
+            "short_name": "Agenda",
+            "url": "/agenda.php"
+        },
+        {
+            "name": "Semana",
+            "short_name": "Semana",
+            "url": "/semana.php"
+        },
+        {
+            "name": "Vida",
+            "short_name": "Vida",
+            "url": "/vida.php"
+        },
+        {
+            "name": "Notificaciones",
+            "short_name": "Avisos",
+            "url": "/notificaciones.php"
+        },
+        {
+            "name": "Sistema",
+            "short_name": "Sistema",
+            "url": "/sistema.php"
+        }
+    ],
+    "categories": [
+        "productivity",
+        "education"
+    ],
+    "prefer_related_applications": false
+}

@@ -1,5 +1,14 @@
 <?php
 declare(strict_types=1);
+require_once '/var/www/app/public_host.php';
+try {
+    $agendaPublicHost = agendaPublicHost();
+} catch (Throwable $e) {
+    http_response_code(503);
+    header('Cache-Control: no-store');
+    exit('Configuracion de host no disponible.');
+}
+
 
 $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
 $host = preg_replace('/:443$/', '', $host);
@@ -7,14 +16,14 @@ $proto = strtolower(trim(
     (string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')
 ));
 
-if ($host !== ((getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com')) || $proto !== 'https') {
+if (!in_array($host, [$agendaPublicHost, ($agendaPublicHost . ':10000')], true) || $proto !== 'https') {
     if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') {
         http_response_code(403);
         exit;
     }
 
     header(
-        ('Location: https://' . (getenv('AGENDA_PUBLIC_HOST') ?: 'agenda.example.com') . '/admin-invitaciones.php'),
+        'Location: https://' . $agendaPublicHost . '/admin-invitaciones.php',
         true,
         308
     );

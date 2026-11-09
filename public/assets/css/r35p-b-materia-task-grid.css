@@ -1,0 +1,14 @@
+/* ARK3360_R35P_B_TASK_GRID_THREE_COLS */
+/* Solo las tarjetas de tareas de Materia.
+   La barra lateral absoluta no ocupa celda en CSS Grid. */
+body.ui-v3.page-subject-workspace-v3
+.subject-task-list-v4 > a.subject-task-item-v4 {
+    grid-template-columns: 49px minmax(0, 1fr) auto !important;
+}
+
+@media (max-width: 760px) {
+    body.ui-v3.page-subject-workspace-v3
+    .subject-task-list-v4 > a.subject-task-item-v4 {
+        grid-template-columns: 43px minmax(0, 1fr) auto !important;
+    }
+}

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/database.php';
+require_once __DIR__ . '/mfa_auth.php';
 
 const AGENDA_AUTH_IDLE_SECONDS = 1800;
 const AGENDA_AUTH_ABSOLUTE_SECONDS = 43200;
@@ -95,6 +96,29 @@ function agendaPrincipalAutenticado(): ?array
         return null;
     }
 
+    if ((string) $u['rol'] === 'ADMIN'
+        && agendaMfaEnabled((int) $u['id'])) {
+
+        $mfaId = $_SESSION[
+            'auth_mfa_verified_user_id'
+        ] ?? null;
+
+        $mfaAt = $_SESSION[
+            'auth_mfa_verified_at'
+        ] ?? null;
+
+        if (
+            !is_int($mfaId)
+            || $mfaId !== (int) $u['id']
+            || !is_int($mfaAt)
+            || $mfaAt < $issued
+            || $mfaAt > $now
+        ) {
+            agendaCerrarSesionAutenticada();
+            return null;
+        }
+    }
+
     $_SESSION['auth_last_seen'] = $now;
 
     return [
@@ -141,57 +165,14 @@ function agendaExigirAutenticacion(): array
 
 function agendaLoginPermitido(string $username, ?bool $resultado = null): bool
 {
-    $ip = (string) ($_SERVER['REMOTE_ADDR'] ?? 'unknown');
-    $dir = sys_get_temp_dir() . '/agenda-login-limiter';
+    require_once __DIR__ . '/login_rate_limit.php';
 
-    if ((!is_dir($dir) && !@mkdir($dir, 0700, true)) || is_link($dir)) {
-        return false;
-    }
-
-    $key = hash('sha256', $ip . '|' . strtolower($username));
-    $f = @fopen($dir . '/' . $key, 'c+');
-
-    if ($f === false) {
-        return false;
-    }
-
-    try {
-        if (!flock($f, LOCK_EX)) {
-            return false;
-        }
-
-        $raw = stream_get_contents($f);
-        $v = json_decode(is_string($raw) ? $raw : '', true);
-        $now = time();
-
-        if (!is_array($v) || !isset($v['start'], $v['count'])
-            || $now - (int) $v['start'] >= 900) {
-            $v = ['start' => $now, 'count' => 0];
-        }
-
-        $allowed = (int) $v['count'] < 8;
-
-        // Consultar no consume intentos.
-        // Solo un resultado fallido incrementa el contador.
-        if ($resultado !== null) {
-            if ($resultado === true) {
-                $v = ['start' => $now, 'count' => 0];
-            } else {
-                $v['count'] = (int) $v['count'] + 1;
-            }
-
-            rewind($f);
-            ftruncate($f, 0);
-            fwrite($f, json_encode($v, JSON_THROW_ON_ERROR));
-            fflush($f);
-        }
-        flock($f, LOCK_UN);
-
-        return $allowed;
-    } finally {
-        fclose($f);
-    }
+    return agendaLoginRateLimit(
+        $username,
+        $resultado
+    );
 }
+
 
 function agendaIntentarLogin(string $username, string $password): bool
 {
@@ -225,6 +206,13 @@ function agendaIntentarLogin(string $username, string $password): bool
     if (!$ok || !is_array($u) || (int) $u['activo'] !== 1) {
         agendaLoginPermitido($username, false);
         return false;
+    }
+
+    if ((string) $u['rol'] === 'ADMIN'
+        && agendaMfaEnabled((int) $u['id'])) {
+
+        agendaMfaBeginPending($u);
+        return true;
     }
 
     if (!session_regenerate_id(true)) {

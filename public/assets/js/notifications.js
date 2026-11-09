@@ -789,7 +789,15 @@
 
 
         renderBadge(
-            data.unread_count
+            data.active_count
+        );
+
+        // ARK3360_R35B3_NOTIFICATION_BADGE
+        // El badge muestra avisos activos;
+        // el estado de no leidas se mantiene.
+        button.classList.toggle(
+            'has-unread',
+            Number(data.unread_count) > 0
         );
 
 

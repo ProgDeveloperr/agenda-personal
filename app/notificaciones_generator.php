@@ -705,6 +705,7 @@ function procesarNotificacionesEventos(
             . $spec['tipo'];
 
 
+        if (!r36j2Excluded($pdo, $userId, $clave)) {
         $upsert->execute([
             'user_id' =>
                 $userId,
@@ -727,6 +728,7 @@ function procesarNotificacionesEventos(
             'fecha_objetivo' =>
                 $evento['fecha'],
         ]);
+        }
 
 
         $relevantes++;
@@ -925,6 +927,7 @@ function procesarNotificacionesTareas(
             . $spec['tipo'];
 
 
+        if (!r36j2Excluded($pdo, $userId, $clave)) {
         $upsert->execute([
             'user_id' =>
                 $userId,
@@ -947,6 +950,7 @@ function procesarNotificacionesTareas(
             'fecha_objetivo' =>
                 $tarea['fecha_limite'],
         ]);
+        }
 
 
         $relevantes++;
@@ -990,10 +994,9 @@ function ejecutarGeneradorNotificaciones(): void
         );
 
 
-    $pdo->beginTransaction();
-
-
+    r36j2Lock($pdo);
     try {
+        $pdo->beginTransaction();
 
         $eventos =
             procesarNotificacionesEventos(
@@ -1020,6 +1023,8 @@ function ejecutarGeneradorNotificaciones(): void
 
 
         throw $e;
+    } finally {
+        r36j2Unlock($pdo);
     }
 
 
@@ -1210,4 +1215,26 @@ if (
 ) {
 
     ejecutarGeneradorNotificacionesCli();
+}
+
+// ARK3360_R36J2_GENERATOR_PROTECTION
+function r36j2Lock(PDO $pdo): void {
+    $s = $pdo->query("SELECT GET_LOCK('ark3360:r36j2:notificaciones', 30)");
+    if ((int) $s->fetchColumn() !== 1) {
+        throw new RuntimeException('R36J2: bloqueo de generador no disponible.');
+    }
+}
+function r36j2Unlock(PDO $pdo): void {
+    $s = $pdo->query("SELECT RELEASE_LOCK('ark3360:r36j2:notificaciones')");
+    if ((int) $s->fetchColumn() !== 1) {
+        error_log('R36J2: fallo al liberar el bloqueo del generador.');
+    }
+}
+function r36j2Excluded(PDO $pdo, int $userId, string $key): bool {
+    $s = $pdo->prepare(
+        'SELECT 1 FROM notificaciones_exclusiones_r36j2 '
+        . 'WHERE user_id=:uid AND clave_hash=:hash LIMIT 1'
+    );
+    $s->execute(['uid'=>$userId, 'hash'=>hash('sha256', $key)]);
+    return $s->fetchColumn() !== false;
 }

@@ -1,0 +1,20 @@
+/* ARK3360_R35P_C_MATERIA_TASK_SURFACE */
+/* Superficie externa del panel Tareas, solo en la ficha de una materia.
+   No afecta la grilla de R35P-B, enlaces, datos ni Quick Add. */
+
+html:not([data-theme="dark"]) body.ui-v3.page-subject-workspace-v3
+:is(section, article, div):has(> .subject-task-list-v4) {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+    border: 1px solid #cfdee9 !important;
+    border-radius: 22px !important;
+    box-shadow: 0 13px 35px rgba(15, 32, 46, .075) !important;
+    padding: 22px 20px !important;
+}
+
+@media (max-width: 760px) {
+    html:not([data-theme="dark"]) body.ui-v3.page-subject-workspace-v3
+    :is(section, article, div):has(> .subject-task-list-v4) {
+        padding: 16px 14px !important;
+        border-radius: 20px !important;
+    }
+}

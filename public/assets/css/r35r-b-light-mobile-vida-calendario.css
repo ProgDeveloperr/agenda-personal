@@ -1,0 +1,245 @@
+/* ARK3360_R35R_B_LIGHT_MOBILE_ONLY
+   ONLY html[data-theme="light"] + body.page-life-v3/page-calendar-v3
+   ONLY mobile <= 760px. No layout, navigation, application logic or JS changes.
+   Dark-only search modal and Quick Add intentionally excluded.
+*/
+@media (max-width: 760px) {
+  html[data-theme="light"] body.ui-v3.page-life-v3,
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 {
+    color-scheme: light;
+    color: #213141 !important;
+    background: radial-gradient(760px 440px at 10% -6%, rgba(75,132,178,.075), transparent 65%), linear-gradient(180deg,#f9fbfc,#f1f4f7) !important;
+  }
+
+  /* Header: visual styling only; position/order of its controls unchanged. */
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) .app-header {
+    background: rgba(249,251,252,.97) !important;
+    border-color: #dce5ec !important;
+    box-shadow: 0 4px 18px rgba(32,48,64,.055) !important;
+  }
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) :is(.app-header .theme-toggle-v3,.app-header .notification-bell-v3,.app-header .r8-account-menu > summary) {
+    background: #f8fafc !important;
+    color: #385167 !important;
+    border-color: #cfdae4 !important;
+  }
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) :is(.app-header .theme-toggle-v3,.app-header .notification-bell-v3,.app-header .r8-account-menu > summary):hover {
+    background: #eaf1f7 !important;
+    color: #245b86 !important;
+  }
+
+  /* Mobile navigation visual surface. Do not touch placement or display. */
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) .mobile-bottom-nav-v3 {
+    background: rgba(250,252,254,.975) !important;
+    border-color: #d7e1ea !important;
+    box-shadow: 0 -5px 24px rgba(31,46,61,.06) !important;
+  }
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) .mobile-bottom-nav-item-v3 {
+    color: #60778b !important;
+  }
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) .mobile-bottom-nav-item-v3.is-active {
+    background: #eaf3fb !important;
+    color: #275c8c !important;
+  }
+  html[data-theme="light"] body.ui-v3:is(.page-life-v3,.page-calendar-v3) .mobile-more-sheet-v3 {
+    background: #ffffff !important;
+    color: #263b4e !important;
+    border-color: #d5dfe8 !important;
+  }
+
+  /* VIDA: read-only appearance of mobile year navigation and month matrix. */
+  html[data-theme="light"] body.ui-v3.page-life-v3 {
+    --life-bg: #f3f5f7;
+    --life-surface: #ffffff;
+    --life-surface-soft: #f7f9fb;
+    --life-border: rgba(37,54,70,.12);
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-hero-copy-v3 h1,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-head-v1 h3 {
+    color: #1e3040 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-hero-copy-v3 > p,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-head-v1 p {
+    color: #61778a !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-year-v1 {
+    background: linear-gradient(160deg,#ffffff,#f6f9fb) !important;
+    border-color: #d4dfe8 !important;
+    color: #273c4e !important;
+    box-shadow: 0 9px 25px rgba(32,53,72,.055) !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-arrow-v1,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-select-v1 {
+    background: #ffffff !important;
+    color: #34536d !important;
+    border-color: #c8d8e6 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-select-v1 option {
+    background: #ffffff !important;
+    color: #263b4c !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-select-wrap-v1::after {
+    color: #537ba1 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-summary-v1 :is(strong,span) {
+    color: #4e6478 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1 {
+    background: linear-gradient(145deg,#ffffff,#f9fbfd) !important;
+    color: #30485b !important;
+    border-color: #d6e1ea !important;
+    box-shadow: 0 3px 10px rgba(36,52,70,.032) !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1 > small {
+    color: #71879b !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1.is-marked {
+    background: #eefaf3 !important;
+    color: #266d4b !important;
+    border-color: #9bd4b5 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1.is-marked > :is(span,small) {
+    color: #297b52 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1.is-current {
+    background: #eaf3ff !important;
+    color: #215d98 !important;
+    border-color: #679de0 !important;
+    box-shadow: inset 0 0 0 1px rgba(70,126,204,.18),0 0 0 2px rgba(87,148,255,.09) !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1.is-current > :is(span,small) {
+    color: #2e6eaf !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1.is-marked.is-current {
+    background: #e5f7ed !important;
+    color: #206b49 !important;
+    border-color: #438bdf !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-month-v1.is-marked.is-current > :is(span,small) {
+    color: #206b49 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-mobile-legend-v1 > span {
+    color: #61798b !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-v3 {
+    background: linear-gradient(145deg,#ffffff,#f6f9fb) !important;
+    border-color: #d0dce6 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-primary-v3 strong,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-period-v3 strong,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-age-v3 strong {
+    color: #244b70 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-primary-v3 p,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-period-v3 > span,
+  html[data-theme="light"] body.ui-v3.page-life-v3 .life-current-age-v3 > span {
+    color: #657d91 !important;
+  }
+
+  /* CALENDARIO: mobile month board, controls and daily agenda. */
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 {
+    --cal-bg: #f3f5f7;
+    --cal-bg-soft: #eef2f5;
+    --cal-surface: #ffffff;
+    --cal-surface-soft: #f8fafc;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-hero-v3 h1,
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-month-title-v3 h2 {
+    color: #203243 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-hero-v3 > div:first-child > p,
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-month-title-v3 > span,
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-month-title-v3 p {
+    color: #60778b !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-workspace-v3 {
+    background: linear-gradient(145deg,#ffffff,#f7fafc) !important;
+    border-color: #d0dce6 !important;
+    box-shadow: 0 12px 32px rgba(36,52,69,.065) !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-toolbar-v3 {
+    background: #f9fbfd !important;
+    border-color: #d9e4ed !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-nav-button-v3 {
+    background: #ffffff !important;
+    color: #355c7b !important;
+    border-color: #ccdce8 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-v1 {
+    background: linear-gradient(165deg,#ffffff,#f7fafc) !important;
+    color: #263b4c !important;
+    border-color: #d7e2eb !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-head-copy-v1 strong {
+    color: #203447 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-head-copy-v1 small,
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-agenda-count-v1 {
+    color: #647d91 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-head-state-v1 {
+    background: #edf5ff !important;
+    border-color: #bfd5f0 !important;
+    color: #2f669b !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-weekdays-v1 span {
+    color: #657c8d !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-day-v1 {
+    background: transparent !important;
+    color: #344d60 !important;
+    border-color: transparent !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-day-v1.has-events {
+    background: #f2f6fb !important;
+    border-color: #dce6ef !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-day-v1.is-today {
+    background: #eaf3ff !important;
+    border-color: #79a7df !important;
+    color: #245c95 !important;
+    box-shadow: inset 0 0 0 1px rgba(73,131,197,.12) !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-day-v1.is-selected {
+    background: #dceafe !important;
+    border-color: #5c90d6 !important;
+    color: #20568c !important;
+    box-shadow: 0 0 0 2px rgba(73,132,207,.11) !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-more-v1 {
+    color: #527390 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-agenda-v1 {
+    background: #f9fbfd !important;
+    border-color: #dce5ed !important;
+    color: #263d50 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-agenda-title-v1 strong {
+    color: #23394d !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-empty-v1 {
+    background: #ffffff !important;
+    border-color: #d0dfe9 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-empty-v1 > span {
+    background: #ecf8f1 !important;
+    color: #278457 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-mobile-empty-v1 strong {
+    color: #385269 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-legend-title-v3,
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-legend-chip-v3 small {
+    color: #667d90 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-event-total-v3 {
+    background: #ffffff !important;
+    border-color: #d2dee8 !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-event-total-v3 strong {
+    color: #24394c !important;
+  }
+  html[data-theme="light"] body.ui-v3.page-calendar-v3 .calendar-event-total-v3 span {
+    color: #667e92 !important;
+  }
+}

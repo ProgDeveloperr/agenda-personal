@@ -27,3 +27,12 @@ node_modules/
 .idea/
 .vscode/
 .DS_Store
+
+# Dependencia frontend vendorizada de forma deliberada (licencia MIT).
+# Mantener ignorados los demas directorios vendor/.
+!public/assets/vendor/
+!public/assets/vendor/flatpickr-4.6.13/
+!public/assets/vendor/flatpickr-4.6.13/flatpickr.min.js
+!public/assets/vendor/flatpickr-4.6.13/flatpickr.min.css
+!public/assets/vendor/flatpickr-4.6.13/es.js
+!public/assets/vendor/flatpickr-4.6.13/LICENSE.md

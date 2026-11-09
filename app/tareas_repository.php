@@ -1135,3 +1135,47 @@ function listarTareasVencidas(
 
     return $stmt->fetchAll();
 }
+
+
+// ARK3360_R36F_TASK_DELETE_PILOT_REPOSITORY
+function eliminarTareaIndividualR36F(int $userId, int $id): void
+{
+    if ($userId <= 0 || $id <= 0) {
+        throw new InvalidArgumentException('Identificador inválido.');
+    }
+
+    $pdo = db();
+    $pdo->beginTransaction();
+    try {
+        $consulta = $pdo->prepare(
+            'SELECT serie_id FROM tareas '
+            . 'WHERE id = :id AND user_id = :user_id FOR UPDATE'
+        );
+        $consulta->execute(['id' => $id, 'user_id' => $userId]);
+        $fila = $consulta->fetch(PDO::FETCH_ASSOC);
+
+        if (!is_array($fila)) {
+            throw new InvalidArgumentException('La tarea no existe o no te pertenece.');
+        }
+        if ($fila['serie_id'] !== null) {
+            throw new InvalidArgumentException(
+                'La eliminación de tareas recurrentes todavía no está habilitada.'
+            );
+        }
+
+        $eliminar = $pdo->prepare(
+            'DELETE FROM tareas '
+            . 'WHERE id = :id AND user_id = :user_id AND serie_id IS NULL'
+        );
+        $eliminar->execute(['id' => $id, 'user_id' => $userId]);
+        if ($eliminar->rowCount() !== 1) {
+            throw new RuntimeException('No se pudo verificar la eliminación.');
+        }
+        $pdo->commit();
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        throw $e;
+    }
+}

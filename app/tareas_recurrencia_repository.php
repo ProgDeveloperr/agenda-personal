@@ -34,7 +34,7 @@ function validarIntervaloTareaRecurrente(
 }
 
 
-function validarDatosSerieTarea(int $userId,
+function validarDatosSerieTarea(int $userId, 
     string $titulo,
     ?string $descripcion,
     string $prioridad,
@@ -160,7 +160,7 @@ function validarDatosSerieTarea(int $userId,
 
 
     $vinculos =
-        resolverVinculosTareaUsuario($userId,
+        resolverVinculosTareaUsuario($userId, 
             $materiaId,
             $eventoId
         );
@@ -200,7 +200,7 @@ function validarDatosSerieTarea(int $userId,
 }
 
 
-function crearSerieTarea(int $userId,
+function crearSerieTarea(int $userId, 
     string $titulo,
     ?string $descripcion,
     string $prioridad,
@@ -214,7 +214,7 @@ function crearSerieTarea(int $userId,
 ): int {
 
     $datos =
-        validarDatosSerieTarea($userId,
+        validarDatosSerieTarea($userId, 
             $titulo,
             $descripcion,
             $prioridad,
@@ -303,7 +303,7 @@ function crearSerieTarea(int $userId,
 }
 
 
-function buscarSerieTarea(int $userId,
+function buscarSerieTarea(int $userId, 
     int $id
 ): ?array {
 
@@ -450,7 +450,7 @@ function listarSeriesTareasActivas(): array
 }
 
 
-function cambiarActivaSerieTarea(int $userId,
+function cambiarActivaSerieTarea(int $userId, 
     int $id,
     bool $activa
 ): bool {
@@ -703,7 +703,7 @@ function calcularSiguienteFechaSerieTarea(
 }
 
 
-function crearOcurrenciaSerieTarea(int $userId,
+function crearOcurrenciaSerieTarea(int $userId, 
     int $serieId,
     string $fechaOcurrencia
 ): int {
@@ -731,7 +731,7 @@ function crearOcurrenciaSerieTarea(int $userId,
 
 
     $serie =
-        buscarSerieTarea($userId,
+        buscarSerieTarea($userId, 
             $serieId
         );
 
@@ -908,7 +908,7 @@ function crearOcurrenciaSerieTarea(int $userId,
 }
 
 
-function listarOcurrenciasSerieTarea(int $userId,
+function listarOcurrenciasSerieTarea(int $userId, 
     int $serieId
 ): array {
 
@@ -991,7 +991,7 @@ function contarSeriesTareasActivas(int $userId): int
 
 
 
-function listarSeriesTareas(int $userId,
+function listarSeriesTareas(int $userId, 
     ?bool $activa = null
 ): array {
 
@@ -1089,7 +1089,7 @@ function listarSeriesTareas(int $userId,
 
 // R4-D5 — edición de plantilla de serie
 
-function actualizarSerieTarea(int $userId,
+function actualizarSerieTarea(int $userId, 
     int $id,
     string $titulo,
     ?string $descripcion,
@@ -1111,7 +1111,7 @@ function actualizarSerieTarea(int $userId,
 
 
     $actual =
-        buscarSerieTarea($userId,
+        buscarSerieTarea($userId, 
             $id
         );
 
@@ -1142,7 +1142,7 @@ function actualizarSerieTarea(int $userId,
 
 
     $datos =
-        validarDatosSerieTarea($userId,
+        validarDatosSerieTarea($userId, 
             $titulo,
             $descripcion,
             $prioridad,
@@ -1271,3 +1271,4 @@ function actualizarSerieTarea(int $userId,
 
     return true;
 }
+

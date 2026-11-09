@@ -1,0 +1,32 @@
+
+/* ARK3360_R35E4A_DATE_PILOT */
+
+body.page-agenda-v3
+.agenda-field-v3 input.r35e-date-visible,
+body.page-agenda-v3
+.quick-add-field-v3 input.r35e-date-visible {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body.page-agenda-v3
+input.r35e-date-visible::placeholder {
+    opacity: .7;
+}
+
+.flatpickr-calendar {
+    z-index: 2147483000 !important;
+}
+
+.flatpickr-calendar
+.flatpickr-day.selected {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+@media (max-width: 640px) {
+    .flatpickr-calendar {
+        max-width: calc(100vw - 16px);
+    }
+}

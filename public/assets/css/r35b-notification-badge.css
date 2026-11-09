@@ -1,0 +1,75 @@
+/*
+ * ARK3360_R35B3_NOTIFICATION_BADGE
+ *
+ * Indicador de notificaciones del header.
+ *
+ * - Oculto con cero avisos activos.
+ * - Numeracion hasta 99+.
+ * - Diseno compacto en light y dark.
+ * - No altera el menu desplegable.
+ */
+
+.notification-badge-v3[hidden],
+body.ui-v3
+.notification-bell-v3
+> .notification-badge-v3[hidden] {
+    display: none !important;
+}
+
+body.ui-v3
+.notification-bell-v3
+> .notification-badge-v3:not([hidden]) {
+    position: absolute !important;
+
+    top: -5px !important;
+    right: -5px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-width: 20px !important;
+    width: auto !important;
+    height: 20px !important;
+
+    padding: 0 5px !important;
+
+    box-sizing: border-box !important;
+
+    border: 2px solid #f7f9fc !important;
+    border-radius: 999px !important;
+
+    background: #2563eb !important;
+    color: #ffffff !important;
+
+    font-family: inherit !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+
+    white-space: nowrap !important;
+
+    box-shadow:
+        0 2px 5px rgba(37, 99, 235, .15)
+        !important;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+html[data-theme="dark"]
+body.ui-v3
+.notification-bell-v3
+> .notification-badge-v3:not([hidden]) {
+    border-color: #142131 !important;
+}
+
+@media (max-width: 640px) {
+    body.ui-v3
+    .notification-bell-v3
+    > .notification-badge-v3:not([hidden]) {
+        top: -4px !important;
+        right: -4px !important;
+    }
+}
